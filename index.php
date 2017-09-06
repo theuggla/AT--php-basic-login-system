@@ -16,4 +16,4 @@ $lv = new LayoutView();
 
 
 $lv->render(false, $v, $dtv);
-
+?>
