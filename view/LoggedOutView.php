@@ -20,14 +20,17 @@
      	*
      	* @return  void BUT writes to standard output and cookies!
      	*/
-    	public function response()
-    	{
+    	public function renderBody() {
         	$message = '';
         
         	$response = $this->generateLoginFormHTML($message);
         	//$response .= $this->generateLogoutButtonHTML($message);
         	return $response;
     	}
+
+		public function renderHeading() {
+			return '<h2>Logged out</h2>';
+		}
 
     	/**
     	* Generate HTML code on the output buffer for the logout button
