@@ -22,8 +22,6 @@ $lv = new LayoutView();
 $lv->render($isLoggedIn, $v, $dtv);
 
 echo '<html><head><title>Test MySQL</title></head><body>';
-var_dump($_ENV);
-var_dump($_SERVER);
 $host = 'localhost';
 $user = $_ENV["MYSQL_USERNAME"];
 $password = $_ENV["MYSQL_PASSWORD"];
