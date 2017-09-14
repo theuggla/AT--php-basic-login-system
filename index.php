@@ -1,4 +1,8 @@
 <?php
+session_start();
+$_SESSION['isLoggedIn'] = true;
+//Set session variable
+$isLoggedIn = $_SESSION ? $_SESSION["isLoggedIn"] : false;
 
 //INCLUDE THE FILES NEEDED...
 require_once('view/LoginView.php');
@@ -15,5 +19,37 @@ $dtv = new DateTimeView();
 $lv = new LayoutView();
 
 
-$lv->render(false, $v, $dtv);
+$lv->render($isLoggedIn, $v, $dtv);
+
+echo '<html><head><title>Test MySQL</title></head><body>';
+var_dump($_ENV);
+var_dump($_SERVER);
+$host = '178.62.87.11';
+$user = getenv("MYSQL_USERNAME");
+$password = getenv("MYSQL_PASSWORD");
+$cxn = mysqli_connect($host,$user,$password);
+$sql='SHOW DATABASES';
+$result = mysqli_query($cxn,$sql);
+
+if($result == false)
+{
+    echo '<h4>Error: '.mysqli_error($cxn).'</h4>';
+}
+else
+{
+if(mysqli_num_rows($result) < 1)
+{
+    echo '<p>No current databases</p>';
+}
+else
+{
+    echo '<ol>';
+while($row = mysqli_fetch_row($result))
+{
+    echo '<li>' . $row[0] . '</li>';
+}
+    echo '</ol>';
+}
+}
+    echo '</body></html>';
 ?>
