@@ -1,6 +1,6 @@
 <?php
 
-	class LoggedOutView
+	class LoginView
 	{
     	private static $login = 'LoginView::Login';
     	private static $logout = 'LoginView::Logout';
@@ -9,56 +9,29 @@
     	private static $cookieName = 'LoginView::CookieName';
     	private static $cookiePassword = 'LoginView::CookiePassword';
     	private static $keep = 'LoginView::KeepMeLoggedIn';
-    	private static $messageId = 'LoginView::Message';
-
-    
-
-    	/**
-     	* Create HTTP response
-     	*
-     	* Should be called after a login attempt has been determined
-     	*
-     	* @return  void BUT writes to standard output and cookies!
-     	*/
-    	public function renderBody() {
-        	$message = '';
-        
-        	$response = $this->generateLoginFormHTML($message);
-        	//$response .= $this->generateLogoutButtonHTML($message);
-        	return $response;
-    	}
+    	private static $messageId = 'LoginView::MessageId';
+		private static $message = 'LoginView::Message';
 
 		public function renderHeading() {
 			return '<h2>Logged out</h2>';
 		}
 
-    	/**
-    	* Generate HTML code on the output buffer for the logout button
-    	* @param $message, String output message
-    	* @return  void, BUT writes to standard output!
-    	*/
-    	private function generateLogoutButtonHTML($message)
-    	{
-        	return '
-				<form  method="post" >
-					<p id="' . self::$messageId . '">' . $message .'</p>
-					<input type="submit" name="' . self::$logout . '" value="logout"/>
-				</form>
-			';
+		public function renderNavigation() {
+			return '<a href="?register">Register a new user</a>';
+		}
+
+		public function renderBody() {
+        	$response = $this->generateLoginFormHTML();
+        	return $response;
     	}
     
-    	/**
-    	* Generate HTML code on the output buffer for the logout button
-    	* @param $message, String output message
-    	* @return  void, BUT writes to standard output!
-    	*/
-    	private function generateLoginFormHTML($message)
+    	private function generateLoginFormHTML()
     	{
         	return '
 				<form method="post" > 
 					<fieldset>
 						<legend>Login - enter Username and password</legend>
-						<p id="' . self::$messageId . '">' . $message . '</p>
+						<p id="' . self::$messageId . '">' . self::$message . '</p>
 					
 						<label for="' . self::$name . '">Username :</label>
 						<input type="text" id="' . self::$name . '" name="' . self::$name . '" value="" />

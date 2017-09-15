@@ -2,21 +2,32 @@
     class RegisterView {
 
     	private static $name = 'RegisterView::UserName';
+		private static $register = 'RegisterView::Register';
     	private static $password = 'RegisterView::Password';
 		private static $passwordRepeat = 'RegisterView::PasswordRepeat';
-    	private static $messageId = 'RegisterView::Message';
+		private static $message = 'RegisterView::Message';
+    	private static $messageId = 'RegisterView::MessageId';
 
-        public function renderBody() {
-            
-        }
+		public function renderHeading() {
+			return '<h2>Logged out</h2>';
+		}
 
-        private function generateRegisterFormHTML($message)
+		public function renderNavigation() {
+			return '<a href="?">Back to login</a>';
+		}
+
+		 public function renderBody() {
+        	$response = $this->generateRegisterFormHTML();
+        	return $response;
+    	}
+
+        private function generateRegisterFormHTML()
     	{
         	return '
-				<form action="?register" method="post" > 
+				<form action="?register" method="post" enctype="multipart/form-data"> 
 					<fieldset>
 						<legend>Register a new user - Write username and password</legend>
-						<p id="' . self::$messageId . '">' . $message . '</p>
+						<p id="' . self::$messageId . '">' . self::$message . '</p>
 					
 						<label for="' . self::$name . '">Username :</label>
 						<input type="text" id="' . self::$name . '" name="' . self::$name . '" value="" />
@@ -24,10 +35,10 @@
 						<label for="' . self::$password . '">Password :</label>
 						<input type="password" id="' . self::$password . '" name="' . self::$password . '" />
 
-						<label for="' . self::$keep . '">Keep me logged in  :</label>
-						<input type="checkbox" id="' . self::$keep . '" name="' . self::$keep . '" />
+						<label for="' . self::$passwordRepeat . '">Repeat password :</label>
+						<input type="password" id="' . self::$passwordRepeat . '" name="' . self::$passwordRepeat . '" />
 					
-						<input type="submit" name="' . self::$login . '" value="login" />
+						<input type="submit" name="' . self::$register . '" value="register" />
 					</fieldset>	
 				</form>
 			';

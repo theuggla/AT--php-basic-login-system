@@ -11,6 +11,7 @@
           </head>
           <body>
             <h1>Assignment 2</h1>
+              ' . $mainView->renderNavigation() . '
               ' . $mainView->renderHeading() . '
             <div class="container">
               ' . $mainView->renderBody() . '

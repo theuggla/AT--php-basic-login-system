@@ -1,17 +1,31 @@
 <?php
-    require_once('../view/LoggedOutView.php');
-    require_once('../view/RegisterUserView.php');
-    require_once('../view/DateTimeView.php');
-    require_once('../view/LayoutView.php');
-
-    $loggedOutView = new LoggedOutView();
-    $registerView = new RegisterUserView();
-    $dateTime = new DateTimeView();
-    $layout = new LayoutView();
-
     class LoggedOutUserController {
 
+        private static $credentials = 'LoggedOutUserController::Credentials';
+
         public function greetUser() {
+            if ($loggedOutView->credentialsAreSavedInCookie) {
+                $this->credentials = $loggedOutView->getSavedCredentials();
+                $this->tryToLoginUser($this->credentials);
+            } else if ($loggedOutView->userWantsToRegister()){
+                $this->showRegisterForm();
+            } else if ($loggedOutView->userWantsToLogin()) {
+                $this->credentials = $loggedOutView->getNewCredentials();
+                $this->tryToLoginUser($this->credentials);
+            } else {
+                $this->showLoginForm();
+            }
+        }
+
+        private function tryToLoginUser() {
+            
+        }
+
+        private function showRegisterForm() {
+            $layout->renderToOutput($registerView, $dateTime);
+        }
+
+        private function showLoginForm() {
             $layout->renderToOutput($loggedOutView, $dateTime);
         }
 
