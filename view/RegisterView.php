@@ -6,10 +6,10 @@
     	private static $password = 'RegisterView::Password';
 		private static $passwordRepeat = 'RegisterView::PasswordRepeat';
 		private static $message = 'RegisterView::Message';
-    	private static $messageId = 'RegisterView::MessageId';
+    	private static $messageId = 'RegisterView::Message';
 
 		public function renderHeading() {
-			return '<h2>Logged out</h2>';
+			return '<h2>Not logged in</h2>';
 		}
 
 		public function renderNavigation() {
@@ -17,17 +17,18 @@
 		}
 
 		 public function renderBody() {
-        	$response = $this->generateRegisterFormHTML();
+			 $message = '';
+        	$response = $this->generateRegisterFormHTML($message);
         	return $response;
     	}
 
-        private function generateRegisterFormHTML()
+        private function generateRegisterFormHTML($message)
     	{
         	return '
 				<form action="?register" method="post" enctype="multipart/form-data"> 
 					<fieldset>
 						<legend>Register a new user - Write username and password</legend>
-						<p id="' . self::$messageId . '">' . self::$message . '</p>
+						<p id="' . self::$messageId . '">' . $message . '</p>
 					
 						<label for="' . self::$name . '">Username :</label>
 						<input type="text" id="' . self::$name . '" name="' . self::$name . '" value="" />

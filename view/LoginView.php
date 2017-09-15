@@ -9,11 +9,10 @@
     	private static $cookieName = 'LoginView::CookieName';
     	private static $cookiePassword = 'LoginView::CookiePassword';
     	private static $keep = 'LoginView::KeepMeLoggedIn';
-    	private static $messageId = 'LoginView::MessageId';
-		private static $message = 'LoginView::Message';
+    	private static $messageId = 'LoginView::Message';
 
 		public function renderHeading() {
-			return '<h2>Logged out</h2>';
+			return '<h2>Not logged in</h2>';
 		}
 
 		public function renderNavigation() {
@@ -21,17 +20,18 @@
 		}
 
 		public function renderBody() {
+			$message = '';
         	$response = $this->generateLoginFormHTML();
         	return $response;
     	}
     
-    	private function generateLoginFormHTML()
+    	private function generateLoginFormHTML($message)
     	{
         	return '
 				<form method="post" > 
 					<fieldset>
 						<legend>Login - enter Username and password</legend>
-						<p id="' . self::$messageId . '">' . self::$message . '</p>
+						<p id="' . self::$messageId . '">' . $message . '</p>
 					
 						<label for="' . self::$name . '">Username :</label>
 						<input type="text" id="' . self::$name . '" name="' . self::$name . '" value="" />
