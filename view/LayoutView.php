@@ -1,5 +1,7 @@
 <?php
 
+namespace view;
+
   class LayoutView {
   
     public function renderToOutput(IUseCaseView $mainView, DateTimeView $dateTime, string $message) {

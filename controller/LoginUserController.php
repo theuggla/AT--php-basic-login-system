@@ -2,22 +2,20 @@
 
 namespace controller;
 
-    class LoginrController {
+    class LoginUserController {
+        private static $layoutView;
+        private static $loginView;
+        private static $dateTimeView;
+        private static $credentials = 'LoginUserController::Credentials';
 
-        private static $credentials = 'LoggedOutUserController::Credentials';
+        public function __construct($layoutView, $loginView, $dateTimeView) {
+            $this->layoutView = $layoutView;
+            $this->loginView = $loginView;
+            $this->dateTimeView = $dateTimeView;
+        }
 
         public function greetUser() {
-            if ($loggedOutView->credentialsAreSavedInCookie) {
-                $this->credentials = $loggedOutView->getSavedCredentials();
-                $this->tryToLoginUser($this->credentials);
-            } else if ($loggedOutView->userWantsToRegister()){
-                $this->showRegisterForm();
-            } else if ($loggedOutView->userWantsToLogin()) {
-                $this->credentials = $loggedOutView->getNewCredentials();
-                $this->tryToLoginUser($this->credentials);
-            } else {
-                $this->showLoginForm();
-            }
+            
         }
 
         private function tryToLoginUser() {

@@ -3,32 +3,15 @@
 namespace controller;
 
     class UserController {
-        private $layoutView;
-        private $loginView;
-        private $logoutView;
-        private $registerView;
-        private $dateTimeView;
-
-        private $user;
-
         private $loginController;
         private $logoutController;
         private $registerController;
 
-        public function __construct($layoutView, 
-                                $loginView,
-                                $logoutView, 
-                                $registerView, 
-                                $dateTimeView, 
+        public function __construct(
                                 $loginController, 
                                 $logoutController,
                                 $registerController) {
 
-            $this->layoutView = $layoutView;
-            $this->loginView = $loginView;
-            $this->logoutView = $logoutView;
-            $this->registerView = $layoutView;
-            $this->dateTimeView = $dateTimeView;
             $this->loginController = $loginController;
             $this->logoutController = $logoutController;
             $this->registerController = $registerController;
@@ -36,7 +19,16 @@ namespace controller;
         }
 
         public function greetUserCorrectly() {
-            
+            $isLoggedIn = isset($_SESSION["isLoggedIn"]) ? $_SESSION["isLoggedIn"] : false ;    
+            $wantsToRegister = isset($_GET["register"]);
+
+            if ($isLoggedIn) {
+                echo 'is logged in';
+            } else if ($wantsToRegister) {
+                echo 'wants to register';
+            } else {
+                $this->loginController->greetUser();
+            }
         }
     }
 

@@ -21,23 +21,21 @@
     require_once('view/LoginView.php');
 
     $layoutView = new \view\LayoutView(); 
-    $loginView = new \view\LoginView();
-    $logoutView = new \view\LogoutView();
-    $registerView = new \view\RegisterView();
     $dateTimeView = new \view\DateTimeView();
+    $loginView = new \view\LoginView($layoutView, $loginView, $dateTimeView);
+    $logoutView = new \view\LogoutView($layoutView, $logoutView, $dateTimeView);
+    $registerView = new \view\RegisterView($layoutView, $registerView, $dateTimeView);
 
     $loginController = new \controller\LoginUserController();
     $logoutController = new \controller\LogoutUserController();
     $registerController = new \controller\RegisterUserController();
-    $mainController = new \controller\UserController(   $layoutView, 
-                                                        $loginView, 
-                                                        $logoutView, 
-                                                        $registerView, 
-                                                        $dateTimeView, 
+    $mainController = new \controller\UserController(
                                                         $loginController, 
                                                         $logoutController, 
                                                         $registerController);
 
+    $mainController->greetUserCorrectly();
+/*
     $isLoggedIn = isset($_SESSION["isLoggedIn"]) ? $_SESSION["isLoggedIn"] : false ;    
     $wantsToRegister = isset($_GET["register"]);
 
