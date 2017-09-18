@@ -23,9 +23,5 @@ namespace view;
         </html>
       ';
     }
-
-    public function userWantsToLogin() {
-      return isset($_POST['LoginView::Login']);
-    }
   }
 ?>

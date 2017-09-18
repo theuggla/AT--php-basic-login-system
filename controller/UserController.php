@@ -7,7 +7,10 @@ namespace controller;
         private $logoutController = 'UserController::Logoutontroller';
         private $registerController = 'UserController::RegisterController';
 
+        private $user  = 'UserController::User';
+
         public function __construct(
+                                $user, 
                                 $loginController, 
                                 $logoutController,
                                 $registerController) {
@@ -15,6 +18,8 @@ namespace controller;
             $this->loginController = $loginController;
             $this->logoutController = $logoutController;
             $this->registerController = $registerController;
+
+            $this->user = $user;
 
         }
 

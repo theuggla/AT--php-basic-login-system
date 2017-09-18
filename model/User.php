@@ -8,7 +8,20 @@ class User {
 
     private $isLoggedIn;
 
-    public function __construct(string $suggestedUsername, string $suggestedPassword) {
+    public function find(string $username, string $password) {
+        echo 'you are checking for a user with username ' . $username . ' and password ' . $password;
+        
+        try {
+            $this->username = new Username($username);
+            $this->password = new Password($password);
+        } catch (\Exception $e) {
+            throw $e;
+        }
+    }
+
+    public function create(string $suggestedUsername, string $suggestedPassword) {
+        echo 'you are create a user with username ' . $suggestedUsername . ' and password ' . $suggestedPassword;
+        
         try {
             $this->username = new Username($suggestedUsername);
             $this->password = new Password($suggestedPassword);

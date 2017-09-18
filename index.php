@@ -20,16 +20,20 @@
     require_once('view/RegisterView.php');   
     require_once('view/LoginView.php');
 
+    require_once('model/Exception.php');
+
     $layoutView = new \view\LayoutView(); 
     $dateTimeView = new \view\DateTimeView();
     $loginView = new \view\LoginView();
     $logoutView = new \view\LogoutView();
     $registerView = new \view\RegisterView();
 
-    $loginController = new \controller\LoginUserController($layoutView, $loginView, $dateTimeView);
-    $logoutController = new \controller\LogoutUserController($layoutView, $logoutView, $dateTimeView);
-    $registerController = new \controller\RegisterUserController($layoutView, $registerView, $dateTimeView);
-    $mainController = new \controller\UserController($loginController, $logoutController, $registerController);
+    $user = new \model\User();
+
+    $loginController = new \controller\LoginUserController($user, $layoutView, $loginView, $dateTimeView);
+    $logoutController = new \controller\LogoutUserController($user, $layoutView, $logoutView, $dateTimeView);
+    $registerController = new \controller\RegisterUserController($user, $layoutView, $registerView, $dateTimeView);
+    $mainController = new \controller\UserController($user, $loginController, $logoutController, $registerController);
 
     $mainController->greetUserCorrectly();
 /*

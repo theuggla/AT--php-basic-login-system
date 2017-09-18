@@ -47,11 +47,25 @@ namespace view;
 				</form>
 			';
     	}
+
+		public function userWantsToLogin() {
+    		return isset($_POST[self::$login]);
+		}
+
+		public function getUserCredentials() {
+			$username = $this->getRequestUserName();
+			$password = $this->getRequestPassword();
+    		return array('username'=>$username, 'password'=>$password);
+		}	
     
-    	//CREATE GET-FUNCTIONS TO FETCH REQUEST VARIABLES
     	private function getRequestUserName()
     	{
-        	//RETURN REQUEST VARIABLE: USERNAME
+        	return $_POST[self::$name];
+    	}
+
+		private function getRequestPassword()
+    	{
+        	return $_POST[self::$password];
     	}
 	}
 ?>
