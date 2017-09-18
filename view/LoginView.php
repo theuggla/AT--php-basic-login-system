@@ -19,9 +19,8 @@
 			return '<a href="?register">Register a new user</a>';
 		}
 
-		public function renderBody() {
-			$message = '';
-        	$response = $this->generateLoginFormHTML();
+		public function renderBody($message = '') {
+        	$response = $this->generateLoginFormHTML($message);
         	return $response;
     	}
     

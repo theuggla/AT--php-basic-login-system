@@ -2,7 +2,7 @@
 
   class LayoutView {
   
-    public function renderToOutput($mainView, DateTimeView $dateTime) {
+    public function renderToOutput($mainView, DateTimeView $dateTime, string $message) {
       echo '<!DOCTYPE html>
         <html>
           <head>
@@ -14,7 +14,7 @@
               ' . $mainView->renderNavigation() . '
               ' . $mainView->renderHeading() . '
             <div class="container">
-              ' . $mainView->renderBody() . '
+              ' . $mainView->renderBody($message) . '
               ' . $dateTime->show() . '
             </div>
           </body>

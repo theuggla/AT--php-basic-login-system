@@ -16,8 +16,7 @@
 			return '<a href="?">Back to login</a>';
 		}
 
-		 public function renderBody() {
-			 $message = '';
+		 public function renderBody($message = '') {
         	$response = $this->generateRegisterFormHTML($message);
         	return $response;
     	}

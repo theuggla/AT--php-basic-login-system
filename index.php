@@ -7,56 +7,120 @@
     require_once('controller/LoggedOutUserController.php');
     require_once('controller/LoggedInUserController.php');
 
+    require_once('model/User.php');
+    require_once('model/Username.php');
+    require_once('model/Password.php');
+
     require_once('view/LogoutView.php');   
     require_once('view/DateTimeView.php');
     require_once('view/LayoutView.php');
     require_once('view/LoginView.php');
     require_once('view/RegisterView.php');
 
+    $layout = new LayoutView(); 
     $logoutView = new LogoutView();
     $dateTime = new DateTimeView();
-    $layout = new LayoutView(); 
-
     $loginView = new LoginView();
     $registerView = new RegisterView();
-    $dateTime = new DateTimeView();
-    $layout = new LayoutView();
 
-    $isLoggedIn = $_SESSION ? $_SESSION["isLoggedIn"] ? $_SESSION["isLoggedIn"] : false : false;    
+    $isLoggedIn = isset($_SESSION["isLoggedIn"]) ? $_SESSION["isLoggedIn"] : false ;    
     $wantsToRegister = isset($_GET["register"]);
 
     if ($isLoggedIn) {
-        $layout->renderToOutput($logoutView, $dateTime);
+        showLogoutPage();
     } else if ($wantsToRegister) {
-        $layout->renderToOutput($registerView, $dateTime);
+        showRegisterPage();
     } else {
-        $layout->renderToOutput($loginView, $dateTime);
+        showLoginPage();
+    }
+
+    function showLogoutPage() {
+        $message = getCurrentMessage();
+        $layout->renderToOutput($logoutView, $dateTime, $message);
+        removeCurrentMessage();
+
+        if (userWantsToLogOut()) {
+            logoutUser();
+        }
+    }
+
+    function showLoginPage() {
+        if (thereAreSavedCredentials()) {
+            $username = getSavedUsername();
+            $password = getSavedPassword();
+
+            loginUser($username, $password);
+        } else {
+            $layout = new LayoutView(); 
+            $logoutView = new LogoutView();
+            $dateTime = new DateTimeView();
+            $loginView = new LoginView();
+            $registerView = new RegisterView(); 
+
+            $message = getCurrentMessage();
+            $layout->renderToOutput($loginView, $dateTime, $message);
+            removeCurrentMessage();
+
+            if (userTriesToLogin()) {
+                $username = getNewUsername();
+                $password = getNewPassword();
+
+                loginUser($username, $password);
+            }
+        }
+    }
+
+    function thereAreSavedCredentials() {
+        return false;
+    }
+
+    function getCurrentMessage() {
+        $message = isset($_SESSION['current_message']) ? $_SESSION['current_message'] : '';
+
+        return $message;
+    }
+
+    function removeCurrentMessage() {
+        if (isset($_SESSION['current_message'])) {
+            unset($_SESSION['current_message']);
+        }
+    }
+
+    function userTriesToLogin() {
+        return isset($_POST['LoginView::Login']);
+    }
+
+    function showRegisterPage() {
+        $message = getCurrentMessage();
+        $layout->renderToOutput($registerView, $dateTime, $message);
+        $this->removeCurrentMessage();
+
+        if (userTriesToSignup()) {
+                $username = getNewUsername();
+                $password = getNewPassword();
+
+                registerUser($username, $password);
+            }
+    }
+
+    function getNewUsername() {
+        return $_POST['LoginView::UserName'];
+    }
+
+    function getNewPassword() {
+        return $_POST['LoginView::Password'];
+    }
+
+    function loginUser() {
+        $_SESSION['current_message'] = 'wrong username or password';
+    }
+
+    function logoutUser() {
+        destroySession();
+        destroyCookies();
     }
 
 /*
-to show logged in page
-display session_login message
-then
-delete session_login message
-if log out is pressed
-destroy session
-and
-destroy saved username cookie
-and
-destroy saved password cookie
-
-on logged out page
-if cookie-username && cookie password isset
-login user with those credentials
-else if get_register user isset
-display register user page
-else
-display session_error message
-then
-delete session_error message
-display register user-link
-and
-display login form
 
 when login is pressed (post_logininfo isset)
 if username and password exist
@@ -87,13 +151,6 @@ set password-cookie and username-cookie
 
 to set password cookie and username cookie
 do something with php_cookies
-
-
-to display register user page
-display index link
-display session_registererror
-delete session_ registererror
-and display register-userform
 
 when register is pressed (post_registerinfo isset)
 check that info is valid

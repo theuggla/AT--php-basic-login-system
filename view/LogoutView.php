@@ -3,8 +3,7 @@
 	class LogoutView
 	{
     	private static $logout = 'LogoutView::Logout';
-    	private static $message = 'LogoutView::Message';
-		private static $messageId = 'LogoutView::MessageId';
+		private static $messageId = 'LogoutView::Message';
 
 		public function renderHeader() {
 			return '<h2>Logged in</h2>';
@@ -14,17 +13,17 @@
 			return '';
 		}
 
-    	public function renderBody()
+    	public function renderBody($message = '')
     	{
-        	$response .= $this->generateLogoutButtonHTML();
+        	$response = $this->generateLogoutButtonHTML($message);
         	return $response;
     	}
 
-    	private function generateLogoutButtonHTML()
+    	private function generateLogoutButtonHTML($message)
     	{
         	return '
 				<form  method="post" >
-					<p id="' . self::$messageId . '">' . self::$message .'</p>
+					<p id="' . self::$messageId . '">' . $message .'</p>
 					<input type="submit" name="' . self::$logout . '" value="logout"/>
 				</form>
 			';
