@@ -3,9 +3,9 @@
 namespace controller;
 
     class UserController {
-        private $loginController;
-        private $logoutController;
-        private $registerController;
+        private $loginController = 'UserController::LoginController';
+        private $logoutController = 'UserController::Logoutontroller';
+        private $registerController = 'UserController::RegisterController';
 
         public function __construct(
                                 $loginController, 

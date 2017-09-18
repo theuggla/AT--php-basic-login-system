@@ -22,17 +22,14 @@
 
     $layoutView = new \view\LayoutView(); 
     $dateTimeView = new \view\DateTimeView();
-    $loginView = new \view\LoginView($layoutView, $loginView, $dateTimeView);
-    $logoutView = new \view\LogoutView($layoutView, $logoutView, $dateTimeView);
-    $registerView = new \view\RegisterView($layoutView, $registerView, $dateTimeView);
+    $loginView = new \view\LoginView();
+    $logoutView = new \view\LogoutView();
+    $registerView = new \view\RegisterView();
 
-    $loginController = new \controller\LoginUserController();
-    $logoutController = new \controller\LogoutUserController();
-    $registerController = new \controller\RegisterUserController();
-    $mainController = new \controller\UserController(
-                                                        $loginController, 
-                                                        $logoutController, 
-                                                        $registerController);
+    $loginController = new \controller\LoginUserController($layoutView, $loginView, $dateTimeView);
+    $logoutController = new \controller\LogoutUserController($layoutView, $logoutView, $dateTimeView);
+    $registerController = new \controller\RegisterUserController($layoutView, $registerView, $dateTimeView);
+    $mainController = new \controller\UserController($loginController, $logoutController, $registerController);
 
     $mainController->greetUserCorrectly();
 /*

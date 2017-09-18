@@ -3,31 +3,30 @@
 namespace controller;
 
     class LoginUserController {
-        private static $layoutView;
-        private static $loginView;
-        private static $dateTimeView;
+        private static $layoutView = 'LoginUserController::LayoutView';
+        private static $loginView = 'LoginUserController::LoginView';
+        private static $dateTimeView = 'LoginUserController::DateTimeView';
         private static $credentials = 'LoginUserController::Credentials';
 
         public function __construct($layoutView, $loginView, $dateTimeView) {
-            $this->layoutView = $layoutView;
-            $this->loginView = $loginView;
-            $this->dateTimeView = $dateTimeView;
+            self::$layoutView = $layoutView;
+            self::$loginView = $loginView;
+            self::$dateTimeView = $dateTimeView;
         }
 
         public function greetUser() {
-            
+            $this->showLoginForm();
+            if (self::$layoutView->userWantsToLogin()) {
+                echo 'you want to login!';
+            }
         }
 
         private function tryToLoginUser() {
             
         }
 
-        private function showRegisterForm() {
-            $layout->renderToOutput($registerView, $dateTime);
-        }
-
         private function showLoginForm() {
-            $layout->renderToOutput($loggedOutView, $dateTime);
+            self::$layoutView->renderToOutput(self::$loginView, self::$dateTimeView, '');
         }
 
         public function authenticateUserWithNewCredentials() {
