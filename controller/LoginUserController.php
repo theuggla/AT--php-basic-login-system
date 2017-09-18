@@ -1,5 +1,8 @@
 <?php
-    class LoggedOutUserController {
+
+namespace controller;
+
+    class LoginrController {
 
         private static $credentials = 'LoggedOutUserController::Credentials';
 

@@ -4,24 +4,39 @@
     error_reporting(E_ALL);
     ini_set('display_errors', 'On');
 
-    require_once('controller/LoggedOutUserController.php');
-    require_once('controller/LoggedInUserController.php');
+    require_once('controller/LogoutUserController.php');
+    require_once('controller/LoginUserController.php');
+    require_once('controller/RegisterUserController.php');
+    require_once('controller/UserController.php');
 
     require_once('model/User.php');
     require_once('model/Username.php');
     require_once('model/Password.php');
 
-    require_once('view/LogoutView.php');   
-    require_once('view/DateTimeView.php');
     require_once('view/LayoutView.php');
+    require_once('view/DateTimeView.php');
+    require_once('view/IUseCaseView.php');
+    require_once('view/LogoutView.php');
+    require_once('view/RegisterView.php');   
     require_once('view/LoginView.php');
-    require_once('view/RegisterView.php');
 
-    $layout = new LayoutView(); 
-    $logoutView = new LogoutView();
-    $dateTime = new DateTimeView();
-    $loginView = new LoginView();
-    $registerView = new RegisterView();
+    $layoutView = new \view\LayoutView(); 
+    $loginView = new \view\LoginView();
+    $logoutView = new \view\LogoutView();
+    $registerView = new \view\RegisterView();
+    $dateTimeView = new \view\DateTimeView();
+
+    $loginController = new \controller\LoginUserController();
+    $logoutController = new \controller\LogoutUserController();
+    $registerController = new \controller\RegisterUserController();
+    $mainController = new \controller\UserController(   $layoutView, 
+                                                        $loginView, 
+                                                        $logoutView, 
+                                                        $registerView, 
+                                                        $dateTimeView, 
+                                                        $loginController, 
+                                                        $logoutController, 
+                                                        $registerController);
 
     $isLoggedIn = isset($_SESSION["isLoggedIn"]) ? $_SESSION["isLoggedIn"] : false ;    
     $wantsToRegister = isset($_GET["register"]);

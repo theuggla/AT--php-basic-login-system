@@ -1,5 +1,8 @@
 <?php
-    class RegisterView {
+
+namespace view;
+
+    class RegisterView implements IUseCaseView {
 
     	private static $name = 'RegisterView::UserName';
 		private static $register = 'RegisterView::Register';
@@ -16,7 +19,7 @@
 			return '<a href="?">Back to login</a>';
 		}
 
-		 public function renderBody($message = '') {
+		 public function renderBodyWithMessage($message = '') {
         	$response = $this->generateRegisterFormHTML($message);
         	return $response;
     	}

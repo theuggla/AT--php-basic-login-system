@@ -1,7 +1,8 @@
 <?php
 
-	class LoginView
-	{
+namespace view;
+
+	class LoginView implements IUseCaseView {
     	private static $login = 'LoginView::Login';
     	private static $logout = 'LoginView::Logout';
     	private static $name = 'LoginView::UserName';
@@ -19,7 +20,7 @@
 			return '<a href="?register">Register a new user</a>';
 		}
 
-		public function renderBody($message = '') {
+		public function renderBodyWithMessage($message = '') {
         	$response = $this->generateLoginFormHTML($message);
         	return $response;
     	}

@@ -1,11 +1,12 @@
 <?php
 
-	class LogoutView
-	{
+namespace view;
+
+	class LogoutView implements IUseCaseView {
     	private static $logout = 'LogoutView::Logout';
 		private static $messageId = 'LogoutView::Message';
 
-		public function renderHeader() {
+		public function renderHeading() {
 			return '<h2>Logged in</h2>';
 		}
 
@@ -13,7 +14,7 @@
 			return '';
 		}
 
-    	public function renderBody($message = '')
+    	public function renderBodyWithMessage($message = '')
     	{
         	$response = $this->generateLogoutButtonHTML($message);
         	return $response;
