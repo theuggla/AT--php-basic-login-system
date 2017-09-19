@@ -6,14 +6,26 @@ class User {
     private $password;
     private $username;
 
-    private $isLoggedIn;
-
     public function getUser(string $username, string $password) {
         try {
             $this->username = new Username($username);
             $this->password = new Password($password);
-        } catch (\Exception $e) {
+
+            $query='SELECT * FROM User WHERE username="' . $this->username->getUsername() . '" AND password="' . $this->password->getPassword() . '"';
+            $dbconnection = \model\DBConnector::getConnection('UserRegistry');
+            $result = $dbconnection->query($query);
+
+            var_dump($result);
+            
+            if ($result->num_rows > 0) {
+                $_SESSION["isLoggedIn"] = true;
+            } else {
+                throw new \model\WrongCredentialsException('Username or password is wrong');
+            }
+        } catch (\model\WrongCredentialsException $e) {
             throw $e;
+        } catch (\Exception $e) {
+            echo 'exception';
         }
     }
 
@@ -40,7 +52,7 @@ class User {
     }
 
     public function isUserLoggedIn() {
-        return $this->isLoggedIn;
+        return $_SESSION["isLoggedIn"];
     }
 }
 

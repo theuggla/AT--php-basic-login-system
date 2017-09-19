@@ -30,9 +30,6 @@
     $registerView = new \view\RegisterView();
 
     $user = new \model\User();
-    $db = new \model\DBConnector();
-
-    $db->connect('UserRegistry');
 
     $loginController = new \controller\LoginUserController($user, $layoutView, $loginView, $dateTimeView);
     $logoutController = new \controller\LogoutUserController($user, $layoutView, $logoutView, $dateTimeView);

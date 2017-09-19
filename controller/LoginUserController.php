@@ -31,7 +31,9 @@ namespace controller;
                     $this->currentMessage = $e->getMessage();
                 } catch (\model\PasswordIsNotValidException $e) {
                     $this->currentMessage = $e->getMessage();
-                }
+                } catch (\model\WrongCredentialsException $e) {
+                    $this->currentMessage = $e->getMessage();
+                } 
             }
 
             $this->showLoginForm();

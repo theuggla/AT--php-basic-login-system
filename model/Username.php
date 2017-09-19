@@ -13,7 +13,7 @@ class Username {
             if (!strlen($suggestedUsername) > 0) {
                 throw new \model\UsernameIsNotValidException('Username is missing');
             }
-            if ($suggestedUsername >= self::$MIN_LENGTH) {
+            if (strlen($suggestedUsername) >= self::$MIN_LENGTH) {
                 $this->username = $suggestedUsername;
             }
 
