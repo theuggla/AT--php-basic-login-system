@@ -10,6 +10,7 @@ namespace controller;
         private static $user = 'LoginUserController::User';
 
         private $currentMessage = '';
+        private $lastUsernameUsed = '';
 
         public function __construct($user, $layoutView, $loginView, $dateTimeView) {
             self::$layoutView = $layoutView;
@@ -24,6 +25,7 @@ namespace controller;
                 self::$credentials = self::$loginView->getUserCredentials();
 
                 try {
+                    $this->lastUsernameUsed = self::$credentials['username'];
                     self::$user->getUser( self::$credentials['username'],  self::$credentials['password']);
                 } catch (\model\UsernameIsNotValidException $e) {
                     $this->currentMessage = $e->getMessage();
@@ -40,7 +42,7 @@ namespace controller;
         }
 
         private function showLoginForm() {
-            self::$layoutView->renderToOutput(self::$loginView, self::$dateTimeView, $this->currentMessage);
+            self::$layoutView->renderToOutput(self::$loginView, self::$dateTimeView, $this->currentMessage, $this->lastUsernameUsed);
         }
 
         public function authenticateUserWithNewCredentials() {

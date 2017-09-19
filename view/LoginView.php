@@ -20,12 +20,12 @@ namespace view;
 			return '<a href="?register">Register a new user</a>';
 		}
 
-		public function renderBodyWithMessage($message = '') {
-        	$response = $this->generateLoginFormHTML($message);
+		public function renderBodyWithMessage($message = '', $lastUsername = '') {
+        	$response = $this->generateLoginFormHTML($message, $lastUsername);
         	return $response;
     	}
     
-    	private function generateLoginFormHTML($message)
+    	private function generateLoginFormHTML($message, $lastUsername)
     	{
         	return '
 				<form method="post" > 
@@ -34,7 +34,7 @@ namespace view;
 						<p id="' . self::$messageId . '">' . $message . '</p>
 					
 						<label for="' . self::$name . '">Username :</label>
-						<input type="text" id="' . self::$name . '" name="' . self::$name . '" value="" />
+						<input type="text" id="' . self::$name . '" name="' . self::$name . '" value="' . $lastUsername . '"/>
 
 						<label for="' . self::$password . '">Password :</label>
 						<input type="password" id="' . self::$password . '" name="' . self::$password . '" />
