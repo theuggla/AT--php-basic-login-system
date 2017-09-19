@@ -8,7 +8,7 @@ class User {
 
     private $isLoggedIn;
 
-    public function find(string $username, string $password) {
+    public function getUser(string $username, string $password) {
         try {
             $this->username = new Username($username);
             $this->password = new Password($password);

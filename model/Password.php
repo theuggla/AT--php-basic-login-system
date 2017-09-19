@@ -8,14 +8,23 @@ class Password {
 
     public function __construct(string $suggestedPassword) {
         try {
+            if (!strlen($suggestedPassword) > 0) {
+                throw new \model\PasswordIsNotValidException('Password is missing');
+            }
             if ($suggestedPassword >= self::$MIN_LENGTH) {
-                $this->password = $suggestedPassword;
+                $this->username = $suggestedPassword;
             }
 
+        } catch (PasswordIsNotValidException $e) {
+            throw $e;
         } catch (\Exception $e) {
             echo 'exception in password';
             echo $e;
         }
+    }
+
+    public function getPassword() {
+        return $this->password;
     }
 
 }

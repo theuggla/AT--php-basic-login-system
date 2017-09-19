@@ -24,12 +24,14 @@ namespace controller;
                 self::$credentials = self::$loginView->getUserCredentials();
 
                 try {
-                    self::$user->find( self::$credentials['username'],  self::$credentials['password']);
+                    self::$user->getUser( self::$credentials['username'],  self::$credentials['password']);
                 } catch (\model\UsernameIsNotValidException $e) {
+                    $this->currentMessage = $e->getMessage();
+                } catch (\model\PasswordIsNotValidException $e) {
                     $this->currentMessage = $e->getMessage();
                 }
             }
-            
+
             $this->showLoginForm();
         }
 

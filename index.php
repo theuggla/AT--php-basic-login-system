@@ -21,6 +21,7 @@
     require_once('view/LoginView.php');
 
     require_once('model/Exception.php');
+    require_once('model/DBConnector.php');
 
     $layoutView = new \view\LayoutView(); 
     $dateTimeView = new \view\DateTimeView();
@@ -29,6 +30,9 @@
     $registerView = new \view\RegisterView();
 
     $user = new \model\User();
+    $db = new \model\DBConnector();
+
+    $db->connect('UserRegistry');
 
     $loginController = new \controller\LoginUserController($user, $layoutView, $loginView, $dateTimeView);
     $logoutController = new \controller\LogoutUserController($user, $layoutView, $logoutView, $dateTimeView);
