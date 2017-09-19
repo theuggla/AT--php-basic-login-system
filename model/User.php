@@ -14,8 +14,6 @@ class User {
             $query='SELECT * FROM User WHERE username="' . $this->username->getUsername() . '" AND password="' . $this->password->getPassword() . '"';
             $dbconnection = \model\DBConnector::getConnection('UserRegistry');
             $result = $dbconnection->query($query);
-
-            var_dump($result);
             
             if ($result->num_rows > 0) {
                 $_SESSION["isLoggedIn"] = true;
