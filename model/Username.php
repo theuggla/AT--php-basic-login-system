@@ -9,7 +9,7 @@ class Username {
     public function __construct(string $suggestedUsername) {
         try {
             if (!strlen($suggestedUsername) > 0) {
-                throw new \model\UsernameIsNotValidException('username is missing');
+                throw new \model\UsernameIsNotValidException('Username is missing');
             }
             if ($suggestedUsername >= self::$MIN_LENGTH) {
                 $this->username = $suggestedUsername;
