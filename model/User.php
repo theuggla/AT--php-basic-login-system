@@ -23,7 +23,6 @@ class User {
         } catch (\model\WrongCredentialsException $e) {
             throw $e;
         } catch (\Exception $e) {
-            echo 'exception';
         }
     }
 
