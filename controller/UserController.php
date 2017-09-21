@@ -30,7 +30,7 @@ namespace controller;
                     $this->displayLogout = false;
                 }
             } else if ($wantsToRegister) {
-                $this->displayRegister = false;
+                $this->displayLogout = false;
                 $this->displayRegister = true;
             } else {
                 $this->loginController->tryToLoginUser();
@@ -44,7 +44,7 @@ namespace controller;
             if ($this->displayLogout) {
                 $this->loginController->showLogoutForm();
             } else if ($this->displayRegister) {
-                echo 'wants to register';
+                $this->registerController->showRegisterForm();
             } else {
                 $this->loginController->showLoginForm();
             }
