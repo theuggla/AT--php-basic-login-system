@@ -29,6 +29,9 @@ namespace controller;
 
             if ($isLoggedIn) {
                 $this->loginController->tryToLogoutUser();
+                if (!$this->user->isUserLoggedIn()) {
+                    $this->displayLogout = false;
+                }
             } else if ($wantsToRegister) {
                 $this->displayRegister = false;
                 $this->displayRegister = true;
