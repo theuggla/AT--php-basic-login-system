@@ -11,7 +11,7 @@ class User {
             $this->username = new Username($username);
             $this->password = new Password($password);
 
-            $query='SELECT * FROM User WHERE username="' . $this->username->getUsername() . '" AND password="' . $this->password->getPassword() . '"';
+            $query='SELECT * FROM User WHERE BINARY username="' . $this->username->getUsername() . '" AND BINARY password="' . $this->password->getPassword() . '"';
             $dbconnection = \model\DBConnector::getConnection('UserRegistry');
             $result = $dbconnection->query($query);
             

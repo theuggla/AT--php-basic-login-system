@@ -4,7 +4,7 @@ namespace view;
 
 	class LogoutView implements IUseCaseView {
     	private static $logout = 'LogoutView::Logout';
-		private static $messageId = 'LogoutView::Message';
+		private static $messageId = 'LoginView::Message';
 
 		public function renderHeading() {
 			return '<h2>Logged in</h2>';
