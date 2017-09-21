@@ -44,8 +44,21 @@ namespace controller;
                 } catch (\model\WrongCredentialsException $e) {
                     $this->currentMessage = $e->getMessage();
                 } 
-            }
+            } else if ($this->loginView->cookieCredentialsArePresent()) {
+                $this->credentials = $this->loginView->getCookieCredentials();
 
+                try {
+                    if ($this->user->verifyUserByCookie($this->credentials['username'],  $this->credentials['password'])) {
+                        $this->user->login();
+                        $this->loginSucceeded = true;
+                        $this->currentMessage = 'Welcome back with cookie';
+                    }
+                } catch (\model\WrongInfoInCookieException $e) {
+                    $this->currentMessage = $e->getMessage();
+                    $this->loginView->removeCookieCredentials();
+                }
+
+        }
         }
 
         public function tryToLogoutUser() {

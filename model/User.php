@@ -21,6 +21,23 @@ class User {
         }
     }
 
+    public function verifyUserByCookie(string $username, string $password) {
+        $this->username->validateUsername($username);
+        $this->password->validatePassword($password);
+
+        //TODO: Fix so that saving a cookie updates the password in the database, then compare here properly
+
+        $query='SELECT * FROM User WHERE BINARY username="' . $username . '"';
+        $dbconnection = \model\DBConnector::getConnection('UserRegistry');
+        $result = $dbconnection->query($query);
+        
+        if ($result->num_rows <= 0) {
+            throw new \model\WrongInfoInCookieException('Wrong information in cookies');
+        } else {
+            return true;
+        }
+    }
+
     private function findUser(string $username, string $password) {
         $this->username->validateUsername($username);
         $this->password->validatePassword($password);
