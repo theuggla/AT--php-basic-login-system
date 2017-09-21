@@ -42,7 +42,10 @@ namespace controller;
         }
 
         public function tryToLogoutUser() {
-            $this->user->logout();
+            if ($this->loginView->userWantsToLogout()) {
+                $this->user->logout();
+                $this->currentMessage = 'Bye bye!';
+            }
         }
 
         public function loginSucceeded() {
