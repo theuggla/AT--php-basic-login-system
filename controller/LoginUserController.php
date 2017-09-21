@@ -11,6 +11,7 @@ namespace controller;
 
         private $currentMessage = '';
         private $lastUsernameUsed = '';
+        private $loginSucceeded = false;
 
         public function __construct($user, $layoutView, $loginView, $dateTimeView) {
             self::$layoutView = $layoutView;
@@ -20,7 +21,7 @@ namespace controller;
             self::$user = $user;
         }
 
-        public function greetUser() {
+        public function tryToLoginUser() {
             if (self::$loginView->userWantsToLogin()) {
                 self::$credentials = self::$loginView->getUserCredentials();
 
@@ -36,14 +37,16 @@ namespace controller;
                 } 
             }
 
-            $this->showLoginForm();
+            if (self::$user->isUserLoggedIn()) {
+                $this->loginSucceeded = true;
+            }
         }
 
-        private function tryToLoginUser() {
-            
+        public function loginSucceeded() {
+            return $this->loginSucceeded;
         }
 
-        private function showLoginForm() {
+        public function showLoginForm() {
             self::$layoutView->renderToOutput(self::$loginView, self::$dateTimeView, $this->currentMessage, $this->lastUsernameUsed);
         }
 

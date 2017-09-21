@@ -9,6 +9,9 @@ namespace controller;
 
         private $user  = 'UserController::User';
 
+        private $displayLogin = false;
+        private $displayRegister = false;
+
         public function __construct(
                                 $user, 
                                 $loginController, 
@@ -24,15 +27,28 @@ namespace controller;
         }
 
         public function greetUserCorrectly() {
-            $isLoggedIn = isset($_SESSION["isLoggedIn"]) ? $_SESSION["isLoggedIn"] : false ;    
+            $isLoggedIn = isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"];   
             $wantsToRegister = isset($_GET["register"]);
 
             if ($isLoggedIn) {
-                echo 'is logged in';
+                $this->displayLogin = true;
             } else if ($wantsToRegister) {
+                $this->displayRegister = true;
+            } else {
+                $this->loginController->tryToLoginUser();
+
+                if ($this->loginController->loginSucceeded()) {
+                    $this->displayLogin = true;
+                }
+                
+            }
+
+            if ($this->displayLogin) {
+                $this->logoutController->greetUser();
+            } else if ($this->displayRegister) {
                 echo 'wants to register';
             } else {
-                $this->loginController->greetUser();
+                $this->loginController->showLoginForm();
             }
         }
     }

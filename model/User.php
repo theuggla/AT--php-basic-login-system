@@ -20,9 +20,8 @@ class User {
             } else {
                 throw new \model\WrongCredentialsException('Username or password is wrong');
             }
-        } catch (\model\WrongCredentialsException $e) {
-            throw $e;
         } catch (\Exception $e) {
+            throw $e;
         }
     }
 
@@ -49,7 +48,7 @@ class User {
     }
 
     public function isUserLoggedIn() {
-        return $_SESSION["isLoggedIn"];
+        return isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"];
     }
 }
 
