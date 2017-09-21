@@ -3,35 +3,34 @@
 namespace model;
 
 class User {
-    private $password;
-    private $username;
-
-    public function getUser(string $username, string $password) {
+    public function doesUserExist($username, $password) {
         try {
-            $this->username = new Username($username);
-            $this->password = new Password($password);
-
-            $query='SELECT * FROM User WHERE BINARY username="' . $this->username->getUsername() . '" AND BINARY password="' . $this->password->getPassword() . '"';
-            $dbconnection = \model\DBConnector::getConnection('UserRegistry');
-            $result = $dbconnection->query($query);
-            
-            if ($result->num_rows > 0) {
-                $this->login();
-            } else {
-                throw new \model\WrongCredentialsException('Wrong name or password');
-            }
+            $this->findUser($username, $password);
+            return true;
         } catch (\Exception $e) {
             throw $e;
         }
     }
 
-    public function create(string $suggestedUsername, string $suggestedPassword) {
+    private function findUser(string $username, string $password) {
+        $username = new Username($username);
+        $password = new Password($password);
+
+        $query='SELECT * FROM User WHERE BINARY username="' . $username->getUsername() . '" AND BINARY password="' . $password->getPassword() . '"';
+        $dbconnection = \model\DBConnector::getConnection('UserRegistry');
+        $result = $dbconnection->query($query);
+        
+        if ($result->num_rows <= 0) {
+            throw new \model\WrongCredentialsException('Wrong name or password');
+        }
+    }
+
+    public function createUser(string $suggestedUsername, string $suggestedPassword) {
         try {
-            $this->username = new Username($suggestedUsername);
-            $this->password = new Password($suggestedPassword);
+            $username = new Username($suggestedUsername);
+            $password = new Password($suggestedPassword);
         } catch (\Exception $e) {
-            echo 'found exception';
-            echo e;
+            throw $e;
         }
     }
 
@@ -41,10 +40,6 @@ class User {
 
     public function login() {
         $_SESSION["isLoggedIn"] = true;
-    }
-
-    public function register() {
-
     }
 
     public function isUserLoggedIn() {

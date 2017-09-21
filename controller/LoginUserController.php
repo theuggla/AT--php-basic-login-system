@@ -25,7 +25,11 @@ namespace controller;
                 $this->credentials = $this->loginView->getUserCredentials();
 
                 try {
-                $this->user->getUser( $this->credentials['username'],  $this->credentials['password']);
+                    if ($this->user->doesUserExist( $this->credentials['username'],  $this->credentials['password'])) {
+                        $this->user->login();
+                        $this->loginSucceeded = true;
+                        $this->currentMessage = 'Welcome';
+                    }
                 } catch (\model\UsernameIsNotValidException $e) {
                     $this->currentMessage = $e->getMessage();
                 } catch (\model\PasswordIsNotValidException $e) {
@@ -35,10 +39,6 @@ namespace controller;
                 } 
             }
 
-            if ($this->user->isUserLoggedIn()) {
-                $this->loginSucceeded = true;
-                $this->currentMessage = 'Welcome';
-            }
         }
 
         public function tryToLogoutUser() {

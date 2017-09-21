@@ -3,23 +3,25 @@
 namespace model;
 
 class Password {
-    private static $MIN_LENGTH = 2;
+    private static $MIN_LENGTH = 1;
+    private static $MIN_VALID_LENGTH = 6;
+
     private $password;
 
     public function __construct(string $suggestedPassword) {
         try {
-            if (!strlen($suggestedPassword) > 0) {
-                throw new \model\PasswordIsNotValidException('Password is missing');
-            }
-            if (strlen($suggestedPassword) >= self::$MIN_LENGTH) {
-                $this->password = $suggestedPassword;
-            }
-
+            $this->validatePassword($suggestedPassword);
+            $this->password = $suggestedPassword;
         } catch (PasswordIsNotValidException $e) {
             throw $e;
-        } catch (\Exception $e) {
-            echo 'exception in password';
-            echo $e;
+        }
+    }
+
+    public function validatePassword($password) {
+        if (strlen($password) < self::$MIN_LENGTH) {
+            throw new \model\PasswordIsNotValidException('Password is missing');
+        } else if (strlen($password) < self::$MIN_VALID_LENGTH) {
+            throw new \model\PasswordIsNotValidException("Password has too few characters, at least " . self::$MIN_VALID_LENGTH . " characters.");
         }
     }
 
