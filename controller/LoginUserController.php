@@ -9,6 +9,8 @@ namespace controller;
         private $credentials = 'LoginUserController::Credentials';
         private $user = 'LoginUserController::User';
 
+        private $COOKIE_EXPIRY;
+
         private $currentMessage = '';
         private $loginSucceeded = false;
 
@@ -18,6 +20,8 @@ namespace controller;
             $this->dateTimeView = $dateTimeView;
 
             $this->user = $user;
+
+            $this->COOKIE_EXPIRY = time() + 120;
         }
 
         public function tryToLoginUser() {
@@ -30,8 +34,9 @@ namespace controller;
                         $this->loginSucceeded = true;
 
                         if ($this->loginView->userWantsToKeepCredentials()) {
-                            $this->credentials['password'] = $this->user->hashPassword($this->credentials['password']);
-                            $this->loginView->setCookieCredentials($this->credentials);
+                            $this->credentials['cookiePassword'] = $this->user->hashPassword($this->credentials['password']);
+                            $this->loginView->setCookieCredentials($this->credentials, $this->COOKIE_EXPIRY);
+                            $this->user->saveCookieCredentials($this->credentials, $this->COOKIE_EXPIRY);
                             $this->currentMessage = 'Welcome and you will be remebered';
                         } else {
                             $this->currentMessage = 'Welcome';
@@ -48,7 +53,7 @@ namespace controller;
                 $this->credentials = $this->loginView->getCookieCredentials();
 
                 try {
-                    if ($this->user->verifyUserByCookie($this->credentials['username'],  $this->credentials['password'])) {
+                    if ($this->user->verifyUserByCookie($this->credentials['username'],  $this->credentials['cookiePassword'])) {
                         $this->user->login();
                         $this->loginSucceeded = true;
                         $this->currentMessage = 'Welcome back with cookie';

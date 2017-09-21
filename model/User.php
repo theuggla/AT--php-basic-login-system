@@ -6,10 +6,12 @@ class User {
 
     private $username;
     private $password;
+    private $cookie;
 
     public function __construct() {
         $this->username = new \model\Username();
         $this->password = new \model\Password();
+        $this->cookie = new \model\Cookie();
     }
 
     public function doesUserExist(string $username, string $password) {
@@ -21,21 +23,8 @@ class User {
         }
     }
 
-    public function verifyUserByCookie(string $username, string $password) {
-        $this->username->validateUsername($username);
-        $this->password->validatePassword($password);
-
-        //TODO: Fix so that saving a cookie updates the password in the database, then compare here properly
-
-        $query='SELECT * FROM User WHERE BINARY username="' . $username . '"';
-        $dbconnection = \model\DBConnector::getConnection('UserRegistry');
-        $result = $dbconnection->query($query);
-        
-        if ($result->num_rows <= 0) {
-            throw new \model\WrongInfoInCookieException('Wrong information in cookies');
-        } else {
-            return true;
-        }
+    public function verifyUserByCookie(string $username, string $cookiePassword) {
+        return $this->cookie->findCookie($username, $cookiePassword);
     }
 
     private function findUser(string $username, string $password) {
@@ -66,6 +55,10 @@ class User {
     public function hashPassword($password) {
         $hashedPassword = $this->password->hashPassword($password);
         return ($hashedPassword);
+    }
+
+    public function saveCookieCredentials($credentials, $expiry) {
+        $this->cookie->saveCookie($credentials["username"], $credentials["cookiePassword"], $expiry);
     }
 }
 

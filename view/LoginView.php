@@ -75,9 +75,9 @@ namespace view;
     		return array('username'=>$username, 'password'=>$password);
 		}
 
-		public function setCookieCredentials($credentials) {
-			setcookie(self::$cookieName, $credentials["username"], time() + (86400 * 30), "/");
-			setcookie(self::$cookiePassword, $credentials["password"], time() + (86400 * 30), "/");
+		public function setCookieCredentials($credentials, $expiry) {
+			setcookie(self::$cookieName, $credentials["username"], $expiry, "/");
+			setcookie(self::$cookiePassword, $credentials["cookiePassword"], $expiry, "/");
 		}
 
 		public function getCookieCredentials() {
@@ -86,7 +86,7 @@ namespace view;
 			if(isset($_COOKIE[self::$cookieName]) && isset($_COOKIE[self::$cookiePassword])) {
 				$credentials;
 				$credentials["username"] = $_COOKIE[self::$cookieName];
-				$credentials["password"] = $_COOKIE[self::$cookiePassword];
+				$credentials["cookiePassword"] = $_COOKIE[self::$cookiePassword];
 				$result = $credentials;
 			} else {
 				$result = false;
