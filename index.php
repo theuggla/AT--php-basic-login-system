@@ -3,8 +3,7 @@
 
     error_reporting(E_ALL);
     ini_set('display_errors', 'On');
-
-    require_once('controller/LogoutUserController.php');
+    
     require_once('controller/LoginUserController.php');
     require_once('controller/RegisterUserController.php');
     require_once('controller/UserController.php');
@@ -16,7 +15,6 @@
     require_once('view/LayoutView.php');
     require_once('view/DateTimeView.php');
     require_once('view/IUseCaseView.php');
-    require_once('view/LogoutView.php');
     require_once('view/RegisterView.php');   
     require_once('view/LoginView.php');
 
@@ -26,15 +24,13 @@
     $layoutView = new \view\LayoutView(); 
     $dateTimeView = new \view\DateTimeView();
     $loginView = new \view\LoginView();
-    $logoutView = new \view\LogoutView();
     $registerView = new \view\RegisterView();
 
     $user = new \model\User();
 
     $loginController = new \controller\LoginUserController($user, $layoutView, $loginView, $dateTimeView);
-    $logoutController = new \controller\LogoutUserController($user, $layoutView, $logoutView, $dateTimeView);
     $registerController = new \controller\RegisterUserController($user, $layoutView, $registerView, $dateTimeView);
-    $mainController = new \controller\UserController($user, $loginController, $logoutController, $registerController);
+    $mainController = new \controller\UserController($user, $loginController, $registerController);
 
     $mainController->greetUserCorrectly();
 /*

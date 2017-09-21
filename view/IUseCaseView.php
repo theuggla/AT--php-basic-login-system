@@ -4,7 +4,6 @@ namespace view;
 
     interface IUseCaseView
     {
-        public function renderNavigation();
-        public function renderBodyWithMessage();
+        public function renderBodyWithMessage(bool $isLoggedIn, string $message);
     }
 ?>

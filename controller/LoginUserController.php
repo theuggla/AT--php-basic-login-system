@@ -3,31 +3,29 @@
 namespace controller;
 
     class LoginUserController {
-        private static $layoutView = 'LoginUserController::LayoutView';
-        private static $loginView = 'LoginUserController::LoginView';
-        private static $dateTimeView = 'LoginUserController::DateTimeView';
-        private static $credentials = 'LoginUserController::Credentials';
-        private static $user = 'LoginUserController::User';
+        private $layoutView = 'LoginUserController::LayoutView';
+        private $loginView = 'LoginUserController::LoginView';
+        private $dateTimeView = 'LoginUserController::DateTimeView';
+        private $credentials = 'LoginUserController::Credentials';
+        private $user = 'LoginUserController::User';
 
         private $currentMessage = '';
-        private $lastUsernameUsed = '';
         private $loginSucceeded = false;
 
         public function __construct($user, $layoutView, $loginView, $dateTimeView) {
-            self::$layoutView = $layoutView;
-            self::$loginView = $loginView;
-            self::$dateTimeView = $dateTimeView;
+            $this->layoutView = $layoutView;
+            $this->loginView = $loginView;
+            $this->dateTimeView = $dateTimeView;
 
-            self::$user = $user;
+            $this->user = $user;
         }
 
         public function tryToLoginUser() {
-            if (self::$loginView->userWantsToLogin()) {
-                self::$credentials = self::$loginView->getUserCredentials();
+            if ($this->loginView->userWantsToLogin()) {
+                $this->credentials = $this->loginView->getUserCredentials();
 
                 try {
-                    $this->lastUsernameUsed = self::$credentials['username'];
-                    self::$user->getUser( self::$credentials['username'],  self::$credentials['password']);
+                $this->user->getUser( $this->credentials['username'],  $this->credentials['password']);
                 } catch (\model\UsernameIsNotValidException $e) {
                     $this->currentMessage = $e->getMessage();
                 } catch (\model\PasswordIsNotValidException $e) {
@@ -37,8 +35,9 @@ namespace controller;
                 } 
             }
 
-            if (self::$user->isUserLoggedIn()) {
+            if ($this->user->isUserLoggedIn()) {
                 $this->loginSucceeded = true;
+                $this->currentMessage = 'Welcome';
             }
         }
 
@@ -47,40 +46,11 @@ namespace controller;
         }
 
         public function showLoginForm() {
-            self::$layoutView->renderToOutput(self::$loginView, self::$dateTimeView, false, $this->currentMessage, $this->lastUsernameUsed);
+            $this->layoutView->renderToOutput($this->loginView, $this->dateTimeView, false, $this->currentMessage);
         }
 
-        public function authenticateUserWithNewCredentials() {
-            if ($this->view->userWantsToAuthenticate()) {
-                $credentials = $this->view->getUserCredentials();
-
-                $this->authenticateUser($credentials);
-            }
-        }
-
-        public function authenticateUserWithSavedCredentials() {
-            if ($this->view->userWantsToAuthenticate()) {
-
-                $credentials = $this->view->getSavedUserCredentials();
-
-                $this->authenticateUser($credentials);
-            }
-        }
-
-        private function authenticateUser() {
-
-             if ($this->user->credentialsAreCorrect($credentials)) {
-
-                $this->view->setUserAsLoggedIn();
-
-                if ($this->view->userWantsToSaveCredentials()) {
-
-                    $this->view->saveUserCredentials();
-
-                } else {
-                    $this->view->setLoginAttemptFailed();
-                }
-             }
+        public function showLogoutForm() {
+            $this->layoutView->renderToOutput($this->loginView, $this->dateTimeView, true, $this->currentMessage);
         }
     }
 ?>

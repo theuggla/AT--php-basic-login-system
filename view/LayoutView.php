@@ -13,18 +13,33 @@ namespace view;
         </head>
         <body>
           <h1>Assignment 2</h1>
-          ' . $mainView->renderNavigation() . '
+          ' . $this->renderNavigation($isLoggedIn) . '
 
           ' . $this->renderIsLoggedIn($isLoggedIn) . '
           
           <div class="container">
-              ' . $mainView->renderBodyWithMessage($message, $lastUsername) . '
+              ' . $mainView->renderBodyWithMessage($isLoggedIn, $message) . '
               
               ' . $dateTime->show() . '
           </div>
          </body>
       </html>
     ';
+    }
+  
+  private function renderNavigation($isLoggedIn) {
+    $response;
+
+      if ($isLoggedIn) {
+        $response = '';
+      }
+      else if ($this->userWantsToRegister()) {
+        $response = '<a href="?">Back to login</a>';
+      } else {
+        $response = '<a href="?register">Register a new user</a>';
+      }
+
+      return $response;
     }
 
   private function renderIsLoggedIn($isLoggedIn) {
@@ -35,5 +50,9 @@ namespace view;
       return '<h2>Not logged in</h2>';
     }
   }
+
+  public function userWantsToRegister() {
+    return isset($_GET["register"]);
   }
+}
 ?>

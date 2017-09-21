@@ -4,24 +4,19 @@ namespace controller;
 
     class UserController {
         private $loginController = 'UserController::LoginController';
-        private $logoutController = 'UserController::Logoutontroller';
         private $registerController = 'UserController::RegisterController';
 
         private $user  = 'UserController::User';
 
-        private $currentMessage = '';
-
-        private $displayLogin = false;
+        private $displayLogout = false;
         private $displayRegister = false;
 
         public function __construct(
                                 $user, 
                                 $loginController, 
-                                $logoutController,
                                 $registerController) {
 
             $this->loginController = $loginController;
-            $this->logoutController = $logoutController;
             $this->registerController = $registerController;
 
             $this->user = $user;
@@ -29,25 +24,24 @@ namespace controller;
         }
 
         public function greetUserCorrectly() {
-            $isLoggedIn = isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"];   
+            $isLoggedIn = $this->user->isUserLoggedIn();  
             $wantsToRegister = isset($_GET["register"]);
 
             if ($isLoggedIn) {
-                $this->displayLogin = true;
+                $this->displayLogout = true;
             } else if ($wantsToRegister) {
                 $this->displayRegister = true;
             } else {
                 $this->loginController->tryToLoginUser();
 
                 if ($this->loginController->loginSucceeded()) {
-                    $this->displayLogin = true;
-                    $this->currentMessage = 'Welcome';
+                    $this->displayLogout = true;
                 }
                 
             }
 
-            if ($this->displayLogin) {
-                $this->logoutController->greetUser($this->currentMessage);
+            if ($this->displayLogout) {
+                $this->loginController->showLogoutForm();
             } else if ($this->displayRegister) {
                 echo 'wants to register';
             } else {

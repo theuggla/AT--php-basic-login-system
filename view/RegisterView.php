@@ -11,15 +11,7 @@ namespace view;
 		private static $message = 'RegisterView::Message';
     	private static $messageId = 'RegisterView::Message';
 
-		public function renderHeading() {
-			return '<h2>Not logged in</h2>';
-		}
-
-		public function renderNavigation() {
-			return '<a href="?">Back to login</a>';
-		}
-
-		 public function renderBodyWithMessage($message = '') {
+		 public function renderBodyWithMessage(bool $isLoggedIn = false, string $message = '') {
         	$response = $this->generateRegisterFormHTML($message);
         	return $response;
     	}
