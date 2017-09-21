@@ -20,10 +20,11 @@ namespace controller;
         }
 
         public function greetUserCorrectly() {
-            $isLoggedIn = $this->user->isUserLoggedIn();  
+            $isLoggedIn = $this->user->isUserLoggedIn(); 
+            $sessionIsNotHijacked = isset($_SESSION["userAgent"]) && $_SESSION["userAgent"] == $_SERVER["HTTP_USER_AGENT"];
             $wantsToRegister = isset($_GET["register"]);
 
-            if ($isLoggedIn) {
+            if ($isLoggedIn && $sessionIsNotHijacked) {
                 $this->loginController->tryToLogoutUser();
                 if (!$this->user->isUserLoggedIn()) {
                     $this->displayLogout = false;

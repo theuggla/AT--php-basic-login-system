@@ -46,6 +46,7 @@ class User {
 
     public function login() {
         $_SESSION["isLoggedIn"] = true;
+        $_SESSION['userAgent'] = $_SERVER['HTTP_USER_AGENT'];
     }
 
     public function isUserLoggedIn() {

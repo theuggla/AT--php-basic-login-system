@@ -21,7 +21,7 @@ namespace controller;
 
             $this->user = $user;
 
-            $this->COOKIE_EXPIRY = time() + 120;
+            $this->COOKIE_EXPIRY = time() + 1000;
         }
 
         public function tryToLoginUser() {
