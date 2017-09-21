@@ -4,11 +4,13 @@ namespace model;
 
 class Cookie {
     public function findCookie(string $username, string $cookiePassword) {
-        $query='SELECT * FROM Cookie WHERE BINARY username="' . $username . '" AND BINARY cookiepassword="' . $cookiePassword . '" AND expiry > ' . time();
+        $query='SELECT * FROM Cookie WHERE BINARY username="' . $username . '" AND BINARY cookiepassword="' . $cookiePassword . '"';
         $dbconnection = \model\DBConnector::getConnection('UserRegistry');
         $result = $dbconnection->query($query);
+
+        $cookie = $result->fetch_object();
         
-        if ($result->num_rows <= 0) {
+        if ($result->num_rows <= 0 || $cookie->expiry < time()) {
             throw new \model\WrongInfoInCookieException('Wrong information in cookies');
         } else {
             return true;
@@ -20,9 +22,8 @@ class Cookie {
 
         $cookiepassword = $dbconnection->real_escape_string($cookiepassword);
         $username = $dbconnection->real_escape_string($username);
-        $timestamp = $dbconnection->real_escape_string($timestamp);
 
-        $query = 'INSERT INTO Cookie (cookiepassword, username, expiry) VALUES ("' . $cookiepassword . '", "' . $username . '", "' . $timestamp . '")';
+        $query = 'INSERT INTO Cookie (cookiepassword, username, expiry) VALUES ("' . $cookiepassword . '", "' . $username . '", ' . $timestamp . ')';
     
         $result = $dbconnection->query($query);
     }
