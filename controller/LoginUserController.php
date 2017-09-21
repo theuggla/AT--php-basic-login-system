@@ -28,7 +28,13 @@ namespace controller;
                     if ($this->user->doesUserExist( $this->credentials['username'],  $this->credentials['password'])) {
                         $this->user->login();
                         $this->loginSucceeded = true;
-                        $this->currentMessage = 'Welcome';
+
+                        if ($this->loginView->userWantsToKeepCredentials()) {
+                            $this->loginView->setCookieCredentials($this->credentials);
+                            $this->currentMessage = 'Welcome and you will be remebered';
+                        } else {
+                            $this->currentMessage = 'Welcome';
+                        }
                     }
                 } catch (\model\UsernameIsNotValidException $e) {
                     $this->currentMessage = $e->getMessage();

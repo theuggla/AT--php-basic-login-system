@@ -65,10 +65,34 @@ namespace view;
     		return isset($_POST[self::$logout]);
 		}
 
+		public function userWantsToKeepCredentials() {
+    		return isset($_POST[self::$keep]);
+		}
+
 		public function getUserCredentials() {
 			$username = $this->getRequestUserName();
 			$password = $this->getRequestPassword();
     		return array('username'=>$username, 'password'=>$password);
+		}
+
+		public function setCookieCredentials($credentials) {
+			setcookie(self::$cookieName, $credentials["username"], time() + (86400 * 30), "/");
+			setcookie(self::$cookiePassword, $credentials["password"], time() + (86400 * 30), "/");
+		}
+
+		public function getCookieCredentials() {
+			$result;
+
+			if(isset($_COOKIE[$cookieName]) && isset($_COOKIE[$cookiePassword])) {
+				$credentials;
+				$credentials["username"] = $_COOKIE[self::$cookieName];
+				$credentials["password"] = $_COOKIE[self::$cookiePassword];
+				$result = $credentials;
+			} else {
+				$result = false;
+			}
+
+			return $result;
 		}	
     
     	private function getRequestUserName()

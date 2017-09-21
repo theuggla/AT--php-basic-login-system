@@ -11,11 +11,7 @@ namespace controller;
         private $displayLogout = true;
         private $displayRegister = false;
 
-        public function __construct(
-                                $user, 
-                                $loginController, 
-                                $registerController) {
-
+        public function __construct($user, $loginController, $registerController) {
             $this->loginController = $loginController;
             $this->registerController = $registerController;
 
