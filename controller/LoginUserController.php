@@ -41,6 +41,10 @@ namespace controller;
             }
         }
 
+        public function tryToLogoutUser() {
+            $this->user->logout();
+        }
+
         public function loginSucceeded() {
             return $this->loginSucceeded;
         }

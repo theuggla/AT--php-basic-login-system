@@ -16,7 +16,7 @@ class User {
             $result = $dbconnection->query($query);
             
             if ($result->num_rows > 0) {
-                $_SESSION["isLoggedIn"] = true;
+                $this->login();
             } else {
                 throw new \model\WrongCredentialsException('Wrong name or password');
             }
@@ -35,12 +35,12 @@ class User {
         }
     }
 
-    public function logOut() {
-
+    public function logout() {
+        $_SESSION["isLoggedIn"] = false;
     }
 
-    public function logIn() {
-
+    public function login() {
+        $_SESSION["isLoggedIn"] = true;
     }
 
     public function register() {

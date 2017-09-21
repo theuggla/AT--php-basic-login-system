@@ -8,7 +8,7 @@ namespace controller;
 
         private $user  = 'UserController::User';
 
-        private $displayLogout = false;
+        private $displayLogout = true;
         private $displayRegister = false;
 
         public function __construct(
@@ -28,14 +28,15 @@ namespace controller;
             $wantsToRegister = isset($_GET["register"]);
 
             if ($isLoggedIn) {
-                $this->displayLogout = true;
+                $this->loginController->tryToLogoutUser();
             } else if ($wantsToRegister) {
+                $this->displayRegister = false;
                 $this->displayRegister = true;
             } else {
                 $this->loginController->tryToLoginUser();
 
-                if ($this->loginController->loginSucceeded()) {
-                    $this->displayLogout = true;
+                if (!$this->loginController->loginSucceeded()) {
+                    $this->displayLogout = false;
                 }
                 
             }
