@@ -3,7 +3,7 @@
 namespace view;
 
 	class LogoutView implements IUseCaseView {
-    	private static $logout = 'LogoutView::Logout';
+    	private static $logout = 'LoginView::Logout';
 		private static $messageId = 'LoginView::Message';
 
 		public function renderHeading() {
@@ -28,12 +28,6 @@ namespace view;
 					<input type="submit" name="' . self::$logout . '" value="logout"/>
 				</form>
 			';
-    	}
-    
-    	//CREATE GET-FUNCTIONS TO FETCH REQUEST VARIABLES
-    	private function getRequestUserName()
-    	{
-        	//RETURN REQUEST VARIABLE: USERNAME
     	}
 	}
 ?>

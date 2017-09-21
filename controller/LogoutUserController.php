@@ -20,7 +20,8 @@ namespace controller;
         }
 
 
-        public function greetUser() {
+        public function greetUser($message = '') {
+            $this->currentMessage = $message;
             self::$layoutView->renderToOutput(self::$logoutView, self::$dateTimeView, $this->currentMessage);
         }
     }

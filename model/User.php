@@ -18,7 +18,7 @@ class User {
             if ($result->num_rows > 0) {
                 $_SESSION["isLoggedIn"] = true;
             } else {
-                throw new \model\WrongCredentialsException('Username or password is wrong');
+                throw new \model\WrongCredentialsException('Wrong name or password');
             }
         } catch (\Exception $e) {
             throw $e;

@@ -48,6 +48,16 @@ namespace view;
 			';
     	}
 
+		private function generateLogoutButtonHTML($message)
+    	{
+        	return '
+				<form  method="post" >
+					<p id="' . self::$messageId . '">' . $message .'</p>
+					<input type="submit" name="' . self::$logout . '" value="logout"/>
+				</form>
+			';
+    	}
+
 		public function userWantsToLogin() {
     		return isset($_POST[self::$login]);
 		}

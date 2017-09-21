@@ -9,6 +9,8 @@ namespace controller;
 
         private $user  = 'UserController::User';
 
+        private $currentMessage = '';
+
         private $displayLogin = false;
         private $displayRegister = false;
 
@@ -39,12 +41,13 @@ namespace controller;
 
                 if ($this->loginController->loginSucceeded()) {
                     $this->displayLogin = true;
+                    $this->currentMessage = 'Welcome';
                 }
                 
             }
 
             if ($this->displayLogin) {
-                $this->logoutController->greetUser();
+                $this->logoutController->greetUser($this->currentMessage);
             } else if ($this->displayRegister) {
                 echo 'wants to register';
             } else {
