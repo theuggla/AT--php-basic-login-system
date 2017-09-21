@@ -7,8 +7,6 @@ class Cookie {
         $query='SELECT * FROM Cookie WHERE BINARY username="' . $username . '" AND BINARY cookiepassword="' . $cookiePassword . '" AND expiry > ' . time();
         $dbconnection = \model\DBConnector::getConnection('UserRegistry');
         $result = $dbconnection->query($query);
-
-        var_dump($result);
         
         if ($result->num_rows <= 0) {
             throw new \model\WrongInfoInCookieException('Wrong information in cookies');
