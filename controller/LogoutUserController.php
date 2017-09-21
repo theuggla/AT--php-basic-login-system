@@ -22,7 +22,7 @@ namespace controller;
 
         public function greetUser($message = '') {
             $this->currentMessage = $message;
-            self::$layoutView->renderToOutput(self::$logoutView, self::$dateTimeView, $this->currentMessage);
+            self::$layoutView->renderToOutput(self::$logoutView, self::$dateTimeView, true, $this->currentMessage);
         }
     }
 ?>

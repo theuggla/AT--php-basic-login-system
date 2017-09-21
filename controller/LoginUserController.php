@@ -47,7 +47,7 @@ namespace controller;
         }
 
         public function showLoginForm() {
-            self::$layoutView->renderToOutput(self::$loginView, self::$dateTimeView, $this->currentMessage, $this->lastUsernameUsed);
+            self::$layoutView->renderToOutput(self::$loginView, self::$dateTimeView, false, $this->currentMessage, $this->lastUsernameUsed);
         }
 
         public function authenticateUserWithNewCredentials() {

@@ -4,24 +4,36 @@ namespace view;
 
   class LayoutView {
   
-    public function renderToOutput(IUseCaseView $mainView, DateTimeView $dateTime, string $message = '', string $lastUsername = '') {
+    public function renderToOutput(IUseCaseView $mainView, DateTimeView $dateTime, bool $isLoggedIn, string $message = '', string $lastUsername = '') {
       echo '<!DOCTYPE html>
-        <html>
-          <head>
-            <meta charset="utf-8">
-            <title>Login Example</title>
-          </head>
-          <body>
-            <h1>Assignment 2</h1>
-              ' . $mainView->renderNavigation() . '
-              ' . $mainView->renderHeading() . '
-            <div class="container">
+      <html>
+        <head>
+          <meta charset="utf-8">
+          <title>Login Example</title>
+        </head>
+        <body>
+          <h1>Assignment 2</h1>
+          ' . $mainView->renderNavigation() . '
+
+          ' . $this->renderIsLoggedIn($isLoggedIn) . '
+          
+          <div class="container">
               ' . $mainView->renderBodyWithMessage($message, $lastUsername) . '
+              
               ' . $dateTime->show() . '
-            </div>
-          </body>
-        </html>
-      ';
+          </div>
+         </body>
+      </html>
+    ';
     }
+
+  private function renderIsLoggedIn($isLoggedIn) {
+    if ($isLoggedIn) {
+      return '<h2>Logged in</h2>';
+    }
+    else {
+      return '<h2>Not logged in</h2>';
+    }
+  }
   }
 ?>
