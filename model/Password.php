@@ -14,6 +14,11 @@ class Password {
         }
     }
 
+    public function hashPassword(string $password) {
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        return $hashedPassword;
+    }
+
 }
 
 ?>

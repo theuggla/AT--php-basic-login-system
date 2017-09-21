@@ -45,6 +45,11 @@ class User {
     public function isUserLoggedIn() {
         return isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"];
     }
+
+    public function hashPassword($password) {
+        $hashedPassword = $this->password->hashPassword($password);
+        return ($hashedPassword);
+    }
 }
 
 ?>

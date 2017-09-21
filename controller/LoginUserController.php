@@ -30,6 +30,7 @@ namespace controller;
                         $this->loginSucceeded = true;
 
                         if ($this->loginView->userWantsToKeepCredentials()) {
+                            $this->credentials['password'] = $this->user->hashPassword($this->credentials['password']);
                             $this->loginView->setCookieCredentials($this->credentials);
                             $this->currentMessage = 'Welcome and you will be remebered';
                         } else {
