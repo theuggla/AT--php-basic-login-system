@@ -20,6 +20,27 @@ namespace controller;
             $this->user = $user;
         }
 
+        public function tryToRegisterUser() {
+            if ($this->registerView->userWantsToRegister()) {
+                $this->credentials = $this->registerView->getUserCredentials();
+
+                try {
+                    $this->user->validateUsername($this->credentials['username']);
+                    $this->user->validatePassword($this->credentials['password']);
+                    $this->user->validatePassword($this->credentials['passwordRepeat']);
+                    $this->user->matchPlaintextPasswords( $this->credentials['password'],  $this->credentials['passwordRepeat'] );
+
+                } catch (\model\UsernameIsNotValidException $e) {
+                    $this->currentMessage = $e->getMessage();
+                } catch (\model\PasswordIsNotValidException $e) {
+                    $this->currentMessage = $e->getMessage();
+                } catch (\model\PasswordMisMatchException $e) {
+                    $this->currentMessage = $e->getMessage();
+                } 
+            } 
+        }
+
+
         public function showRegisterForm() {
             $this->layoutView->renderToOutput($this->registerView, $this->dateTimeView, false, $this->currentMessage);
         }

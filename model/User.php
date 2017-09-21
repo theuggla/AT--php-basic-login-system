@@ -58,8 +58,24 @@ class User {
         return ($hashedPassword);
     }
 
+    public function matchPlaintextPasswords($passOne, $passTwo) {
+        if ($passOne === $passTwo) {
+            return true;
+        } else {
+            throw new \model\PasswordMisMatchException("Passwords do not match.");
+        }
+    }
+
     public function saveCookieCredentials($credentials, $expiry) {
         $this->cookie->saveCookie($credentials["username"], $credentials["cookiePassword"], $expiry);
+    }
+
+    public function validateUsername($username) {
+        return $this->username->validateUsername($username);
+    }
+
+    public function validatePassword($password) {
+        return $this->password->validatePassword($password);
     }
 }
 

@@ -30,8 +30,10 @@ namespace controller;
                     $this->displayLogout = false;
                 }
             } else if ($wantsToRegister) {
+                $this->registerController->tryToRegisterUser();
                 $this->displayLogout = false;
                 $this->displayRegister = true;
+
             } else {
                 $this->loginController->tryToLoginUser();
 
