@@ -49,7 +49,7 @@ namespace controller;
                         $this->user->matchPlaintextPasswords( $this->credentials['password'],  $this->credentials['passwordRepeat'] );
 
                         if ($this->user->doesUserExist($this->credentials['username'])) {
-                            $this->currentMessage = "User exists, pick another username";
+                            $this->currentMessage = "User exists, pick another username.";
                         } else {
                             $this->user->saveUser($this->credentials['username'], $this->credentials['password']);
                             $this->currentMessage = "Registered new user.";

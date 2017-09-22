@@ -68,7 +68,7 @@ namespace controller;
                         }
                     }
                     } else {
-                         $this->currentMessage = "Wrong username or password";
+                         $this->currentMessage = "Wrong name or password";
                     }
                 } catch (\model\UsernameIsNotValidException $e) {
                     $this->currentMessage = $e->getMessage();
