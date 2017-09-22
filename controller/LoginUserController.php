@@ -24,20 +24,41 @@ namespace controller;
             $this->COOKIE_EXPIRY = time() + 1000;
         }
 
-        public function tryToLoginUser() {
+        public function handleLoggedOutUser() {
+            if ($this->loginView->cookieCredentialsArePresent()) {
+
+                $this->credentials = $this->loginView->getCookieCredentials();
+
+                try {
+                    if ($this->user->hasCorrectCookieCredentials($this->credentials['username'],  $this->credentials['cookiePassword'])) {
+                        $this->user->login();
+                        $this->loginSucceeded = true;
+                        $this->currentMessage = 'Welcome back with cookie';
+                    }
+                } catch (\model\WrongInfoInCookieException $e) {
+                    $this->currentMessage = $e->getMessage();
+                    $this->loginView->removeCookieCredentials();
+                }
+            }
+
+
             if ($this->loginView->userWantsToLogin()) {
+
                 $this->credentials = $this->loginView->getUserCredentials();
 
                 try {
                     if ($this->user->doesUserExist( $this->credentials['username'],  $this->credentials['password'])) {
+                        
                         $this->user->login();
                         $this->loginSucceeded = true;
 
                         if ($this->loginView->userWantsToKeepCredentials()) {
+
                             $this->credentials['cookiePassword'] = $this->user->hashPassword($this->credentials['password']);
                             $this->loginView->setCookieCredentials($this->credentials, $this->COOKIE_EXPIRY);
                             $this->user->saveCookieCredentials($this->credentials, $this->COOKIE_EXPIRY);
                             $this->currentMessage = 'Welcome and you will be remebered';
+
                         } else {
                             $this->currentMessage = 'Welcome';
                         }
@@ -49,24 +70,10 @@ namespace controller;
                 } catch (\model\WrongCredentialsException $e) {
                     $this->currentMessage = $e->getMessage();
                 } 
-            } else if ($this->loginView->cookieCredentialsArePresent()) {
-                $this->credentials = $this->loginView->getCookieCredentials();
-
-                try {
-                    if ($this->user->verifyUserByCookie($this->credentials['username'],  $this->credentials['cookiePassword'])) {
-                        $this->user->login();
-                        $this->loginSucceeded = true;
-                        $this->currentMessage = 'Welcome back with cookie';
-                    }
-                } catch (\model\WrongInfoInCookieException $e) {
-                    $this->currentMessage = $e->getMessage();
-                    $this->loginView->removeCookieCredentials();
-                }
-
-        }
+            }
         }
 
-        public function tryToLogoutUser() {
+        public function handleLoggedInUser() {
             if ($this->loginView->userWantsToLogout()) {
                 $this->user->logout();
                 $this->currentMessage = 'Bye bye!';
@@ -78,11 +85,12 @@ namespace controller;
         }
 
         public function showLoginForm() {
-            $this->layoutView->renderToOutput($this->loginView, $this->dateTimeView, false, $this->currentMessage);
+            $this->layoutView->renderToOutput(false, $this->currentMessage, $this->loginView, $this->dateTimeView);
         }
 
         public function showLogoutForm() {
-            $this->layoutView->renderToOutput($this->loginView, $this->dateTimeView, true, $this->currentMessage);
+            $this->layoutView->renderToOutput( true, $this->currentMessage, $this->loginView, $this->dateTimeView);
         }
     }
+
 ?>

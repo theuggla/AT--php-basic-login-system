@@ -23,7 +23,7 @@ class User {
         }
     }
 
-    public function verifyUserByCookie(string $username, string $cookiePassword) {
+    public function hasCorrectCookieCredentials(string $username, string $cookiePassword) {
         return $this->cookie->findCookie($username, $cookiePassword);
     }
 
@@ -49,8 +49,12 @@ class User {
         $_SESSION['userAgent'] = $_SERVER['HTTP_USER_AGENT'];
     }
 
-    public function isUserLoggedIn() {
+    public function isLoggedIn() {
         return isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"];
+    }
+
+    public function hasNotBeenHijacked() {
+        isset($_SESSION["userAgent"]) && $_SESSION["userAgent"] == $_SERVER["HTTP_USER_AGENT"];
     }
 
     public function hashPassword($password) {

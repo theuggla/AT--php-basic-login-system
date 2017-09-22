@@ -34,4 +34,5 @@
     $mainController = new \controller\UserController($user, $loginController, $registerController);
 
     $mainController->greetUserCorrectly();
+    
 ?>

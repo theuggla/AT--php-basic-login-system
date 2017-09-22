@@ -2,9 +2,9 @@
 
 namespace view;
 
-  class LayoutView {
+class LayoutView {
   
-    public function renderToOutput(IUseCaseView $mainView, DateTimeView $dateTime, bool $isLoggedIn, string $message = '', string $lastUsername = '') {
+  public function renderToOutput(bool $isLoggedIn, string $message, IUseCaseView $mainView, DateTimeView $dateTimeView) {
       echo '<!DOCTYPE html>
       <html>
         <head>
@@ -13,36 +13,40 @@ namespace view;
         </head>
         <body>
           <h1>Assignment 2</h1>
-          ' . $this->renderNavigation($isLoggedIn) . '
+          ' . $this->getCorrectNavigation($isLoggedIn) . '
 
-          ' . $this->renderIsLoggedIn($isLoggedIn) . '
+          ' . $this->getCorrectLoggedInStatus($isLoggedIn) . '
           
           <div class="container">
-              ' . $mainView->renderBodyWithMessage($isLoggedIn, $message) . '
+              ' . $mainView->getBodyWithMessage($message, $isLoggedIn) . '
               
-              ' . $dateTime->show() . '
+              ' . $dateTimeView->getFormattedDateString() . '
           </div>
          </body>
       </html>
     ';
-    }
-  
-  private function renderNavigation($isLoggedIn) {
-    $response;
+  }
+
+  private function getCorrectNavigation($isLoggedIn) {
+      $response;
 
       if ($isLoggedIn) {
         $response = '';
       }
-      else if ($this->userWantsToRegister()) {
+      else if ($this->isOnRegisterPage()) {
         $response = '<a href="?">Back to login</a>';
       } else {
         $response = '<a href="?register">Register a new user</a>';
       }
 
       return $response;
-    }
+  }
 
-  private function renderIsLoggedIn($isLoggedIn) {
+  private function isOnRegisterPage() {
+    		return isset($_GET['register']);
+  }
+
+  private function getCorrectLoggedInStatus($isLoggedIn) {
     if ($isLoggedIn) {
       return '<h2>Logged in</h2>';
     }
@@ -50,9 +54,6 @@ namespace view;
       return '<h2>Not logged in</h2>';
     }
   }
-
-  public function userWantsToRegister() {
-    return isset($_GET["register"]);
-  }
 }
+
 ?>

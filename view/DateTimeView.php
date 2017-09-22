@@ -4,7 +4,7 @@ namespace view;
 
 	class DateTimeView {
 
-		public function show() {
+		public function getFormattedDateString() {
 			$dateString = date('j');
 			$ordialDate = new \NumberFormatter( 'en', \NumberFormatter::ORDINAL );
 			$ordialDate = $ordialDate->format($dateString);

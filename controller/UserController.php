@@ -8,8 +8,8 @@ namespace controller;
 
         private $user  = 'UserController::User';
 
-        private $displayLogout = true;
-        private $displayRegister = false;
+        private $displayLogout;
+        private $displayRegister;
 
         public function __construct($user, $loginController, $registerController) {
             $this->loginController = $loginController;
@@ -20,37 +20,41 @@ namespace controller;
         }
 
         public function greetUserCorrectly() {
-            $isLoggedIn = $this->user->isUserLoggedIn(); 
-            $sessionIsNotHijacked = isset($_SESSION["userAgent"]) && $_SESSION["userAgent"] == $_SERVER["HTTP_USER_AGENT"];
-            $wantsToRegister = isset($_GET["register"]);
 
-            if ($isLoggedIn && $sessionIsNotHijacked) {
-                $this->loginController->tryToLogoutUser();
-                if (!$this->user->isUserLoggedIn()) {
-                    $this->displayLogout = false;
-                }
-            } else if ($wantsToRegister) {
-                $this->registerController->tryToRegisterUser();
-                $this->displayLogout = false;
+            if ($this->user->isLoggedIn() && $this->user->hasNotBeenHijacked()) {
+                
+                $this->displayLogout = true;
+                
+                $this->loginController->handleLoggedInUser();
+
+            } else if ($this->registerController->userWantsToRegister()) {
+
                 $this->displayRegister = true;
 
-            } else {
-                $this->loginController->tryToLoginUser();
+                $this->registerController->handleUser();
 
-                if (!$this->loginController->loginSucceeded()) {
-                    $this->displayLogout = false;
+            } else {
+                $this->loginController->handleLoggedOutUser();
+
+                if ($this->loginController->loginSucceeded()) {
+
+                    $this->displayLogout = true;
+
                 }
                 
             }
 
             if ($this->displayLogout) {
+
                 $this->loginController->showLogoutForm();
+
             } else if ($this->displayRegister) {
+
                 $this->registerController->showRegisterForm();
+
             } else {
                 $this->loginController->showLoginForm();
             }
         }
     }
-
 ?>

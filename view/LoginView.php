@@ -12,7 +12,7 @@ namespace view;
     	private static $keep = 'LoginView::KeepMeLoggedIn';
     	private static $messageId = 'LoginView::Message';
 
-		public function renderBodyWithMessage(bool $isLoggedIn, string $message = '') {
+		public function getBodyWithMessage(string $message = '', bool $isLoggedIn) {
 			if ($isLoggedIn) {
 				$response = $this->generateLogoutButtonHTML($message);
 			} else {
@@ -56,14 +56,6 @@ namespace view;
 				</form>
 			';
     	}
-
-		public function userWantsToLogin() {
-    		return isset($_POST[self::$login]);
-		}
-
-		public function userWantsToLogout() {
-    		return isset($_POST[self::$logout]);
-		}
 
 		public function userWantsToKeepCredentials() {
     		return isset($_POST[self::$keep]);
@@ -113,5 +105,15 @@ namespace view;
     	{
         	return isset($_POST[self::$password]) ? $_POST[self::$password]: '' ;
     	}
+
+
+  		public function userWantsToLogin() {
+    		return isset($_POST[self::$login]);
+		}
+
+		public function userWantsToLogout() {
+  			return isset($_POST[self::$logout]);
+  		}
+
 	}
 ?>

@@ -20,8 +20,11 @@ namespace controller;
             $this->user = $user;
         }
 
-        public function tryToRegisterUser() {
-            if ($this->registerView->userWantsToRegister()) {
+        public function userWantsToRegister() {
+            return $this->registerView->userWantsToRegister();
+        }
+
+        public function handleUser() {
                 $this->credentials = $this->registerView->getUserCredentials();
 
                 try {
@@ -30,19 +33,18 @@ namespace controller;
                     $this->user->validatePassword($this->credentials['passwordRepeat']);
                     $this->user->matchPlaintextPasswords( $this->credentials['password'],  $this->credentials['passwordRepeat'] );
 
-                } catch (\model\UsernameIsNotValidException $e) {
-                    $this->currentMessage = "Username has too few characters, at least 3 characters.";
                 } catch (\model\PasswordIsNotValidException $e) {
                     $this->currentMessage = "Password has too few characters, at least 6 characters.";
+                } catch (\model\UsernameIsNotValidException $e) {
+                    $this->currentMessage = "Username has too few characters, at least 3 characters.";
                 } catch (\model\PasswordMisMatchException $e) {
                     $this->currentMessage = $e->getMessage();
                 } 
-            } 
-        }
+            }
 
 
         public function showRegisterForm() {
-            $this->layoutView->renderToOutput($this->registerView, $this->dateTimeView, false, $this->currentMessage);
+            $this->layoutView->renderToOutput(false, $this->currentMessage, $this->registerView, $this->dateTimeView);
         }
     }
 ?>
