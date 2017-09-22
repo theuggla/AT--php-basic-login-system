@@ -29,6 +29,7 @@ namespace controller;
             if ($this->registerView->userWantsToRegister()) {
                 
                 $this->credentials = $this->registerView->getUserCredentials();
+                $_SESSION["latestUsername"] = $this->credentials['username'];
 
                 try {
                     $usernameValid = strlen($this->credentials['username']) >= 3;
