@@ -82,6 +82,10 @@ namespace controller;
             }
         }
 
+        public function loginSucceeded() {
+            return $this->loginSucceeded;
+        }
+
         public function userLoggedIn() {
             return $this->loginSucceeded;
         }

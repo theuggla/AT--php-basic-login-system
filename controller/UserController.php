@@ -8,8 +8,8 @@ namespace controller;
 
         private $user  = 'UserController::User';
 
-        private $displayLoginForm = true;
-        private $displayRegisterForm = false;
+        private $displayLogout = true;
+        private $displayRegister = false;
 
         public function __construct($user, $loginController, $registerController) {
             $this->loginController = $loginController;
@@ -20,7 +20,7 @@ namespace controller;
         }
 
         public function greetUserCorrectly() {
-            $isLoggedIn = $this->user->isUserLoggedIn(); 
+            $isLoggedIn = $this->user->isLoggedIn(); 
             $sessionIsNotHijacked = isset($_SESSION["userAgent"]) && $_SESSION["userAgent"] == $_SERVER["HTTP_USER_AGENT"];
             $wantsToRegister = isset($_GET["register"]);
             if ($isLoggedIn && $sessionIsNotHijacked) {
