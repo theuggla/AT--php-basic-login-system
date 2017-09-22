@@ -14,20 +14,29 @@ class User {
         $this->cookie = new \model\Cookie();
     }
 
-    public function doesUserExist(string $username, string $password) {
-        try {
-            $this->findUser($username, $password);
-            return true;
-        } catch (\Exception $e) {
-            throw $e;
-        }
+    public function doesUserExist(string $username) {
+        return $this->findUser($username);
     }
 
     public function hasCorrectCookieCredentials(string $username, string $cookiePassword) {
         return $this->cookie->findCookie($username, $cookiePassword);
     }
 
-    private function findUser(string $username, string $password) {
+    private function findUser(string $username) {
+        $this->username->validateUsername($username);
+
+        $query='SELECT * FROM User WHERE BINARY username="' . $username . '"';
+        $dbconnection = \model\DBConnector::getConnection('UserRegistry');
+        $result = $dbconnection->query($query);
+        
+        if ($result->num_rows <= 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public function doesUserHaveCorrectCredentials(string $username, string $password) {
         $this->username->validateUsername($username);
         $this->password->validatePassword($password);
 
@@ -37,6 +46,8 @@ class User {
         
         if ($result->num_rows <= 0) {
             throw new \model\WrongCredentialsException('Wrong name or password');
+        } else {
+            return true;
         }
     }
 
@@ -87,7 +98,14 @@ class User {
     }
 
     public function saveUser(string $username, string $password) {
+        $dbconnection = \model\DBConnector::getConnection('UserRegistry');
 
+        $password = $dbconnection->real_escape_string($password);
+        $username = $dbconnection->real_escape_string($username);
+
+        $query = 'INSERT INTO User (username, password) VALUES ("' . $username . '", "' . $password . '")';
+    
+        $result = $dbconnection->query($query);
     }
 }
 

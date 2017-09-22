@@ -49,7 +49,9 @@ namespace controller;
                 $_SESSION["latestUsername"] = $this->credentials['username'];
 
                 try {
-                    if ($this->user->doesUserExist( $this->credentials['username'],  $this->credentials['password'])) {
+                    if ($this->user->doesUserExist($this->credentials['username'])) {
+
+                    if ($this->user->doesUserHaveCorrectCredentials($this->credentials['username'],  $this->credentials['password'])) {
                         
                         $this->user->login();
                         $this->loginSucceeded = true;
@@ -65,6 +67,9 @@ namespace controller;
                             $this->currentMessage = 'Welcome';
                         }
                     }
+                    } else {
+                         $this->currentMessage = "Wrong username or password";
+                    }
                 } catch (\model\UsernameIsNotValidException $e) {
                     $this->currentMessage = $e->getMessage();
                 } catch (\model\PasswordIsNotValidException $e) {
@@ -73,6 +78,7 @@ namespace controller;
                     $this->currentMessage = $e->getMessage();
                 } 
             }
+
         }
 
         public function handleLoggedInUser() {

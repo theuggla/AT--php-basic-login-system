@@ -23,15 +23,22 @@ namespace controller;
             $isLoggedIn = $this->user->isLoggedIn(); 
             $sessionIsNotHijacked = isset($_SESSION["userAgent"]) && $_SESSION["userAgent"] == $_SERVER["HTTP_USER_AGENT"];
             $wantsToRegister = isset($_GET["register"]);
+            $notAlreadyRegistred = !$this->registerController->registrationSuccessful();
+
             if ($isLoggedIn && $sessionIsNotHijacked) {
                 $this->loginController->handleLoggedInUser();
                 if (!$this->user->isLoggedIn()) {
                     $this->displayLogout = false;
                 }
-            } else if ($wantsToRegister) {
-                $this->registerController->handleUser();
+            } else if ($wantsToRegister && $notAlreadyRegistred) {
                 $this->displayLogout = false;
                 $this->displayRegister = true;
+                $this->registerController->handleUser();
+
+                if (!isset($_GET["register"])) {
+                    $this->displayRegister = false;
+                    header("Location: /");
+                }
             } else {
                 $this->loginController->handleLoggedOutUser();
                 if (!$this->loginController->loginSucceeded()) {

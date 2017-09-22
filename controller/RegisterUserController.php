@@ -47,6 +47,15 @@ namespace controller;
                         $this->user->validateUsername($this->credentials['username']);
                         $this->user->validatePassword($this->credentials['password']);
                         $this->user->matchPlaintextPasswords( $this->credentials['password'],  $this->credentials['passwordRepeat'] );
+
+                        if ($this->user->doesUserExist($this->credentials['username'])) {
+                            $this->currentMessage = "User exists, pick another username";
+                        } else {
+                            $this->user->saveUser($this->credentials['username'], $this->credentials['password']);
+                            $this->currentMessage = "Registered new user.";
+                            unset($_GET['register']);
+                            $this->registrySucceeded = true;
+                        }
                     }
 
                 } catch (\model\PasswordIsNotValidException $e) {
@@ -56,10 +65,13 @@ namespace controller;
                     $_SESSION["latestUsername"] = $this->user->cleanUpUsername($this->credentials['username']);
                 } catch (\model\PasswordMisMatchException $e) {
                     $this->currentMessage = $e->getMessage();
-                } 
+                }
             }
         }
 
+        public function registrationSuccessful() {
+            return $this->registrySucceeded;
+        }
 
         public function showRegisterForm() {
             $this->layoutView->renderToOutput(false, $this->currentMessage, $this->registerView, $this->dateTimeView);
