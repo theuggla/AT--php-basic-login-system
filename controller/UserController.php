@@ -29,7 +29,7 @@ namespace controller;
                 
                 $this->loginController->handleLoggedInUser();
 
-                if (!$this->user->isLoggedIn() && !$this->user->hasNotBeenHijacked()) {
+                if (!$this->user->isLoggedIn() && $this->user->hasNotBeenHijacked()) {
                     $this->displayLoginForm = true;
                 }
 
@@ -42,7 +42,7 @@ namespace controller;
             } else {
                 $this->loginController->handleLoggedOutUser();
 
-                if (!$this->user->isLoggedIn() && !$this->user->hasNotBeenHijacked()) {
+                if (!$this->user->isLoggedIn() && $this->user->hasNotBeenHijacked()) {
                     $this->displayLoginForm = true;
                 }
                 
