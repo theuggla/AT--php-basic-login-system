@@ -51,7 +51,7 @@ namespace controller;
                 } catch (\model\PasswordIsNotValidException $e) {
                     $this->currentMessage = "Password has too few characters, at least 6 characters.";
                 } catch (\model\UsernameIsNotValidException $e) {
-                    $this->currentMessage = "Username has too few characters, at least 3 characters.";
+                    $this->currentMessage = $e->getMessage();
                 } catch (\model\PasswordMisMatchException $e) {
                     $this->currentMessage = $e->getMessage();
                 } 
