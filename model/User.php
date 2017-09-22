@@ -54,7 +54,7 @@ class User {
     }
 
     public function hasNotBeenHijacked() {
-        isset($_SESSION["userAgent"]) && $_SESSION["userAgent"] == $_SERVER["HTTP_USER_AGENT"];
+        return isset($_SESSION["userAgent"]) && $_SESSION["userAgent"] == $_SERVER["HTTP_USER_AGENT"];
     }
 
     public function hashPassword($password) {

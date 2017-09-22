@@ -13,6 +13,7 @@ namespace controller;
 
         private $currentMessage = '';
         private $loginSucceeded = false;
+        private $logoutSucceeded = false;
 
         public function __construct($user, $layoutView, $loginView, $dateTimeView) {
             $this->layoutView = $layoutView;
@@ -76,12 +77,17 @@ namespace controller;
         public function handleLoggedInUser() {
             if ($this->loginView->userWantsToLogout()) {
                 $this->user->logout();
+                $this->user->logoutSucceeded = true;
                 $this->currentMessage = 'Bye bye!';
             }
         }
 
-        public function loginSucceeded() {
+        public function userLoggedIn() {
             return $this->loginSucceeded;
+        }
+
+        public function userLoggedOut() {
+            return $this->logoutSucceeded;
         }
 
         public function showLoginForm() {

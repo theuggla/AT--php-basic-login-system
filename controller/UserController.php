@@ -8,8 +8,8 @@ namespace controller;
 
         private $user  = 'UserController::User';
 
-        private $displayLogout;
-        private $displayRegister;
+        private $displayLoginForm = false;
+        private $displayRegisterForm = false;
 
         public function __construct($user, $loginController, $registerController) {
             $this->loginController = $loginController;
@@ -20,40 +20,49 @@ namespace controller;
         }
 
         public function greetUserCorrectly() {
+            $this->delegateControlDependingOnUseCase();
+            $this->displayCorrectView();
+        }
 
-            if ($this->user->isLoggedIn() && $this->user->hasNotBeenHijacked()) {
-                
-                $this->displayLogout = true;
+        private function delegateControlDependingOnUseCase() {
+            if ($this->user->isLoggedIn() && $this->user->hasNotBeenHijacked()) {                
                 
                 $this->loginController->handleLoggedInUser();
 
-            } else if ($this->registerController->userWantsToRegister()) {
+                if (!$this->user->isLoggedIn()) {
+                    $this->displayLoginForm = true;
+                }
 
-                $this->displayRegister = true;
+            } else if ($this->registerController->userWantsToRegister()) {
+                
+                $this->displayRegisterForm = true;
 
                 $this->registerController->handleUser();
 
             } else {
                 $this->loginController->handleLoggedOutUser();
 
-                if ($this->loginController->loginSucceeded()) {
-
-                    $this->displayLogout = true;
-
+                if (!$this->user->isLoggedIn()) {
+                    $this->displayLoginForm = true;
                 }
                 
             }
 
-            if ($this->displayLogout) {
+        }
 
-                $this->loginController->showLogoutForm();
+        private function displayCorrectView() {
+            if ($this->displayLoginForm) {
 
-            } else if ($this->displayRegister) {
+                $this->loginController->showLoginForm();
+                
+            } else if ($this->displayRegisterForm) {
 
                 $this->registerController->showRegisterForm();
 
             } else {
-                $this->loginController->showLoginForm();
+
+                $this->loginController->showLogoutForm();
+                
             }
         }
     }
