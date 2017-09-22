@@ -96,6 +96,8 @@ namespace controller;
                 $this->loginController->showLogoutForm();
                 
             }
+
+            unset($_SESSION["currentMessage"]);
         }
     }
 ?>

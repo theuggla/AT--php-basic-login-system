@@ -53,6 +53,7 @@ namespace controller;
                         } else {
                             $this->user->saveUser($this->credentials['username'], $this->credentials['password']);
                             $this->currentMessage = "Registered new user.";
+                            $_SESSION["currentMessage"] = $this->currentMessage;
                             unset($_GET['register']);
                             $this->registrySucceeded = true;
                         }
@@ -74,7 +75,8 @@ namespace controller;
         }
 
         public function showRegisterForm() {
-            $this->layoutView->renderToOutput(false, $this->currentMessage, $this->registerView, $this->dateTimeView);
+            $message = isset($_SESSION["currentMessage"]) ? $_SESSION["currentMessage"] : $this->currentMessage;
+            $this->layoutView->renderToOutput(false, $message, $this->registerView, $this->dateTimeView);
         }
     }
 ?>

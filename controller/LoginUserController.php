@@ -102,11 +102,13 @@ namespace controller;
         }
 
         public function showLoginForm() {
-            $this->layoutView->renderToOutput(false, $this->currentMessage, $this->loginView, $this->dateTimeView);
+            $message = isset($_SESSION["currentMessage"]) ? $_SESSION["currentMessage"] : $this->currentMessage;
+            $this->layoutView->renderToOutput(false, $message, $this->loginView, $this->dateTimeView);
         }
 
         public function showLogoutForm() {
-            $this->layoutView->renderToOutput( true, $this->currentMessage, $this->loginView, $this->dateTimeView);
+            $message = isset($_SESSION["currentMessage"]) ? $_SESSION["currentMessage"] : $this->currentMessage;
+            $this->layoutView->renderToOutput( true, $message, $this->loginView, $this->dateTimeView);
         }
     }
 
