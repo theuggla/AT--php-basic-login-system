@@ -78,6 +78,10 @@ class User {
         return $this->username->validateUsername($username);
     }
 
+    public function cleanUpUsername($username) {
+        return $this->username->cleanUpUsername($username);
+    }
+
     public function validatePassword($password) {
         return $this->password->validatePassword($password);
     }

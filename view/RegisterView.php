@@ -17,7 +17,7 @@ namespace view;
 
         private function generateRegisterFormHTML($message)
     	{
-			$lastUsernameTried = $this->getRequestUsername();
+			$lastUsernameTried = isset($_SESSION["latestUsername"]) ? $_SESSION["latestUsername"] : '';
 
         	return '
 				<form action="?register" method="post" enctype="multipart/form-data"> 

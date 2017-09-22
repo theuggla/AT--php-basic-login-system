@@ -46,6 +46,7 @@ namespace controller;
             if ($this->loginView->userWantsToLogin()) {
 
                 $this->credentials = $this->loginView->getUserCredentials();
+                $_SESSION["latestUsername"] = $this->credentials['username'];
 
                 try {
                     if ($this->user->doesUserExist( $this->credentials['username'],  $this->credentials['password'])) {

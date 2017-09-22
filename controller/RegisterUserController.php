@@ -52,6 +52,7 @@ namespace controller;
                     $this->currentMessage = "Password has too few characters, at least 6 characters.";
                 } catch (\model\UsernameIsNotValidException $e) {
                     $this->currentMessage = $e->getMessage();
+                    $_SESSION["latestUsername"] = $this->user->cleanUpUsername($this->credentials['username']);
                 } catch (\model\PasswordMisMatchException $e) {
                     $this->currentMessage = $e->getMessage();
                 } 

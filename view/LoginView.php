@@ -24,7 +24,7 @@ namespace view;
     
     	private function generateLoginFormHTML($message)
     	{
-			$lastUsernameTried = $this->getRequestUsername();
+			$lastUsernameTried = isset($_SESSION["latestUsername"]) ? $_SESSION["latestUsername"] : '';
 
         	return '
 				<form method="post" > 

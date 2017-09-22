@@ -5,7 +5,7 @@ namespace model;
 class Username {
     private static $MIN_LENGTH = 1;
     private static $MIN_VALID_LENGTH = 3;
-    private static $INVALID_CHARS = array(">", "<");
+    private static $INVALID_CHARS = array(">", "<", "/", "\\");
 
     public function validateUsername(string $username) {
         if (strlen($username) < self::$MIN_LENGTH) {
@@ -16,11 +16,16 @@ class Username {
             foreach(self::$INVALID_CHARS as $char) {
                 $found = strpos($username , $char);
 
-                if ($found) {
+                if ($found > -1) {
                     throw new \model\UsernameIsNotValidException('Username contains invalid characters.');
                 }
             }
         }
+    }
+
+    public function cleanUpUsername(string $username) {
+        $cleanedUpString = str_replace(self::$INVALID_CHARS , '', $username);
+        return $cleanedUpString;
     }
 
 }
