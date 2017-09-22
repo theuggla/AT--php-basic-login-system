@@ -8,7 +8,7 @@ namespace controller;
 
         private $user  = 'UserController::User';
 
-        private $displayLoginForm = false;
+        private $displayLoginForm = true;
         private $displayRegisterForm = false;
 
         public function __construct($user, $loginController, $registerController) {
@@ -29,8 +29,8 @@ namespace controller;
                 
                 $this->loginController->handleLoggedInUser();
 
-                if (!$this->user->isLoggedIn() && $this->user->hasNotBeenHijacked()) {
-                    $this->displayLoginForm = true;
+                if ($this->user->isLoggedIn()) {
+                    $this->displayLoginForm = false;
                 }
 
             } else if ($this->registerController->userWantsToRegister()) {
@@ -42,8 +42,8 @@ namespace controller;
             } else {
                 $this->loginController->handleLoggedOutUser();
 
-                if (!$this->user->isLoggedIn() && $this->user->hasNotBeenHijacked()) {
-                    $this->displayLoginForm = true;
+                if ($this->user->isLoggedIn()) {
+                    $this->displayLoginForm = false;
                 }
                 
             }
