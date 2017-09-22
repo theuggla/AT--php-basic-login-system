@@ -5,10 +5,9 @@ namespace view;
     class RegisterView implements IUseCaseView {
 
     	private static $name = 'RegisterView::UserName';
-		private static $register = 'register';
+		private static $register = 'RegisterView::Register';
     	private static $password = 'RegisterView::Password';
 		private static $passwordRepeat = 'RegisterView::PasswordRepeat';
-		private static $message = 'RegisterView::Message';
     	private static $messageId = 'RegisterView::Message';
 
 		 public function getBodyWithMessage(string $message = '', bool $isLoggedIn = false) {
@@ -41,8 +40,12 @@ namespace view;
 			';
     	}
 
+		public function userWantsToViewForm() {
+    		return isset($_GET['register']);
+  		}
+
 		public function userWantsToRegister() {
-    		return isset($_GET[self::$register]);
+    		return isset($_POST[self::$register]);
   		}
 
 		public function getUserCredentials() {
