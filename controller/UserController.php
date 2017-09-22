@@ -20,8 +20,31 @@ namespace controller;
         }
 
         public function greetUserCorrectly() {
-            $this->delegateControlDependingOnUseCase();
-            $this->displayCorrectView();
+            $isLoggedIn = $this->user->isUserLoggedIn(); 
+            $sessionIsNotHijacked = isset($_SESSION["userAgent"]) && $_SESSION["userAgent"] == $_SERVER["HTTP_USER_AGENT"];
+            $wantsToRegister = isset($_GET["register"]);
+            if ($isLoggedIn && $sessionIsNotHijacked) {
+                $this->loginController->handleLoggedInUser();
+                if (!$this->user->isLoggedIn()) {
+                    $this->displayLogout = false;
+                }
+            } else if ($wantsToRegister) {
+                $this->displayLogout = false;
+                $this->displayRegister = true;
+            } else {
+                $this->loginController->handleLoggedOutUser();
+                if (!$this->loginController->loginSucceeded()) {
+                    $this->displayLogout = false;
+                }
+                
+            }
+            if ($this->displayLogout) {
+                $this->loginController->showLogoutForm();
+            } else if ($this->displayRegister) {
+                $this->registerController->showRegisterForm();
+            } else {
+                $this->loginController->showLoginForm();
+            }
         }
 
         private function delegateControlDependingOnUseCase() {
