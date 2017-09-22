@@ -29,6 +29,7 @@ namespace controller;
                     $this->displayLogout = false;
                 }
             } else if ($wantsToRegister) {
+                $this->registerController->handleUser();
                 $this->displayLogout = false;
                 $this->displayRegister = true;
             } else {
@@ -38,6 +39,7 @@ namespace controller;
                 }
                 
             }
+
             if ($this->displayLogout) {
                 $this->loginController->showLogoutForm();
             } else if ($this->displayRegister) {

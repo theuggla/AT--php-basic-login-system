@@ -81,6 +81,10 @@ class User {
     public function validatePassword($password) {
         return $this->password->validatePassword($password);
     }
+
+    public function saveUser(string $username, string $password) {
+
+    }
 }
 
 ?>
