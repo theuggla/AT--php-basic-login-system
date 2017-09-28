@@ -105,7 +105,7 @@ namespace controller;
             if ($this->user->isLoggedIn() && $this->user->hasNotBeenHijacked()) {
                 $loggedIn = true;
             } else {
-                $loggedIn = felse;
+                $loggedIn = false;
             }
 
             $this->lastUsername = $this->user->getLatestUsername();
