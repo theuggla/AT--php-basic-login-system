@@ -96,14 +96,21 @@ namespace controller;
             {
                 $this->displayLoginForm = false;
             }
-
         }
 
         private function renderDependingOnLoginStatus() 
         {
+            $loggedin;
+
+            if ($this->user->isLoggedIn() && $this->user->hasNotBeenHijacked()) {
+                $loggedIn = true;
+            } else {
+                $loggedIn = felse;
+            }
+
             $this->lastUsername = $this->user->getLatestUsername();
             $currentHTML = $this->loginUserController->getHTML($this->flashMessage, $this->lastUsername);
-            $this->externalView->renderToOutput($this->user->isLoggedIn(), $currentHTML);
+            $this->externalView->renderToOutput($loggedIn, $currentHTML);
         }
 
         private function renderRegisterForm() 
