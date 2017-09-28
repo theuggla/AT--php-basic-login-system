@@ -11,6 +11,7 @@ namespace controller;
         private $user  = 'UserController::User';
         private $flashMessage = 'UserController::FlashMessage';
         private $lastUsername = 'UserController::LastUsername';
+        private $userIsLoggedIn = 'UserController::LoggedInStatus';
 
         private $externalView;
 
@@ -35,6 +36,8 @@ namespace controller;
 
         private function delegateControlDependingOnUseCase() 
         {
+            $this->userIsLoggedIn = $this->getLoggedInStatus();
+
             if ($this->user->isLoggedIn() && $this->user->hasNotBeenHijacked()) 
             { 
                 $this->determineLogoutAttempt(); 
@@ -100,6 +103,20 @@ namespace controller;
 
         private function renderDependingOnLoginStatus() 
         {
+            $this->lastUsername = $this->user->getLatestUsername();
+            $currentHTML = $this->loginUserController->getHTML($this->flashMessage, $this->lastUsername);
+            $this->externalView->renderToOutput($this->userIsLoggedIn, $currentHTML);
+        }
+
+        private function renderRegisterForm() 
+        {
+            $this->lastUsername = $this->user->getLatestUsername();
+            $currentHTML = $this->registerUserController->getHTML($this->flashMessage, $this->lastUsername);
+            $this->externalView->renderToOutput($this->userisLoggedIn(), $currentHTML);
+        }
+
+        private function getLoggedInStatus()
+        {
             $loggedin;
 
             if ($this->user->isLoggedIn() && $this->user->hasNotBeenHijacked()) {
@@ -108,15 +125,6 @@ namespace controller;
                 $loggedIn = false;
             }
 
-            $this->lastUsername = $this->user->getLatestUsername();
-            $currentHTML = $this->loginUserController->getHTML($this->flashMessage, $this->lastUsername);
-            $this->externalView->renderToOutput($loggedIn, $currentHTML);
-        }
-
-        private function renderRegisterForm() 
-        {
-            $this->lastUsername = $this->user->getLatestUsername();
-            $currentHTML = $this->registerUserController->getHTML($this->flashMessage, $this->lastUsername);
-            $this->externalView->renderToOutput($this->user->isLoggedIn(), $currentHTML);
+            return $loggedIn;
         }
     }
