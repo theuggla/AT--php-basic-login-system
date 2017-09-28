@@ -31,7 +31,8 @@ class Username {
         }
     }
 
-    public function cleanUpUsername(string $username) {
+    public function cleanUpUsername(string $username) 
+    {
         $cleanedUpString = strip_tags($username);
         $cleanedUpString = str_replace(self::$INVALID_CHARS , '', $cleanedUpString);
         return $cleanedUpString;

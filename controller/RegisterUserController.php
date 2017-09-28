@@ -28,8 +28,6 @@ namespace controller;
                 try
                 {
                     $this->getAttemptedCredentials();
-                    echo 'atteptedUsername:';
-                    echo $this->attemptedUsername;
                     $this->validateCredentialsAndSetErrorMessage();
                     $this->checkIfUserAlreadyExists();
                     $this->createNewUser();
@@ -54,8 +52,6 @@ namespace controller;
                 }
                 finally
                 {
-                    echo 'setting username to ';
-                    var_dump($this->attemptedUsername);
                     $this->user->setLatestUsername($this->attemptedUsername);
                 }
             }
