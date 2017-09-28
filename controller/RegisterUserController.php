@@ -135,7 +135,7 @@ namespace controller;
             {
                 $result = false;
             }
-            catch (\model\PasswordIsMissingdException $e) 
+            catch (\model\PasswordIsMissingException $e) 
             {
                 $result = false;
             }
