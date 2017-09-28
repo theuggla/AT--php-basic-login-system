@@ -28,7 +28,8 @@ namespace view;
 
 		public function getAttemptedUsername()
     	{
-        	return isset($_POST[self::$name]) ? $_POST[self::$name] : '' ;
+			$username = isset($_POST[self::$name]) ? $_POST[self::$name] : '';
+        	return $username;
     	}
 
 		public function getAttemptedPassword()

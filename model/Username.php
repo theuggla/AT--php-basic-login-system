@@ -21,18 +21,17 @@ class Username {
         {
             foreach(self::$INVALID_CHARS as $char) 
             {
-                $found = strpos($username , $char);
+                $found = strpos($username, $char);
 
                 if ($found > -1) 
                 {
-                    throw new \model\UsernameIsNotValidException('Username contains invalid characters.');
+                    throw new \model\UsernameHasInvalidCharactersException('Username contains invalid characters.');
                 }
             }
         }
     }
 
-    public function cleanUpUsername(string $username) 
-    {
+    public function cleanUpUsername(string $username) {
         $cleanedUpString = strip_tags($username);
         $cleanedUpString = str_replace(self::$INVALID_CHARS , '', $cleanedUpString);
         return $cleanedUpString;

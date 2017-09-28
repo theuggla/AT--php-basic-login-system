@@ -8,26 +8,38 @@ namespace controller;
         private $registerView = 'RegisterUserController::RegisterView';
         private $user = 'RegisterUserController::User';
 
+        private $attemptedUsername = '';
+        private $attemptedPassword = '';
+        private $atteptedRepeatedPassword = '';
+
         private $currentMessage = '';
         private $registrySucceeded = false;
 
-        public function __construct($user, $registerView) {
+        public function __construct($user, $registerView) 
+        {
             $this->registerView = $registerView;
             $this->user = $user;
         }
 
-        public function handleUserRegisterAttempt() {
-
+        public function handleUserRegisterAttempt() 
+        {
             if ($this->userHasPressedRegisterButton())
             {
                 try
                 {
                     $this->getAttemptedCredentials();
+                    echo 'atteptedUsername:';
+                    echo $this->attemptedUsername;
                     $this->validateCredentialsAndSetErrorMessage();
                     $this->checkIfUserAlreadyExists();
                     $this->createNewUser();
                     $this->currentMessage = "Registered new user";
                 } 
+                catch (\model\UsernameHasInvalidCharactersException $e)
+                {
+                    $this->attemptedUsername = $this->user->cleanUpUsername($this->attemptedUsername);
+                    $this->currentMessage = "Username contains invalid characters.";
+                }
                 catch (\model\DuplicateUserException $e)
                 {
                     $this->currentMessage = "User exists, pick another username.";
@@ -42,6 +54,8 @@ namespace controller;
                 }
                 finally
                 {
+                    echo 'setting username to ';
+                    var_dump($this->attemptedUsername);
                     $this->user->setLatestUsername($this->attemptedUsername);
                 }
             }
@@ -69,7 +83,7 @@ namespace controller;
 
         private function getAttemptedCredentials()
         {
-            $this->attemptedUsername = $this->registerView->getAttemptedUsername();
+            $this->attemptedUsername = addslashes($this->registerView->getAttemptedUsername());
             $this->attemptedPassword = $this->registerView->getAttemptedPassword();
             $this->attemptedRepeatedPassword = $this->registerView->getAttemptedRepeatedPassword();
         }
@@ -78,6 +92,7 @@ namespace controller;
         {
             $usernameIsValid = $this->isUsernameValid();
             $passwordIsValid = $this->isPasswordValid();
+
             if (!($usernameIsValid))
             {
                 $this->currentMessage .= "Username has too few characters, at least " . $this->user->getMinimumUsernameCharacters() . " characters. ";
@@ -109,12 +124,10 @@ namespace controller;
             }
             catch (\model\UsernameIsNotValidException $e) 
             {
-                
                 $result = false;
             } 
             catch (\model\UsernameIsMissingException $e) 
             {
-                
                 $result = false;
             }
 

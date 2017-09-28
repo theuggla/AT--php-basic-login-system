@@ -38,15 +38,13 @@ namespace controller;
             if ($this->user->isLoggedIn() && $this->user->hasNotBeenHijacked()) 
             { 
                 $this->determineLogoutAttempt(); 
-                $this->flashMessage = $this->loginUserController->getCurrentMessage();   
-                $this->lastUsername = $this->user->getLatestUsername();    
+                $this->flashMessage = $this->loginUserController->getCurrentMessage();      
             } 
             else if ($this->externalView->userWantsToRegister()) 
             {
                 $this->displayRegisterForm = true;
                 $this->determineRegisterAttempt();
                 $this->flashMessage = $this->registerUserController->getCurrentMessage();
-                $this->lastUsername = $this->user->getLatestUsername();
             } 
             else 
             {
@@ -99,17 +97,18 @@ namespace controller;
                 $this->displayLoginForm = false;
             }
 
-            $this->lastUsername = $this->user->getLatestUsername();
         }
 
         private function renderDependingOnLoginStatus() 
         {
+            $this->lastUsername = $this->user->getLatestUsername();
             $currentHTML = $this->loginUserController->getHTML($this->flashMessage, $this->lastUsername);
             $this->externalView->renderToOutput($this->user->isLoggedIn(), $currentHTML);
         }
 
         private function renderRegisterForm() 
         {
+            $this->lastUsername = $this->user->getLatestUsername();
             $currentHTML = $this->registerUserController->getHTML($this->flashMessage, $this->lastUsername);
             $this->externalView->renderToOutput($this->user->isLoggedIn(), $currentHTML);
         }
