@@ -1,2 +1,2 @@
-# Login_1DV608
-Interface repository for 1DV608 assignment 2 and 4
+# basic-php-login-system
+Basic login module written in php.

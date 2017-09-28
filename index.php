@@ -15,24 +15,26 @@
 
     require_once('view/LayoutView.php');
     require_once('view/DateTimeView.php');
-    require_once('view/IUseCaseView.php');
     require_once('view/RegisterView.php');   
     require_once('view/LoginView.php');
 
     require_once('model/Exception.php');
-    require_once('model/DBConnector.php');
+    require_once('model/MSQLConnector.php');
+    require_once('model/Persistance.php');
 
-    $layoutView = new \view\LayoutView(); 
     $dateTimeView = new \view\DateTimeView();
+    $layoutView = new \view\LayoutView($dateTimeView);
     $loginView = new \view\LoginView();
     $registerView = new \view\RegisterView();
 
-    $user = new \model\User();
+    $dbconnection = \model\DBConnector::getConnection('UserRegistry');
+    $persistance = new \model\Persistance($dbconnection);
 
-    $loginController = new \controller\LoginUserController($user, $layoutView, $loginView, $dateTimeView);
-    $registerController = new \controller\RegisterUserController($user, $layoutView, $registerView, $dateTimeView);
-    $mainController = new \controller\UserController($user, $loginController, $registerController);
+    $user = new \model\User($persistance);
+    $cookie = new \model\Cookie(1000, $persistance);
 
-    $mainController->greetUserCorrectly();
-    
-?>
+    $loginController = new \controller\LoginUserController($user, $cookie, $loginView);
+    $registerController = new \controller\RegisterUserController($user, $registerView);
+    $mainController = new \controller\UserController($user, $loginController, $registerController, $layoutView);
+
+    $mainController->listenForUserAccessAttempt();

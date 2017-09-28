@@ -3,30 +3,41 @@
 namespace model;
 
 class Cookie {
-    public function findCookie(string $username, string $cookiePassword) {
-        $query='SELECT * FROM Cookie WHERE BINARY username="' . $username . '" AND BINARY cookiepassword="' . $cookiePassword . '"';
-        $dbconnection = \model\DBConnector::getConnection('UserRegistry');
-        $result = $dbconnection->query($query);
 
-        $cookie = $result->fetch_object();
-        
-        if ($result->num_rows <= 0 || $cookie->expiry < time()) {
-            throw new \model\WrongInfoInCookieException('Wrong information in cookies');
-        } else {
+    private static $EXPIRY_TIME;
+    private $persistance;
+
+    public function __construct($expiryTime, $persistance)
+    {
+        self::$EXPIRY_TIME = $expiryTime;
+        $this->persistance = $persistance;
+    }
+
+    public function checkForManipulation(string $username, string $cookiePassword) 
+    {        
+        if ($this->persistance->doesCookieExist($username, $cookiePassword)) 
+        {
             return true;
+        } 
+        else 
+        {
+            throw new \model\WrongInfoInCookieException('Wrong information in cookies');
         }
     }
 
-    public function saveCookie(string $username, string $cookiepassword, int $timestamp) {
-        $dbconnection = \model\DBConnector::getConnection('UserRegistry');
+    public function saveCookie(string $username, string $cookiePassword) 
+    {
+        $timestamp = time() + self::$EXPIRY_TIME;
+        $this->persistance->saveCookie($username, $cookiePassword, $timestamp);
+    }
 
-        $cookiepassword = $dbconnection->real_escape_string($cookiepassword);
-        $username = $dbconnection->real_escape_string($username);
+    public function hashPassword(string $password) {
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        return $hashedPassword;
+    }
 
-        $query = 'INSERT INTO Cookie (cookiepassword, username, expiry) VALUES ("' . $cookiepassword . '", "' . $username . '", ' . $timestamp . ')';
-    
-        $result = $dbconnection->query($query);
+    public function getExpiryTime()
+    {
+        return self::$EXPIRY_TIME;
     }
 }
-
-?>

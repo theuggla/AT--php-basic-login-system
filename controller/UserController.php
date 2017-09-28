@@ -3,101 +3,113 @@
 namespace controller;
 
     class UserController {
-        private $loginController = 'UserController::LoginController';
-        private $registerController = 'UserController::RegisterController';
+        private static $currentMessage = 'LoginModule::UserController::CurrentMessage';
+
+        private $loginUserController = 'UserController::LoginController';
+        private $registerUserController = 'UserController::RegisterController';
 
         private $user  = 'UserController::User';
+        private $flashMessage = 'UserController::FlashMessage';
+        private $lastUsername = 'UserController::LastUsername';
 
-        private $displayLogout = true;
-        private $displayRegister = false;
+        private $externalView;
 
-        public function __construct($user, $loginController, $registerController) {
-            $this->loginController = $loginController;
-            $this->registerController = $registerController;
+        private $displayLoginForm = false;
+        private $displayRegisterForm = false;
+
+        public function __construct($user, $loginUserController, $registerUserController, $externalView) 
+        {
+            $this->loginUserController = $loginUserController;
+            $this->registerUserController = $registerUserController;
+
+            $this->externalView = $externalView;
 
             $this->user = $user;
-
         }
 
-        public function greetUserCorrectly() {
-            $isLoggedIn = $this->user->isLoggedIn(); 
-            $sessionIsNotHijacked = isset($_SESSION["userAgent"]) && $_SESSION["userAgent"] == $_SERVER["HTTP_USER_AGENT"];
-            $wantsToRegister = isset($_GET["register"]);
-            $notAlreadyRegistred = !$this->registerController->registrationSuccessful();
-
-            if ($isLoggedIn && $sessionIsNotHijacked) {
-                $this->loginController->handleLoggedInUser();
-                if (!$this->user->isLoggedIn()) {
-                    $this->displayLogout = false;
-                }
-            } else if ($wantsToRegister && $notAlreadyRegistred) {
-                $this->displayLogout = false;
-                $this->displayRegister = true;
-                $this->registerController->handleUser();
-
-                if (!isset($_GET["register"])) {
-                    $this->displayRegister = false;
-                    header("Location: /");
-                }
-            } else {
-                $this->loginController->handleLoggedOutUser();
-                if (!$this->loginController->loginSucceeded()) {
-                    $this->displayLogout = false;
-                }
-                
-            }
-
-            if ($this->displayLogout) {
-                $this->loginController->showLogoutForm();
-            } else if ($this->displayRegister) {
-                $this->registerController->showRegisterForm();
-            } else {
-                $this->loginController->showLoginForm();
-            }
+        public function listenForUserAccessAttempt()
+        {
+            $this->delegateControlDependingOnUseCase();
+            $this->displayCorrectView();
         }
 
-        private function delegateControlDependingOnUseCase() {
-            if ($this->user->isLoggedIn() && $this->user->hasNotBeenHijacked()) {                
-                
-                $this->loginController->handleLoggedInUser();
-
-                if ($this->user->isLoggedIn()) {
-                    $this->displayLoginForm = false;
-                }
-
-            } else if ($this->registerController->userWantsToRegister()) {
-                
+        private function delegateControlDependingOnUseCase() 
+        {
+            if ($this->user->isLoggedIn() && $this->user->hasNotBeenHijacked()) 
+            { 
+                $this->determineLogoutAttempt(); 
+                $this->flashMessage = $this->loginUserController->getCurrentMessage();   
+                $this->lastUsername = $this->user->getLatestUsername();    
+            } 
+            else if ($this->externalView->userWantsToRegister()) 
+            {
                 $this->displayRegisterForm = true;
+                $this->determineRegisterAttempt();
+                $this->flashMessage = $this->registerUserController->getCurrentMessage();
+                $this->lastUsername = $this->user->getLatestUsername();
+            } 
+            else 
+            {
+                $this->displayLoginForm = true;
+                $this->determineLoginAttempt();   
+                $this->flashMessage = $this->loginUserController->getCurrentMessage();
+                $this->lastUsername = $this->user->getLatestUsername();
+            }
+        }
 
-                $this->registerController->handleUser();
+        private function displayCorrectView() 
+        {
+            if ($this->displayRegisterForm) 
+            {
+                $this->renderRegisterForm();
+            }
+            else
+            {
+                $this->renderDependingOnLoginStatus();
+            }
+        }
 
-            } else {
-                $this->loginController->handleLoggedOutUser();
+        private function determineLogoutAttempt()
+        {
+            $this->loginUserController->handleLoggedInUser();
 
-                if ($this->user->isLoggedIn()) {
-                    $this->displayLoginForm = false;
-                }
-                
+            if ($this->loginUserController->logoutSuccessful()) 
+            {
+                $this->displayLoginForm = true;
+            }
+        }
+
+        private function determineRegisterAttempt()
+        {
+            $this->registerUserController->handleUserRegisterAttempt();;
+
+            if ($this->registerUserController->registrationWasSuccessful()) 
+            {
+                $this->displayRegisterForm = false;
+                header("Location: /");
             }
 
         }
 
-        private function displayCorrectView() {
-            if ($this->displayLoginForm) {
+        private function determineLoginAttempt()
+        {
+            $this->loginUserController->handleLoggedOutUser();
 
-                $this->loginController->showLoginForm();
-                
-            } else if ($this->displayRegisterForm) {
-
-                $this->registerController->showRegisterForm();
-
-            } else {
-
-                $this->loginController->showLogoutForm();
-                
+            if ($this->loginUserController->loginSuccessful()) 
+            {
+                $this->displayLoginForm = false;
             }
+        }
 
-            unset($_SESSION["currentMessage"]);
+        private function renderDependingOnLoginStatus() 
+        {
+            $currentHTML = $this->loginUserController->getHTML($this->flashMessage, $this->lastUsername);
+            $this->externalView->renderToOutput($this->user->isLoggedIn(), $currentHTML);
+        }
+
+        private function renderRegisterForm() 
+        {
+            $currentHTML = $this->registerUserController->getHTML($this->flashMessage, $this->lastUsername);
+            $this->externalView->renderToOutput($this->user->isLoggedIn(), $currentHTML);
         }
     }
-?>

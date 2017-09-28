@@ -3,8 +3,16 @@
 namespace view;
 
 class LayoutView {
+
+  private $dateTimeView;
+
+  public function __construct(DateTimeView $dateTimeView)
+  {
+    $this->dateTimeView = $dateTimeView;
+  }
   
-  public function renderToOutput(bool $isLoggedIn, string $message, IUseCaseView $mainView, DateTimeView $dateTimeView) {
+  public function renderToOutput(bool $isLoggedIn, string $mainViewHTML) 
+  {
       echo '<!DOCTYPE html>
       <html>
         <head>
@@ -14,43 +22,48 @@ class LayoutView {
         <body>
           <h1>Assignment 2</h1>
           ' . $this->getCorrectNavigation($isLoggedIn) . '
-
           ' . $this->getCorrectLoggedInStatus($isLoggedIn) . '
-          
           <div class="container">
-              ' . $mainView->getBodyWithMessage($message, $isLoggedIn) . '
-              
-              ' . $dateTimeView->getFormattedDateString() . '
+              ' . $mainViewHTML . '
+              ' . $this->dateTimeView->getFormattedDateString() . '
           </div>
          </body>
       </html>
     ';
   }
 
-  private function getCorrectNavigation($isLoggedIn) {
+  public function userWantsToRegister() 
+  {
+    		return isset($_GET['register']);
+  }
+
+  private function getCorrectNavigation($isLoggedIn) 
+  {
       $response;
 
-      if ($isLoggedIn) {
+      if ($isLoggedIn) 
+      {
         $response = '';
       }
-      else if ($this->isOnRegisterPage()) {
+      else if ($this->userWantsToRegister()) 
+      {
         $response = '<a href="?">Back to login</a>';
-      } else {
+      } else 
+      {
         $response = '<a href="?register">Register a new user</a>';
       }
 
       return $response;
   }
 
-  private function isOnRegisterPage() {
-    		return isset($_GET['register']);
-  }
-
-  private function getCorrectLoggedInStatus($isLoggedIn) {
-    if ($isLoggedIn) {
+  private function getCorrectLoggedInStatus($isLoggedIn) 
+  {
+    if ($isLoggedIn) 
+    {
       return '<h2>Logged in</h2>';
     }
-    else {
+    else 
+    {
       return '<h2>Not logged in</h2>';
     }
   }

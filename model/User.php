@@ -4,85 +4,73 @@ namespace model;
 
 class User {
 
+    private static $userAgent = 'LoginModule::User::UserAgent';
+    private static $isLoggedIn = 'LoginModule::User::isLoggedIn';
+    private static $latestUsername = 'LoginModule::User::latestUserName';
+
     private $username;
     private $password;
-    private $cookie;
+    private $persistance;
 
-    public function __construct() {
+    public function __construct($persistance)
+    {
         $this->username = new \model\Username();
         $this->password = new \model\Password();
-        $this->cookie = new \model\Cookie();
+        $this->persistance = $persistance;
     }
 
-    public function doesUserExist(string $username) {
-        return $this->findUser($username);
-    }
-
-    public function hasCorrectCookieCredentials(string $username, string $cookiePassword) {
-        return $this->cookie->findCookie($username, $cookiePassword);
-    }
-
-    private function findUser(string $username) {
+    public function doesUserExist(string $username) 
+    {
         $this->username->validateUsername($username);
-
-        $query='SELECT * FROM User WHERE BINARY username="' . $username . '"';
-        $dbconnection = \model\DBConnector::getConnection('UserRegistry');
-        $result = $dbconnection->query($query);
-        
-        if ($result->num_rows <= 0) {
-            return false;
-        } else {
-            return true;
-        }
+        return $this->persistance->doesUserExist($username);
     }
 
-    public function doesUserHaveCorrectCredentials(string $username, string $password) {
+    public function checkThatCredentialsAreValid(string $username, string $password) 
+    {
         $this->username->validateUsername($username);
         $this->password->validatePassword($password);
 
-        $query='SELECT * FROM User WHERE BINARY username="' . $username . '" AND BINARY password="' . $password . '"';
-        $dbconnection = \model\DBConnector::getConnection('UserRegistry');
-        $result = $dbconnection->query($query);
-        
-        if ($result->num_rows <= 0) {
-            throw new \model\WrongCredentialsException('Wrong name or password');
-        } else {
-            return true;
+        if ($this->persistance->doesUserExist($username)) 
+        {
+            $hashedPassword = $this->persistance->getUserPasswordFromUsername($username);
+            $passwordIsCorrect = password_verify($password, $hashedPassword); 
+
+            if ($passwordIsCorrect) 
+            {
+                return true;
+            } 
+            else 
+            {
+                throw new \model\WrongCredentialsException("Wrong credentials");
+            }
+        } 
+        else 
+        {
+            throw new \model\UserIsMissingException('User does not exist');
         }
     }
 
     public function logout() {
-        $_SESSION["isLoggedIn"] = false;
+        $_SESSION[self::$isLoggedIn] = false;
     }
 
     public function login() {
-        $_SESSION["isLoggedIn"] = true;
-        $_SESSION['userAgent'] = $_SERVER['HTTP_USER_AGENT'];
+        $_SESSION[self::$isLoggedIn] = true;
+        $_SESSION[self::$userAgent] = $_SERVER['HTTP_USER_AGENT'];
     }
 
     public function isLoggedIn() {
-        return isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"];
+        return isset($_SESSION[self::$isLoggedIn]) && $_SESSION[self::$isLoggedIn];
     }
 
-    public function hasNotBeenHijacked() {
-        return isset($_SESSION["userAgent"]) && $_SESSION["userAgent"] == $_SERVER["HTTP_USER_AGENT"];
+    public function isLoggedOut() 
+    {
+        return !$this->isLoggedIn();
     }
 
-    public function hashPassword($password) {
-        $hashedPassword = $this->password->hashPassword($password);
-        return ($hashedPassword);
-    }
-
-    public function matchPlaintextPasswords($passOne, $passTwo) {
-        if ($passOne === $passTwo) {
-            return true;
-        } else {
-            throw new \model\PasswordMisMatchException("Passwords do not match.");
-        }
-    }
-
-    public function saveCookieCredentials($credentials, $expiry) {
-        $this->cookie->saveCookie($credentials["username"], $credentials["cookiePassword"], $expiry);
+    public function hasNotBeenHijacked() 
+    {
+        return isset($_SESSION[self::$userAgent]) && $_SESSION[self::$userAgent] == $_SERVER["HTTP_USER_AGENT"];
     }
 
     public function validateUsername($username) {
@@ -97,15 +85,30 @@ class User {
         return $this->password->validatePassword($password);
     }
 
-    public function saveUser(string $username, string $password) {
-        $dbconnection = \model\DBConnector::getConnection('UserRegistry');
+    public function saveUser(string $username, string $password) 
+    {
+        $hashedPassword = $this->password->hashPassword($password);
+        $this->persistance->saveUser($username, $hashedPassword);
+    }
 
-        $password = $dbconnection->real_escape_string($password);
-        $username = $dbconnection->real_escape_string($username);
+    public function getLatestUsername()
+    {
+        return isset($_SESSION[self::$latestUsername]) ? $_SESSION[self::$latestUsername] : '';
+    }
 
-        $query = 'INSERT INTO User (username, password) VALUES ("' . $username . '", "' . $password . '")';
-    
-        $result = $dbconnection->query($query);
+    public function setLatestUsername(string $username)
+    {        
+        $_SESSION[self::$latestUsername] = $username;
+    }
+
+    public function getMinimumPasswordCharacters()
+    {
+        return $this->password::$MIN_VALID_LENGTH;
+    }
+
+    public function getMinimumUsernameCharacters()
+    {
+        return $this->username::$MIN_VALID_LENGTH;
     }
 }
 
