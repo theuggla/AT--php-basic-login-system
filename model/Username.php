@@ -11,7 +11,8 @@ class Username {
     {
         if (strlen($username) < self::$MIN_LENGTH) 
         {
-            throw new \model\UsernameIsNotValidException('Username is missing');
+            echo 'throwing';
+            throw new \model\UsernameIsMissingException('Username is missing');
         } 
         else if (strlen($username) < self::$MIN_VALID_LENGTH) 
         {

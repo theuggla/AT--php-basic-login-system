@@ -10,7 +10,8 @@ class Password {
     {
         if (strlen($password) < self::$MIN_LENGTH) 
         {
-            throw new \model\PasswordIsNotValidException('Password is missing');
+            echo 'throwing';
+            throw new \model\PasswordIsMissingException('Password is missing');
         } 
         else if (strlen($password) < self::$MIN_VALID_LENGTH) 
         {

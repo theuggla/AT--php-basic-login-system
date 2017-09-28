@@ -112,6 +112,11 @@ namespace controller;
                 
                 $result = false;
             } 
+            catch (\model\UsernameIsMissingException $e) 
+            {
+                
+                $result = false;
+            }
 
             return $result;
 
@@ -127,6 +132,10 @@ namespace controller;
                 $result = true;
             }
             catch (\model\PasswordIsNotValidException $e) 
+            {
+                $result = false;
+            }
+            catch (\model\PasswordIsMissingdException $e) 
             {
                 $result = false;
             }

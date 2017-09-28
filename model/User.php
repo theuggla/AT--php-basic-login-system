@@ -25,11 +25,8 @@ class User {
         return $this->persistance->doesUserExist($username);
     }
 
-    public function checkThatCredentialsAreValid(string $username, string $password) 
+    public function checkForUserWithThoseCredentials(string $username, string $password) 
     {
-        $this->username->validateUsername($username);
-        $this->password->validatePassword($password);
-
         if ($this->persistance->doesUserExist($username)) 
         {
             $hashedPassword = $this->persistance->getUserPasswordFromUsername($username);

@@ -53,12 +53,12 @@ namespace controller;
                 $this->currentMessage = self::$manipulatedCookieCredentialsMessage;
                 $this->loginView->removeCookieCredentials();
             }
-            catch (\model\UsernameIsNotValidException $e) 
+            catch (\model\UsernameIsMissingException $e) 
             {
                 $this->currentMessage = self::$noUsernameMessage;
                 $this->user->setLatestUsername($this->currentUsername);
             } 
-            catch (\model\PasswordIsNotValidException $e) 
+            catch (\model\PasswordIsMissingException $e) 
             {
                 $this->currentMessage = self::$noPasswordMessage;
                 $this->user->setLatestUsername($this->currentUsername);
@@ -97,7 +97,35 @@ namespace controller;
         private function attemptLoginWithNewCredentials()
         {
             $this->setCurrentCredentialsFromLoginForm();
+            $this->validateCurrentCredentials();
             $this->loginUserWithCurrentCredentials();
+        }
+
+        private function validateCurrentCredentials()
+        {
+            $this->validateUsername();
+            $this->validatePassword();
+        }
+
+        private function validateUsername()
+        {
+            try
+            {
+                $this->user->validateUsername($this->currentUsername);
+            }
+            catch (\model\UsernameIsNotValidException $e) 
+            {}
+        }
+        
+        private function validatePassword()
+        {
+            try
+            {
+                $this->user->validatePassword($this->currentPassword);
+            }
+            catch (\model\PasswordIsNotValidException $e) 
+            {}
+
         }
 
         private function ensureCookieCredentialsHaveNotBeenManipulated()
@@ -107,7 +135,7 @@ namespace controller;
 
         private function loginUserWithCurrentCredentials()
         {
-            $this->user->checkThatCredentialsAreValid($this->currentUsername, $this->currentPassword);
+            $this->user->checkforUserWithThoseCredentials($this->currentUsername, $this->currentPassword);
             $this->user->login();
             $this->loginSucceeded = true;
 
