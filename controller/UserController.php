@@ -112,7 +112,7 @@ namespace controller;
         {
             $this->lastUsername = $this->user->getLatestUsername();
             $currentHTML = $this->registerUserController->getHTML($this->flashMessage, $this->lastUsername);
-            $this->externalView->renderToOutput($this->userisLoggedIn(), $currentHTML);
+            $this->externalView->renderToOutput($this->userIsLoggedIn(), $currentHTML);
         }
 
         private function getLoggedInStatus()
