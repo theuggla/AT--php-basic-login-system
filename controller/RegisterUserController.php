@@ -34,7 +34,7 @@ namespace controller;
                 }
                 catch (\model\PasswordMisMatchException $e) 
                 {
-                    $this->currentMessage = "Passwords do not match";
+                    $this->currentMessage = "Passwords do not match.";
                 }
                 catch (\model\InvalidCredentialsException $e)
                 {
