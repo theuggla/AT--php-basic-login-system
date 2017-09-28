@@ -53,7 +53,6 @@ namespace controller;
                 $this->displayLoginForm = true;
                 $this->determineLoginAttempt();   
                 $this->flashMessage = $this->loginUserController->getCurrentMessage();
-                $this->lastUsername = $this->user->getLatestUsername();
             }
         }
 
@@ -99,6 +98,8 @@ namespace controller;
             {
                 $this->displayLoginForm = false;
             }
+
+            $this->lastUsername = $this->user->getLatestUsername();
         }
 
         private function renderDependingOnLoginStatus() 

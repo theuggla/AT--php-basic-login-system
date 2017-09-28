@@ -56,10 +56,12 @@ namespace controller;
             catch (\model\UsernameIsNotValidException $e) 
             {
                 $this->currentMessage = self::$noUsernameMessage;
+                $this->user->setLatestUsername($this->currentUsername);
             } 
             catch (\model\PasswordIsNotValidException $e) 
             {
                 $this->currentMessage = self::$noPasswordMessage;
+                $this->user->setLatestUsername($this->currentUsername);
             }
             catch (\model\UserIsMissingException $e) 
             {
