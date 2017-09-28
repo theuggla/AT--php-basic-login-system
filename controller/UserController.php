@@ -103,6 +103,7 @@ namespace controller;
 
         private function renderDependingOnLoginStatus() 
         {
+            $this->userIsLoggedIn = $this->getLoggedInStatus();
             $this->lastUsername = $this->user->getLatestUsername();
             $currentHTML = $this->loginUserController->getHTML($this->flashMessage, $this->lastUsername);
             $this->externalView->renderToOutput($this->userIsLoggedIn, $currentHTML);
@@ -110,6 +111,7 @@ namespace controller;
 
         private function renderRegisterForm() 
         {
+            $this->userIsLoggedIn = $this->getLoggedInStatus();
             $this->lastUsername = $this->user->getLatestUsername();
             $currentHTML = $this->registerUserController->getHTML($this->flashMessage, $this->lastUsername);
             $this->externalView->renderToOutput($this->userIsLoggedIn, $currentHTML);
