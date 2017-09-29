@@ -95,16 +95,18 @@ class LoginUserController
     {
         try {
             $this->user->validateUsername($this->currentUsername);
-        } catch (\model\UsernameIsNotValidException $e) {
-        }
+        } catch (\model\UsernameIsMissingException $e) {
+            throw $e;
+        } catch (\model\InvalidCredentialsException $e) {}
     }
         
     private function validatePassword()
     {
         try {
             $this->user->validatePassword($this->currentPassword);
-        } catch (\model\PasswordIsNotValidException $e) {
-        }
+        } catch (\model\PasswordIsMissingException $e) {
+            throw $e;
+        } catch (\model\InvalidCredentialsException $e) {}
     }
 
     private function ensureCookieCredentialsHaveNotBeenManipulated()

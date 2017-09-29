@@ -3,9 +3,6 @@ namespace controller;
 
 class RegisterUserController
 {
-    private static $noUsernameMessage = 'Username is missing';
-    private static $noPasswordMessage = 'Password is missing';
-
     private $registerView = 'RegisterUserController::RegisterView';
     private $user = 'RegisterUserController::User';
 
@@ -47,11 +44,6 @@ class RegisterUserController
         }
     }
 
-    private function userHasPressedRegisterButton()
-    {
-        return $this->registerView->userWantsToRegister();
-    }
-
     public function registrationWasSuccessful()
     {
         return $this->registrySucceeded;
@@ -67,9 +59,14 @@ class RegisterUserController
         return $this->registerView->getHTML($message, $latestUsername);
     }
 
+    private function userHasPressedRegisterButton()
+    {
+        return $this->registerView->userWantsToRegister();
+    }
+
     private function getAttemptedCredentials()
     {
-        $this->attemptedUsername = addslashes($this->registerView->getAttemptedUsername());
+        $this->attemptedUsername = $this->registerView->getAttemptedUsername();
         $this->attemptedPassword = $this->registerView->getAttemptedPassword();
         $this->attemptedRepeatedPassword = $this->registerView->getAttemptedRepeatedPassword();
     }

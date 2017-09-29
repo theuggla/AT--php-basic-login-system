@@ -11,7 +11,7 @@ class UserController
 
     private $user  = 'UserController::User';
 
-    private $currentFlashMessage = 'UserController::FlashMessage';
+    private $currentFlashMessage = '';
     private $lastUsername = 'UserController::LastUsername';
     private $userIsLoggedIn = 'UserController::LoggedInStatus';
 
@@ -60,6 +60,7 @@ class UserController
             $this->renderRegisterForm();
         } else {
             $this->renderDependingOnLoginStatus();
+            $this->unsetCurrentFlashMessage();
         }
     }
 
@@ -77,7 +78,11 @@ class UserController
         $this->registerUserController->handleUserRegisterAttempt();
 
         if ($this->registerUserController->registrationWasSuccessful()) {
+            $this->currentFlashMessage = $this->registerUserController->getCurrentMessage();
+            $this->updateCurrentUserStatus();
             $this->sendUserToLoginPage();
+        } else {
+            $this->unsetCurrentFlashMessage();
         }
     }
 
@@ -127,7 +132,9 @@ class UserController
 
     private function updateCurrentUserFlashMessage()
     {
-        $_SESSION[self::$currentMessage] = $this->currentFlashMessage;
+        if (strlen($this->currentFlashMessage) > 0) {
+            $_SESSION[self::$currentMessage] = $this->currentFlashMessage;
+        }
     }
 
     private function updateCurrentUserLatestUsername()
@@ -137,6 +144,13 @@ class UserController
 
     private function getCurrentFlashMessage()
     {
-        return $_SESSION[self::$currentMessage];
+        return isset($_SESSION[self::$currentMessage]) ? $_SESSION[self::$currentMessage] : '';
+    }
+
+    private function unsetCurrentFlashMessage()
+    { 
+         if (isset($_SESSION[self::$currentMessage])) {
+             unset($_SESSION[self::$currentMessage]);
+         }
     }
 }
