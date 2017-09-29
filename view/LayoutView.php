@@ -2,18 +2,19 @@
 
 namespace view;
 
-class LayoutView {
+class LayoutView
+{
 
-  private $dateTimeView;
+    private $dateTimeView;
 
-  public function __construct(DateTimeView $dateTimeView)
-  {
-    $this->dateTimeView = $dateTimeView;
-  }
+    public function __construct(DateTimeView $dateTimeView)
+    {
+        $this->dateTimeView = $dateTimeView;
+    }
   
-  public function renderToOutput(bool $isLoggedIn, string $mainViewHTML) 
-  {
-      echo '<!DOCTYPE html>
+    public function renderToOutput(bool $isLoggedIn, string $mainViewHTML)
+    {
+        echo '<!DOCTYPE html>
       <html>
         <head>
           <meta charset="utf-8">
@@ -30,43 +31,34 @@ class LayoutView {
          </body>
       </html>
     ';
-  }
-
-  public function userWantsToRegister() 
-  {
-    		return isset($_GET['register']);
-  }
-
-  private function getCorrectNavigation($isLoggedIn) 
-  {
-      $response;
-
-      if ($isLoggedIn) 
-      {
-        $response = '';
-      }
-      else if ($this->userWantsToRegister()) 
-      {
-        $response = '<a href="?">Back to login</a>';
-      } else 
-      {
-        $response = '<a href="?register">Register a new user</a>';
-      }
-
-      return $response;
-  }
-
-  private function getCorrectLoggedInStatus($isLoggedIn) 
-  {
-    if ($isLoggedIn) 
-    {
-      return '<h2>Logged in</h2>';
     }
-    else 
+
+    public function userWantsToRegister()
     {
-      return '<h2>Not logged in</h2>';
+            return isset($_GET['register']);
     }
-  }
+
+    private function getCorrectNavigation($isLoggedIn)
+    {
+        $response;
+
+        if ($isLoggedIn) {
+            $response = '';
+        } elseif ($this->userWantsToRegister()) {
+            $response = '<a href="?">Back to login</a>';
+        } else {
+            $response = '<a href="?register">Register a new user</a>';
+        }
+
+          return $response;
+    }
+
+    private function getCorrectLoggedInStatus($isLoggedIn)
+    {
+        if ($isLoggedIn) {
+            return '<h2>Logged in</h2>';
+        } else {
+            return '<h2>Not logged in</h2>';
+        }
+    }
 }
-
-?>

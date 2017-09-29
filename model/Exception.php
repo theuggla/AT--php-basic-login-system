@@ -2,80 +2,90 @@
 
 namespace model;
 
-    class UsernameIsNotValidException extends \Exception
+class UsernameIsNotValidException extends \Exception
+{
+    public function __construct($message, $code = 0, \Exception $previous = null)
     {
-        public function __construct($message, $code = 0, \Exception $previous = null) {    
-            parent::__construct($message, $code, $previous);
-        }
+        parent::__construct($message, $code, $previous);
     }
+}
 
-    class PasswordIsNotValidException extends \Exception
+class PasswordIsNotValidException extends \Exception
+{
+    public function __construct($message, $code = 0, \Exception $previous = null)
     {
-        public function __construct($message, $code = 0, \Exception $previous = null) {    
-            parent::__construct($message, $code, $previous);
-        }
+        parent::__construct($message, $code, $previous);
     }
+}
 
-    class PasswordIsMissingException extends \Exception
+class PasswordIsMissingException extends \Exception
+{
+    public function __construct($message, $code = 0, \Exception $previous = null)
     {
-        public function __construct($message, $code = 0, \Exception $previous = null) {    
-            parent::__construct($message, $code, $previous);
-        }
+        parent::__construct($message, $code, $previous);
     }
+}
 
-    class UsernameIsMissingException extends \Exception
+class UsernameIsMissingException extends \Exception
+{
+    public function __construct($message, $code = 0, \Exception $previous = null)
     {
-        public function __construct($message, $code = 0, \Exception $previous = null) {    
-            parent::__construct($message, $code, $previous);
-        }
+        parent::__construct($message, $code, $previous);
     }
+}
 
-    class UsernameHasInvalidCharactersException extends \Exception
+class UsernameHasInvalidCharactersException extends \Exception
+{
+    public function __construct($message, $code = 0, \Exception $previous = null)
     {
-        public function __construct($message, $code = 0, \Exception $previous = null) {    
-            parent::__construct($message, $code, $previous);
-        }
+        parent::__construct($message, $code, $previous);
     }
+}
 
-    class UserIsMissingException extends \Exception
+class UserIsMissingException extends \Exception
+{
+    public function __construct($message, $code = 0, \Exception $previous = null)
     {
-        public function __construct($message, $code = 0, \Exception $previous = null) {    
-            parent::__construct($message, $code, $previous);
-        }
+        parent::__construct($message, $code, $previous);
     }
+}
 
-    class DuplicateUserException extends \Exception
+class DuplicateUserException extends \Exception
+{
+    public function __construct($message, $code = 0, \Exception $previous = null)
     {
-        public function __construct($message, $code = 0, \Exception $previous = null) {    
-            parent::__construct($message, $code, $previous);
-        }
+        parent::__construct($message, $code, $previous);
     }
+}
 
-    class InvalidCredentialsException extends \Exception
+class InvalidCredentialsException extends \Exception
+{
+    public function __construct($message, $code = 0, \Exception $previous = null)
     {
-        public function __construct($message, $code = 0, \Exception $previous = null) {    
-            parent::__construct($message, $code, $previous);
-        }
+        parent::__construct($message, $code, $previous);
     }
+}
 
-    class WrongCredentialsException extends \Exception
+class WrongCredentialsException extends \Exception
+{
+    public function __construct($message, $code = 0, \Exception $previous = null)
     {
-        public function __construct($message, $code = 0, \Exception $previous = null) {    
-            parent::__construct($message, $code, $previous);
-        }
+        parent::__construct($message, $code, $previous);
     }
+}
 
-    class WrongInfoInCookieException extends \Exception
+class WrongInfoInCookieException extends \Exception
+{
+    public function __construct($message, $code = 0, \Exception $previous = null)
     {
-        public function __construct($message, $code = 0, \Exception $previous = null) {    
-            parent::__construct($message, $code, $previous);
-        }
+        parent::__construct($message, $code, $previous);
     }
+}
 
-    class PasswordMisMatchException extends \Exception
+class PasswordMisMatchException extends \Exception
+{
+    public function __construct($message, $code = 0, \Exception $previous = null)
     {
-        public function __construct($message, $code = 0, \Exception $previous = null) {    
-            parent::__construct($message, $code, $previous);
-        }
+        parent::__construct($message, $code, $previous);
     }
-?>
+}

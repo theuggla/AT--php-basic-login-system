@@ -2,42 +2,33 @@
 
 namespace model;
 
-class Username {
+class Username
+{
     private static $MIN_LENGTH = 1;
     public static $MIN_VALID_LENGTH = 3;
     private static $INVALID_CHARS = array(">", "<", "/", "\\");
 
-    public function validateUsername(string $username) 
+    public function validateUsername(string $username)
     {
-        if (strlen($username) < self::$MIN_LENGTH) 
-        {
+        if (strlen($username) < self::$MIN_LENGTH) {
             throw new \model\UsernameIsMissingException('Username is missing');
-        } 
-        else if (strlen($username) < self::$MIN_VALID_LENGTH) 
-        {
+        } elseif (strlen($username) < self::$MIN_VALID_LENGTH) {
             throw new \model\UsernameIsNotValidException("Username has too few characters, at least " . self::$MIN_VALID_LENGTH . " characters.");
-        } 
-        else 
-        {
-            foreach(self::$INVALID_CHARS as $char) 
-            {
+        } else {
+            foreach (self::$INVALID_CHARS as $char) {
                 $found = strpos($username, $char);
 
-                if ($found > -1) 
-                {
+                if ($found > -1) {
                     throw new \model\UsernameHasInvalidCharactersException('Username contains invalid characters.');
                 }
             }
         }
     }
 
-    public function cleanUpUsername(string $username) 
+    public function cleanUpUsername(string $username)
     {
         $cleanedUpString = strip_tags($username);
-        $cleanedUpString = str_replace(self::$INVALID_CHARS , '', $cleanedUpString);
+        $cleanedUpString = str_replace(self::$INVALID_CHARS, '', $cleanedUpString);
         return $cleanedUpString;
     }
-
 }
-
-?>
