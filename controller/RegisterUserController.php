@@ -42,7 +42,7 @@ class RegisterUserController
                 $this->validateCredentialsAndSetErrorMessage();
                 $this->checkIfUserAlreadyExists();
                 $this->createNewUser();
-                $this->currentMessage = self::$registrationSuccessfulMessage;
+                $this->currentMessage = self::$registrationSucessfulMessage;
             } catch (\model\UsernameHasInvalidCharactersException $e) {
                 $this->attemptedUsername = $this->user->cleanUpUsername($this->attemptedUsername);
                 $this->currentMessage = self::$usernameInvalidMessage;
