@@ -12,7 +12,9 @@ class RegisterUserController
     private static $passwordMisMatchMessage = 'Passwords do not match.';
     private static $manipulatedCookieCredentialsMessage = 'Wrong information in cookies';
     private static $MIN_PASSWORD_CHARACTERS;
+    private static $MIN_USERNAME_CHARACTERS;
     private static $badPasswordMessage;
+    private static $badUsernameMessage;
 
 
     private $registerView = 'RegisterUserController::RegisterView';
@@ -31,7 +33,9 @@ class RegisterUserController
         $this->user = $user;
 
         self::$MIN_PASSWORD_CHARACTERS = $this->user->getMinimumPasswordCharacters();
+        self::$MIN_USERNAME_CHARACTERS = $this->user->getMinimumUsernameCharacters();
         self::$badPasswordMessage = "Password has too few characters, at least " . self::$MIN_PASSWORD_CHARACTERS . " characters.";
+        self::$badUsernameMessage = "Username has too few characters, at least " . self::$MIN_USERNAME_CHARACTERS . " characters. ";
     }
 
     public function handleUserRegisterAttempt()
@@ -42,7 +46,6 @@ class RegisterUserController
                 $this->validateCredentialsAndSetErrorMessage();
                 $this->checkIfUserAlreadyExists();
                 $this->createNewUser();
-                $this->currentMessage = self::$registrationSucessfulMessage;
             } catch (\model\UsernameHasInvalidCharactersException $e) {
                 $this->attemptedUsername = $this->user->cleanUpUsername($this->attemptedUsername);
                 $this->currentMessage = self::$usernameInvalidMessage;
@@ -50,8 +53,7 @@ class RegisterUserController
                 $this->currentMessage = self::$takenUsernameMessage;
             } catch (\model\PasswordMisMatchException $e) {
                 $this->currentMessage = self::$passwordMisMatchMessage;
-            } catch (\model\InvalidCredentialsException $e) {
-            }
+            } catch (\model\InvalidCredentialsException $e) {}
             finally
             {
                 $this->user->setLatestUsername($this->attemptedUsername);
@@ -92,7 +94,7 @@ class RegisterUserController
         $passwordIsValid = $this->isPasswordValid();
 
         if (!($usernameIsValid)) {
-            $this->currentMessage .= "Username has too few characters, at least " . $this->user->getMinimumUsernameCharacters() . " characters. ";
+            $this->currentMessage .= self::$badUsernameMessage;
         }
 
         if (!($passwordIsValid)) {
@@ -157,7 +159,7 @@ class RegisterUserController
     private function createNewUser()
     {
         $this->user->saveUser($this->attemptedUsername, $this->attemptedPassword);
-        $this->currentMessage = "Registered new user.";
+        $this->currentMessage = self::$registrationSucessfulMessage;
         $this->registrySucceeded = true;
     }
 }
