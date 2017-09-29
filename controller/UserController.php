@@ -34,6 +34,7 @@ class UserController
     {
         $this->delegateControlDependingOnUseCase();
         $this->displayCorrectView();
+        $this->unsetCurrentFlashMessage();
     }
 
     private function delegateControlDependingOnUseCase()
@@ -60,7 +61,6 @@ class UserController
             $this->renderRegisterForm();
         } else {
             $this->renderDependingOnLoginStatus();
-            $this->unsetCurrentFlashMessage();
         }
     }
 
@@ -81,8 +81,6 @@ class UserController
             $this->currentFlashMessage = $this->registerUserController->getCurrentMessage();
             $this->updateCurrentUserStatus();
             $this->sendUserToLoginPage();
-        } else {
-            $this->unsetCurrentFlashMessage();
         }
     }
 
