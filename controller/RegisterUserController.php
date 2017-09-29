@@ -30,7 +30,7 @@ class RegisterUserController
         $this->registerView = $registerView;
         $this->user = $user;
 
-        self::$MIN_PASSWOD_CHARACTERS = $this->user->getMinimumPasswordCharacters();
+        self::$MIN_PASSWORD_CHARACTERS = $this->user->getMinimumPasswordCharacters();
         self::$badPasswordMessage = "Password has too few characters, at least " . self::$MIN_PASSWORD_CHARACTERS . " characters.";
     }
 
