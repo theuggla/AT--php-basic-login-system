@@ -104,7 +104,7 @@ class RegisterUserController
         if ($usernameIsValid && $passwordIsValid) {
             $this->comparePlaintextPasswords($this->attemptedPassword, $this->attemptedRepeatedPassword);
         } else {
-            throw new \model\InvalidCredentialsException("Credentials are invalid.");
+            throw new \model\InvalidCredentialsException();
         }
     }
 
@@ -117,9 +117,7 @@ class RegisterUserController
             $result = true;
         } catch (\model\UsernameHasInvalidCharactersException $e) {
             throw $e;
-        }catch (\model\UsernameIsNotValidException $e) {
-            $result = false;
-        } catch (\model\UsernameIsMissingException $e) {
+        } catch (\model\UsernameIsNotValidException $e) {
             $result = false;
         }
 
@@ -135,8 +133,6 @@ class RegisterUserController
             $result = true;
         } catch (\model\PasswordIsNotValidException $e) {
             $result = false;
-        } catch (\model\PasswordIsMissingException $e) {
-            $result = false;
         }
 
         return $result;
@@ -145,14 +141,14 @@ class RegisterUserController
     private function comparePlaintextPasswords($firstPassword, $secondPassword)
     {
         if (!($firstPassword == $secondPassword)) {
-            throw new \model\PasswordMisMatchException("Passwords do not match.");
+            throw new \model\PasswordMisMatchException();
         }
     }
 
     private function checkIfUserAlreadyExists()
     {
         if ($this->user->doesUserExist($this->attemptedUsername)) {
-            throw new \model\DuplicateUserException("User already exists.");
+            throw new \model\DuplicateUserException();
         }
     }
 
