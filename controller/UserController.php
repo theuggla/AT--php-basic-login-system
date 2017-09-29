@@ -34,7 +34,6 @@ class UserController
     {
         $this->delegateControlDependingOnUseCase();
         $this->displayCorrectView();
-        $this->unsetCurrentFlashMessage();
     }
 
     private function delegateControlDependingOnUseCase()
@@ -69,7 +68,7 @@ class UserController
         $this->loginUserController->handleLoggedInUser();
 
         if ($this->loginUserController->logoutSuccessful()) {
-            $this->sendUserToLoginPage();
+            $this->displayLoginForm = true;
         }
     }
 
@@ -130,9 +129,7 @@ class UserController
 
     private function updateCurrentUserFlashMessage()
     {
-        if (strlen($this->currentFlashMessage) > 0) {
-            $_SESSION[self::$currentMessage] = $this->currentFlashMessage;
-        }
+        $_SESSION[self::$currentMessage] = $this->currentFlashMessage;
     }
 
     private function updateCurrentUserLatestUsername()
@@ -143,12 +140,5 @@ class UserController
     private function getCurrentFlashMessage()
     {
         return isset($_SESSION[self::$currentMessage]) ? $_SESSION[self::$currentMessage] : '';
-    }
-
-    private function unsetCurrentFlashMessage()
-    { 
-         if (isset($_SESSION[self::$currentMessage])) {
-             unset($_SESSION[self::$currentMessage]);
-         }
     }
 }

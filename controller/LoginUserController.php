@@ -7,7 +7,7 @@ class LoginUserController
     private static $newCredentialsLoginSucessfullMessage = 'Welcome';
     private static $saveCookieLoginSucessfullMessage = 'Welcome and you will be remembered';
     private static $cookieLoginSuccessfulMessage = 'Welcome back with cookie';
-    private static $logoutSucessfullMessage = 'Bye bye!';
+    private static $logoutSucessfulMessage = 'Bye bye!';
     private static $wrongCredentialsMessage = 'Wrong name or password';
     private static $noUsernameMessage = 'Username is missing';
     private static $noPasswordMessage = 'Password is missing';
@@ -141,7 +141,7 @@ class LoginUserController
         $this->user->logout();
         $this->loginView->removeCookieCredentials();
         $this->logoutSucceeded = true;
-        $this->currentMessage = self::$logoutSucessfullMessage;
+        $this->currentMessage = self::$logoutSucessfulMessage;
     }
 
     private function setCurrentCredentialsFromCookie()
