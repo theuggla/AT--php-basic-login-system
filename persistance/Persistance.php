@@ -2,7 +2,7 @@
 
 namespace persistance;
 
-class Persistance implements IPersistance
+class Persistance implements \model\IPersistance
 {
 
     private static $dbconnection;

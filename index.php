@@ -4,15 +4,17 @@
     error_reporting(E_ALL);
     ini_set('display_errors', 'On');
 
+    require_once('model/IPersistance.php');
+
     // External dependecies - the view to be injected into, and a database / other persistance layer
     // that implements the IPersistance interface.
     require_once('view/LayoutView.php');
     require_once('view/DateTimeView.php');
-    require_once('model/MSQLConnector.php');
-    require_once('model/Persistance.php');
+    require_once('persistance/MSQLConnector.php');
+    require_once('persistance/Persistance.php');
 
     $msqlconnection = \persistance\MSQLConnector::getConnection('UserRegistry');
-    $persistance = new \persistance\Persistance($dbconnection);
+    $persistance = new \persistance\Persistance($msqlconnection);
     $dateTimeView = new \view\DateTimeView();
     $layoutView = new \view\LayoutView($dateTimeView);
     // End external dependencies.

@@ -4,29 +4,30 @@ namespace controller;
 
 class UserController
 {
-    private static $currentMessage = 'LoginModule::UserController::CurrentMessage';
+    private static $currentMessage = 'LoginModule::UserController::CurrentFlashMessage';
 
     private $loginUserController = 'UserController::LoginController';
     private $registerUserController = 'UserController::RegisterController';
 
     private $user  = 'UserController::User';
-    private $flashMessage = 'UserController::FlashMessage';
+
+    private $currentFlashMessage = 'UserController::FlashMessage';
     private $lastUsername = 'UserController::LastUsername';
     private $userIsLoggedIn = 'UserController::LoggedInStatus';
 
-    private $externalView;
+    private $externalView = 'UserController::ExternalView';
 
     private $displayLoginForm = false;
     private $displayRegisterForm = false;
 
     public function __construct($user, $loginUserController, $registerUserController, $externalView)
     {
+        $this->user = $user;
+
         $this->loginUserController = $loginUserController;
         $this->registerUserController = $registerUserController;
 
         $this->externalView = $externalView;
-
-        $this->user = $user;
     }
 
     public function listenForUserAccessAttempt()
@@ -37,19 +38,19 @@ class UserController
 
     private function delegateControlDependingOnUseCase()
     {
-        $this->userIsLoggedIn = $this->getLoggedInStatus();
+        $this->updateCurrentUserStatus();
 
-        if ($this->user->isLoggedIn() && $this->user->hasNotBeenHijacked()) {
-            $this->determineLogoutAttempt();
-            $this->flashMessage = $this->loginUserController->getCurrentMessage();
-        } elseif ($this->externalView->userWantsToRegister()) {
+        if ($this->userIsLoggedIn) {
+            $this->determineResultOfLogoutAttempt();
+            $this->currentFlashMessage = $this->loginUserController->getCurrentMessage();
+        } else if ($this->externalView->userWantsToRegister()) {
             $this->displayRegisterForm = true;
-            $this->determineRegisterAttempt();
-            $this->flashMessage = $this->registerUserController->getCurrentMessage();
+            $this->determineResultOfRegisterAttempt();
+            $this->currentFlashMessage = $this->registerUserController->getCurrentMessage();
         } else {
             $this->displayLoginForm = true;
-            $this->determineLoginAttempt();
-            $this->flashMessage = $this->loginUserController->getCurrentMessage();
+            $this->determineResultOfLoginAttempt();
+            $this->currentFlashMessage = $this->loginUserController->getCurrentMessage();
         }
     }
 
@@ -62,7 +63,7 @@ class UserController
         }
     }
 
-    private function determineLogoutAttempt()
+    private function determineResultOfLogoutAttempt()
     {
         $this->loginUserController->handleLoggedInUser();
 
@@ -71,18 +72,22 @@ class UserController
         }
     }
 
-    private function determineRegisterAttempt()
+    private function determineResultOfRegisterAttempt()
     {
         $this->registerUserController->handleUserRegisterAttempt();
-        ;
 
         if ($this->registerUserController->registrationWasSuccessful()) {
-            $this->displayRegisterForm = false;
-            header("Location: /");
+            $this->sendUserToLoginPage();
         }
     }
 
-    private function determineLoginAttempt()
+    private function sendUserToLoginPage()
+    {
+        $this->displayRegisterForm = false;
+        header("Location: /");
+    }
+
+    private function determineResultOfLoginAttempt()
     {
         $this->loginUserController->handleLoggedOutUser();
 
@@ -93,30 +98,39 @@ class UserController
 
     private function renderDependingOnLoginStatus()
     {
-        $this->userIsLoggedIn = $this->getLoggedInStatus();
-        $this->lastUsername = $this->user->getLatestUsername();
-        $currentHTML = $this->loginUserController->getHTML($this->flashMessage, $this->lastUsername);
+        $this->updateCurrentUserStatus();
+        $currentHTML = $this->loginUserController->getHTML($_SESSION[self::$currentMessage], $this->lastUsername);
+
         $this->externalView->renderToOutput($this->userIsLoggedIn, $currentHTML);
     }
 
     private function renderRegisterForm()
     {
-        $this->userIsLoggedIn = $this->getLoggedInStatus();
-        $this->lastUsername = $this->user->getLatestUsername();
-        $currentHTML = $this->registerUserController->getHTML($this->flashMessage, $this->lastUsername);
+        $this->updateCurrentUserStatus();
+        $currentHTML = $this->registerUserController->getHTML($_SESSION[self::$currentMessage], $this->lastUsername);
+
         $this->externalView->renderToOutput($this->userIsLoggedIn, $currentHTML);
     }
 
-    private function getLoggedInStatus()
+    private function updateCurrentUserStatus()
     {
-        $loggedin;
+        $this->updateCurrentUserLoggedInStatus();
+        $this->updateCurrentUserFlashMessage();
+        $this->updateCurrentUserLatestUsername();
+    }
 
-        if ($this->user->isLoggedIn() && $this->user->hasNotBeenHijacked()) {
-            $loggedIn = true;
-        } else {
-            $loggedIn = false;
-        }
+    private function updateCurrentUserLoggedInStatus()
+    {
+        $this->userIsLoggedIn = ($this->user->isLoggedIn() && $this->user->hasNotBeenHijacked());
+    }
 
-        return $loggedIn;
+    private function updateCurrentUserFlashMessage()
+    {
+        $_SESSION[self::$currentMessage] = $this->currentFlashMessage;
+    }
+
+    private function updateCurrentUserLatestUsername()
+    {
+        $this->lastUsername = $this->user->getLatestUsername();
     }
 }
