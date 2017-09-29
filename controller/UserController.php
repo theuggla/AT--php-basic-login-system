@@ -68,7 +68,7 @@ class UserController
         $this->loginUserController->handleLoggedInUser();
 
         if ($this->loginUserController->logoutSuccessful()) {
-            $this->displayLoginForm = true;
+            $this->sendUserToLoginPage();
         }
     }
 
@@ -83,6 +83,7 @@ class UserController
 
     private function sendUserToLoginPage()
     {
+        $this->displayLoginForm = true;
         $this->displayRegisterForm = false;
         header("Location: /");
     }
@@ -99,7 +100,7 @@ class UserController
     private function renderDependingOnLoginStatus()
     {
         $this->updateCurrentUserStatus();
-        $currentHTML = $this->loginUserController->getHTML($_SESSION[self::$currentMessage], $this->lastUsername);
+        $currentHTML = $this->loginUserController->getHTML($this->getCurrentFlashMessage(), $this->lastUsername);
 
         $this->externalView->renderToOutput($this->userIsLoggedIn, $currentHTML);
     }
@@ -107,7 +108,7 @@ class UserController
     private function renderRegisterForm()
     {
         $this->updateCurrentUserStatus();
-        $currentHTML = $this->registerUserController->getHTML($_SESSION[self::$currentMessage], $this->lastUsername);
+        $currentHTML = $this->registerUserController->getHTML($this->getCurrentFlashMessage(), $this->lastUsername);
 
         $this->externalView->renderToOutput($this->userIsLoggedIn, $currentHTML);
     }
@@ -132,5 +133,10 @@ class UserController
     private function updateCurrentUserLatestUsername()
     {
         $this->lastUsername = $this->user->getLatestUsername();
+    }
+
+    private function getCurrentFlashMessage()
+    {
+        return $_SESSION[self::$currentMessage];
     }
 }
