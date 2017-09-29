@@ -98,7 +98,9 @@ class RegisterUserController
         try {
             $this->user->validateUsername($this->attemptedUsername);
             $result = true;
-        } catch (\model\UsernameIsNotValidException $e) {
+        } catch (\model\UsernameHasInvalidCharactersException $e) {
+            throw $e;
+        }catch (\model\UsernameIsNotValidException $e) {
             $result = false;
         } catch (\model\UsernameIsMissingException $e) {
             $result = false;
