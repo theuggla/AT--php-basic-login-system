@@ -4,7 +4,7 @@ namespace controller;
 
 class UserController
 {
-    private static $currentMessage = 'LoginModule::UserController::CurrentFlashMessage';
+    private static $currentMessage = 'UpdatedLoginModule::UserController::CurrentFlashMessage';
 
     private $loginUserController = 'UserController::LoginController';
     private $registerUserController = 'UserController::RegisterController';

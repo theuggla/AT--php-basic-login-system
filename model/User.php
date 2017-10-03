@@ -4,10 +4,9 @@ namespace model;
 
 class User
 {
-
-    private static $userAgent = 'LoginModule::User::UserAgent';
-    private static $isLoggedIn = 'LoginModule::User::isLoggedIn';
-    private static $latestUsername = 'LoginModule::User::latestUserName';
+    private static $userAgent = 'UpdatedLoginModule::User::UserAgent';
+    private static $isLoggedIn = 'UpdatedLoginModule::User::IsLoggedIn';
+    private static $latestUsername = 'UpdatedLoginModule::User::LatestUserName';
 
     private $username;
     private $password;
