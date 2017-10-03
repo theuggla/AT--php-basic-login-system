@@ -13,7 +13,7 @@
     require_once('persistance/MSQLConnector.php');
     require_once('persistance/Persistance.php');
 
-    $msqlconnection = \persistance\MSQLConnector::getConnection('UserRegistry');
+    $msqlconnection = \persistance\MSQLConnector::getConnection('UpdatedUserRegistry');
     $persistance = new \persistance\Persistance($msqlconnection);
     $dateTimeView = new \view\DateTimeView();
     $layoutView = new \view\LayoutView($dateTimeView);
