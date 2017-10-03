@@ -87,7 +87,7 @@ class UserController
     {
         $this->displayLoginForm = true;
         $this->displayRegisterForm = false;
-        header("Location: /");
+        header("Location: /added-functionality/");
     }
 
     private function determineResultOfLoginAttempt()
