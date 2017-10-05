@@ -14,8 +14,7 @@ class StickSelection {
 	 * @param [type] $amount [description]
 	 */
 	public function __construct($amount) {
-
-		if ((int)$amount > 3 || (int)$amount < 1)
+		if ($amount <= 3 && $amount >= 1)
 		{
 			$this->amount = $amount;
 		}

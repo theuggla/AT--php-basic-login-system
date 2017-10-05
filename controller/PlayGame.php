@@ -36,7 +36,8 @@ class PlayGame {
 				$sticksDrawnByPlayer = $this->view->getNumberOfSticks();
 				$this->game->playerSelectsSticks($sticksDrawnByPlayer, $this->view);
 			} catch(\Exception $e) {
-				$this->message = $e;
+				$this->message = 'Unauthorized input';
+				throw $e;
 			}
 		}
 	}
