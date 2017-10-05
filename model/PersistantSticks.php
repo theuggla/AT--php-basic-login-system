@@ -14,25 +14,17 @@ class PersistantSticks {
 		if (isset($_SESSION[self::$sticks]) == false) {
 			$this->newGame($maxAmount);
 		}
-		
 	}
 
 	public function newGame($maxAmount) {
 		$_SESSION[self::$sticks] = $maxAmount;
 	}
 
-	/**
-	 * Its game over if its only 1 stick left
-	 * @return boolean 
-	 */
-	public function isGameOver() {
+	public function isGameOver() : boolean {
 		return $_SESSION[self::$sticks] < 2;
 	}
 
-	/**
-	 * @return int 
-	 */
-	public function getNumberOfSticks() {
+	public function getNumberOfSticks() : int {
 		return $_SESSION[self::$sticks];
 	}
 

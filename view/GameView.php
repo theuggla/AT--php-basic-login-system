@@ -2,19 +2,12 @@
 
 namespace view;
 
-require_once("model/StickGameObserver.php");
-
 class GameView implements \model\StickGameObserver {
-	const StartingNumberOfSticks = 22;
+	private static $draw = "draw";
+	private static $startOver = "startOver";
 
-	/** 
-	* @var integer
-	*/
 	private $numberOfSticksAIDrewLastTime = 0;
 
-	/** 
-	* @var boolean
-	*/
 	private $playerWon = false;
 
 	public function playerWins() {
@@ -24,27 +17,15 @@ class GameView implements \model\StickGameObserver {
 		$this->playerWon = false;
 	}
 
-	/**
-	 * Sets the number of sticks the AI player did
-	 * @param  modelStickSelection $sticks 
-	 */
 	public function aiRemoved(\model\StickSelection $sticks) {
 		$this->numberOfSticksAIDrewLastTime = $sticks->getAmount();
 	}
 
-	/**
-	 * @param modelLastStickGame $game 
-	 */
 	public function __construct(\model\LastStickGame $game) {
 		$this->game = $game;
 	}
 
-	
-
-	/** 
-	* @return String HTML
-	*/
-	public function show($message) {
+	public function show($message) : String {
 		if ($this->game->isGameOver()) {
 
 			return 	$message .
@@ -58,10 +39,21 @@ class GameView implements \model\StickGameObserver {
 		}
 	}
 
-	/** 
-	* @return String HTML
-	*/
-	private function showSticks() {
+	public function playerSelectSticks() : bool {
+		return isset($_GET[self::$draw]);
+	}
+
+	public function playerStartsOver() : bool {
+		return isset($_GET[self::$startOver]);
+	}
+
+	public function getNumberOfSticks() : \model\StickSelection {
+		$numberOfSticks = $_GET[self::$draw];
+		
+		return new \model\StickSelection($numberOfSticks);
+	}
+
+	private function showSticks() : String {
 		$numSticks = $this->game->getNumberOfSticks();
 		$aiDrew = $this->numberOfSticksAIDrewLastTime;
 
@@ -77,7 +69,7 @@ class GameView implements \model\StickGameObserver {
 		for (; $i < $aiDrew + $numSticks; $i++) {
 			$sticks .= "."; //Sticks taken by opponent
 		}
-		for (; $i < self::StartingNumberOfSticks; $i++) {
+		for (; $i < $this->game->getStartingNumberOfSticks(); $i++) {
 			$sticks .= "_"; //old sticks
 		}
 		return "<p>There is $numSticks stick" . ($numSticks > 1 ? "s" : "") ." left</p>
@@ -85,10 +77,7 @@ class GameView implements \model\StickGameObserver {
 				<p>$opponentsMove</p>";
 	}
 
-	/** 
-	* @return String HTML
-	*/
-	private function showSelection() {
+	private function showSelection() : String {
 		
 		$numSticks = $this->game->getNumberOfSticks();
 
@@ -104,10 +93,7 @@ class GameView implements \model\StickGameObserver {
 		return $ret;
 	}
 
-	/** 
-	* @return String HTML
-	*/
-	private function showWinner() {
+	private function showWinner() : String {
 		if ($this->playerWon) {
 			return "<h2>Congratulations</h2>
 					<p>You force the opponent to draw the last stick!</p>";
@@ -117,10 +103,7 @@ class GameView implements \model\StickGameObserver {
 		}
 	}
 
-	/** 
-	* @return String HTML
-	*/
-	private function startOver() {
+	private function startOver() : String {
 
 		return "<a href='?startOver'>Start new game</a>";
 		

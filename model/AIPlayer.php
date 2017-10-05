@@ -4,19 +4,13 @@ namespace model;
 
 class AIPlayer {
 	
-	/**
-	* Slightly evil AI player
-	* @param int $amountOfSticksLeft
-	* @return \model\StickSelection
-	*/
-	public function getSelection($amountOfSticksLeft) {
-
+	public function getSelection(int $amountOfSticksLeft) : \model\StickSelection {
 
 		$desiredAmountAfterDraw = array(21, 17, 13, 9, 5, 1);
 
-		foreach ($desiredAmountAfterDraw as $desiredStics) {
-			if ($amountOfSticksLeft > $desiredStics ) {
-				$difference = $amountOfSticksLeft - $desiredStics;
+		foreach ($desiredAmountAfterDraw as $desiredSticks) {
+			if ($amountOfSticksLeft > $desiredSticks ) {
+				$difference = $amountOfSticksLeft - $desiredSticks;
 
 				if ($difference > 3 || $difference < 1) {
 					$drawInteger = rand() % 3 + 1; // [1-3]
@@ -33,11 +27,7 @@ class AIPlayer {
 	
 
 		//change from integer into valid StickSelection
-		switch ($drawInteger) {
-			case 1 : return StickSelection::One(); break;
-			case 2 : return StickSelection::Two(); break;
-			case 3 : return StickSelection::Three(); break;
-		}
+		return new StickSelection($drawInteger);
 
 		//should never go here
 		assert(false); 

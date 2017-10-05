@@ -2,16 +2,15 @@
 
 namespace model;
 
-require_once("model/StickSelection.php");
-require_once("model/AIPlayer.php");
-require_once("model/PersistantSticks.php");
-
 class LastStickGame {
-	
+	private static $startingNumberOfSticks = 22;
+
+	private $ai;
+	private $sticks;
 
 	public function __construct() {
 		$this->ai = new AIPlayer();
-		$this->sticks = new PersistantSticks(\view\GameView::StartingNumberOfSticks);
+		$this->sticks = new PersistantSticks(self::$startingNumberOfSticks);
 	}
 
 	public function playerSelectsSticks(StickSelection $playerSelection, StickGameObserver $observer) {
@@ -22,7 +21,12 @@ class LastStickGame {
 		} else {
 			$this->AIPlayerTurn($observer);
 		} 
-	}	
+	}
+	
+	public function getStartingNumberOfSticks()
+	{
+		return self::$startingNumberOfSticks;
+	}
 
 	private function AIPlayerTurn(StickGameObserver $observer) {
 		$sticksLeft = $this->getNumberOfSticks();
@@ -36,21 +40,15 @@ class LastStickGame {
 		}
 	}
 
-	/** 
-	* @return boolean
-	*/
-	public function isGameOver() {
+	public function isGameOver() : bool {
 		return $this->sticks->getNumberOfSticks() < 2;
 	}
 
-	/** 
-	* @return int
-	*/
-	public function getNumberOfSticks() {
+	public function getNumberOfSticks() : int {
 		return $this->sticks->getNumberOfSticks();
 	}
 
 	public function newGame() {
-		$this->sticks->newGame(\view\GameView::StartingNumberOfSticks);
+		$this->sticks->newGame(self::$startingNumberOfSticks);
 	}
 }

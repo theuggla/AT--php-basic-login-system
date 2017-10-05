@@ -2,30 +2,10 @@
 
 namespace model;
 
-
-/**
- * Encapsulate how many sticks a player draws
- * can be 1,2 or 3
- */
 class StickSelection {
-	/**
-	 * @var int (1,2,3)
-	 */
 	private $amount;
 
-	public static function One() {
-		return new StickSelection(1);
-	}
-
-	public static function Two() {
-		return new StickSelection(2);
-	}
-
-	public static function Three() {
-		return new StickSelection(3);
-	}
-
-	public function  getAmount() {
+	public function getAmount() {
 		return $this->amount;
 	}
 
@@ -33,8 +13,16 @@ class StickSelection {
 	 * Private constructor makes sure we cannot create outside of 1,2,3
 	 * @param [type] $amount [description]
 	 */
-	private function __construct($amount) {
-		$this->amount = $amount;
+	public function __construct($amount) {
+
+		if ((int)$amount > 3 || (int)$amount < 1)
+		{
+			$this->amount = $amount;
+		}
+		else
+		{
+			throw new \Exception($amount);
+		}
 	}
 
 
