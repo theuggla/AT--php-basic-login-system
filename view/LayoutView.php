@@ -24,6 +24,7 @@ class LayoutView
           <h1>Assignment 2</h1>
           ' . $this->getCorrectNavigation($isLoggedIn) . '
           ' . $this->getCorrectLoggedInStatus($isLoggedIn) . '
+          ' . "Falala." . '
           <div class="container">
               ' . $mainViewHTML . '
               ' . $this->dateTimeView->getFormattedDateString() . '

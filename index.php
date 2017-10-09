@@ -1,9 +1,6 @@
 <?php
     session_start();
 
-    error_reporting(E_ALL);
-    ini_set('display_errors', 'On');
-
     require_once('model/IPersistance.php');
 
     // External dependecies - the view to be injected into, and a database / other persistance layer
