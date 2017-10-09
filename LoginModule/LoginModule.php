@@ -49,12 +49,12 @@ class LoginModule {
         $this->isLoggedIn = $this->mainController->getLoggedInStatus();
     }
 
-    public function currentHTML()
+    public function getCurrentHTML()
     {
         return $this->currentHTML;
     }
 
-    public function loggedInStatus()
+    public function getLoggedInStatus()
     {
         return $this->isLoggedIn;
     }

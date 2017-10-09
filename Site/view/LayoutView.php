@@ -12,7 +12,7 @@ class LayoutView
         $this->dateTimeView = $dateTimeView;
     }
   
-    public function renderToOutput(bool $isLoggedIn, string $loginViewHTML)
+    public function renderToOutput(bool $isLoggedIn, string $loginViewHTML, string $gameViewHTML)
     {
     echo '<!DOCTYPE html>
       <html>
@@ -28,14 +28,12 @@ class LayoutView
               ' . $loginViewHTML . '
               ' . $this->dateTimeView->getFormattedDateString() . '
           </div>
+          <div class="game">
+          ' . $gameViewHTML . '
+          </div>
          </body>
       </html>
     ';
-    }
-
-    private function userWantsToRegister()
-    {
-        return isset($_GET['register']);
     }
 
     private function getCorrectNavigation($isLoggedIn)
@@ -60,5 +58,10 @@ class LayoutView
         } else {
             return '<h2>Not logged in</h2>';
         }
+    }
+
+    private function userWantsToRegister()
+    {
+        return isset($_GET['register']);
     }
 }

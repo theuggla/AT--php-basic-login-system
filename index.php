@@ -7,6 +7,8 @@
     require_once('LoginModule/model/IPersistance.php');
     require_once('LoginModule/LoginModule.php');
 
+    require_once('TicTacToe/TicTacToe.php');
+
     require_once('Site/view/LayoutView.php');
     require_once('Site/view/DateTimeView.php');
     require_once('Site/persistance/MSQLConnector.php');
@@ -19,7 +21,10 @@
 
     $dateTimeView = new \site\view\DateTimeView();
     $layoutView = new \site\view\LayoutView($dateTimeView);
+
     $loginModule = new \loginmodule\LoginModule($persistanceHandler, $cookieExpiryTimeInSeconds);
+    $ticTacToe = new \tictactoe\TicTacToe();
 
     $loginModule->startLoginModule();
-    $layoutView->renderToOutput($loginModule->loggedInStatus(), $loginModule->currentHTML());
+    $ticTacToe->runGame($loginModule->getLoggedInStatus());
+    $layoutView->renderToOutput($loginModule->getLoggedInStatus(), $loginModule->getCurrentHTML(), $ticTacToe->getCurrentHTML());
