@@ -19,7 +19,7 @@ class Cookie
         if ($this->persistance->doesCookieExist($username, $cookiePassword)) {
             return true;
         } else {
-            throw new \model\WrongInfoInCookieException('Wrong information in cookies');
+            throw new \loginmodule\model\WrongInfoInCookieException('Wrong information in cookies');
         }
     }
 
