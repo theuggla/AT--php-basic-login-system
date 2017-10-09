@@ -1,0 +1,269 @@
+[Mon Oct  9 11:20:10 2017] PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'UpdatedUserRegistry' in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/persistance/MSQLConnector.php on line 15
+[Mon Oct  9 11:20:10 2017] PHP Stack trace:
+[Mon Oct  9 11:20:10 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Mon Oct  9 11:20:10 2017] PHP   2. persistance\MSQLConnector::getConnection() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:13
+[Mon Oct  9 11:20:10 2017] PHP   3. persistance\MSQLConnector::connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/persistance/MSQLConnector.php:28
+[Mon Oct  9 11:20:10 2017] PHP   4. mysqli_connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/persistance/MSQLConnector.php:15
+[Mon Oct  9 11:20:10 2017] 127.0.0.1:35332 [200]: /
+[Mon Oct  9 11:20:10 2017] 127.0.0.1:35336 [404]: /favicon.ico - No such file or directory
+[Mon Oct  9 12:28:54 2017] PHP Warning:  require_once(Site/view/LayoutView.php): failed to open stream: No such file or directory in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 8
+[Mon Oct  9 12:28:54 2017] PHP Stack trace:
+[Mon Oct  9 12:28:54 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Mon Oct  9 12:28:54 2017] PHP Fatal error:  require_once(): Failed opening required 'Site/view/LayoutView.php' (include_path='.:/usr/share/php') in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 8
+[Mon Oct  9 12:28:54 2017] PHP Stack trace:
+[Mon Oct  9 12:28:54 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Mon Oct  9 12:28:54 2017] 127.0.0.1:37938 [500]: / - require_once(): Failed opening required 'Site/view/LayoutView.php' (include_path='.:/usr/share/php') in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 8
+[Mon Oct  9 12:28:57 2017] PHP Warning:  require_once(Site/view/LayoutView.php): failed to open stream: No such file or directory in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 8
+[Mon Oct  9 12:28:57 2017] PHP Stack trace:
+[Mon Oct  9 12:28:57 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Mon Oct  9 12:28:57 2017] PHP Fatal error:  require_once(): Failed opening required 'Site/view/LayoutView.php' (include_path='.:/usr/share/php') in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 8
+[Mon Oct  9 12:28:57 2017] PHP Stack trace:
+[Mon Oct  9 12:28:57 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Mon Oct  9 12:28:57 2017] 127.0.0.1:37942 [500]: / - require_once(): Failed opening required 'Site/view/LayoutView.php' (include_path='.:/usr/share/php') in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 8
+[Mon Oct  9 12:29:31 2017] 127.0.0.1:37946 Invalid request (Unexpected EOF)
+[Mon Oct  9 12:29:31 2017] 127.0.0.1:37950 Invalid request (Unexpected EOF)
+[Mon Oct  9 12:29:31 2017] PHP Warning:  require_once(Site/view/LayoutView.php): failed to open stream: No such file or directory in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 11
+[Mon Oct  9 12:29:31 2017] PHP Stack trace:
+[Mon Oct  9 12:29:31 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Mon Oct  9 12:29:31 2017] PHP Fatal error:  require_once(): Failed opening required 'Site/view/LayoutView.php' (include_path='.:/usr/share/php') in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 11
+[Mon Oct  9 12:29:31 2017] PHP Stack trace:
+[Mon Oct  9 12:29:31 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Mon Oct  9 12:29:31 2017] 127.0.0.1:37960 [200]: / - require_once(): Failed opening required 'Site/view/LayoutView.php' (include_path='.:/usr/share/php') in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 11
+[Mon Oct  9 12:30:19 2017] 127.0.0.1:37964 Invalid request (Unexpected EOF)
+[Mon Oct  9 12:30:19 2017] 127.0.0.1:37968 Invalid request (Unexpected EOF)
+[Mon Oct  9 12:30:19 2017] PHP Fatal error:  Interface 'model\IPersistance' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 5
+[Mon Oct  9 12:30:19 2017] PHP Stack trace:
+[Mon Oct  9 12:30:19 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Mon Oct  9 12:30:19 2017] PHP   2. require_once() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:14
+[Mon Oct  9 12:30:19 2017] 127.0.0.1:37976 [200]: / - Interface 'model\IPersistance' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 5
+[Mon Oct  9 12:30:58 2017] PHP Fatal error:  Interface 'persistance\loginmodule\model\IPersistance' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 5
+[Mon Oct  9 12:30:58 2017] PHP Stack trace:
+[Mon Oct  9 12:30:58 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Mon Oct  9 12:30:58 2017] PHP   2. require_once() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:14
+[Mon Oct  9 12:30:58 2017] 127.0.0.1:37986 [200]: / - Interface 'persistance\loginmodule\model\IPersistance' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 5
+[Mon Oct  9 12:31:16 2017] PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'UpdatedUserRegistry' in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php on line 14
+[Mon Oct  9 12:31:16 2017] PHP Stack trace:
+[Mon Oct  9 12:31:16 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Mon Oct  9 12:31:16 2017] PHP   2. persistance\MSQLConnector::getConnection() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:16
+[Mon Oct  9 12:31:16 2017] PHP   3. persistance\MSQLConnector::connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:27
+[Mon Oct  9 12:31:16 2017] PHP   4. mysqli_connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:14
+[Mon Oct  9 12:31:16 2017] PHP Fatal error:  Uncaught Error: Class 'persistance\Persistance' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:17
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 17
+[Mon Oct  9 12:31:16 2017] 127.0.0.1:37996 [200]: / - Uncaught Error: Class 'persistance\Persistance' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:17
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 17
+[Mon Oct  9 12:40:14 2017] PHP Fatal error:  Uncaught Error: Class 'persistance\Persistance' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:17
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 17
+[Mon Oct  9 12:40:14 2017] 127.0.0.1:38030 [200]: / - Uncaught Error: Class 'persistance\Persistance' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:17
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 17
+[Mon Oct  9 12:40:37 2017] PHP Warning:  require_once(LoginModule/controller/UserController.php): failed to open stream: No such file or directory in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 23
+[Mon Oct  9 12:40:37 2017] PHP Stack trace:
+[Mon Oct  9 12:40:37 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Mon Oct  9 12:40:37 2017] PHP Fatal error:  require_once(): Failed opening required 'LoginModule/controller/UserController.php' (include_path='.:/usr/share/php') in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 23
+[Mon Oct  9 12:40:37 2017] PHP Stack trace:
+[Mon Oct  9 12:40:37 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Mon Oct  9 12:40:37 2017] 127.0.0.1:38038 [200]: / - require_once(): Failed opening required 'LoginModule/controller/UserController.php' (include_path='.:/usr/share/php') in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 23
+[Mon Oct  9 12:41:08 2017] PHP Fatal error:  Uncaught Error: Class 'model\Username' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:17
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(37): loginmodule\model\User->__construct(Object(persistance\LoginModulePersistance))
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 17
+[Mon Oct  9 12:41:08 2017] 127.0.0.1:38046 [200]: / - Uncaught Error: Class 'model\Username' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:17
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(37): loginmodule\model\User->__construct(Object(persistance\LoginModulePersistance))
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 17
+[Mon Oct  9 12:42:55 2017] PHP Fatal error:  Uncaught Error: Class 'loginmodule\model\model\Username' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:17
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(37): loginmodule\model\User->__construct(Object(persistance\LoginModulePersistance))
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 17
+[Mon Oct  9 12:42:55 2017] 127.0.0.1:38056 [200]: / - Uncaught Error: Class 'loginmodule\model\model\Username' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:17
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(37): loginmodule\model\User->__construct(Object(persistance\LoginModulePersistance))
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 17
+[Mon Oct  9 12:43:11 2017] PHP Fatal error:  Uncaught Error: Class 'loginmodule\model\Cookie' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:38
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 38
+[Mon Oct  9 12:43:11 2017] 127.0.0.1:38064 [200]: / - Uncaught Error: Class 'loginmodule\model\Cookie' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:38
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 38
+[Mon Oct  9 12:44:35 2017] PHP Fatal error:  Uncaught Error: Class 'loginmodule\model\Cookie' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:38
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 38
+[Mon Oct  9 12:44:35 2017] 127.0.0.1:38080 [200]: / - Uncaught Error: Class 'loginmodule\model\Cookie' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:38
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 38
+[Mon Oct  9 12:46:13 2017] 127.0.0.1:38084 Invalid request (Unexpected EOF)
+[Mon Oct  9 12:46:13 2017] PHP Fatal error:  Uncaught Error: Class 'loginmodule\model\Cookie' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:38
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 38
+[Mon Oct  9 12:46:13 2017] 127.0.0.1:38094 [200]: / - Uncaught Error: Class 'loginmodule\model\Cookie' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:38
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 38
+[Mon Oct  9 12:46:34 2017] 127.0.0.1:38098 Invalid request (Unexpected EOF)
+[Mon Oct  9 12:46:34 2017] PHP Fatal error:  Uncaught Error: Class 'loginmodule\model\Cookie' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:38
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 38
+[Mon Oct  9 12:46:34 2017] 127.0.0.1:38108 [200]: / - Uncaught Error: Class 'loginmodule\model\Cookie' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:38
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 38
+[Mon Oct  9 12:46:54 2017] 127.0.0.1:38112 Invalid request (Unexpected EOF)
+[Mon Oct  9 12:46:54 2017] PHP Fatal error:  Uncaught Error: Class 'loginmodule\model\Cookie' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:38
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 38
+[Mon Oct  9 12:46:54 2017] 127.0.0.1:38120 [200]: / - Uncaught Error: Class 'loginmodule\model\Cookie' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:38
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 38
+[Mon Oct  9 12:47:07 2017] 127.0.0.1:38124 Invalid request (Unexpected EOF)
+[Mon Oct  9 12:47:07 2017] PHP Fatal error:  Uncaught Error: Class 'loginmodule\model\Cookie' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:37
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 37
+[Mon Oct  9 12:47:07 2017] 127.0.0.1:38132 [200]: / - Uncaught Error: Class 'loginmodule\model\Cookie' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:37
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 37
+[Mon Oct  9 12:47:29 2017] PHP Fatal error:  Uncaught Error: Class 'loginmodule\model\Cookie' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:37
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 37
+[Mon Oct  9 12:47:29 2017] 127.0.0.1:38142 [200]: / - Uncaught Error: Class 'loginmodule\model\Cookie' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:37
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 37
+[Mon Oct  9 12:47:41 2017] 127.0.0.1:38146 Invalid request (Unexpected EOF)
+[Mon Oct  9 12:49:51 2017] PHP Fatal error:  Uncaught Error: Class 'loginmodule\controller\LoginUserController' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:41
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 41
+[Mon Oct  9 12:49:51 2017] 127.0.0.1:38214 [200]: / - Uncaught Error: Class 'loginmodule\controller\LoginUserController' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:41
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 41
+[Mon Oct  9 12:50:13 2017] 127.0.0.1:38218 Invalid request (Unexpected EOF)
+[Mon Oct  9 12:50:13 2017] PHP Fatal error:  Uncaught Error: Class 'loginmodule\controller\LoginUserController' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:42
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 42
+[Mon Oct  9 12:50:13 2017] 127.0.0.1:38228 [200]: / - Uncaught Error: Class 'loginmodule\controller\LoginUserController' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:42
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 42
+[Mon Oct  9 12:50:49 2017] 127.0.0.1:38232 Invalid request (Unexpected EOF)
+[Mon Oct  9 12:50:49 2017] PHP Fatal error:  Uncaught Error: Class 'loginmodule\controller\RegisterUserController' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:43
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 43
+[Mon Oct  9 12:50:49 2017] 127.0.0.1:38240 [200]: / - Uncaught Error: Class 'loginmodule\controller\RegisterUserController' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:43
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 43
+[Mon Oct  9 12:51:10 2017] 127.0.0.1:38244 Invalid request (Unexpected EOF)
+[Mon Oct  9 12:51:10 2017] PHP Fatal error:  Uncaught Error: Class 'loginmodule\controller\UserController' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:44
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 44
+[Mon Oct  9 12:51:10 2017] 127.0.0.1:38252 [200]: / - Uncaught Error: Class 'loginmodule\controller\UserController' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:44
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 44
+[Mon Oct  9 12:51:25 2017] 127.0.0.1:38256 Invalid request (Unexpected EOF)
+[Mon Oct  9 12:51:25 2017] 127.0.0.1:38264 [200]: /
+[Mon Oct  9 12:51:29 2017] 127.0.0.1:38268 [200]: /?register
+[Mon Oct  9 12:51:31 2017] 127.0.0.1:38276 [200]: /?
+[Mon Oct  9 12:51:38 2017] PHP Fatal error:  Uncaught Error: Class 'model\UserIsMissingException' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:40
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(119): loginmodule\model\User->checkForUserWithThoseCredentials('Kerim', 'Mrabti')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(85): loginmodule\controller\LoginUserController->loginUserWithCurrentCredentials()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(44): loginmodule\controller\LoginUserController->attemptLoginWithNewCredentials()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(95): loginmodule\contro in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 40
+[Mon Oct  9 12:51:38 2017] 127.0.0.1:38284 [200]: /? - Uncaught Error: Class 'model\UserIsMissingException' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:40
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(119): loginmodule\model\User->checkForUserWithThoseCredentials('Kerim', 'Mrabti')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(85): loginmodule\controller\LoginUserController->loginUserWithCurrentCredentials()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(44): loginmodule\controller\LoginUserController->attemptLoginWithNewCredentials()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(95): loginmodule\contro in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 40
+[Mon Oct  9 12:52:41 2017] 127.0.0.1:38296 [200]: /?
+[Mon Oct  9 12:52:43 2017] 127.0.0.1:38300 [200]: /?register
+[Mon Oct  9 12:52:46 2017] 127.0.0.1:38308 [200]: /?
+[Mon Oct  9 12:52:55 2017] PHP Fatal error:  Uncaught loginmodule\model\UserIsMissingException: User does not exist in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:40
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(119): loginmodule\model\User->checkForUserWithThoseCredentials('Kerim', 'Mrabti')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(85): loginmodule\controller\LoginUserController->loginUserWithCurrentCredentials()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(44): loginmodule\controller\LoginUserController->attemptLoginWithNewCredentials()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(95): loginmodul in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 40
+[Mon Oct  9 12:52:55 2017] 127.0.0.1:38316 [200]: /? - Uncaught loginmodule\model\UserIsMissingException: User does not exist in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:40
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(119): loginmodule\model\User->checkForUserWithThoseCredentials('Kerim', 'Mrabti')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(85): loginmodule\controller\LoginUserController->loginUserWithCurrentCredentials()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(44): loginmodule\controller\LoginUserController->attemptLoginWithNewCredentials()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(95): loginmodul in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 40
+[Mon Oct  9 12:55:26 2017] 127.0.0.1:38336 [200]: /?
+[Mon Oct  9 12:55:35 2017] 127.0.0.1:38340 [200]: /?
+[Mon Oct  9 12:55:45 2017] 127.0.0.1:38348 [200]: /?
+[Mon Oct  9 12:55:47 2017] PHP Fatal error:  Uncaught Error: Class 'model\PasswordIsMissingException' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php:13
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(82): loginmodule\model\Password->validatePassword('')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(106): loginmodule\model\User->validatePassword('')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(91): loginmodule\controller\LoginUserController->validatePassword()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(84): loginmodule\controller\LoginUserController->validateCurrentCredentials()
+#4 /media/molly/DATA/code/ in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php on line 13
+[Mon Oct  9 12:55:47 2017] 127.0.0.1:38354 [200]: /? - Uncaught Error: Class 'model\PasswordIsMissingException' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php:13
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(82): loginmodule\model\Password->validatePassword('')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(106): loginmodule\model\User->validatePassword('')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(91): loginmodule\controller\LoginUserController->validatePassword()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(84): loginmodule\controller\LoginUserController->validateCurrentCredentials()
+#4 /media/molly/DATA/code/ in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php on line 13
+[Mon Oct  9 12:56:16 2017] 127.0.0.1:38362 [200]: /?
+[Mon Oct  9 12:56:17 2017] 127.0.0.1:38366 [200]: /?
+[Mon Oct  9 12:56:21 2017] PHP Fatal error:  Uncaught Error: Class 'model\UsernameIsMissingException' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Username.php:14
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(72): loginmodule\model\Username->validateUsername('')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(97): loginmodule\model\User->validateUsername('')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(90): loginmodule\controller\LoginUserController->validateUsername()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(84): loginmodule\controller\LoginUserController->validateCurrentCredentials()
+#4 /media/molly/DATA/code/w in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Username.php on line 14
+[Mon Oct  9 12:56:21 2017] 127.0.0.1:38374 [200]: /? - Uncaught Error: Class 'model\UsernameIsMissingException' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Username.php:14
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(72): loginmodule\model\Username->validateUsername('')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(97): loginmodule\model\User->validateUsername('')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(90): loginmodule\controller\LoginUserController->validateUsername()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(84): loginmodule\controller\LoginUserController->validateCurrentCredentials()
+#4 /media/molly/DATA/code/w in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Username.php on line 14
+[Mon Oct  9 12:56:40 2017] 127.0.0.1:38382 [200]: /?
+[Mon Oct  9 12:56:44 2017] 127.0.0.1:38386 [200]: /?
+[Mon Oct  9 12:56:47 2017] 127.0.0.1:38396 [200]: /?register
+[Mon Oct  9 12:56:48 2017] 127.0.0.1:38402 [200]: /?register
+[Mon Oct  9 12:56:54 2017] 127.0.0.1:38408 [200]: /?register
+[Mon Oct  9 12:56:59 2017] 127.0.0.1:38414 [200]: /?register
+[Mon Oct  9 12:57:09 2017] 127.0.0.1:38420 [200]: /?register
+[Mon Oct  9 12:57:21 2017] 127.0.0.1:38426 [200]: /?register
+[Mon Oct  9 12:57:23 2017] 127.0.0.1:38432 [200]: /?
+[Mon Oct  9 12:57:28 2017] 127.0.0.1:38438 [200]: /?
+[Mon Oct  9 12:57:31 2017] 127.0.0.1:38444 [200]: /?
+[Mon Oct  9 12:57:34 2017] 127.0.0.1:38448 [200]: /?
+[Mon Oct  9 12:57:36 2017] 127.0.0.1:38456 [200]: /?
+[Mon Oct  9 12:57:41 2017] 127.0.0.1:38460 [200]: /?
+[Mon Oct  9 12:57:43 2017] 127.0.0.1:38468 [200]: /?
+[Mon Oct  9 12:57:45 2017] 127.0.0.1:38472 [200]: /?
+[Mon Oct  9 12:57:48 2017] 127.0.0.1:38480 [200]: /?
