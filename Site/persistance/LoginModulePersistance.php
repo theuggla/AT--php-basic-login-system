@@ -1,8 +1,8 @@
 <?php
 
-namespace persistance;
+namespace loginmodule\persistance;
 
-class LoginModulePersistance implements \loginmodule\model\IPersistance
+class LoginModulePersistance implements \loginmodule\persistance\IPersistance
 {
 
     private static $dbconnection;

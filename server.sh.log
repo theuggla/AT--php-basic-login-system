@@ -268,3 +268,252 @@ Stack trace:
 [Mon Oct  9 12:57:45 2017] 127.0.0.1:38472 [200]: /?
 [Mon Oct  9 12:57:48 2017] 127.0.0.1:38480 [200]: /?
 [Mon Oct  9 12:58:35 2017] 127.0.0.1:38484 Invalid request (Unexpected EOF)
+[Mon Oct  9 14:11:09 2017] PHP Notice:  Undefined variable: mainController in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 46
+[Mon Oct  9 14:11:09 2017] PHP Stack trace:
+[Mon Oct  9 14:11:09 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Mon Oct  9 14:11:09 2017] PHP   2. loginmodule\LoginModule->startLoginModule() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:24
+[Mon Oct  9 14:11:09 2017] PHP Fatal error:  Uncaught Error: Call to a member function listenForUserAccessAttempt() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:46
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(24): loginmodule\LoginModule->startLoginModule()
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 46
+[Mon Oct  9 14:11:09 2017] 127.0.0.1:38858 [200]: /? - Uncaught Error: Call to a member function listenForUserAccessAttempt() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:46
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(24): loginmodule\LoginModule->startLoginModule()
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 46
+[Mon Oct  9 14:11:36 2017] 127.0.0.1:38862 Invalid request (Unexpected EOF)
+[Mon Oct  9 14:11:36 2017] PHP Notice:  Undefined variable: mainController in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 46
+[Mon Oct  9 14:11:36 2017] PHP Stack trace:
+[Mon Oct  9 14:11:36 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Mon Oct  9 14:11:36 2017] PHP   2. loginmodule\LoginModule->startLoginModule() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:24
+[Mon Oct  9 14:11:36 2017] PHP Fatal error:  Uncaught Error: Call to a member function listenForUserAccessAttempt() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:46
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(24): loginmodule\LoginModule->startLoginModule()
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 46
+[Mon Oct  9 14:11:36 2017] 127.0.0.1:38868 [200]: /? - Uncaught Error: Call to a member function listenForUserAccessAttempt() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:46
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(24): loginmodule\LoginModule->startLoginModule()
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 46
+[Mon Oct  9 14:11:51 2017] 127.0.0.1:38872 Invalid request (Unexpected EOF)
+[Mon Oct  9 14:11:51 2017] PHP Fatal error:  Uncaught Error: Call to a member function listenForUserAccessAttempt() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:46
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(24): loginmodule\LoginModule->startLoginModule()
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 46
+[Mon Oct  9 14:11:51 2017] 127.0.0.1:38880 [200]: /? - Uncaught Error: Call to a member function listenForUserAccessAttempt() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:46
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(24): loginmodule\LoginModule->startLoginModule()
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 46
+[Mon Oct  9 14:14:12 2017] 127.0.0.1:38884 Invalid request (Unexpected EOF)
+[Mon Oct  9 14:14:12 2017] PHP Fatal error:  Uncaught Error: Call to a member function listenForUserAccessAttempt() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:46
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(24): loginmodule\LoginModule->startLoginModule()
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 46
+[Mon Oct  9 14:14:12 2017] 127.0.0.1:38896 [200]: /? - Uncaught Error: Call to a member function listenForUserAccessAttempt() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:46
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(24): loginmodule\LoginModule->startLoginModule()
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 46
+[Mon Oct  9 14:14:45 2017] 127.0.0.1:38900 Invalid request (Unexpected EOF)
+[Mon Oct  9 14:14:45 2017] PHP Fatal error:  Uncaught Error: Call to a member function listenForUserAccessAttempt() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:46
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(24): loginmodule\LoginModule->startLoginModule()
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 46
+[Mon Oct  9 14:14:45 2017] 127.0.0.1:38908 [200]: /? - Uncaught Error: Call to a member function listenForUserAccessAttempt() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:46
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(24): loginmodule\LoginModule->startLoginModule()
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 46
+[Mon Oct  9 14:15:13 2017] 127.0.0.1:38912 Invalid request (Unexpected EOF)
+[Mon Oct  9 14:15:13 2017] PHP Fatal error:  Uncaught Error: Call to a member function listenForUserAccessAttempt() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:46
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(24): loginmodule\LoginModule->startLoginModule()
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 46
+[Mon Oct  9 14:15:13 2017] 127.0.0.1:38922 [200]: /? - Uncaught Error: Call to a member function listenForUserAccessAttempt() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:46
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(24): loginmodule\LoginModule->startLoginModule()
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 46
+[Mon Oct  9 14:15:15 2017] PHP Fatal error:  Uncaught Error: Call to a member function listenForUserAccessAttempt() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:46
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(24): loginmodule\LoginModule->startLoginModule()
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 46
+[Mon Oct  9 14:15:15 2017] 127.0.0.1:38926 [200]: /? - Uncaught Error: Call to a member function listenForUserAccessAttempt() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:46
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(24): loginmodule\LoginModule->startLoginModule()
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 46
+[Mon Oct  9 14:16:11 2017] 127.0.0.1:38932 Invalid request (Unexpected EOF)
+[Mon Oct  9 14:16:11 2017] PHP Fatal error:  Uncaught Error: Call to a member function listenForUserAccessAttempt() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:46
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(24): loginmodule\LoginModule->startLoginModule()
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 46
+[Mon Oct  9 14:16:11 2017] 127.0.0.1:38940 [200]: /? - Uncaught Error: Call to a member function listenForUserAccessAttempt() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:46
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(24): loginmodule\LoginModule->startLoginModule()
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 46
+[Mon Oct  9 14:16:49 2017] 127.0.0.1:38944 Invalid request (Unexpected EOF)
+[Mon Oct  9 14:16:49 2017] PHP Fatal error:  Uncaught Error: Call to a member function listenForUserAccessAttempt() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:48
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(24): loginmodule\LoginModule->startLoginModule()
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 48
+[Mon Oct  9 14:16:49 2017] 127.0.0.1:38954 [200]: /? - Uncaught Error: Call to a member function listenForUserAccessAttempt() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:48
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(24): loginmodule\LoginModule->startLoginModule()
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 48
+[Mon Oct  9 14:17:58 2017] 127.0.0.1:38958 Invalid request (Unexpected EOF)
+[Mon Oct  9 14:17:58 2017] PHP Fatal error:  Uncaught Error: Call to a member function listenForUserAccessAttempt() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:46
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(24): loginmodule\LoginModule->startLoginModule()
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 46
+[Mon Oct  9 14:17:58 2017] 127.0.0.1:38970 [200]: /? - Uncaught Error: Call to a member function listenForUserAccessAttempt() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:46
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(24): loginmodule\LoginModule->startLoginModule()
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 46
+[Mon Oct  9 14:18:23 2017] 127.0.0.1:38974 Invalid request (Unexpected EOF)
+[Mon Oct  9 14:18:23 2017] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to loginmodule\LoginModule::__construct() must be an instance of loginmodule\IPersistance, instance of site\persistance\LoginModulePersistance given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 22 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:36
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(22): loginmodule\LoginModule->__construct(Object(site\persistance\LoginModulePersistance), 1000)
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 36
+[Mon Oct  9 14:18:23 2017] 127.0.0.1:38982 [200]: /? - Uncaught TypeError: Argument 1 passed to loginmodule\LoginModule::__construct() must be an instance of loginmodule\IPersistance, instance of site\persistance\LoginModulePersistance given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 22 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:36
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(22): loginmodule\LoginModule->__construct(Object(site\persistance\LoginModulePersistance), 1000)
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 36
+[Mon Oct  9 14:19:49 2017] 127.0.0.1:38986 Invalid request (Unexpected EOF)
+[Mon Oct  9 14:19:49 2017] PHP Fatal error:  Interface 'loginmodule\model\IPersistance' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 5
+[Mon Oct  9 14:19:49 2017] PHP Stack trace:
+[Mon Oct  9 14:19:49 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Mon Oct  9 14:19:49 2017] PHP   2. require_once() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:13
+[Mon Oct  9 14:19:49 2017] 127.0.0.1:39002 [200]: /? - Interface 'loginmodule\model\IPersistance' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 5
+[Mon Oct  9 14:21:35 2017] 127.0.0.1:39006 Invalid request (Unexpected EOF)
+[Mon Oct  9 14:21:35 2017] PHP Fatal error:  Interface 'loginmodule\model\IPersistance' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 5
+[Mon Oct  9 14:21:35 2017] PHP Stack trace:
+[Mon Oct  9 14:21:35 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Mon Oct  9 14:21:35 2017] PHP   2. require_once() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:13
+[Mon Oct  9 14:21:35 2017] 127.0.0.1:39028 [200]: /? - Interface 'loginmodule\model\IPersistance' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 5
+[Mon Oct  9 14:21:55 2017] 127.0.0.1:39032 Invalid request (Unexpected EOF)
+[Mon Oct  9 14:21:55 2017] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to loginmodule\LoginModule::__construct() must be an instance of loginmodule\IPersistance, instance of loginmodule\persistance\LoginModulePersistance given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 22 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:36
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(22): loginmodule\LoginModule->__construct(Object(loginmodule\persistance\LoginModulePersistance), 1000)
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 36
+[Mon Oct  9 14:21:55 2017] 127.0.0.1:39038 [200]: /? - Uncaught TypeError: Argument 1 passed to loginmodule\LoginModule::__construct() must be an instance of loginmodule\IPersistance, instance of loginmodule\persistance\LoginModulePersistance given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 22 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:36
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(22): loginmodule\LoginModule->__construct(Object(loginmodule\persistance\LoginModulePersistance), 1000)
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 36
+[Mon Oct  9 14:22:25 2017] 127.0.0.1:39042 Invalid request (Unexpected EOF)
+[Mon Oct  9 14:22:25 2017] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to loginmodule\model\Cookie::__construct() must be an instance of loginmodule\model\IPersistance, instance of loginmodule\persistance\LoginModulePersistance given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 77 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Cookie.php:11
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(77): loginmodule\model\Cookie->__construct(1000, Object(loginmodule\persistance\LoginModulePersistance))
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(65): loginmodule\LoginModule->initiateModels()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(41): loginmodule\L in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Cookie.php on line 11
+[Mon Oct  9 14:22:25 2017] 127.0.0.1:39050 [200]: /? - Uncaught TypeError: Argument 2 passed to loginmodule\model\Cookie::__construct() must be an instance of loginmodule\model\IPersistance, instance of loginmodule\persistance\LoginModulePersistance given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 77 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Cookie.php:11
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(77): loginmodule\model\Cookie->__construct(1000, Object(loginmodule\persistance\LoginModulePersistance))
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(65): loginmodule\LoginModule->initiateModels()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(41): loginmodule\L in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Cookie.php on line 11
+[Mon Oct  9 14:23:03 2017] 127.0.0.1:39054 Invalid request (Unexpected EOF)
+[Mon Oct  9 14:23:03 2017] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to loginmodule\model\Cookie::__construct() must be an instance of persistance\IPersistance, instance of loginmodule\persistance\LoginModulePersistance given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 77 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Cookie.php:11
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(77): loginmodule\model\Cookie->__construct(1000, Object(loginmodule\persistance\LoginModulePersistance))
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(65): loginmodule\LoginModule->initiateModels()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(41): loginmodule\LoginMo in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Cookie.php on line 11
+[Mon Oct  9 14:23:03 2017] 127.0.0.1:39066 [200]: /? - Uncaught TypeError: Argument 2 passed to loginmodule\model\Cookie::__construct() must be an instance of persistance\IPersistance, instance of loginmodule\persistance\LoginModulePersistance given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 77 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Cookie.php:11
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(77): loginmodule\model\Cookie->__construct(1000, Object(loginmodule\persistance\LoginModulePersistance))
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(65): loginmodule\LoginModule->initiateModels()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(41): loginmodule\LoginMo in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Cookie.php on line 11
+[Mon Oct  9 14:23:19 2017] 127.0.0.1:39070 Invalid request (Unexpected EOF)
+[Mon Oct  9 14:23:19 2017] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to loginmodule\model\User::__construct() must be an instance of loginmodule\model\IPersistance, instance of loginmodule\persistance\LoginModulePersistance given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 78 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:15
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(78): loginmodule\model\User->__construct(Object(loginmodule\persistance\LoginModulePersistance))
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(65): loginmodule\LoginModule->initiateModels()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(41): loginmodule\LoginModule-> in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 15
+[Mon Oct  9 14:23:19 2017] 127.0.0.1:39078 [200]: /? - Uncaught TypeError: Argument 1 passed to loginmodule\model\User::__construct() must be an instance of loginmodule\model\IPersistance, instance of loginmodule\persistance\LoginModulePersistance given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 78 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:15
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(78): loginmodule\model\User->__construct(Object(loginmodule\persistance\LoginModulePersistance))
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(65): loginmodule\LoginModule->initiateModels()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(41): loginmodule\LoginModule-> in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 15
+[Mon Oct  9 14:23:40 2017] 127.0.0.1:39082 Invalid request (Unexpected EOF)
+[Mon Oct  9 14:23:40 2017] PHP Fatal error:  Uncaught Error: Class 'controller\LoginUserController' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:83
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(66): loginmodule\LoginModule->initiateControllers()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(41): loginmodule\LoginModule->initiateDependencies()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(22): loginmodule\LoginModule->__construct(Object(loginmodule\persistance\LoginModulePersistance), 1000)
+#3 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 83
+[Mon Oct  9 14:23:40 2017] 127.0.0.1:39090 [200]: /? - Uncaught Error: Class 'controller\LoginUserController' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:83
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(66): loginmodule\LoginModule->initiateControllers()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(41): loginmodule\LoginModule->initiateDependencies()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(22): loginmodule\LoginModule->__construct(Object(loginmodule\persistance\LoginModulePersistance), 1000)
+#3 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php on line 83
+[Mon Oct  9 14:24:24 2017] 127.0.0.1:39094 Invalid request (Unexpected EOF)
+[Mon Oct  9 14:24:24 2017] PHP Fatal error:  Uncaught Error: Call to undefined method loginmodule\controller\MainController::renderDependingOnLoginStatus() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:69
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(33): loginmodule\controller\MainController->displayCorrectView()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(46): loginmodule\controller\MainController->listenForUserAccessAttempt()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(24): loginmodule\LoginModule->startLoginModule()
+#3 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php on line 69
+[Mon Oct  9 14:24:24 2017] 127.0.0.1:39102 [200]: /? - Uncaught Error: Call to undefined method loginmodule\controller\MainController::renderDependingOnLoginStatus() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:69
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(33): loginmodule\controller\MainController->displayCorrectView()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(46): loginmodule\controller\MainController->listenForUserAccessAttempt()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(24): loginmodule\LoginModule->startLoginModule()
+#3 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php on line 69
+[Mon Oct  9 14:24:59 2017] 127.0.0.1:39106 Invalid request (Unexpected EOF)
+[Mon Oct  9 14:24:59 2017] PHP Notice:  Undefined property: loginmodule\controller\MainController::$userIsLOggedIn in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php on line 43
+[Mon Oct  9 14:24:59 2017] PHP Stack trace:
+[Mon Oct  9 14:24:59 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Mon Oct  9 14:24:59 2017] PHP   2. loginmodule\LoginModule->startLoginModule() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:24
+[Mon Oct  9 14:24:59 2017] PHP   3. loginmodule\controller\MainController->getLoggedInStatus() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:49
+[Mon Oct  9 14:24:59 2017] PHP Notice:  Undefined property: loginmodule\LoginModule::$loggedInStatus in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 25
+[Mon Oct  9 14:24:59 2017] PHP Stack trace:
+[Mon Oct  9 14:24:59 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Mon Oct  9 14:24:59 2017] PHP Fatal error:  Uncaught Error: Cannot access private property loginmodule\LoginModule::$currentHTML in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 25
+[Mon Oct  9 14:24:59 2017] 127.0.0.1:39114 [200]: /? - Uncaught Error: Cannot access private property loginmodule\LoginModule::$currentHTML in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 25
+[Mon Oct  9 14:25:17 2017] 127.0.0.1:39118 Invalid request (Unexpected EOF)
+[Mon Oct  9 14:25:17 2017] PHP Notice:  Undefined property: loginmodule\LoginModule::$loggedInStatus in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 25
+[Mon Oct  9 14:25:17 2017] PHP Stack trace:
+[Mon Oct  9 14:25:17 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Mon Oct  9 14:25:17 2017] PHP Fatal error:  Uncaught Error: Cannot access private property loginmodule\LoginModule::$currentHTML in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 25
+[Mon Oct  9 14:25:17 2017] 127.0.0.1:39126 [200]: /? - Uncaught Error: Cannot access private property loginmodule\LoginModule::$currentHTML in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php on line 25
+[Mon Oct  9 14:25:41 2017] 127.0.0.1:39130 Invalid request (Unexpected EOF)
+[Mon Oct  9 14:25:41 2017] 127.0.0.1:39138 [200]: /?
+[Mon Oct  9 14:25:43 2017] 127.0.0.1:39142 [200]: /?register
+[Mon Oct  9 14:25:44 2017] 127.0.0.1:39150 [200]: /?
+[Mon Oct  9 14:25:52 2017] 127.0.0.1:39156 [200]: /?
+[Mon Oct  9 14:25:53 2017] 127.0.0.1:39164 [200]: /?
+[Mon Oct  9 14:25:55 2017] 127.0.0.1:39172 [200]: /?register

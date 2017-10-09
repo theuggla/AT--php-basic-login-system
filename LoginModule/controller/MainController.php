@@ -14,26 +14,33 @@ class MainController
     private $currentFlashMessage = '';
     private $lastUsername = 'MainController::LastUsername';
     private $userIsLoggedIn = 'MainController::LoggedInStatus';
-
-    private $externalView = 'MainController::ExternalView';
+    private $currentHTML = 'MainController::CurrentHTML';
 
     private $displayLoginForm = false;
     private $displayRegisterForm = false;
 
-    public function __construct($user, $loginUserController, $registerUserController, $externalView)
+    public function __construct($user, $loginUserController, $registerUserController)
     {
         $this->user = $user;
 
         $this->loginUserController = $loginUserController;
         $this->registerUserController = $registerUserController;
-
-        $this->externalView = $externalView;
     }
 
     public function listenForUserAccessAttempt()
     {
         $this->delegateControlDependingOnUseCase();
         $this->displayCorrectView();
+    }
+
+    public function getCurrentHTML()
+    {
+        return $this->currentHTML;
+    }
+
+    public function getLoggedInStatus()
+    {
+        return $this->userIsLoggedIn;
     }
 
     private function delegateControlDependingOnUseCase()
@@ -57,9 +64,9 @@ class MainController
     private function displayCorrectView()
     {
         if ($this->displayRegisterForm) {
-            $this->renderRegisterForm();
+            $this->setRegisterFormHTML();
         } else {
-            $this->renderDependingOnLoginStatus();
+            $this->setLoginHTMLDependingOnLoginStatus();
         }
     }
 
@@ -99,20 +106,16 @@ class MainController
         }
     }
 
-    private function renderDependingOnLoginStatus()
+    private function setLoginHTMLDependingOnLoginStatus()
     {
         $this->updateCurrentUserStatus();
-        $currentHTML = $this->loginUserController->getHTML($this->getCurrentFlashMessage(), $this->lastUsername);
-
-        $this->externalView->renderToOutput($this->userIsLoggedIn, $currentHTML);
+        $this->currentHTML = $this->loginUserController->getHTML($this->getCurrentFlashMessage(), $this->lastUsername);
     }
 
-    private function renderRegisterForm()
+    private function setRegisterFormHTML()
     {
         $this->updateCurrentUserStatus();
-        $currentHTML = $this->registerUserController->getHTML($this->getCurrentFlashMessage(), $this->lastUsername);
-
-        $this->externalView->renderToOutput($this->userIsLoggedIn, $currentHTML);
+        $this->currentHTML = $this->registerUserController->getHTML($this->getCurrentFlashMessage(), $this->lastUsername);
     }
 
     private function updateCurrentUserStatus()

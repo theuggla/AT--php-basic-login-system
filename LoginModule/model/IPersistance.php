@@ -1,6 +1,6 @@
 <?php
 
-namespace loginmodule\model;
+namespace loginmodule\persistance;
 
 interface IPersistance
 {

@@ -12,7 +12,7 @@ class User
     private $password;
     private $persistance;
 
-    public function __construct(IPersistance $persistance)
+    public function __construct(\loginmodule\persistance\IPersistance $persistance)
     {
         $this->username = new \loginmodule\model\Username();
         $this->password = new \loginmodule\model\Password();

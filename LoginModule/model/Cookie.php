@@ -8,7 +8,7 @@ class Cookie
     private static $EXPIRY_TIME;
     private $persistance;
 
-    public function __construct(int $expiryTime, IPersistance $persistance)
+    public function __construct(int $expiryTime, \loginmodule\persistance\IPersistance $persistance)
     {
         self::$EXPIRY_TIME = $expiryTime;
         $this->persistance = $persistance;

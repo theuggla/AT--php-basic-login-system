@@ -1,6 +1,6 @@
 <?php
 
-namespace persistance;
+namespace site\persistance;
 
 class MSQLConnector
 {
