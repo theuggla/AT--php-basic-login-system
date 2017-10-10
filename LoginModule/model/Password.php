@@ -4,21 +4,32 @@ namespace loginmodule\model;
 
 class Password
 {
-    private static $MIN_LENGTH = 1;
-    public static $MIN_VALID_LENGTH = 6;
+    private static $MIN_VALID_LENGTH = 6;
 
-    public function validatePassword(string $password)
+    protected $password;
+
+    public function __construct(string $password)
     {
-        if (strlen($password) < self::$MIN_LENGTH) {
+        $this->validate($password);
+        $this->password = $this->getHashedPassword($password);
+    }
+
+    public static function getMinLength() : bool
+    {
+        return self::$MIN_VALID_LENGTH;
+    }
+
+    private function validate($password)
+    {
+        if ($this->passwordIsMissing()) {
             throw new \loginmodule\model\PasswordIsMissingException('Password is missing');
-        } elseif (strlen($password) < self::$MIN_VALID_LENGTH) {
+        } elseif ($this->passwordIsTooShort()) {
             throw new \loginmodule\model\PasswordIsNotValidException("Password has too few characters, at least " . self::$MIN_VALID_LENGTH . " characters.");
         }
     }
 
-    public function hashPassword(string $password)
+    private function getHashedPassword($password) : string
     {
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-        return $hashedPassword;
+        return password_hash($password, PASSWORD_DEFAULT);
     }
 }

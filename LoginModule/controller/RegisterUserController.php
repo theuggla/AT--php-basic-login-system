@@ -11,8 +11,6 @@ class RegisterUserController
     private static $usernameInvalidMessage = 'Username contains invalid characters.';
     private static $passwordMisMatchMessage = 'Passwords do not match.';
     private static $manipulatedCookieCredentialsMessage = 'Wrong information in cookies';
-    private static $MIN_PASSWORD_CHARACTERS;
-    private static $MIN_USERNAME_CHARACTERS;
     private static $badPasswordMessage;
     private static $badUsernameMessage;
 
@@ -31,10 +29,8 @@ class RegisterUserController
         $this->registerView = $registerView;
         $this->user = $user;
 
-        self::$MIN_PASSWORD_CHARACTERS = $this->user->getMinimumPasswordCharacters();
-        self::$MIN_USERNAME_CHARACTERS = $this->user->getMinimumUsernameCharacters();
-        self::$badPasswordMessage = "Password has too few characters, at least " . self::$MIN_PASSWORD_CHARACTERS . " characters.";
-        self::$badUsernameMessage = "Username has too few characters, at least " . self::$MIN_USERNAME_CHARACTERS . " characters. ";
+        self::$badPasswordMessage = "Password has too few characters, at least " . $this->user->getMinimumPasswordCharacters() . " characters.";
+        self::$badUsernameMessage = "Username has too few characters, at least " . $this->user->getMinimumUsernameCharacters() . " characters. ";
     }
 
     public function handleUserRegisterAttempt()
@@ -46,7 +42,7 @@ class RegisterUserController
                 $this->checkIfUserAlreadyExists();
                 $this->createNewUser();
             } catch (\loginmodule\model\UsernameHasInvalidCharactersException $e) {
-                $this->attemptedUsername = $this->user->cleanUpUsername($this->attemptedUsername);
+                $this->attemptedUsername = $this->user->getUsername();
                 $this->currentMessage = self::$usernameInvalidMessage;
             } catch (\loginmodule\model\DuplicateUserException $e) {
                 $this->currentMessage = self::$takenUsernameMessage;
@@ -77,7 +73,7 @@ class RegisterUserController
 
     public function userWantsToRegister()
     {
-        return isset($_GET['register']);
+        return $this->registerView->userWantsToViewForm();
     }
 
     private function userHasPressedRegisterButton()
@@ -94,21 +90,17 @@ class RegisterUserController
 
     private function validateCredentialsAndSetErrorMessage()
     {
-        $usernameIsValid = $this->isUsernameValid();
-        $passwordIsValid = $this->isPasswordValid();
-
-        if (!($usernameIsValid)) {
-            $this->currentMessage .= self::$badUsernameMessage;
+        try
+        {
+            $this->user($attemptedUsername, $attemptedPassword);
         }
-
-        if (!($passwordIsValid)) {
-            $this->currentMessage .= self::$badPasswordMessage;
+        catch (\loginmodule\model\UsernameIsMissingException $e)
+        {
+            echo 'specific';
         }
-
-        if ($usernameIsValid && $passwordIsValid) {
-            $this->comparePlaintextPasswords($this->attemptedPassword, $this->attemptedRepeatedPassword);
-        } else {
-            throw new \loginmodule\model\InvalidCredentialsException();
+        catch (\loginmodule\model\InvalidCredentialsException $e)
+        {
+            echo 'generic';
         }
     }
 

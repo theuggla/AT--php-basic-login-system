@@ -9,7 +9,7 @@ require_once('LoginModule/controller/MainController.php');
 require_once('LoginModule/model/User.php');
 require_once('LoginModule/model/Username.php');
 require_once('LoginModule/model/Password.php');
-require_once('LoginModule/model/Cookie.php');
+require_once('LoginModule/model/TemporaryUser.php');
 require_once('LoginModule/model/Exception.php');
 
 require_once('LoginModule/view/RegisterView.php');
@@ -26,14 +26,13 @@ class LoginModule {
     private $loginVew;
     private $registerView;
 
-    private $cookieModel;
-    private $userModel;
+    private $currentUser;
 
     private $mainController;
     private $loginController;
     private $registerController;
 
-    public function __construct(persistance\IPersistance $persistanceHandler, int $cookieExpiryTimeInSeconds)
+    public function __construct(\loginmodule\persistance\IPersistance $persistanceHandler, int $cookieExpiryTimeInSeconds)
     {
         $this->persistanceHandler = $persistanceHandler;
         $this->cookieExpiryTimeInSeconds = $cookieExpiryTimeInSeconds;   
@@ -49,12 +48,12 @@ class LoginModule {
         $this->isLoggedIn = $this->mainController->getLoggedInStatus();
     }
 
-    public function getCurrentHTML()
+    public function getCurrentHTML() : String
     {
         return $this->currentHTML;
     }
 
-    public function getLoggedInStatus()
+    public function getLoggedInStatus() : bool
     {
         return $this->isLoggedIn;
     }
@@ -74,14 +73,14 @@ class LoginModule {
 
     private function initiateModels()
     {
-        $this->cookieModel = new \loginmodule\model\Cookie($this->cookieExpiryTimeInSeconds, $this->persistanceHandler);
-        $this->userModel = new \loginmodule\model\User($this->persistanceHandler);
+        $this->currentUser = new \loginmodule\model\User($this->persistanceHandler);
+        $this->currentTempUser = new \loginmodule\model\TemporaryUser($this->persistanceHandler, $this->cookieExpiryTimeInSeconds);
     }
 
     private function initiateControllers()
     {
-        $this->loginController = new \loginmodule\controller\LoginUserController($this->userModel, $this->cookieModel, $this->loginView);
-        $this->registerController = new \loginmodule\controller\RegisterUserController($this->userModel, $this->registerView);
-        $this->mainController = new \loginmodule\controller\MainController($this->userModel, $this->loginController, $this->registerController);
+        $this->loginController = new \loginmodule\controller\LoginUserController($this->currentUser, $this->currentTempUser, $this->loginView);
+        $this->registerController = new \loginmodule\controller\RegisterUserController($this->currentUser, $this->registerView);
+        $this->mainController = new \loginmodule\controller\MainController($this->currentUser, $this->loginController, $this->registerController);
     }
 }

@@ -4,14 +4,13 @@ namespace loginmodule\persistance;
 
 interface IPersistance
 {
-
-    public function doesCookieExist(string $username, string $cookiePassword);
-
-    public function saveCookie(string $username, string $cookiepassword, int $timestamp);
-
-    public function doesUserExist(string $username);
-
-    public function getUserPasswordFromUsername(string $username);
-
     public function saveUser(string $username, string $password);
+
+    public function saveTempUser(string $username, string $password, int $timestamp);
+
+    public function doesUserExist(string $username) : bool;
+
+    public function getUser(string $username, string $password);
+
+    public function didTempUserExpire(string $username, string $password): bool;
 }

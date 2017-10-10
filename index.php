@@ -27,4 +27,7 @@
 
     $loginModule->startLoginModule();
     $ticTacToe->runGame($loginModule->getLoggedInStatus());
-    $layoutView->renderToOutput($loginModule->getLoggedInStatus(), $loginModule->getCurrentHTML(), $ticTacToe->getCurrentHTML());
+    
+    $layoutView->renderToOutput($loginModule->getLoggedInStatus(),
+                                $loginModule->getCurrentHTML(),
+                                $ticTacToe->getCurrentHTML());

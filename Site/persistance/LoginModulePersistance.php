@@ -12,7 +12,7 @@ class LoginModulePersistance implements \loginmodule\persistance\IPersistance
         self::$dbconnection = $dbconnection;
     }
 
-    public function doesCookieExist(string $username, string $cookiePassword)
+    public function didTempUserExpire(string $username, string $password) : bool
     {
         $query='SELECT * FROM Cookie WHERE BINARY username="' . $username . '" AND cookiepassword="' . $cookiePassword . '"';
         $result = self::$dbconnection->query($query);
@@ -26,7 +26,7 @@ class LoginModulePersistance implements \loginmodule\persistance\IPersistance
         }
     }
 
-    public function saveCookie(string $username, string $cookiepassword, int $timestamp)
+    public function saveTempUser(string $username, string $password, int $timestamp)
     {
         $cookiepassword = self::$dbconnection->real_escape_string($cookiepassword);
         $username = self::$dbconnection->real_escape_string($username);
@@ -36,7 +36,7 @@ class LoginModulePersistance implements \loginmodule\persistance\IPersistance
         self::$dbconnection->query($query);
     }
 
-    public function doesUserExist(string $username)
+    public function doesUserExist(string $username) : bool
     {
         $result = $this->getUserByUsername($username);
             
@@ -47,12 +47,14 @@ class LoginModulePersistance implements \loginmodule\persistance\IPersistance
         }
     }
 
-    public function getUserPasswordFromUsername(string $username)
+    public function getUser(string $username, string $password) : bool
     {
-        if ($this->doesUserExist($username)) {
-            $result = $this->getUserByUsername($username);
-            $user = $result->fetch_object();
-            return $user->password;
+        $result = $this->getUserByUsername($username);
+            
+        if ($result->num_rows <= 0) {
+            return false;
+        } else {
+            return true;
         }
     }
 

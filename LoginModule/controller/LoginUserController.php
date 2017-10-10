@@ -5,163 +5,29 @@ namespace loginmodule\controller;
 class LoginUserController
 {
     private static $newCredentialsLoginSucessfullMessage = 'Welcome';
-    private static $saveCookieLoginSucessfullMessage = 'Welcome and you will be remembered';
-    private static $cookieLoginSuccessfulMessage = 'Welcome back with cookie';
+    private static $saveCookieUserLoginSucessfullMessage = 'Welcome and you will be remembered';
+    private static $tempUserLoginSuccessfulMessage = 'Welcome back with cookie';
     private static $logoutSucessfulMessage = 'Bye bye!';
     private static $wrongCredentialsMessage = 'Wrong name or password';
     private static $noUsernameMessage = 'Username is missing';
     private static $noPasswordMessage = 'Password is missing';
-    private static $manipulatedCookieCredentialsMessage = 'Wrong information in cookies';
+    private static $manipulatedTempUserCredentialsMessage = 'Wrong information in cookies';
 
-    private $loginView = 'LoginUserController::LoginView';
+    private $loginView = 'LoginModule::LoginUserController::LoginView';
 
-    private $cookie = 'LoginUserController::Cookie';
-    private $user = 'LoginUserController::User';
+    private $currentUser = 'LoginModule::LoginUserController::User';
+    private $currentTempUser = 'LoginModule::LoginUserController::TempUser';
 
     private $currentMessage = '';
-    private $currentUsername = '';
-    private $currentPassword = '';
-    private $currentCookieUsername = '';
-    private $currentCookiePassword = '';
-
 
     private $loginSucceeded = false;
     private $logoutSucceeded = false;
 
-    public function __construct($user, $cookie, $loginView)
+    public function __construct($currentUser, $currentTempUser, $loginView)
     {
-        $this->user = $user;
-        $this->cookie = $cookie;
+        $this->currentUser = $currentUser;
+        $this->currentTempUser = $currentTempUser;
         $this->loginView = $loginView;
-    }
-
-    public function handleLoggedOutUser()
-    {
-        try {
-            if ($this->loginView->cookieCredentialsArePresent()) {
-                $this->attemptLoginWithCookieCredentials();
-            } elseif ($this->loginView->userWantsToLogin()) {
-                $this->attemptLoginWithNewCredentials();
-                $this->user->setLatestUsername($this->currentUsername);
-            }
-        } catch (\loginmodule\model\WrongInfoInCookieException $e) {
-            $this->currentMessage = self::$manipulatedCookieCredentialsMessage;
-            $this->loginView->removeCookieCredentials();
-        } catch (\loginmodule\model\UsernameIsMissingException $e) {
-            $this->currentMessage = self::$noUsernameMessage;
-            $this->user->setLatestUsername($this->currentUsername);
-        } catch (\loginmodule\model\PasswordIsMissingException $e) {
-            $this->currentMessage = self::$noPasswordMessage;
-            $this->user->setLatestUsername($this->currentUsername);
-        } catch (\loginmodule\model\UserIsMissingException $e) {
-            $this->currentMessage = self::$wrongCredentialsMessage;
-            $this->user->setLatestUsername($this->currentUsername);
-        } catch (\loginmodule\model\WrongCredentialsException $e) {
-            $this->currentMessage = self::$wrongCredentialsMessage;
-            $this->user->setLatestUsername($this->currentUsername);
-        }
-    }
-
-    public function handleLoggedInUser()
-    {
-        if ($this->loginView->userWantsToLogout()) {
-            $this->logoutUser();
-        }
-    }
-
-    private function attemptLoginWithCookieCredentials()
-    {
-        $this->setCurrentCredentialsFromCookie();
-
-        $this->ensureCookieCredentialsHaveNotBeenManipulated();
-        $this->loginUserWithCookieCredentials();
-        $this->currentMessage = self::$cookieLoginSuccessfulMessage;
-    }
-
-    private function attemptLoginWithNewCredentials()
-    {
-        $this->setCurrentCredentialsFromLoginForm();
-        $this->validateCurrentCredentials();
-        $this->loginUserWithCurrentCredentials();
-    }
-
-    private function validateCurrentCredentials()
-    {
-        $this->validateUsername();
-        $this->validatePassword();
-    }
-
-    private function validateUsername()
-    {
-        try {
-            $this->user->validateUsername($this->currentUsername);
-        } catch (\loginmodule\model\UsernameIsMissingException $e) {
-            throw $e;
-        } catch (\loginmodule\model\InvalidCredentialsException $e) {}
-    }
-        
-    private function validatePassword()
-    {
-        try {
-            $this->user->validatePassword($this->currentPassword);
-        } catch (\loginmodule\model\PasswordIsMissingException $e) {
-            throw $e;
-        } catch (\loginmodule\model\InvalidCredentialsException $e) {}
-    }
-
-    private function ensureCookieCredentialsHaveNotBeenManipulated()
-    {
-        $this->cookie->checkForManipulation($this->currentCookieUsername, $this->currentCookiePassword);
-    }
-
-    private function loginUserWithCurrentCredentials()
-    {
-        $this->user->checkforUserWithThoseCredentials($this->currentUsername, $this->currentPassword);
-        $this->user->login();
-        $this->loginSucceeded = true;
-
-        if ($this->loginView->userWantsToKeepCredentials()) {
-            $this->makeCookie();
-            $this->currentMessage = self::$saveCookieLoginSucessfullMessage;
-        } else {
-            $this->currentMessage = self::$newCredentialsLoginSucessfullMessage;
-        }
-    }
-
-    private function loginUserWithCookieCredentials()
-    {
-        $this->user->login();
-        $this->loginSucceeded = true;
-
-        $this->currentMessage = self::$cookieLoginSuccessfulMessage;
-    }
-
-    private function logoutUser()
-    {
-        $this->user->logout();
-        $this->loginView->removeCookieCredentials();
-        $this->logoutSucceeded = true;
-        $this->currentMessage = self::$logoutSucessfulMessage;
-    }
-
-    private function setCurrentCredentialsFromCookie()
-    {
-        $this->currentCookieUsername = $this->loginView->getCookieUsername();
-        $this->currentCookiePassword = $this->loginView->getCookiePassword();
-    }
-
-    private function setCurrentCredentialsFromLoginForm()
-    {
-        $this->currentUsername = $this->loginView->getLoginFormUsername();
-        $this->currentPassword = $this->loginView->getLoginFormPassword();
-    }
-
-    private function makeCookie()
-    {
-        $expirytimestamp = time() + $this->cookie->getExpiryTime();
-        $this->currentCookiePassword = $this->cookie->hashPassword($this->currentPassword);
-        $this->loginView->setCookieCredentials($this->currentUsername, $this->currentCookiePassword, $expirytimestamp);
-        $this->cookie->saveCookie($this->currentUsername, $this->currentCookiePassword);
     }
 
     public function loginSuccessful()
@@ -174,13 +40,125 @@ class LoginUserController
         return $this->logoutSucceeded;
     }
 
-    public function getHTML(string $message, string $latestUsername)
+    public function getHTML(string $message)
     {
-        return $this->loginView->getHTML($this->user->isLoggedIn(), $message, $latestUsername);
+        return $this->loginView->getHTML($this->currentUser->isLoggedIn(), $message, $this->currentUser->getUsername());
     }
 
     public function getCurrentMessage()
     {
         return $this->currentMessage;
+    }
+
+    public function handleLoggedOutUser()
+    {
+        try {
+            if ($this->loginView->cookieCredentialsArePresent()) {
+                $this->attemptLoginWithCookieCredentials();
+            } elseif ($this->loginView->userWantsToLogin()) {
+                $this->attemptLoginWithNewCredentials();
+            }
+        } catch (\loginmodule\model\WrongInfoInCookieException $e) {
+            $this->currentMessage = self::$manipulatedTempUserCredentialsMessage;
+            $this->loginView->removeCookieCredentials();
+        } catch (\loginmodule\model\UsernameIsMissingException $e) {
+            $this->currentMessage = self::$noUsernameMessage;
+        } catch (\loginmodule\model\PasswordIsMissingException $e) {
+            $this->currentMessage = self::$noPasswordMessage;
+        } catch (\loginmodule\model\UserIsMissingException $e) {
+            $this->currentMessage = self::$wrongCredentialsMessage;
+        } catch (\loginmodule\model\WrongCredentialsException $e) {
+            $this->currentMessage = self::$wrongCredentialsMessage;
+        } catch (\loginmodule\model\InvalidCredentialsException $e) {
+            $this->currentMessage = self::$wrongCredentialsMessage;
+        }
+    }
+
+    public function handleLoggedInUser()
+    {
+        if ($this->loginView->userWantsToLogout()) {
+            $this->logoutUser();
+        }
+    }
+
+    private function attemptLoginWithCookieCredentials()
+    {
+        $this->setTempUserCredentials();
+        $this->ensureTempUserCredentialsHaveNotBeenManipulated();
+        $this->loginUserWithTempUserCredentials();
+        $this->currentMessage = self::$cookieLoginSuccessfulMessage;
+    }
+
+    private function createTempUserFromCookie()
+    {
+        $this->currentTempUser->setUsername($this->loginView->getCookieUsername());
+        $this->currentTempUser->setPassword($this->loginView->getCookiePassword());
+    }
+
+    private function ensureTempUserCredentialsHaveNotBeenManipulated()
+    {
+        $this->currentTempUser->checkForManipulation();
+    }
+
+    private function loginUserWithTempUserCredentials()
+    {
+        $this->transformTempUserToCurrentUser();
+        $this->loginCurrentUser();
+    }
+
+    private function transformTempUserToCurrentUser()
+    {
+        $this->currentUser->setUsername($this->currentTempUser->getUsername());
+        $this->currentUser->setPassword($this->currentTempUser->getPassword());
+    }
+
+    private function attemptLoginWithNewCredentials()
+    {
+        $this->setCurrentCredentialsFromLoginForm();
+        $this->validateCurrentUser();
+        $this->loginCurrentUser();
+    }
+
+    private function setCurrentCredentialsFromLoginForm()
+    {
+        $this->currentUser->setUsername($this->loginView->getLoginFormUsername());
+        $this->currentUser->setPassword($this->loginView->getLoginFormPassword());
+    }
+
+    private function validateCurrentUser()
+    {
+        $this->currentUser->validateUser();
+    }
+
+    private function loginCurrentUser()
+    {
+        $this->currentUser->login();
+        $this->loginSucceeded = true;
+
+        if ($this->loginView->userWantsToKeepCredentials()) {
+            $this->createCookieFromTempUser();
+            $this->currentMessage = self::$saveCookieUserLoginSucessfullMessage;
+        } else {
+            $this->currentMessage = self::$newCredentialsLoginSucessfullMessage;
+        }
+    }
+
+    private function logoutUser()
+    {
+        $this->user->logout();
+        $this->loginView->removeCookieCredentials();
+        $this->logoutSucceeded = true;
+        $this->currentMessage = self::$logoutSucessfulMessage;
+    }
+
+    private function createCookieFromTempUser()
+    {
+        $this->currentTempUser->setUsername($this->currentUsername);
+        $this->currentTempUser->setPassword($this->currentPassword);
+        $expiryTimestamp = time() + $this->currentTempUser->getExpiryTime();
+
+        $this->loginView->setCookieCredentials($this->currentTempUser->getUsername(), $this->currentTempUser->getUsername(), $expirytimestamp);
+        
+        $this->currentTempUser->saveUser();
     }
 }
