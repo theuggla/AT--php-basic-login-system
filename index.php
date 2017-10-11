@@ -16,7 +16,7 @@
 
     $cookieExpiryTimeInSeconds = 1000;
 
-    $msqlconnection = \site\persistance\MSQLConnector::getConnection('UserRegistry');
+    $msqlconnection = \site\persistance\MSQLConnector::getConnection('UpdatedUserRegistry');
     $persistanceHandler = new \loginmodule\persistance\LoginModulePersistance($msqlconnection);
 
     $dateTimeView = new \site\view\DateTimeView();
