@@ -106,7 +106,6 @@ class MainController
 
     private function setRegisterFormHTML()
     {
-        echo $this->currentUser->getUsername();
         $this->currentHTML = $this->registerUserController->getHTML($this->currentFlashMessage, $this->currentUser->getUsername());
     }
 
