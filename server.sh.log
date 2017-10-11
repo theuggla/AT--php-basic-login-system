@@ -2213,3 +2213,4 @@ Stack trace:
 [Wed Oct 11 15:47:06 2017] 127.0.0.1:53446 [200]: /
 [Wed Oct 11 15:47:07 2017] 127.0.0.1:53454 [200]: /
 [Wed Oct 11 15:47:10 2017] 127.0.0.1:53458 [200]: /added-functionality/?
+[Wed Oct 11 15:47:49 2017] 127.0.0.1:53464 Invalid request (Unexpected EOF)
