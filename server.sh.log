@@ -2150,3 +2150,37 @@ Stack trace:
 [Wed Oct 11 15:23:09 2017] PHP   4. mysqli_connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:14
 [Wed Oct 11 15:23:09 2017] 127.0.0.1:53128 [200]: /added-functionality/?
 [Wed Oct 11 15:23:29 2017] 127.0.0.1:53132 Invalid request (Unexpected EOF)
+[Wed Oct 11 15:31:58 2017] PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'UpdatedUserRegistry' in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php on line 14
+[Wed Oct 11 15:31:58 2017] PHP Stack trace:
+[Wed Oct 11 15:31:58 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 15:31:58 2017] PHP   2. site\persistance\MSQLConnector::getConnection() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:19
+[Wed Oct 11 15:31:58 2017] PHP   3. site\persistance\MSQLConnector::connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:27
+[Wed Oct 11 15:31:58 2017] PHP   4. mysqli_connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:14
+[Wed Oct 11 15:31:58 2017] 127.0.0.1:53202 [200]: /added-functionality/?
+[Wed Oct 11 15:32:06 2017] PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'UpdatedUserRegistry' in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php on line 14
+[Wed Oct 11 15:32:06 2017] PHP Stack trace:
+[Wed Oct 11 15:32:06 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 15:32:06 2017] PHP   2. site\persistance\MSQLConnector::getConnection() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:19
+[Wed Oct 11 15:32:06 2017] PHP   3. site\persistance\MSQLConnector::connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:27
+[Wed Oct 11 15:32:06 2017] PHP   4. mysqli_connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:14
+[Wed Oct 11 15:32:06 2017] 127.0.0.1:53206 [200]: /added-functionality/?
+[Wed Oct 11 15:32:15 2017] PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'UpdatedUserRegistry' in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php on line 14
+[Wed Oct 11 15:32:15 2017] PHP Stack trace:
+[Wed Oct 11 15:32:15 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 15:32:15 2017] PHP   2. site\persistance\MSQLConnector::getConnection() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:19
+[Wed Oct 11 15:32:15 2017] PHP   3. site\persistance\MSQLConnector::connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:27
+[Wed Oct 11 15:32:15 2017] PHP   4. mysqli_connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:14
+[Wed Oct 11 15:32:15 2017] PHP Fatal error:  Uncaught Error: Call to a member function query() on boolean in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php:70
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php(38): loginmodule\persistance\LoginModulePersistance->getUserByUsername('Othman')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(118): loginmodule\persistance\LoginModulePersistance->doesUserExist('Othman')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(63): loginmodule\model\User->userIsNotRegistredInDatabase()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(130): loginmodule\model\User->validateUserAgainstDatabase()
+#4 /media/moll in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 70
+[Wed Oct 11 15:32:15 2017] 127.0.0.1:53220 [200]: /added-functionality/? - Uncaught Error: Call to a member function query() on boolean in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php:70
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php(38): loginmodule\persistance\LoginModulePersistance->getUserByUsername('Othman')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(118): loginmodule\persistance\LoginModulePersistance->doesUserExist('Othman')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(63): loginmodule\model\User->userIsNotRegistredInDatabase()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(130): loginmodule\model\User->validateUserAgainstDatabase()
+#4 /media/moll in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 70
