@@ -11,8 +11,6 @@ class RegisterUserController
     private static $usernameInvalidMessage = 'Username contains invalid characters.';
     private static $passwordMisMatchMessage = 'Passwords do not match.';
     private static $manipulatedCookieCredentialsMessage = 'Wrong information in cookies';
-    private static $noUsernameMessage = 'Username is missing';
-    private static $noPasswordMessage = 'Password is missing';
     private static $badPasswordMessage;
     private static $badUsernameMessage;
 
@@ -39,10 +37,6 @@ class RegisterUserController
         if ($this->userHasPressedRegisterButton()) {
             try {
                 $this->attemptRegistration();
-            } catch (\loginmodule\model\UsernameIsMissingException $e) {
-                $this->currentMessage = self::$noUsernameMessage;
-            } catch (\loginmodule\model\PasswordIsMissingException $e) {
-                $this->currentMessage = self::$noPasswordMessage;
             } catch (\loginmodule\model\UsernameHasInvalidCharactersException $e) {
                 $this->currentMessage = self::$usernameInvalidMessage;
             } catch (\loginmodule\model\PasswordMisMatchException $e) {
