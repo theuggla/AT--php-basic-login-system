@@ -58,7 +58,7 @@ class LoginUserController
             } elseif ($this->loginView->userWantsToLogin()) {
                 $this->attemptLoginWithNewCredentials();
             }
-        } catch (\loginmodule\model\WrongInfoInCookieException $e) {
+        } catch (\loginmodule\model\WrongInfoInTempPasswordException $e) {
             $this->currentMessage = self::$manipulatedTempUserCredentialsMessage;
             $this->loginView->removeCookieCredentials();
         } catch (\loginmodule\model\UsernameIsMissingException $e) {
