@@ -93,8 +93,6 @@ class User
 
     public function hasNotBeenHijacked()
     {
-        $result = isset($_SESSION[self::$userAgent]) && $_SESSION[self::$userAgent] == $_SERVER[self::$serverUserAgent];
-        var_dump($result);
         return isset($_SESSION[self::$userAgent]) && $_SESSION[self::$userAgent] == $_SERVER[self::$serverUserAgent];
     }
 
