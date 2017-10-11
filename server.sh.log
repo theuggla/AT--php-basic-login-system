@@ -1894,3 +1894,55 @@ Stack trace:
 [Wed Oct 11 14:57:30 2017] PHP   3. site\persistance\MSQLConnector::connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:27
 [Wed Oct 11 14:57:30 2017] PHP   4. mysqli_connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:14
 [Wed Oct 11 14:57:30 2017] 127.0.0.1:52372 [200]: /added-functionality/?register
+[Wed Oct 11 15:07:31 2017] PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'UpdatedUserRegistry' in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php on line 14
+[Wed Oct 11 15:07:31 2017] PHP Stack trace:
+[Wed Oct 11 15:07:31 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 15:07:31 2017] PHP   2. site\persistance\MSQLConnector::getConnection() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:19
+[Wed Oct 11 15:07:31 2017] PHP   3. site\persistance\MSQLConnector::connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:27
+[Wed Oct 11 15:07:31 2017] PHP   4. mysqli_connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:14
+[Wed Oct 11 15:07:31 2017] PHP Catchable fatal error:  Object of class __PHP_Incomplete_Class could not be converted to string in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 37
+[Wed Oct 11 15:07:31 2017] PHP Stack trace:
+[Wed Oct 11 15:07:31 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 15:07:31 2017] PHP   2. loginmodule\LoginModule->startLoginModule() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:28
+[Wed Oct 11 15:07:31 2017] PHP   3. loginmodule\controller\MainController->listenForUserAccessAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:45
+[Wed Oct 11 15:07:31 2017] PHP   4. loginmodule\controller\MainController->setCorrectViewHTML() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:29
+[Wed Oct 11 15:07:31 2017] PHP   5. loginmodule\controller\MainController->setRegisterFormHTML() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:61
+[Wed Oct 11 15:07:31 2017] PHP   6. loginmodule\model\User->getUsername() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:109
+[Wed Oct 11 15:07:31 2017] 127.0.0.1:52432 [200]: /added-functionality/?register
+[Wed Oct 11 15:08:21 2017] 127.0.0.1:52436 Invalid request (Unexpected EOF)
+[Wed Oct 11 15:09:05 2017] PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'UpdatedUserRegistry' in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php on line 14
+[Wed Oct 11 15:09:05 2017] PHP Stack trace:
+[Wed Oct 11 15:09:05 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 15:09:05 2017] PHP   2. site\persistance\MSQLConnector::getConnection() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:19
+[Wed Oct 11 15:09:05 2017] PHP   3. site\persistance\MSQLConnector::connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:27
+[Wed Oct 11 15:09:05 2017] PHP   4. mysqli_connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:14
+[Wed Oct 11 15:09:05 2017] 127.0.0.1:52574 [200]: /added-functionality/?register
+[Wed Oct 11 15:09:20 2017] 127.0.0.1:52578 Invalid request (Unexpected EOF)
+[Wed Oct 11 15:09:20 2017] PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'UpdatedUserRegistry' in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php on line 14
+[Wed Oct 11 15:09:20 2017] PHP Stack trace:
+[Wed Oct 11 15:09:20 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 15:09:20 2017] PHP   2. site\persistance\MSQLConnector::getConnection() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:19
+[Wed Oct 11 15:09:20 2017] PHP   3. site\persistance\MSQLConnector::connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:27
+[Wed Oct 11 15:09:20 2017] PHP   4. mysqli_connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:14
+[Wed Oct 11 15:09:20 2017] 127.0.0.1:52600 [200]: /added-functionality/?register
+[Wed Oct 11 15:09:22 2017] PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'UpdatedUserRegistry' in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php on line 14
+[Wed Oct 11 15:09:22 2017] PHP Stack trace:
+[Wed Oct 11 15:09:22 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 15:09:22 2017] PHP   2. site\persistance\MSQLConnector::getConnection() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:19
+[Wed Oct 11 15:09:22 2017] PHP   3. site\persistance\MSQLConnector::connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:27
+[Wed Oct 11 15:09:22 2017] PHP   4. mysqli_connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:14
+[Wed Oct 11 15:09:22 2017] 127.0.0.1:52606 [200]: /added-functionality/?
+[Wed Oct 11 15:09:25 2017] PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'UpdatedUserRegistry' in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php on line 14
+[Wed Oct 11 15:09:25 2017] PHP Stack trace:
+[Wed Oct 11 15:09:25 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 15:09:25 2017] PHP   2. site\persistance\MSQLConnector::getConnection() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:19
+[Wed Oct 11 15:09:25 2017] PHP   3. site\persistance\MSQLConnector::connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:27
+[Wed Oct 11 15:09:25 2017] PHP   4. mysqli_connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:14
+[Wed Oct 11 15:09:25 2017] 127.0.0.1:52612 [200]: /added-functionality/?
+[Wed Oct 11 15:09:30 2017] PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'UpdatedUserRegistry' in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php on line 14
+[Wed Oct 11 15:09:30 2017] PHP Stack trace:
+[Wed Oct 11 15:09:30 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 15:09:30 2017] PHP   2. site\persistance\MSQLConnector::getConnection() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:19
+[Wed Oct 11 15:09:30 2017] PHP   3. site\persistance\MSQLConnector::connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:27
+[Wed Oct 11 15:09:30 2017] PHP   4. mysqli_connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:14
+[Wed Oct 11 15:09:30 2017] 127.0.0.1:52618 [200]: /added-functionality/?

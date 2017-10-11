@@ -33,7 +33,9 @@ class User
 
     public function getUsername() : String
     {
-        return \is_null($this->username) ? isset($_SESSION[self::$latestUsername]) ? $_SESSION[self::$latestUsername] : '' : $this->username->getUsername();
+        $username = \is_null($this->username) ? isset($_SESSION[self::$latestUsername]) ? $_SESSION[self::$latestUsername] : '' : $this->username->getUsername();
+        echo 'username: ---> ' . $username . ' <---';
+        return  $username;
     }
 
     public function getPassword() : String
