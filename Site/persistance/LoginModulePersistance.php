@@ -41,7 +41,6 @@ class LoginModulePersistance implements \loginmodule\persistance\IPersistance
         $result = $this->getUserByUsername($username);
             
         if ($result->num_rows <= 0) {
-            echo 'returning false';
             return false;
         } else {
             return true;
