@@ -30,7 +30,7 @@ class User
 
     public function getUsername() : String
     {
-        return \is_null($this->username->getUsername()) ? '' : $this->username->getUsername();
+        return \is_null($this->username) ? '' : $this->username->getUsername();
     }
 
     public function getPassword() : String
