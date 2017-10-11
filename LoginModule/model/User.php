@@ -23,7 +23,7 @@ class User
     {
         $this->rememberUsername($username);
         $this->username = new \loginmodule\model\Username($username, $stripHTML);
-        $this->rememberUsername($this->username);
+        $this->rememberUsername($this->username->getUsername());
     }
 
     public function setPassword(string $password)
@@ -34,7 +34,6 @@ class User
     public function getUsername() : String
     {
         $username = \is_null($this->username) ? isset($_SESSION[self::$latestUsername]) ? $_SESSION[self::$latestUsername] : '' : $this->username->getUsername();
-        echo 'username: ---> ' . $username . ' <---';
         return  $username;
     }
 
