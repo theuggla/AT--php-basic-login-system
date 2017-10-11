@@ -6,6 +6,7 @@ class User
 {
     private static $userAgent = 'UpdatedLoginModule::User::UserAgent';
     private static $isLoggedIn = 'UpdatedLoginModule::User::IsLoggedIn';
+    private static $latestUsername = 'UpdatedLoginModule::Username::LatestUserName';
     private static $serverUserAgent = 'HTTP_USER_AGENT';
 
     protected $username;
@@ -20,6 +21,7 @@ class User
 
     public function setUsername(string $username)
     {
+        $this->rememberUsername($username);
         $this->username = new \loginmodule\model\Username($username);
     }
 
@@ -30,7 +32,7 @@ class User
 
     public function getUsername() : String
     {
-        return \is_null($this->username) ? '' : $this->username->getUsername();
+        return \is_null($this->username) ? isset($_SESSION[self::$latestUsername]) ? $_SESSION[self::$latestUsername] : '' : $this->username->getUsername();
     }
 
     public function getPassword() : String
@@ -51,7 +53,7 @@ class User
     public function loginUser()
     {
         $_SESSION[self::$isLoggedIn] = true;
-        $_SESSION[self::$userAgent] = $_SERVER['HTTP_USER_AGENT'];
+        $_SESSION[self::$userAgent] = $_SERVER[self::$serverUserAgent];
     }
 
     public function validateUserAgainstDatabase()
@@ -83,7 +85,7 @@ class User
 
     public function hasNotBeenHijacked()
     {
-        return isset($_SESSION[self::$userAgent]) && $_SESSION[self::$userAgent] == $_SERVER["HTTP_USER_AGENT"];
+        return isset($_SESSION[self::$userAgent]) && $_SESSION[self::$userAgent] == $_SERVER[self::$serverUserAgent];
     }
 
     public function getMinimumPasswordCharacters()
@@ -94,6 +96,11 @@ class User
     public function getMinimumUsernameCharacters()
     {
         return \loginmodule\model\Username::$MIN_VALID_LENGTH;
+    }
+
+    private function rememberUsername($username)
+    {
+        $_SESSION[self::$latestUsername] = $username;
     }
 
     private function userIsNotRegistredInDatabase()

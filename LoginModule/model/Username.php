@@ -5,7 +5,6 @@ namespace loginmodule\model;
 class Username
 {
     public static $MIN_VALID_LENGTH = 3;
-    private static $latestUsername = 'UpdatedLoginModule::Username::LatestUserName';
 
     private $INVALID_CHARS = array(">", "<", "/", "\\");
     private $username;
@@ -14,13 +13,12 @@ class Username
     {
         $this->username = $username;
         $this->username = $this->stripUsernameOfHTMLTags();
-        $this->rememberUsername();
         $this->validate($username);
     }
 
     public function getUsername() : String
     {
-        return isset($_SESSION[self::$latestUsername]) ? $_SESSION[self::$latestUsername] : '';
+        return $this->username;
     }
 
     public function setInvalidChars(array $invalidChars)
@@ -37,11 +35,6 @@ class Username
         } elseif ($this->usernameContainsInvalidCharacters()) {
             throw new \loginmodule\model\UsernameHasInvalidCharactersException('Username contains invalid characters.');
         }
-    }
-
-    private function rememberUsername()
-    {
-        $_SESSION[self::$latestUsername] = $this->username;
     }
 
     private function stripUsernameOfHTMLTags() : string
