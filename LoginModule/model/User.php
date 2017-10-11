@@ -21,7 +21,6 @@ class User
     public function setUsername(string $username)
     {
         $this->username = new \loginmodule\model\Username($username);
-        $this->rememberUsername();
     }
 
     public function setPassword(string $password)
@@ -31,7 +30,7 @@ class User
 
     public function getUsername() : String
     {
-        return $this->username->getUsername();
+        return \is_null($this->username->getUsername()) ? '' : $this->username->getUsername();
     }
 
     public function getPassword() : String
