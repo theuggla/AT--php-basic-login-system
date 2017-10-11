@@ -1635,3 +1635,53 @@ Stack trace:
 [Wed Oct 11 14:01:24 2017] 127.0.0.1:51906 [200]: /added-functionality/?register
 [Wed Oct 11 14:01:27 2017] 127.0.0.1:51910 [200]: /added-functionality/?register
 [Wed Oct 11 14:01:35 2017] 127.0.0.1:51920 [200]: /added-functionality/?register
+[Wed Oct 11 14:10:31 2017] PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'UpdatedUserRegistry' in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php on line 14
+[Wed Oct 11 14:10:31 2017] PHP Stack trace:
+[Wed Oct 11 14:10:31 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 14:10:31 2017] PHP   2. site\persistance\MSQLConnector::getConnection() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:19
+[Wed Oct 11 14:10:31 2017] PHP   3. site\persistance\MSQLConnector::connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:27
+[Wed Oct 11 14:10:31 2017] PHP   4. mysqli_connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:14
+[Wed Oct 11 14:10:31 2017] 127.0.0.1:51976 [200]: /added-functionality/?register
+[Wed Oct 11 14:10:42 2017] 127.0.0.1:51980 Invalid request (Unexpected EOF)
+[Wed Oct 11 14:10:42 2017] PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'UpdatedUserRegistry' in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php on line 14
+[Wed Oct 11 14:10:42 2017] PHP Stack trace:
+[Wed Oct 11 14:10:42 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 14:10:42 2017] PHP   2. site\persistance\MSQLConnector::getConnection() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:19
+[Wed Oct 11 14:10:42 2017] PHP   3. site\persistance\MSQLConnector::connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:27
+[Wed Oct 11 14:10:42 2017] PHP   4. mysqli_connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:14
+[Wed Oct 11 14:10:42 2017] PHP Notice:  Accessing static property loginmodule\model\Username::$latestUsername as non static in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Username.php on line 44
+[Wed Oct 11 14:10:42 2017] PHP Stack trace:
+[Wed Oct 11 14:10:42 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 14:10:42 2017] PHP   2. loginmodule\LoginModule->startLoginModule() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:28
+[Wed Oct 11 14:10:42 2017] PHP   3. loginmodule\controller\MainController->listenForUserAccessAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:45
+[Wed Oct 11 14:10:42 2017] PHP   4. loginmodule\controller\MainController->delegateControlDependingOnUseCase() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:28
+[Wed Oct 11 14:10:42 2017] PHP   5. loginmodule\controller\MainController->determineResultOfRegisterAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:49
+[Wed Oct 11 14:10:42 2017] PHP   6. loginmodule\controller\RegisterUserController->handleUserRegisterAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:78
+[Wed Oct 11 14:10:42 2017] PHP   7. loginmodule\controller\RegisterUserController->attemptRegistration() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php:39
+[Wed Oct 11 14:10:42 2017] PHP   8. loginmodule\controller\RegisterUserController->setCurrentCredentialsFromForm() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php:77
+[Wed Oct 11 14:10:42 2017] PHP   9. loginmodule\controller\RegisterUserController->setUsernameOrErrorMessage() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php:84
+[Wed Oct 11 14:10:42 2017] PHP  10. loginmodule\model\User->setUsername() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php:98
+[Wed Oct 11 14:10:42 2017] PHP  11. loginmodule\model\Username->__construct() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:24
+[Wed Oct 11 14:10:42 2017] PHP  12. loginmodule\model\Username->rememberUsername() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Username.php:17
+[Wed Oct 11 14:10:42 2017] PHP Notice:  Undefined property: loginmodule\model\Username::$latestUsername in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Username.php on line 44
+[Wed Oct 11 14:10:42 2017] PHP Stack trace:
+[Wed Oct 11 14:10:42 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 14:10:42 2017] PHP   2. loginmodule\LoginModule->startLoginModule() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:28
+[Wed Oct 11 14:10:42 2017] PHP   3. loginmodule\controller\MainController->listenForUserAccessAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:45
+[Wed Oct 11 14:10:42 2017] PHP   4. loginmodule\controller\MainController->delegateControlDependingOnUseCase() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:28
+[Wed Oct 11 14:10:42 2017] PHP   5. loginmodule\controller\MainController->determineResultOfRegisterAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:49
+[Wed Oct 11 14:10:42 2017] PHP   6. loginmodule\controller\RegisterUserController->handleUserRegisterAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:78
+[Wed Oct 11 14:10:42 2017] PHP   7. loginmodule\controller\RegisterUserController->attemptRegistration() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php:39
+[Wed Oct 11 14:10:42 2017] PHP   8. loginmodule\controller\RegisterUserController->setCurrentCredentialsFromForm() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php:77
+[Wed Oct 11 14:10:42 2017] PHP   9. loginmodule\controller\RegisterUserController->setUsernameOrErrorMessage() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php:84
+[Wed Oct 11 14:10:42 2017] PHP  10. loginmodule\model\User->setUsername() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php:98
+[Wed Oct 11 14:10:42 2017] PHP  11. loginmodule\model\Username->__construct() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:24
+[Wed Oct 11 14:10:42 2017] PHP  12. loginmodule\model\Username->rememberUsername() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Username.php:17
+[Wed Oct 11 14:10:42 2017] 127.0.0.1:51988 [200]: /added-functionality/?register
+[Wed Oct 11 14:11:13 2017] PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'UpdatedUserRegistry' in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php on line 14
+[Wed Oct 11 14:11:13 2017] PHP Stack trace:
+[Wed Oct 11 14:11:13 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 14:11:13 2017] PHP   2. site\persistance\MSQLConnector::getConnection() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:19
+[Wed Oct 11 14:11:13 2017] PHP   3. site\persistance\MSQLConnector::connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:27
+[Wed Oct 11 14:11:13 2017] PHP   4. mysqli_connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:14
+[Wed Oct 11 14:11:13 2017] 127.0.0.1:51994 [200]: /added-functionality/?register
