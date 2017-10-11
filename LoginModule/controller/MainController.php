@@ -41,6 +41,7 @@ class MainController
 
     private function delegateControlDependingOnUseCase()
     {
+        var_dump($this->userIsLoggedIn());
         if ($this->userIsLoggedIn()) {
             $this->determineResultOfLogoutAttempt();
             $this->currentFlashMessage = $this->loginUserController->getCurrentMessage();
@@ -111,8 +112,6 @@ class MainController
 
     private function userIsLoggedIn()
     {
-        $result = $this->currentUser->isLoggedIn() && $this->currentUser->hasNotBeenHijacked();
-        var_dump($result);
         return ($this->currentUser->isLoggedIn() && $this->currentUser->hasNotBeenHijacked());
     }
 }
