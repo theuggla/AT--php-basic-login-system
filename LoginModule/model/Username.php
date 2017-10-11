@@ -9,11 +9,10 @@ class Username
     private $INVALID_CHARS = array(">", "<", "/", "\\");
     private $username;
 
-    public function __construct(string $username)
+    public function __construct(string $username, bool $stripOfHTML)
     {
         $this->username = $username;
-        $this->username = $this->stripUsernameOfHTMLTags();
-        $this->validate($username);
+        $stripOfHTML ? $this->stripUsernameOfHTMLTags() : $this->validate($username);
     }
 
     public function getUsername() : String
@@ -37,9 +36,9 @@ class Username
         }
     }
 
-    private function stripUsernameOfHTMLTags() : string
+    private function stripUsernameOfHTMLTags()
     {
-        return strip_tags($this->username);
+        $this->username = strip_tags($this->username);
     }
 
     private function usernameIsMissing() : bool

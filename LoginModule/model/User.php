@@ -19,10 +19,11 @@ class User
         $this->persistance = $persistance;
     }
 
-    public function setUsername(string $username)
+    public function setUsername(string $username, bool $stripHTML = false)
     {
         $this->rememberUsername($username);
-        $this->username = new \loginmodule\model\Username($username);
+        $this->username = new \loginmodule\model\Username($username, $stripHTML);
+        $this->rememberUsername($this->username);
     }
 
     public function setPassword(string $password)
@@ -70,6 +71,12 @@ class User
         if (!($this->userIsNotRegistredInDatabase())) {
             throw new \loginmodule\model\DuplicateUserException('User already exists.');
         }  
+    }
+
+    public function cleanUpUsername()
+    {
+        $stripHTML = true;
+        $this->setUsername($this->getUsername(), $stripHTML);
     }
 
     public function saveUser()
