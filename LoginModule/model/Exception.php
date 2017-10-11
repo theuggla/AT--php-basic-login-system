@@ -82,7 +82,7 @@ class UserIsMissingException extends WrongCredentialsException
     }
 }
 
-class WrongInfoInCookieException extends WrongCredentialsException
+class WrongInfoInTempPasswordException extends WrongCredentialsException
 {
     public function __construct($message, $code = 0, \Exception $previous = null)
     {

@@ -19,11 +19,8 @@ class LoginModulePersistance implements \loginmodule\persistance\IPersistance
              
         $cookie = $result->fetch_object();
 
-        if ($result->num_rows <= 0 || $cookie->expiry < time()) {
-            return false;
-        } else {
-            return true;
-        }
+        return ($result->num_rows <= 0 || $cookie->expiry < time());
+
     }
 
     public function saveTempUser(string $username, string $password, int $timestamp)
