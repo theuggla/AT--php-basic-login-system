@@ -97,7 +97,7 @@ class RegisterUserController
         {
             $this->currentUser->setUsername($this->registerView->getAttemptedUsername());
         }
-        catch (\loginmodule\model\UsernameIsTooShortException $e) 
+        catch (\loginmodule\model\UsernameNotValidException $e) 
         {
             $this->currentMessage .= self::$badUsernameMessage;
         }
@@ -109,7 +109,7 @@ class RegisterUserController
         {
             $this->currentUser->setPassword($this->registerView->getAttemptedPassword());
         }
-        catch (\loginmodule\model\PasswordIsTooShortException $e) 
+        catch (\loginmodule\model\PasswordIsNotValidException $e) 
         {
             $this->currentMessage .= self::$badPasswordMessage;
         }
