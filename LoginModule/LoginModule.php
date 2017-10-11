@@ -80,7 +80,7 @@ class LoginModule {
     private function initiateControllers()
     {
         $this->loginController = new \loginmodule\controller\LoginUserController($this->currentUser, $this->currentTempUser, $this->loginView);
-        $this->registerController = new \loginmodule\controller\RegisterUserController($this->currentUser, $this->registerView);
+        $this->registerController = new \loginmodule\controller\RegisterUserController($this->currentUser, $this->currentTempUser, $this->registerView);
         $this->mainController = new \loginmodule\controller\MainController($this->currentUser, $this->loginController, $this->registerController);
     }
 }

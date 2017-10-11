@@ -11,48 +11,45 @@ class RegisterUserController
     private static $usernameInvalidMessage = 'Username contains invalid characters.';
     private static $passwordMisMatchMessage = 'Passwords do not match.';
     private static $manipulatedCookieCredentialsMessage = 'Wrong information in cookies';
+    private static $noUsernameMessage = 'Username is missing';
+    private static $noPasswordMessage = 'Password is missing';
     private static $badPasswordMessage;
     private static $badUsernameMessage;
 
     private $registerView = 'RegisterUserController::RegisterView';
-    private $user = 'RegisterUserController::User';
-
-    private $attemptedUsername = '';
-    private $attemptedPassword = '';
-    private $atteptedRepeatedPassword = '';
+    
+    private $currentUser = 'RegisterUserController::User';
+    private $currentTempUser = 'RegisterUserController::TempUser';
 
     private $currentMessage = '';
     private $registrySucceeded = false;
 
-    public function __construct($user, $registerView)
+    public function __construct($currentUser, $currentTempUser, $registerView)
     {
+        $this->currentUser = $currentUser;
+        $this->currentTempUser = $currentTempUser;
         $this->registerView = $registerView;
-        $this->user = $user;
 
-        self::$badPasswordMessage = "Password has too few characters, at least " . $this->user->getMinimumPasswordCharacters() . " characters.";
-        self::$badUsernameMessage = "Username has too few characters, at least " . $this->user->getMinimumUsernameCharacters() . " characters. ";
+        self::$badPasswordMessage = "Password has too few characters, at least " . $this->currentUser->getMinimumPasswordCharacters() . " characters.";
+        self::$badUsernameMessage = "Username has too few characters, at least " . $this->currentUser->getMinimumUsernameCharacters() . " characters. ";
     }
 
     public function handleUserRegisterAttempt()
     {
         if ($this->userHasPressedRegisterButton()) {
             try {
-                $this->getAttemptedCredentials();
-                $this->validateCredentialsAndSetErrorMessage();
-                $this->checkIfUserAlreadyExists();
-                $this->createNewUser();
+                $this->attemptRegistration();
+            } catch (\loginmodule\model\UsernameIsMissingException $e) {
+                $this->currentMessage = self::$noUsernameMessage;
+            } catch (\loginmodule\model\PasswordIsMissingException $e) {
+                $this->currentMessage = self::$noPasswordMessage;
             } catch (\loginmodule\model\UsernameHasInvalidCharactersException $e) {
-                $this->attemptedUsername = $this->user->getUsername();
                 $this->currentMessage = self::$usernameInvalidMessage;
-            } catch (\loginmodule\model\DuplicateUserException $e) {
-                $this->currentMessage = self::$takenUsernameMessage;
             } catch (\loginmodule\model\PasswordMisMatchException $e) {
                 $this->currentMessage = self::$passwordMisMatchMessage;
+            } catch (\loginmodule\model\DuplicateUserException $e) {
+                $this->currentMessage = self::$takenUsernameMessage;
             } catch (\loginmodule\model\InvalidCredentialsException $e) {}
-            finally
-            {
-                $this->user->setLatestUsername($this->attemptedUsername);
-            }
         }
     }
 
@@ -81,76 +78,70 @@ class RegisterUserController
         return $this->registerView->userWantsToRegister();
     }
 
-    private function getAttemptedCredentials()
+    private function attemptRegistration()
     {
-        $this->attemptedUsername = $this->registerView->getAttemptedUsername();
-        $this->attemptedPassword = $this->registerView->getAttemptedPassword();
-        $this->attemptedRepeatedPassword = $this->registerView->getAttemptedRepeatedPassword();
+        $this->setCurrentCredentialsFromForm();
+        $this->validateCurrentUser();
+        $this->createNewUser();
     }
 
-    private function validateCredentialsAndSetErrorMessage()
+    private function setCurrentCredentialsFromForm()
+    {
+        $this->setUsernameOrErrorMessage();
+        $this->setPasswordOrErrorMessage();
+
+        if (($this->currentUser->isMissingCrendentials()))
+        {
+            throw new \loginmodule\model\InvalidCredentialsException('Attempted credentials are not valid.');
+        }
+
+    }
+
+    private function setUsernameOrErrorMessage()
     {
         try
         {
-            $this->user($attemptedUsername, $attemptedPassword);
+            $this->currentUser->setUsername($this->registerView->getAttemptedUsername());
         }
-        catch (\loginmodule\model\UsernameIsMissingException $e)
+        catch (\loginmodule\model\UsernameIsTooShortException $e) 
         {
-            echo 'specific';
+            $this->currentMessage .= self::$badUsernameMessage;
         }
-        catch (\loginmodule\model\InvalidCredentialsException $e)
+    }
+
+    private function setPasswordOrErrorMessage()
+    {
+        try
         {
-            echo 'generic';
+            $this->currentUser->setPassword($this->registerView->getAttemptedPassword());
+        }
+        catch (\loginmodule\model\PasswordIsTooShortException $e) 
+        {
+            $this->currentMessage .= self::$badPasswordMessage;
         }
     }
 
-    private function isUsernameValid()
+    private function validateCurrentUser()
     {
-        $result;
-
-        try {
-            $this->user->validateUsername($this->attemptedUsername);
-            $result = true;
-        } catch (\loginmodule\model\UsernameHasInvalidCharactersException $e) {
-            throw $e;
-        } catch (\loginmodule\model\UsernameIsNotValidException $e) {
-            $result = false;
-        }
-
-        return $result;
-    }
-        
-    private function isPasswordValid()
-    {
-        $result;
-
-        try {
-            $this->user->validatePassword($this->attemptedPassword);
-            $result = true;
-        } catch (\loginmodule\model\PasswordIsNotValidException $e) {
-            $result = false;
-        }
-
-        return $result;
+        $this->compareAttemptedPasswords();
+        $this->currentUser->validateNewUser();
     }
 
-    private function comparePlaintextPasswords($firstPassword, $secondPassword)
+    private function compareAttemptedPasswords()
     {
-        if (!($firstPassword == $secondPassword)) {
+        if ($this->currentUser->getPassword() != $this->registerView->getAttemptedRepeatedPassword()) {
             throw new \loginmodule\model\PasswordMisMatchException();
         }
     }
 
     private function checkIfUserAlreadyExists()
     {
-        if ($this->user->doesUserExist($this->attemptedUsername)) {
-            throw new \loginmodule\model\DuplicateUserException();
-        }
+        $this->currentUser->validateNewUser();
     }
 
     private function createNewUser()
     {
-        $this->user->saveUser($this->attemptedUsername, $this->attemptedPassword);
+        $this->currentUser->saveUser();
         $this->currentMessage = self::$registrationSucessfulMessage;
         $this->registrySucceeded = true;
     }

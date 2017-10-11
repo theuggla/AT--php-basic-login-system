@@ -4,32 +4,47 @@ namespace loginmodule\model;
 
 class Password
 {
-    private static $MIN_VALID_LENGTH = 6;
+    public static $MIN_VALID_LENGTH = 6;
 
-    protected $password;
+    private $password;
 
     public function __construct(string $password)
     {
-        $this->validate($password);
-        $this->password = $this->getHashedPassword($password);
+        $this->password = $password;
+        $this->validatePassword();
     }
 
-    public static function getMinLength() : bool
+    public function getPassword()
     {
-        return self::$MIN_VALID_LENGTH;
+        return $this->password;
     }
 
-    private function validate($password)
+    public function hashPassword()
+    {
+        $this->password = \password_hash($this->password, PASSWORD_DEFAULT);
+    }
+
+    public function isPasswordCorrect(string $hashedPassword) : bool
+    {
+        return \password_verify($this->password, $hashedPassword);
+    }
+
+    private function validatePassword()
     {
         if ($this->passwordIsMissing()) {
             throw new \loginmodule\model\PasswordIsMissingException('Password is missing');
         } elseif ($this->passwordIsTooShort()) {
-            throw new \loginmodule\model\PasswordIsNotValidException("Password has too few characters, at least " . self::$MIN_VALID_LENGTH . " characters.");
+            throw new \loginmodule\model\PasswordIsTooShortException("Password has too few characters, at least " . self::$MIN_VALID_LENGTH . " characters.");
         }
     }
 
-    private function getHashedPassword($password) : string
+    private function passwordIsMissing() : bool
     {
-        return password_hash($password, PASSWORD_DEFAULT);
+        return strlen($this->password) == 0;
+    }
+
+    private function passwordIsTooShort() : bool
+    {
+        return strlen($this->password) < self::$MIN_VALID_LENGTH;
     }
 }

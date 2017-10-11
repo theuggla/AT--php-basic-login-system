@@ -10,7 +10,7 @@ interface IPersistance
 
     public function doesUserExist(string $username) : bool;
 
-    public function getUser(string $username, string $password);
+    public function getUserPassword(string $username);
 
     public function didTempUserExpire(string $username, string $password): bool;
 }

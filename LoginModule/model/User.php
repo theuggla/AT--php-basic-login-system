@@ -37,7 +37,12 @@ class User
 
     public function getPassword() : String
     {
-        return $this->password;
+        return $this->password->getPassword();
+    }
+
+    public function isMissingCrendentials()
+    {
+        return \is_null($this->username) || \is_null($this->password);
     }
 
     public function logoutUser()
@@ -51,12 +56,26 @@ class User
         $_SESSION[self::$userAgent] = $_SERVER['HTTP_USER_AGENT'];
     }
 
-    public function validateUser()
+    public function validateUserAgainstDatabase()
     {
-        if (!($this->persistance->doesUserExist($this->username, $this->password))) {
-            throw new \loginmodule\model\loginmodule\model\WrongCredentialsException();
-        }
-        
+        if ($this->userIsNotRegistredInDatabase()) {
+            throw new \loginmodule\model\WrongCredentialsException('User does not exist.');
+        } else if ($this->passwordsDoesNotMatch()) {
+            throw new \loginmodule\model\WrongCredentialsException('Password is wrong.');
+        }   
+    }
+
+    public function validateNewUser()
+    {
+        if (!($this->userIsNotRegistredInDatabase())) {
+            throw new \loginmodule\model\DuplicateUserException('User already exists.');
+        }  
+    }
+
+    public function saveUser()
+    {
+        $this->password->hashPassword();
+        $this->persistance->saveUser($this->username->getUsername(), $this->password->getPassword());
     }
 
     public function isLoggedIn()
@@ -71,16 +90,27 @@ class User
 
     public function getMinimumPasswordCharacters()
     {
-        return \loginmodule\model\Password::getMinLength();
+        return \loginmodule\model\Password::$MIN_VALID_LENGTH;
     }
 
     public function getMinimumUsernameCharacters()
     {
-        return \loginmodule\model\Username::getMinLength();
+        return \loginmodule\model\Username::$MIN_VALID_LENGTH;
     }
 
     private function rememberUsername()
     {
         $_SESSION[self::$latestUsername] = $this->username->getUsername();
+    }
+
+    private function userIsNotRegistredInDatabase()
+    {
+        return !($this->persistance->doesUserExist($this->username->getUsername()));
+    }
+
+    private function passwordsDoesNotMatch()
+    {
+        $savedPassword = $this->persistance->getUserPassword($this->username->getUsername());
+        return !($this->password->isPasswordCorrect($savedPassword));
     }
 }

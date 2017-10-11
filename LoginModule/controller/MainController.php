@@ -79,7 +79,6 @@ class MainController
 
         if ($this->registerUserController->registrationWasSuccessful()) {
             $this->currentFlashMessage = $this->registerUserController->getCurrentMessage();
-            $this->updateCurrentUserStatus();
             $this->sendUserToLoginPage();
         }
     }

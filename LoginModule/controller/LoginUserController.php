@@ -83,10 +83,10 @@ class LoginUserController
 
     private function attemptLoginWithCookieCredentials()
     {
-        $this->setTempUserCredentials();
+        $this->createTempUserFromCookie();
         $this->ensureTempUserCredentialsHaveNotBeenManipulated();
         $this->loginUserWithTempUserCredentials();
-        $this->currentMessage = self::$cookieLoginSuccessfulMessage;
+        $this->currentMessage = self::$tempUserLoginSuccessfulMessage;
     }
 
     private function createTempUserFromCookie()
@@ -127,12 +127,12 @@ class LoginUserController
 
     private function validateCurrentUser()
     {
-        $this->currentUser->validateUser();
+        $this->currentUser->validateUserAgainstDatabase();
     }
 
     private function loginCurrentUser()
     {
-        $this->currentUser->login();
+        $this->currentUser->loginUser();
         $this->loginSucceeded = true;
 
         if ($this->loginView->userWantsToKeepCredentials()) {
@@ -145,7 +145,7 @@ class LoginUserController
 
     private function logoutUser()
     {
-        $this->user->logout();
+        $this->currentUser->logoutUser();
         $this->loginView->removeCookieCredentials();
         $this->logoutSucceeded = true;
         $this->currentMessage = self::$logoutSucessfulMessage;
@@ -153,9 +153,9 @@ class LoginUserController
 
     private function createCookieFromTempUser()
     {
-        $this->currentTempUser->setUsername($this->currentUsername);
-        $this->currentTempUser->setPassword($this->currentPassword);
-        $expiryTimestamp = time() + $this->currentTempUser->getExpiryTime();
+        $this->currentTempUser->setUsername($this->currentUser->getUsername());
+        $this->currentTempUser->setPassword($this->currentUser->getPassword());
+        $expirytimestamp = time() + $this->currentTempUser->getExpiryTime();
 
         $this->loginView->setCookieCredentials($this->currentTempUser->getUsername(), $this->currentTempUser->getUsername(), $expirytimestamp);
         

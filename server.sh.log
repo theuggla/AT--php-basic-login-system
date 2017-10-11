@@ -824,3 +824,765 @@ Stack trace:
 [Tue Oct 10 16:35:48 2017] 127.0.0.1:38344 [200]: /?
 [Tue Oct 10 16:35:57 2017] 127.0.0.1:38356 [200]: /?
 [Tue Oct 10 16:36:02 2017] 127.0.0.1:38362 [200]: /?
+[Tue Oct 10 17:56:57 2017] 127.0.0.1:44538 [200]: /?
+[Tue Oct 10 17:57:02 2017] 127.0.0.1:44542 [200]: /?
+[Tue Oct 10 17:57:47 2017] 127.0.0.1:44724 [200]: /?
+[Tue Oct 10 17:57:50 2017] 127.0.0.1:44728 [200]: /?
+[Tue Oct 10 17:58:24 2017] 127.0.0.1:44990 [200]: /?
+[Tue Oct 10 17:58:27 2017] 127.0.0.1:44994 [200]: /?
+[Tue Oct 10 18:00:03 2017] 127.0.0.1:45864 [200]: /?
+[Tue Oct 10 18:00:08 2017] 127.0.0.1:45916 [200]: /?
+[Tue Oct 10 18:00:18 2017] 127.0.0.1:45976 [200]: /?
+[Wed Oct 11 08:24:29 2017] 127.0.0.1:43054 Invalid request (Unexpected EOF)
+[Wed Oct 11 08:24:29 2017] 127.0.0.1:43058 Invalid request (Unexpected EOF)
+[Wed Oct 11 10:10:42 2017] 127.0.0.1:47608 [200]: /?
+[Wed Oct 11 10:10:42 2017] 127.0.0.1:47612 [404]: /favicon.ico - No such file or directory
+[Wed Oct 11 10:12:54 2017] 127.0.0.1:47636 [200]: /?
+[Wed Oct 11 10:12:58 2017] 127.0.0.1:47640 [200]: /?
+[Wed Oct 11 10:15:13 2017] 127.0.0.1:47644 Invalid request (Unexpected EOF)
+[Wed Oct 11 10:15:13 2017] 127.0.0.1:47648 Invalid request (Unexpected EOF)
+[Wed Oct 11 10:15:13 2017] 127.0.0.1:47666 [200]: /?
+[Wed Oct 11 10:15:17 2017] PHP Fatal error:  Uncaught Error: Call to undefined method loginmodule\model\Username::getUsername() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:84
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(25): loginmodule\model\User->rememberUsername()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(124): loginmodule\model\User->setUsername('othman')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(117): loginmodule\controller\LoginUserController->setCurrentCredentialsFromLoginForm()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(59): loginmodule\controller\LoginUserController->attemptLoginWithNewCredential in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 84
+[Wed Oct 11 10:15:17 2017] 127.0.0.1:47670 [200]: /? - Uncaught Error: Call to undefined method loginmodule\model\Username::getUsername() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:84
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(25): loginmodule\model\User->rememberUsername()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(124): loginmodule\model\User->setUsername('othman')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(117): loginmodule\controller\LoginUserController->setCurrentCredentialsFromLoginForm()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(59): loginmodule\controller\LoginUserController->attemptLoginWithNewCredential in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 84
+[Wed Oct 11 10:15:50 2017] 127.0.0.1:47674 Invalid request (Unexpected EOF)
+[Wed Oct 11 10:15:50 2017] 127.0.0.1:47686 [200]: /?
+[Wed Oct 11 10:15:55 2017] PHP Fatal error:  Uncaught Error: Call to undefined method loginmodule\model\Password::passwordIsMissing() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php:24
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php(13): loginmodule\model\Password->validate('')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(30): loginmodule\model\Password->__construct('')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(125): loginmodule\model\User->setPassword('')
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(117): loginmodule\controller\LoginUserController->setCurrentCredentialsFromLoginForm()
+#4 /media/molly/DATA/code/wp/2/1dv610/assig in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php on line 24
+[Wed Oct 11 10:15:55 2017] 127.0.0.1:47690 [200]: /? - Uncaught Error: Call to undefined method loginmodule\model\Password::passwordIsMissing() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php:24
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php(13): loginmodule\model\Password->validate('')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(30): loginmodule\model\Password->__construct('')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(125): loginmodule\model\User->setPassword('')
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(117): loginmodule\controller\LoginUserController->setCurrentCredentialsFromLoginForm()
+#4 /media/molly/DATA/code/wp/2/1dv610/assig in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php on line 24
+[Wed Oct 11 10:17:56 2017] 127.0.0.1:47694 Invalid request (Unexpected EOF)
+[Wed Oct 11 10:17:56 2017] 127.0.0.1:47716 [200]: /?
+[Wed Oct 11 10:17:58 2017] 127.0.0.1:47722 [200]: /?
+[Wed Oct 11 10:18:06 2017] 127.0.0.1:47728 [200]: /?
+[Wed Oct 11 10:18:10 2017] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to loginmodule\persistance\LoginModulePersistance::doesUserExist() must be of the type string, object given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 56 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php:39
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(56): loginmodule\persistance\LoginModulePersistance->doesUserExist(Object(loginmodule\model\Username), Object(loginmodule\model\Password))
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(130): loginmodule\model\User->validateUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserContr in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 39
+[Wed Oct 11 10:18:10 2017] 127.0.0.1:47736 [200]: /? - Uncaught TypeError: Argument 1 passed to loginmodule\persistance\LoginModulePersistance::doesUserExist() must be of the type string, object given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 56 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php:39
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(56): loginmodule\persistance\LoginModulePersistance->doesUserExist(Object(loginmodule\model\Username), Object(loginmodule\model\Password))
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(130): loginmodule\model\User->validateUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserContr in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 39
+[Wed Oct 11 10:19:15 2017] 127.0.0.1:47746 [200]: /?
+[Wed Oct 11 10:19:20 2017] PHP Fatal error:  Uncaught Error: Call to undefined function loginmodule\model\getPassword() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:56
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(130): loginmodule\model\User->validateUser()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(118): loginmodule\controller\LoginUserController->validateCurrentUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(59): loginmodule\controller\LoginUserController->attemptLoginWithNewCredentials()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(96): loginmodule\controller\LoginUserController->handleLogg in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 56
+[Wed Oct 11 10:19:20 2017] 127.0.0.1:47752 [200]: /? - Uncaught Error: Call to undefined function loginmodule\model\getPassword() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:56
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(130): loginmodule\model\User->validateUser()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(118): loginmodule\controller\LoginUserController->validateCurrentUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(59): loginmodule\controller\LoginUserController->attemptLoginWithNewCredentials()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(96): loginmodule\controller\LoginUserController->handleLogg in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 56
+[Wed Oct 11 10:19:54 2017] 127.0.0.1:47762 [200]: /?
+[Wed Oct 11 10:19:58 2017] PHP Fatal error:  Uncaught Error: Call to undefined function loginmodule\model\getPassword() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:56
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(130): loginmodule\model\User->validateUser()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(118): loginmodule\controller\LoginUserController->validateCurrentUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(59): loginmodule\controller\LoginUserController->attemptLoginWithNewCredentials()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(96): loginmodule\controller\LoginUserController->handleLogg in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 56
+[Wed Oct 11 10:19:58 2017] 127.0.0.1:47768 [200]: /? - Uncaught Error: Call to undefined function loginmodule\model\getPassword() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:56
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(130): loginmodule\model\User->validateUser()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(118): loginmodule\controller\LoginUserController->validateCurrentUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(59): loginmodule\controller\LoginUserController->attemptLoginWithNewCredentials()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(96): loginmodule\controller\LoginUserController->handleLogg in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 56
+[Wed Oct 11 10:21:12 2017] 127.0.0.1:47780 [200]: /?
+[Wed Oct 11 10:21:16 2017] PHP Warning:  Missing argument 1 for loginmodule\model\WrongCredentialsException::__construct(), called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 57 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Exception.php on line 55
+[Wed Oct 11 10:21:16 2017] PHP Stack trace:
+[Wed Oct 11 10:21:16 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 10:21:16 2017] PHP   2. loginmodule\LoginModule->startLoginModule() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:28
+[Wed Oct 11 10:21:16 2017] PHP   3. loginmodule\controller\MainController->listenForUserAccessAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:45
+[Wed Oct 11 10:21:16 2017] PHP   4. loginmodule\controller\MainController->delegateControlDependingOnUseCase() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:28
+[Wed Oct 11 10:21:16 2017] PHP   5. loginmodule\controller\MainController->determineResultOfLoginAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:53
+[Wed Oct 11 10:21:16 2017] PHP   6. loginmodule\controller\LoginUserController->handleLoggedOutUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:96
+[Wed Oct 11 10:21:16 2017] PHP   7. loginmodule\controller\LoginUserController->attemptLoginWithNewCredentials() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:59
+[Wed Oct 11 10:21:16 2017] PHP   8. loginmodule\controller\LoginUserController->validateCurrentUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:118
+[Wed Oct 11 10:21:16 2017] PHP   9. loginmodule\model\User->validateUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:130
+[Wed Oct 11 10:21:16 2017] PHP  10. loginmodule\model\WrongCredentialsException->__construct() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:57
+[Wed Oct 11 10:21:16 2017] PHP Notice:  Undefined variable: message in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Exception.php on line 57
+[Wed Oct 11 10:21:16 2017] PHP Stack trace:
+[Wed Oct 11 10:21:16 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 10:21:16 2017] PHP   2. loginmodule\LoginModule->startLoginModule() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:28
+[Wed Oct 11 10:21:16 2017] PHP   3. loginmodule\controller\MainController->listenForUserAccessAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:45
+[Wed Oct 11 10:21:16 2017] PHP   4. loginmodule\controller\MainController->delegateControlDependingOnUseCase() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:28
+[Wed Oct 11 10:21:16 2017] PHP   5. loginmodule\controller\MainController->determineResultOfLoginAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:53
+[Wed Oct 11 10:21:16 2017] PHP   6. loginmodule\controller\LoginUserController->handleLoggedOutUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:96
+[Wed Oct 11 10:21:16 2017] PHP   7. loginmodule\controller\LoginUserController->attemptLoginWithNewCredentials() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:59
+[Wed Oct 11 10:21:16 2017] PHP   8. loginmodule\controller\LoginUserController->validateCurrentUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:118
+[Wed Oct 11 10:21:16 2017] PHP   9. loginmodule\model\User->validateUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:130
+[Wed Oct 11 10:21:16 2017] PHP  10. loginmodule\model\WrongCredentialsException->__construct() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:57
+[Wed Oct 11 10:21:16 2017] 127.0.0.1:47788 [200]: /?
+[Wed Oct 11 10:21:47 2017] 127.0.0.1:47794 [200]: /?
+[Wed Oct 11 10:21:56 2017] 127.0.0.1:47800 [200]: /?
+[Wed Oct 11 10:22:03 2017] 127.0.0.1:47808 [200]: /?
+[Wed Oct 11 10:22:15 2017] 127.0.0.1:47814 [200]: /?
+[Wed Oct 11 10:22:34 2017] PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'UpdatedUserRegistry' in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php on line 14
+[Wed Oct 11 10:22:34 2017] PHP Stack trace:
+[Wed Oct 11 10:22:34 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 10:22:34 2017] PHP   2. site\persistance\MSQLConnector::getConnection() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:19
+[Wed Oct 11 10:22:34 2017] PHP   3. site\persistance\MSQLConnector::connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:27
+[Wed Oct 11 10:22:34 2017] PHP   4. mysqli_connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:14
+[Wed Oct 11 10:22:34 2017] 127.0.0.1:47820 [200]: /?
+[Wed Oct 11 10:22:48 2017] 127.0.0.1:47828 [200]: /?
+[Wed Oct 11 10:22:54 2017] 127.0.0.1:47834 [200]: /?
+[Wed Oct 11 10:32:47 2017] 127.0.0.1:47884 [200]: /?
+[Wed Oct 11 10:32:53 2017] PHP Catchable fatal error:  Object of class loginmodule\model\Password could not be converted to string in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 56
+[Wed Oct 11 10:32:53 2017] PHP Stack trace:
+[Wed Oct 11 10:32:53 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 10:32:53 2017] PHP   2. loginmodule\LoginModule->startLoginModule() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:28
+[Wed Oct 11 10:32:53 2017] PHP   3. loginmodule\controller\MainController->listenForUserAccessAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:45
+[Wed Oct 11 10:32:53 2017] PHP   4. loginmodule\controller\MainController->delegateControlDependingOnUseCase() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:28
+[Wed Oct 11 10:32:53 2017] PHP   5. loginmodule\controller\MainController->determineResultOfLoginAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:53
+[Wed Oct 11 10:32:53 2017] PHP   6. loginmodule\controller\LoginUserController->handleLoggedOutUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:96
+[Wed Oct 11 10:32:53 2017] PHP   7. loginmodule\controller\LoginUserController->attemptLoginWithNewCredentials() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:59
+[Wed Oct 11 10:32:53 2017] PHP   8. loginmodule\controller\LoginUserController->validateCurrentUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:118
+[Wed Oct 11 10:32:53 2017] PHP   9. loginmodule\model\User->validateUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:130
+[Wed Oct 11 10:32:53 2017] 127.0.0.1:47892 [200]: /?
+[Wed Oct 11 10:33:10 2017] 127.0.0.1:47898 [200]: /?
+[Wed Oct 11 10:33:15 2017] 127.0.0.1:47902 [200]: /?
+[Wed Oct 11 10:33:32 2017] 127.0.0.1:47912 [200]: /?
+[Wed Oct 11 10:33:35 2017] 127.0.0.1:47916 [200]: /?
+[Wed Oct 11 10:34:24 2017] 127.0.0.1:47926 [200]: /?
+[Wed Oct 11 10:34:30 2017] 127.0.0.1:47930 [200]: /?
+[Wed Oct 11 10:34:40 2017] 127.0.0.1:47940 [200]: /?
+[Wed Oct 11 10:35:38 2017] 127.0.0.1:47950 [200]: /?
+[Wed Oct 11 10:35:42 2017] 127.0.0.1:47954 [200]: /?
+[Wed Oct 11 10:37:05 2017] PHP Fatal error:  Uncaught Error: Call to undefined method loginmodule\model\User::login() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:135
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(119): loginmodule\controller\LoginUserController->loginCurrentUser()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(59): loginmodule\controller\LoginUserController->attemptLoginWithNewCredentials()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(96): loginmodule\controller\LoginUserController->handleLoggedOutUser()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(53): loginmodule\contr in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php on line 135
+[Wed Oct 11 10:37:05 2017] 127.0.0.1:47964 [200]: /? - Uncaught Error: Call to undefined method loginmodule\model\User::login() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:135
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(119): loginmodule\controller\LoginUserController->loginCurrentUser()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(59): loginmodule\controller\LoginUserController->attemptLoginWithNewCredentials()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(96): loginmodule\controller\LoginUserController->handleLoggedOutUser()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(53): loginmodule\contr in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php on line 135
+[Wed Oct 11 10:37:38 2017] 127.0.0.1:47970 [200]: /?
+[Wed Oct 11 10:37:42 2017] 127.0.0.1:47974 [200]: /?
+[Wed Oct 11 10:37:45 2017] PHP Notice:  Undefined property: loginmodule\controller\LoginUserController::$user in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php on line 148
+[Wed Oct 11 10:37:45 2017] PHP Stack trace:
+[Wed Oct 11 10:37:45 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 10:37:45 2017] PHP   2. loginmodule\LoginModule->startLoginModule() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:28
+[Wed Oct 11 10:37:45 2017] PHP   3. loginmodule\controller\MainController->listenForUserAccessAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:45
+[Wed Oct 11 10:37:45 2017] PHP   4. loginmodule\controller\MainController->delegateControlDependingOnUseCase() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:28
+[Wed Oct 11 10:37:45 2017] PHP   5. loginmodule\controller\MainController->determineResultOfLogoutAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:45
+[Wed Oct 11 10:37:45 2017] PHP   6. loginmodule\controller\LoginUserController->handleLoggedInUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:69
+[Wed Oct 11 10:37:45 2017] PHP   7. loginmodule\controller\LoginUserController->logoutUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:80
+[Wed Oct 11 10:37:45 2017] PHP Fatal error:  Uncaught Error: Call to a member function logout() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:148
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(80): loginmodule\controller\LoginUserController->logoutUser()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(69): loginmodule\controller\LoginUserController->handleLoggedInUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(45): loginmodule\controller\MainController->determineResultOfLogoutAttempt()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(28): loginmodule\controller\MainController->delegateCo in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php on line 148
+[Wed Oct 11 10:37:45 2017] 127.0.0.1:47982 [200]: /? - Uncaught Error: Call to a member function logout() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:148
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(80): loginmodule\controller\LoginUserController->logoutUser()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(69): loginmodule\controller\LoginUserController->handleLoggedInUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(45): loginmodule\controller\MainController->determineResultOfLogoutAttempt()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(28): loginmodule\controller\MainController->delegateCo in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php on line 148
+[Wed Oct 11 10:38:07 2017] 127.0.0.1:47990 [200]: /?
+[Wed Oct 11 10:38:09 2017] 127.0.0.1:47994 [200]: /?
+[Wed Oct 11 10:38:13 2017] 127.0.0.1:48002 [200]: /?
+[Wed Oct 11 10:39:24 2017] 127.0.0.1:48016 [200]: /?
+[Wed Oct 11 10:39:33 2017] 127.0.0.1:48022 [200]: /?
+[Wed Oct 11 10:39:42 2017] 127.0.0.1:48028 [200]: /?
+[Wed Oct 11 10:40:29 2017] 127.0.0.1:48034 [200]: /?
+[Wed Oct 11 10:40:35 2017] 127.0.0.1:48040 [200]: /?
+[Wed Oct 11 10:40:45 2017] 127.0.0.1:48046 [200]: /?
+[Wed Oct 11 11:40:37 2017] 127.0.0.1:49134 [200]: /
+[Wed Oct 11 11:40:42 2017] 127.0.0.1:49138 [200]: /
+[Wed Oct 11 11:40:46 2017] PHP Fatal error:  Uncaught Error: Call to undefined method loginmodule\model\Password::getHashedPassword() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php:14
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(30): loginmodule\model\Password->__construct('elkabir')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(125): loginmodule\model\User->setPassword('elkabir')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(117): loginmodule\controller\LoginUserController->setCurrentCredentialsFromLoginForm()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(59): loginmodule\controller\LoginUserController->attemptLog in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php on line 14
+[Wed Oct 11 11:40:46 2017] 127.0.0.1:49146 [200]: / - Uncaught Error: Call to undefined method loginmodule\model\Password::getHashedPassword() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php:14
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(30): loginmodule\model\Password->__construct('elkabir')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(125): loginmodule\model\User->setPassword('elkabir')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(117): loginmodule\controller\LoginUserController->setCurrentCredentialsFromLoginForm()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(59): loginmodule\controller\LoginUserController->attemptLog in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php on line 14
+[Wed Oct 11 11:41:08 2017] 127.0.0.1:49154 [200]: /
+[Wed Oct 11 11:41:12 2017] PHP Fatal error:  Uncaught Error: Call to undefined method loginmodule\model\Password::isPasswordCorrect() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:96
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(58): loginmodule\model\User->passwordsDoesNotMatch()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(130): loginmodule\model\User->validateUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(118): loginmodule\controller\LoginUserController->validateCurrentUser()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(59): loginmodule\controller\LoginUserController->attemptLoginWithNewCredentials()
+#4 /med in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 96
+[Wed Oct 11 11:41:12 2017] 127.0.0.1:49158 [200]: / - Uncaught Error: Call to undefined method loginmodule\model\Password::isPasswordCorrect() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:96
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(58): loginmodule\model\User->passwordsDoesNotMatch()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(130): loginmodule\model\User->validateUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(118): loginmodule\controller\LoginUserController->validateCurrentUser()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(59): loginmodule\controller\LoginUserController->attemptLoginWithNewCredentials()
+#4 /med in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 96
+[Wed Oct 11 11:41:28 2017] 127.0.0.1:49170 [200]: /
+[Wed Oct 11 11:41:32 2017] PHP Fatal error:  Uncaught TypeError: Return value of loginmodule\model\Password::isPasswordCorrect() must be of the type boolean, none returned in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php:34
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(96): loginmodule\model\Password->isPasswordCorrect('$2y$10$xjSdW/iz...')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(58): loginmodule\model\User->passwordsDoesNotMatch()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(130): loginmodule\model\User->validateUser()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(118): loginmodule\controller\LoginUserController->validateCurrentU in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php on line 34
+[Wed Oct 11 11:41:32 2017] 127.0.0.1:49174 [200]: / - Uncaught TypeError: Return value of loginmodule\model\Password::isPasswordCorrect() must be of the type boolean, none returned in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php:34
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(96): loginmodule\model\Password->isPasswordCorrect('$2y$10$xjSdW/iz...')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(58): loginmodule\model\User->passwordsDoesNotMatch()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(130): loginmodule\model\User->validateUser()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(118): loginmodule\controller\LoginUserController->validateCurrentU in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php on line 34
+[Wed Oct 11 11:41:44 2017] 127.0.0.1:49184 [200]: /
+[Wed Oct 11 11:41:48 2017] 127.0.0.1:49188 [200]: /
+[Wed Oct 11 11:41:50 2017] 127.0.0.1:49196 [200]: /
+[Wed Oct 11 11:41:55 2017] 127.0.0.1:49204 [200]: /
+[Wed Oct 11 11:42:02 2017] 127.0.0.1:49210 [200]: /
+[Wed Oct 11 11:42:06 2017] 127.0.0.1:49216 [200]: /
+[Wed Oct 11 11:42:07 2017] 127.0.0.1:49220 [404]: /favicon.ico - No such file or directory
+[Wed Oct 11 11:42:08 2017] 127.0.0.1:49226 [200]: /
+[Wed Oct 11 11:42:14 2017] PHP Notice:  Undefined property: loginmodule\controller\LoginUserController::$currentUsername in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php on line 156
+[Wed Oct 11 11:42:14 2017] PHP Stack trace:
+[Wed Oct 11 11:42:14 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 11:42:14 2017] PHP   2. loginmodule\LoginModule->startLoginModule() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:28
+[Wed Oct 11 11:42:14 2017] PHP   3. loginmodule\controller\MainController->listenForUserAccessAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:45
+[Wed Oct 11 11:42:14 2017] PHP   4. loginmodule\controller\MainController->delegateControlDependingOnUseCase() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:28
+[Wed Oct 11 11:42:14 2017] PHP   5. loginmodule\controller\MainController->determineResultOfLoginAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:53
+[Wed Oct 11 11:42:14 2017] PHP   6. loginmodule\controller\LoginUserController->handleLoggedOutUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:96
+[Wed Oct 11 11:42:14 2017] PHP   7. loginmodule\controller\LoginUserController->attemptLoginWithNewCredentials() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:59
+[Wed Oct 11 11:42:14 2017] PHP   8. loginmodule\controller\LoginUserController->loginCurrentUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:119
+[Wed Oct 11 11:42:14 2017] PHP   9. loginmodule\controller\LoginUserController->createCookieFromTempUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:139
+[Wed Oct 11 11:42:14 2017] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to loginmodule\model\User::setUsername() must be of the type string, null given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php on line 156 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:22
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(156): loginmodule\model\User->setUsername(NULL)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(139): loginmodule\controller\LoginUserController->createCookieFromTempUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(119): loginmodule\controller\LoginUserController->log in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 22
+[Wed Oct 11 11:42:14 2017] 127.0.0.1:49232 [200]: / - Uncaught TypeError: Argument 1 passed to loginmodule\model\User::setUsername() must be of the type string, null given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php on line 156 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:22
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(156): loginmodule\model\User->setUsername(NULL)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(139): loginmodule\controller\LoginUserController->createCookieFromTempUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(119): loginmodule\controller\LoginUserController->log in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 22
+[Wed Oct 11 11:42:53 2017] 127.0.0.1:49242 [200]: /
+[Wed Oct 11 11:42:55 2017] 127.0.0.1:49246 [200]: /
+[Wed Oct 11 11:43:00 2017] PHP Fatal error:  Uncaught TypeError: Return value of loginmodule\model\User::getPassword() must be of the type string, object returned in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:40
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(157): loginmodule\model\User->getPassword()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(139): loginmodule\controller\LoginUserController->createCookieFromTempUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(119): loginmodule\controller\LoginUserController->loginCurrentUser()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(59): loginmodule\con in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 40
+[Wed Oct 11 11:43:00 2017] 127.0.0.1:49256 [200]: / - Uncaught TypeError: Return value of loginmodule\model\User::getPassword() must be of the type string, object returned in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:40
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(157): loginmodule\model\User->getPassword()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(139): loginmodule\controller\LoginUserController->createCookieFromTempUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(119): loginmodule\controller\LoginUserController->loginCurrentUser()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(59): loginmodule\con in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 40
+[Wed Oct 11 11:43:46 2017] 127.0.0.1:49262 [200]: /
+[Wed Oct 11 11:43:47 2017] 127.0.0.1:49266 [200]: /
+[Wed Oct 11 11:43:51 2017] PHP Fatal error:  Uncaught Error: Call to undefined method loginmodule\model\TemporaryUser::getExpiryTime() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:158
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(139): loginmodule\controller\LoginUserController->createCookieFromTempUser()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(119): loginmodule\controller\LoginUserController->loginCurrentUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(59): loginmodule\controller\LoginUserController->attemptLoginWithNewCredentials()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainControlle in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php on line 158
+[Wed Oct 11 11:43:51 2017] 127.0.0.1:49274 [200]: / - Uncaught Error: Call to undefined method loginmodule\model\TemporaryUser::getExpiryTime() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:158
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(139): loginmodule\controller\LoginUserController->createCookieFromTempUser()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(119): loginmodule\controller\LoginUserController->loginCurrentUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(59): loginmodule\controller\LoginUserController->attemptLoginWithNewCredentials()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainControlle in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php on line 158
+[Wed Oct 11 11:44:32 2017] 127.0.0.1:49286 [200]: /
+[Wed Oct 11 11:44:34 2017] 127.0.0.1:49290 [200]: /
+[Wed Oct 11 11:44:39 2017] PHP Notice:  Undefined variable: expirytimestamp in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php on line 160
+[Wed Oct 11 11:44:39 2017] PHP Stack trace:
+[Wed Oct 11 11:44:39 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 11:44:39 2017] PHP   2. loginmodule\LoginModule->startLoginModule() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:28
+[Wed Oct 11 11:44:39 2017] PHP   3. loginmodule\controller\MainController->listenForUserAccessAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:45
+[Wed Oct 11 11:44:39 2017] PHP   4. loginmodule\controller\MainController->delegateControlDependingOnUseCase() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:28
+[Wed Oct 11 11:44:39 2017] PHP   5. loginmodule\controller\MainController->determineResultOfLoginAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:53
+[Wed Oct 11 11:44:39 2017] PHP   6. loginmodule\controller\LoginUserController->handleLoggedOutUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:96
+[Wed Oct 11 11:44:39 2017] PHP   7. loginmodule\controller\LoginUserController->attemptLoginWithNewCredentials() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:59
+[Wed Oct 11 11:44:39 2017] PHP   8. loginmodule\controller\LoginUserController->loginCurrentUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:119
+[Wed Oct 11 11:44:39 2017] PHP   9. loginmodule\controller\LoginUserController->createCookieFromTempUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:139
+[Wed Oct 11 11:44:39 2017] PHP Warning:  Cannot modify header information - headers already sent by (output started at /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:160) in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/view/LoginView.php on line 69
+[Wed Oct 11 11:44:39 2017] PHP Stack trace:
+[Wed Oct 11 11:44:39 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 11:44:39 2017] PHP   2. loginmodule\LoginModule->startLoginModule() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:28
+[Wed Oct 11 11:44:39 2017] PHP   3. loginmodule\controller\MainController->listenForUserAccessAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:45
+[Wed Oct 11 11:44:39 2017] PHP   4. loginmodule\controller\MainController->delegateControlDependingOnUseCase() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:28
+[Wed Oct 11 11:44:39 2017] PHP   5. loginmodule\controller\MainController->determineResultOfLoginAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:53
+[Wed Oct 11 11:44:39 2017] PHP   6. loginmodule\controller\LoginUserController->handleLoggedOutUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:96
+[Wed Oct 11 11:44:39 2017] PHP   7. loginmodule\controller\LoginUserController->attemptLoginWithNewCredentials() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:59
+[Wed Oct 11 11:44:39 2017] PHP   8. loginmodule\controller\LoginUserController->loginCurrentUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:119
+[Wed Oct 11 11:44:39 2017] PHP   9. loginmodule\controller\LoginUserController->createCookieFromTempUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:139
+[Wed Oct 11 11:44:39 2017] PHP  10. loginmodule\view\LoginView->setCookieCredentials() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:160
+[Wed Oct 11 11:44:39 2017] PHP  11. setcookie() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/view/LoginView.php:69
+[Wed Oct 11 11:44:39 2017] PHP Warning:  Cannot modify header information - headers already sent by (output started at /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:160) in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/view/LoginView.php on line 70
+[Wed Oct 11 11:44:39 2017] PHP Stack trace:
+[Wed Oct 11 11:44:39 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 11:44:39 2017] PHP   2. loginmodule\LoginModule->startLoginModule() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:28
+[Wed Oct 11 11:44:39 2017] PHP   3. loginmodule\controller\MainController->listenForUserAccessAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:45
+[Wed Oct 11 11:44:39 2017] PHP   4. loginmodule\controller\MainController->delegateControlDependingOnUseCase() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:28
+[Wed Oct 11 11:44:39 2017] PHP   5. loginmodule\controller\MainController->determineResultOfLoginAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:53
+[Wed Oct 11 11:44:39 2017] PHP   6. loginmodule\controller\LoginUserController->handleLoggedOutUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:96
+[Wed Oct 11 11:44:39 2017] PHP   7. loginmodule\controller\LoginUserController->attemptLoginWithNewCredentials() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:59
+[Wed Oct 11 11:44:39 2017] PHP   8. loginmodule\controller\LoginUserController->loginCurrentUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:119
+[Wed Oct 11 11:44:39 2017] PHP   9. loginmodule\controller\LoginUserController->createCookieFromTempUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:139
+[Wed Oct 11 11:44:39 2017] PHP  10. loginmodule\view\LoginView->setCookieCredentials() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:160
+[Wed Oct 11 11:44:39 2017] PHP  11. setcookie() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/view/LoginView.php:70
+[Wed Oct 11 11:44:39 2017] PHP Fatal error:  Uncaught Error: Access to undeclared static property: loginmodule\model\TemporaryUser::$EXPIRY_TIME in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/TemporaryUser.php:17
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(162): loginmodule\model\TemporaryUser->saveUser()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(139): loginmodule\controller\LoginUserController->createCookieFromTempUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(119): loginmodule\controller\LoginUserController->loginCurrentUser()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(59): loginmodule\contro in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/TemporaryUser.php on line 17
+[Wed Oct 11 11:44:39 2017] 127.0.0.1:49298 [200]: / - Uncaught Error: Access to undeclared static property: loginmodule\model\TemporaryUser::$EXPIRY_TIME in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/TemporaryUser.php:17
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(162): loginmodule\model\TemporaryUser->saveUser()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(139): loginmodule\controller\LoginUserController->createCookieFromTempUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(119): loginmodule\controller\LoginUserController->loginCurrentUser()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(59): loginmodule\contro in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/TemporaryUser.php on line 17
+[Wed Oct 11 11:46:07 2017] 127.0.0.1:49308 [200]: /
+[Wed Oct 11 11:46:09 2017] 127.0.0.1:49312 [200]: /
+[Wed Oct 11 11:46:14 2017] PHP Fatal error:  Uncaught Error: Access to undeclared static property: loginmodule\model\TemporaryUser::$EXPIRY_TIME in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/TemporaryUser.php:17
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(162): loginmodule\model\TemporaryUser->saveUser()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(139): loginmodule\controller\LoginUserController->createCookieFromTempUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(119): loginmodule\controller\LoginUserController->loginCurrentUser()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(59): loginmodule\contro in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/TemporaryUser.php on line 17
+[Wed Oct 11 11:46:14 2017] 127.0.0.1:49320 [200]: / - Uncaught Error: Access to undeclared static property: loginmodule\model\TemporaryUser::$EXPIRY_TIME in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/TemporaryUser.php:17
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(162): loginmodule\model\TemporaryUser->saveUser()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(139): loginmodule\controller\LoginUserController->createCookieFromTempUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(119): loginmodule\controller\LoginUserController->loginCurrentUser()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(59): loginmodule\contro in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/TemporaryUser.php on line 17
+[Wed Oct 11 11:46:43 2017] 127.0.0.1:49328 [200]: /
+[Wed Oct 11 11:46:44 2017] 127.0.0.1:49332 [200]: /
+[Wed Oct 11 11:46:49 2017] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to loginmodule\persistance\LoginModulePersistance::saveTempUser() must be of the type string, object given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/TemporaryUser.php on line 18 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php:29
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/TemporaryUser.php(18): loginmodule\persistance\LoginModulePersistance->saveTempUser(Object(loginmodule\model\Username), Object(loginmodule\model\Password), 1507716209)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(162): loginmodule\model\TemporaryUser->saveUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Logi in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 29
+[Wed Oct 11 11:46:49 2017] 127.0.0.1:49342 [200]: / - Uncaught TypeError: Argument 1 passed to loginmodule\persistance\LoginModulePersistance::saveTempUser() must be of the type string, object given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/TemporaryUser.php on line 18 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php:29
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/TemporaryUser.php(18): loginmodule\persistance\LoginModulePersistance->saveTempUser(Object(loginmodule\model\Username), Object(loginmodule\model\Password), 1507716209)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(162): loginmodule\model\TemporaryUser->saveUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Logi in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 29
+[Wed Oct 11 11:47:09 2017] 127.0.0.1:49348 [200]: /
+[Wed Oct 11 11:47:10 2017] 127.0.0.1:49352 [200]: /
+[Wed Oct 11 11:47:15 2017] PHP Notice:  Undefined variable: cookiepassword in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 31
+[Wed Oct 11 11:47:15 2017] PHP Stack trace:
+[Wed Oct 11 11:47:15 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 11:47:15 2017] PHP   2. loginmodule\LoginModule->startLoginModule() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:28
+[Wed Oct 11 11:47:15 2017] PHP   3. loginmodule\controller\MainController->listenForUserAccessAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:45
+[Wed Oct 11 11:47:15 2017] PHP   4. loginmodule\controller\MainController->delegateControlDependingOnUseCase() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:28
+[Wed Oct 11 11:47:15 2017] PHP   5. loginmodule\controller\MainController->determineResultOfLoginAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:53
+[Wed Oct 11 11:47:15 2017] PHP   6. loginmodule\controller\LoginUserController->handleLoggedOutUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:96
+[Wed Oct 11 11:47:15 2017] PHP   7. loginmodule\controller\LoginUserController->attemptLoginWithNewCredentials() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:59
+[Wed Oct 11 11:47:15 2017] PHP   8. loginmodule\controller\LoginUserController->loginCurrentUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:119
+[Wed Oct 11 11:47:15 2017] PHP   9. loginmodule\controller\LoginUserController->createCookieFromTempUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:139
+[Wed Oct 11 11:47:15 2017] PHP  10. loginmodule\model\TemporaryUser->saveUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:162
+[Wed Oct 11 11:47:15 2017] PHP  11. loginmodule\persistance\LoginModulePersistance->saveTempUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/TemporaryUser.php:18
+[Wed Oct 11 11:47:15 2017] 127.0.0.1:49362 [200]: /
+[Wed Oct 11 11:48:30 2017] 127.0.0.1:49370 [200]: /
+[Wed Oct 11 11:48:32 2017] 127.0.0.1:49374 [200]: /
+[Wed Oct 11 11:48:37 2017] 127.0.0.1:49384 [200]: /
+[Wed Oct 11 11:48:46 2017] 127.0.0.1:49392 [200]: /
+[Wed Oct 11 11:48:48 2017] 127.0.0.1:49396 Invalid request (Unexpected EOF)
+[Wed Oct 11 11:48:53 2017] PHP Fatal error:  Uncaught Error: Call to undefined method loginmodule\controller\LoginUserController::setTempUserCredentials() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:86
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(57): loginmodule\controller\LoginUserController->attemptLoginWithCookieCredentials()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(96): loginmodule\controller\LoginUserController->handleLoggedOutUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(53): loginmodule\controller\MainController->determineResultOfLoginAttempt()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/ in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php on line 86
+[Wed Oct 11 11:48:53 2017] 127.0.0.1:49424 [200]: / - Uncaught Error: Call to undefined method loginmodule\controller\LoginUserController::setTempUserCredentials() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:86
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(57): loginmodule\controller\LoginUserController->attemptLoginWithCookieCredentials()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(96): loginmodule\controller\LoginUserController->handleLoggedOutUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(53): loginmodule\controller\MainController->determineResultOfLoginAttempt()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/ in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php on line 86
+[Wed Oct 11 11:48:53 2017] 127.0.0.1:49428 [404]: /favicon.ico - No such file or directory
+[Wed Oct 11 11:49:32 2017] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to loginmodule\persistance\LoginModulePersistance::didTempUserExpire() must be of the type string, object given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/TemporaryUser.php on line 23 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php:15
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/TemporaryUser.php(23): loginmodule\persistance\LoginModulePersistance->didTempUserExpire(Object(loginmodule\model\Username), Object(loginmodule\model\Password))
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(100): loginmodule\model\TemporaryUser->checkForManipulation()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-function in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 15
+[Wed Oct 11 11:49:32 2017] 127.0.0.1:49440 [200]: / - Uncaught TypeError: Argument 1 passed to loginmodule\persistance\LoginModulePersistance::didTempUserExpire() must be of the type string, object given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/TemporaryUser.php on line 23 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php:15
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/TemporaryUser.php(23): loginmodule\persistance\LoginModulePersistance->didTempUserExpire(Object(loginmodule\model\Username), Object(loginmodule\model\Password))
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(100): loginmodule\model\TemporaryUser->checkForManipulation()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-function in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 15
+[Wed Oct 11 11:50:01 2017] 127.0.0.1:49444 Invalid request (Unexpected EOF)
+[Wed Oct 11 11:50:01 2017] 127.0.0.1:49448 Invalid request (Unexpected EOF)
+[Wed Oct 11 11:50:01 2017] 127.0.0.1:49452 Invalid request (Unexpected EOF)
+[Wed Oct 11 11:50:02 2017] PHP Notice:  Undefined variable: cookiePassword in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 17
+[Wed Oct 11 11:50:02 2017] PHP Stack trace:
+[Wed Oct 11 11:50:02 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 11:50:02 2017] PHP   2. loginmodule\LoginModule->startLoginModule() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:28
+[Wed Oct 11 11:50:02 2017] PHP   3. loginmodule\controller\MainController->listenForUserAccessAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:45
+[Wed Oct 11 11:50:02 2017] PHP   4. loginmodule\controller\MainController->delegateControlDependingOnUseCase() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:28
+[Wed Oct 11 11:50:02 2017] PHP   5. loginmodule\controller\MainController->determineResultOfLoginAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:53
+[Wed Oct 11 11:50:02 2017] PHP   6. loginmodule\controller\LoginUserController->handleLoggedOutUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:96
+[Wed Oct 11 11:50:02 2017] PHP   7. loginmodule\controller\LoginUserController->attemptLoginWithCookieCredentials() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:57
+[Wed Oct 11 11:50:02 2017] PHP   8. loginmodule\controller\LoginUserController->ensureTempUserCredentialsHaveNotBeenManipulated() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:87
+[Wed Oct 11 11:50:02 2017] PHP   9. loginmodule\model\TemporaryUser->checkForManipulation() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:100
+[Wed Oct 11 11:50:02 2017] PHP  10. loginmodule\persistance\LoginModulePersistance->didTempUserExpire() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/TemporaryUser.php:23
+[Wed Oct 11 11:50:02 2017] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on boolean in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php:20
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/TemporaryUser.php(23): loginmodule\persistance\LoginModulePersistance->didTempUserExpire('Othman', 'Othman')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(100): loginmodule\model\TemporaryUser->checkForManipulation()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(87): loginmodule\controller\LoginUserController->ensureTempUserCredentialsHaveNotBeenManipulated()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(57 in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 20
+[Wed Oct 11 11:50:02 2017] 127.0.0.1:49460 [200]: / - Uncaught Error: Call to a member function fetch_object() on boolean in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php:20
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/TemporaryUser.php(23): loginmodule\persistance\LoginModulePersistance->didTempUserExpire('Othman', 'Othman')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(100): loginmodule\model\TemporaryUser->checkForManipulation()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(87): loginmodule\controller\LoginUserController->ensureTempUserCredentialsHaveNotBeenManipulated()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(57 in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 20
+[Wed Oct 11 11:50:20 2017] 127.0.0.1:49464 Invalid request (Unexpected EOF)
+[Wed Oct 11 11:50:20 2017] 127.0.0.1:49468 Invalid request (Unexpected EOF)
+[Wed Oct 11 11:50:20 2017] PHP Notice:  Undefined variable: cookiePassword in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 17
+[Wed Oct 11 11:50:20 2017] PHP Stack trace:
+[Wed Oct 11 11:50:20 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 11:50:20 2017] PHP   2. loginmodule\LoginModule->startLoginModule() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:28
+[Wed Oct 11 11:50:20 2017] PHP   3. loginmodule\controller\MainController->listenForUserAccessAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:45
+[Wed Oct 11 11:50:20 2017] PHP   4. loginmodule\controller\MainController->delegateControlDependingOnUseCase() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:28
+[Wed Oct 11 11:50:20 2017] PHP   5. loginmodule\controller\MainController->determineResultOfLoginAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:53
+[Wed Oct 11 11:50:20 2017] PHP   6. loginmodule\controller\LoginUserController->handleLoggedOutUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:96
+[Wed Oct 11 11:50:20 2017] PHP   7. loginmodule\controller\LoginUserController->attemptLoginWithCookieCredentials() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:57
+[Wed Oct 11 11:50:20 2017] PHP   8. loginmodule\controller\LoginUserController->ensureTempUserCredentialsHaveNotBeenManipulated() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:87
+[Wed Oct 11 11:50:20 2017] PHP   9. loginmodule\model\TemporaryUser->checkForManipulation() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:100
+[Wed Oct 11 11:50:20 2017] PHP  10. loginmodule\persistance\LoginModulePersistance->didTempUserExpire() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/TemporaryUser.php:23
+[Wed Oct 11 11:50:20 2017] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on boolean in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php:20
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/TemporaryUser.php(23): loginmodule\persistance\LoginModulePersistance->didTempUserExpire('Othman', 'Othman')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(100): loginmodule\model\TemporaryUser->checkForManipulation()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(87): loginmodule\controller\LoginUserController->ensureTempUserCredentialsHaveNotBeenManipulated()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(57 in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 20
+[Wed Oct 11 11:50:20 2017] 127.0.0.1:49482 [200]: / - Uncaught Error: Call to a member function fetch_object() on boolean in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php:20
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/TemporaryUser.php(23): loginmodule\persistance\LoginModulePersistance->didTempUserExpire('Othman', 'Othman')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(100): loginmodule\model\TemporaryUser->checkForManipulation()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(87): loginmodule\controller\LoginUserController->ensureTempUserCredentialsHaveNotBeenManipulated()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(57 in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 20
+[Wed Oct 11 11:50:29 2017] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on boolean in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php:20
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/TemporaryUser.php(23): loginmodule\persistance\LoginModulePersistance->didTempUserExpire('Othman', 'Othman')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(100): loginmodule\model\TemporaryUser->checkForManipulation()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(87): loginmodule\controller\LoginUserController->ensureTempUserCredentialsHaveNotBeenManipulated()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(57 in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 20
+[Wed Oct 11 11:50:29 2017] 127.0.0.1:49486 [200]: / - Uncaught Error: Call to a member function fetch_object() on boolean in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php:20
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/TemporaryUser.php(23): loginmodule\persistance\LoginModulePersistance->didTempUserExpire('Othman', 'Othman')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(100): loginmodule\model\TemporaryUser->checkForManipulation()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(87): loginmodule\controller\LoginUserController->ensureTempUserCredentialsHaveNotBeenManipulated()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(57 in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 20
+[Wed Oct 11 11:51:00 2017] 127.0.0.1:49490 Invalid request (Unexpected EOF)
+[Wed Oct 11 11:51:00 2017] PHP Fatal error:  Uncaught Error: Access to undeclared static property: loginmodule\controller\LoginUserController::$cookieLoginSuccessfulMessage in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:89
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(57): loginmodule\controller\LoginUserController->attemptLoginWithCookieCredentials()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(96): loginmodule\controller\LoginUserController->handleLoggedOutUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(53): loginmodule\controller\MainController->determineResultOfLoginAttempt()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Login in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php on line 89
+[Wed Oct 11 11:51:00 2017] 127.0.0.1:49500 [200]: / - Uncaught Error: Access to undeclared static property: loginmodule\controller\LoginUserController::$cookieLoginSuccessfulMessage in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:89
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(57): loginmodule\controller\LoginUserController->attemptLoginWithCookieCredentials()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(96): loginmodule\controller\LoginUserController->handleLoggedOutUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(53): loginmodule\controller\MainController->determineResultOfLoginAttempt()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Login in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php on line 89
+[Wed Oct 11 11:51:31 2017] 127.0.0.1:49510 [200]: /
+[Wed Oct 11 11:51:38 2017] 127.0.0.1:49516 [200]: /
+[Wed Oct 11 11:51:44 2017] 127.0.0.1:49524 [200]: /
+[Wed Oct 11 11:51:51 2017] 127.0.0.1:49548 [200]: /
+[Wed Oct 11 11:51:51 2017] 127.0.0.1:49554 [404]: /favicon.ico - No such file or directory
+[Wed Oct 11 11:52:05 2017] 127.0.0.1:49564 [200]: /
+[Wed Oct 11 11:52:06 2017] 127.0.0.1:49570 [200]: /?register
+[Wed Oct 11 11:52:10 2017] PHP Fatal error:  Uncaught Error: Call to undefined method loginmodule\controller\RegisterUserController::user() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php:95
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(41): loginmodule\controller\RegisterUserController->validateCredentialsAndSetErrorMessage()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(78): loginmodule\controller\RegisterUserController->handleUserRegisterAttempt()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(49): loginmodule\controller\MainController->determineResultOfRegisterAttempt()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/c in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php on line 54
+[Wed Oct 11 11:52:10 2017] 127.0.0.1:49578 [200]: /?register - Uncaught Error: Call to undefined method loginmodule\controller\RegisterUserController::user() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php:95
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(41): loginmodule\controller\RegisterUserController->validateCredentialsAndSetErrorMessage()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(78): loginmodule\controller\RegisterUserController->handleUserRegisterAttempt()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(49): loginmodule\controller\MainController->determineResultOfRegisterAttempt()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/c in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php on line 54
+[Wed Oct 11 12:51:16 2017] PHP Notice:  Undefined property: loginmodule\controller\RegisterUserController::$user in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php on line 31
+[Wed Oct 11 12:51:16 2017] PHP Stack trace:
+[Wed Oct 11 12:51:16 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 12:51:16 2017] PHP   2. loginmodule\LoginModule->__construct() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:25
+[Wed Oct 11 12:51:16 2017] PHP   3. loginmodule\LoginModule->initiateDependencies() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:40
+[Wed Oct 11 12:51:16 2017] PHP   4. loginmodule\LoginModule->initiateControllers() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:65
+[Wed Oct 11 12:51:16 2017] PHP   5. loginmodule\controller\RegisterUserController->__construct() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:83
+[Wed Oct 11 12:51:16 2017] PHP Fatal error:  Uncaught Error: Call to a member function getMinimumPasswordCharacters() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php:31
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(83): loginmodule\controller\RegisterUserController->__construct(Object(loginmodule\model\User), Object(loginmodule\model\TemporaryUser), Object(loginmodule\view\RegisterView))
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(65): loginmodule\LoginModule->initiateControllers()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(40): loginmodule\LoginModule->initiateDependencies()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(25): loginmodule\LoginModule->__const in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php on line 31
+[Wed Oct 11 12:51:16 2017] 127.0.0.1:50924 [200]: /?register - Uncaught Error: Call to a member function getMinimumPasswordCharacters() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php:31
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(83): loginmodule\controller\RegisterUserController->__construct(Object(loginmodule\model\User), Object(loginmodule\model\TemporaryUser), Object(loginmodule\view\RegisterView))
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(65): loginmodule\LoginModule->initiateControllers()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(40): loginmodule\LoginModule->initiateDependencies()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(25): loginmodule\LoginModule->__const in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php on line 31
+[Wed Oct 11 12:51:36 2017] 127.0.0.1:50930 [200]: /?register
+[Wed Oct 11 12:51:38 2017] 127.0.0.1:50936 [200]: /?
+[Wed Oct 11 12:51:39 2017] 127.0.0.1:50942 [200]: /?register
+[Wed Oct 11 12:51:41 2017] PHP Fatal error:  Uncaught Error: Call to undefined method loginmodule\controller\RegisterUserController::setCurrentCredentialsFromFrom() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php:77
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(39): loginmodule\controller\RegisterUserController->attemptRegistration()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(78): loginmodule\controller\RegisterUserController->handleUserRegisterAttempt()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(49): loginmodule\controller\MainController->determineResultOfRegisterAttempt()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginM in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php on line 77
+[Wed Oct 11 12:51:41 2017] 127.0.0.1:50948 [200]: /?register - Uncaught Error: Call to undefined method loginmodule\controller\RegisterUserController::setCurrentCredentialsFromFrom() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php:77
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(39): loginmodule\controller\RegisterUserController->attemptRegistration()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(78): loginmodule\controller\RegisterUserController->handleUserRegisterAttempt()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(49): loginmodule\controller\MainController->determineResultOfRegisterAttempt()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginM in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php on line 77
+[Wed Oct 11 12:52:02 2017] 127.0.0.1:50956 [200]: /?register
+[Wed Oct 11 12:52:04 2017] 127.0.0.1:50962 [200]: /?register
+[Wed Oct 11 12:52:05 2017] 127.0.0.1:50968 [200]: /?register
+[Wed Oct 11 12:52:06 2017] 127.0.0.1:50974 [200]: /?register
+[Wed Oct 11 12:52:06 2017] 127.0.0.1:50980 [200]: /?register
+[Wed Oct 11 12:52:07 2017] 127.0.0.1:50986 [200]: /?register
+[Wed Oct 11 12:52:07 2017] 127.0.0.1:50992 [200]: /?register
+[Wed Oct 11 12:52:08 2017] 127.0.0.1:50998 [200]: /?register
+[Wed Oct 11 12:54:23 2017] 127.0.0.1:51014 [200]: /?register
+[Wed Oct 11 12:54:26 2017] 127.0.0.1:51020 [200]: /?register
+[Wed Oct 11 12:54:33 2017] 127.0.0.1:51026 [200]: /?register
+[Wed Oct 11 12:54:37 2017] 127.0.0.1:51034 [200]: /?register
+[Wed Oct 11 12:55:02 2017] 127.0.0.1:51040 [200]: /?register
+[Wed Oct 11 12:55:05 2017] 127.0.0.1:51048 [200]: /?register
+[Wed Oct 11 12:55:56 2017] 127.0.0.1:51058 [200]: /?register
+[Wed Oct 11 12:55:59 2017] 127.0.0.1:51064 [200]: /?
+[Wed Oct 11 12:56:01 2017] 127.0.0.1:51070 [200]: /?register
+[Wed Oct 11 12:56:07 2017] 127.0.0.1:51078 [200]: /?register
+[Wed Oct 11 12:56:28 2017] 127.0.0.1:51086 [200]: /?register
+[Wed Oct 11 12:56:33 2017] PHP Fatal error:  Uncaught Error: Call to undefined method loginmodule\view\RegisterView::getAttemptedRepeatPassword() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php:117
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(111): loginmodule\controller\RegisterUserController->compareAttemptedPasswords()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(84): loginmodule\controller\RegisterUserController->validateCurrentUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(41): loginmodule\controller\RegisterUserController->attemptRegistration()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/ in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php on line 117
+[Wed Oct 11 12:56:33 2017] 127.0.0.1:51094 [200]: /?register - Uncaught Error: Call to undefined method loginmodule\view\RegisterView::getAttemptedRepeatPassword() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php:117
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(111): loginmodule\controller\RegisterUserController->compareAttemptedPasswords()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(84): loginmodule\controller\RegisterUserController->validateCurrentUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(41): loginmodule\controller\RegisterUserController->attemptRegistration()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/ in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php on line 117
+[Wed Oct 11 12:56:51 2017] 127.0.0.1:51100 [200]: /?register
+[Wed Oct 11 12:56:55 2017] 127.0.0.1:51106 [200]: /?register
+[Wed Oct 11 12:57:03 2017] 127.0.0.1:51112 [200]: /?register
+[Wed Oct 11 12:57:15 2017] 127.0.0.1:51120 [200]: /?register
+[Wed Oct 11 12:57:31 2017] PHP Fatal error:  Uncaught TypeError: Return value of loginmodule\model\Password::hashPassword() must be of the type string, none returned in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php:29
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(72): loginmodule\model\Password->hashPassword()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(129): loginmodule\model\User->saveUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(85): loginmodule\controller\RegisterUserController->createNewUser()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(41): loginmodule\controller\RegisterUserController->attem in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php on line 29
+[Wed Oct 11 12:57:31 2017] 127.0.0.1:51126 [200]: /?register - Uncaught TypeError: Return value of loginmodule\model\Password::hashPassword() must be of the type string, none returned in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php:29
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(72): loginmodule\model\Password->hashPassword()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(129): loginmodule\model\User->saveUser()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(85): loginmodule\controller\RegisterUserController->createNewUser()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(41): loginmodule\controller\RegisterUserController->attem in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php on line 29
+[Wed Oct 11 12:57:56 2017] 127.0.0.1:51132 [200]: /?register
+[Wed Oct 11 12:58:03 2017] PHP Fatal error:  Uncaught Error: Call to undefined method loginmodule\controller\MainController::updateCurrentUserStatus() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:82
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(49): loginmodule\controller\MainController->determineResultOfRegisterAttempt()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(28): loginmodule\controller\MainController->delegateControlDependingOnUseCase()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(45): loginmodule\controller\MainController->listenForUserAccessAttempt()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(28): loginmodule\LoginModule->startLoginM in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php on line 82
+[Wed Oct 11 12:58:03 2017] 127.0.0.1:51140 [200]: /?register - Uncaught Error: Call to undefined method loginmodule\controller\MainController::updateCurrentUserStatus() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:82
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(49): loginmodule\controller\MainController->determineResultOfRegisterAttempt()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(28): loginmodule\controller\MainController->delegateControlDependingOnUseCase()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(45): loginmodule\controller\MainController->listenForUserAccessAttempt()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(28): loginmodule\LoginModule->startLoginM in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php on line 82
+[Wed Oct 11 12:58:31 2017] 127.0.0.1:51148 [200]: /?register
+[Wed Oct 11 12:58:38 2017] 127.0.0.1:51154 [200]: /?register
+[Wed Oct 11 12:58:46 2017] PHP Fatal error:  Uncaught Error: Call to a member function getPassword() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:40
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(117): loginmodule\model\User->getPassword()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(111): loginmodule\controller\RegisterUserController->compareAttemptedPasswords()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(84): loginmodule\controller\RegisterUserController->validateCurrentUser()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(41): loginmodule\controller\RegisterUserController->a in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 40
+[Wed Oct 11 12:58:46 2017] 127.0.0.1:51160 [200]: /?register - Uncaught Error: Call to a member function getPassword() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:40
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(117): loginmodule\model\User->getPassword()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(111): loginmodule\controller\RegisterUserController->compareAttemptedPasswords()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(84): loginmodule\controller\RegisterUserController->validateCurrentUser()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(41): loginmodule\controller\RegisterUserController->a in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 40
+[Wed Oct 11 13:05:03 2017] 127.0.0.1:51188 [200]: /?register
+[Wed Oct 11 13:05:15 2017] 127.0.0.1:51192 Invalid request (Unexpected EOF)
+[Wed Oct 11 13:05:15 2017] PHP Fatal error:  Uncaught Error: Call to a member function getPassword() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:40
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(133): loginmodule\model\User->getPassword()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(127): loginmodule\controller\RegisterUserController->compareAttemptedPasswords()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(84): loginmodule\controller\RegisterUserController->validateCurrentUser()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(41): loginmodule\controller\RegisterUserController->a in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 40
+[Wed Oct 11 13:05:15 2017] 127.0.0.1:51198 [200]: /?register - Uncaught Error: Call to a member function getPassword() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:40
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(133): loginmodule\model\User->getPassword()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(127): loginmodule\controller\RegisterUserController->compareAttemptedPasswords()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(84): loginmodule\controller\RegisterUserController->validateCurrentUser()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(41): loginmodule\controller\RegisterUserController->a in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 40
+[Wed Oct 11 13:12:53 2017] 127.0.0.1:51244 [200]: /?register
+[Wed Oct 11 13:12:57 2017] PHP Fatal error:  Uncaught Error: Call to undefined method loginmodule\model\User::isMissingCredentials() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php:93
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(83): loginmodule\controller\RegisterUserController->setCurrentCredentialsFromForm()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(41): loginmodule\controller\RegisterUserController->attemptRegistration()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(78): loginmodule\controller\RegisterUserController->handleUserRegisterAttempt()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/Ma in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php on line 93
+[Wed Oct 11 13:12:57 2017] 127.0.0.1:51248 [200]: /?register - Uncaught Error: Call to undefined method loginmodule\model\User::isMissingCredentials() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php:93
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(83): loginmodule\controller\RegisterUserController->setCurrentCredentialsFromForm()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(41): loginmodule\controller\RegisterUserController->attemptRegistration()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(78): loginmodule\controller\RegisterUserController->handleUserRegisterAttempt()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/Ma in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php on line 93
+[Wed Oct 11 13:13:29 2017] 127.0.0.1:51258 [200]: /?register
+[Wed Oct 11 13:13:34 2017] PHP Fatal error:  Uncaught Error: Call to a member function getPassword() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:45
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(93): loginmodule\model\User->isMissingCrendentials()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(83): loginmodule\controller\RegisterUserController->setCurrentCredentialsFromForm()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(41): loginmodule\controller\RegisterUserController->attemptRegistration()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(78): loginmodule\controller\RegisterUserControlle in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 45
+[Wed Oct 11 13:13:34 2017] 127.0.0.1:51262 [200]: /?register - Uncaught Error: Call to a member function getPassword() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:45
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(93): loginmodule\model\User->isMissingCrendentials()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(83): loginmodule\controller\RegisterUserController->setCurrentCredentialsFromForm()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(41): loginmodule\controller\RegisterUserController->attemptRegistration()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(78): loginmodule\controller\RegisterUserControlle in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 45
+[Wed Oct 11 13:14:04 2017] 127.0.0.1:51272 [200]: /?register
+[Wed Oct 11 13:14:08 2017] PHP Fatal error:  Uncaught Error: Call to a member function getPassword() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:40
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(132): loginmodule\model\User->getPassword()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(126): loginmodule\controller\RegisterUserController->compareAttemptedPasswords()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(84): loginmodule\controller\RegisterUserController->validateCurrentUser()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(41): loginmodule\controller\RegisterUserController->a in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 40
+[Wed Oct 11 13:14:08 2017] 127.0.0.1:51276 [200]: /?register - Uncaught Error: Call to a member function getPassword() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:40
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(132): loginmodule\model\User->getPassword()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(126): loginmodule\controller\RegisterUserController->compareAttemptedPasswords()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(84): loginmodule\controller\RegisterUserController->validateCurrentUser()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(41): loginmodule\controller\RegisterUserController->a in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 40
+[Wed Oct 11 13:15:08 2017] 127.0.0.1:51288 [200]: /?register
+[Wed Oct 11 13:15:12 2017] PHP Fatal error:  Uncaught Error: Class 'loginmodule\model\loginmodule\model\InvalidCredentialsException' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php:95
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(83): loginmodule\controller\RegisterUserController->setCurrentCredentialsFromForm()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(41): loginmodule\controller\RegisterUserController->attemptRegistration()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(78): loginmodule\controller\RegisterUserController->handleUserRegisterAttempt()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/con in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php on line 95
+[Wed Oct 11 13:15:12 2017] 127.0.0.1:51292 [200]: /?register - Uncaught Error: Class 'loginmodule\model\loginmodule\model\InvalidCredentialsException' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php:95
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(83): loginmodule\controller\RegisterUserController->setCurrentCredentialsFromForm()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(41): loginmodule\controller\RegisterUserController->attemptRegistration()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(78): loginmodule\controller\RegisterUserController->handleUserRegisterAttempt()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/con in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php on line 95
+[Wed Oct 11 13:15:29 2017] 127.0.0.1:51302 [200]: /?register
+[Wed Oct 11 13:15:34 2017] 127.0.0.1:51306 [200]: /?register
+[Wed Oct 11 13:16:37 2017] 127.0.0.1:51318 [200]: /?register
+[Wed Oct 11 13:16:41 2017] 127.0.0.1:51324 [200]: /?register
+[Wed Oct 11 13:20:49 2017] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php:23
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(93): loginmodule\model\Password::getMinLength()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(33): loginmodule\model\User->getMinimumPasswordCharacters()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(83): loginmodule\controller\RegisterUserController->__construct(Object(loginmodule\model\User), Object(loginmodule\model\TemporaryUser), Object(loginmodule\view\RegisterView))
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(65): loginmodule\LoginModule->initiateCo in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php on line 23
+[Wed Oct 11 13:20:49 2017] 127.0.0.1:51342 [200]: /?register - Uncaught Error: Using $this when not in object context in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php:23
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(93): loginmodule\model\Password::getMinLength()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(33): loginmodule\model\User->getMinimumPasswordCharacters()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(83): loginmodule\controller\RegisterUserController->__construct(Object(loginmodule\model\User), Object(loginmodule\model\TemporaryUser), Object(loginmodule\view\RegisterView))
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(65): loginmodule\LoginModule->initiateCo in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/Password.php on line 23
+[Wed Oct 11 13:22:49 2017] 127.0.0.1:51346 Invalid request (Unexpected EOF)
+[Wed Oct 11 13:22:49 2017] PHP Fatal error:  Uncaught Error: Call to a member function getMinLength() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:93
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(33): loginmodule\model\User->getMinimumPasswordCharacters()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(83): loginmodule\controller\RegisterUserController->__construct(Object(loginmodule\model\User), Object(loginmodule\model\TemporaryUser), Object(loginmodule\view\RegisterView))
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(65): loginmodule\LoginModule->initiateControllers()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(40): loginmodule\LoginModule- in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 93
+[Wed Oct 11 13:22:49 2017] 127.0.0.1:51364 [200]: /?register - Uncaught Error: Call to a member function getMinLength() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:93
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(33): loginmodule\model\User->getMinimumPasswordCharacters()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(83): loginmodule\controller\RegisterUserController->__construct(Object(loginmodule\model\User), Object(loginmodule\model\TemporaryUser), Object(loginmodule\view\RegisterView))
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(65): loginmodule\LoginModule->initiateControllers()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(40): loginmodule\LoginModule- in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 93
+[Wed Oct 11 13:23:30 2017] 127.0.0.1:51368 Invalid request (Unexpected EOF)
+[Wed Oct 11 13:25:47 2017] PHP Fatal error:  Uncaught Error: Class name must be a valid object or a string in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:93
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(33): loginmodule\model\User->getMinimumPasswordCharacters()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(83): loginmodule\controller\RegisterUserController->__construct(Object(loginmodule\model\User), Object(loginmodule\model\TemporaryUser), Object(loginmodule\view\RegisterView))
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(65): loginmodule\LoginModule->initiateControllers()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(40): loginmodule\LoginModule->in in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 93
+[Wed Oct 11 13:25:47 2017] 127.0.0.1:51390 [200]: /?register - Uncaught Error: Class name must be a valid object or a string in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:93
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(33): loginmodule\model\User->getMinimumPasswordCharacters()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(83): loginmodule\controller\RegisterUserController->__construct(Object(loginmodule\model\User), Object(loginmodule\model\TemporaryUser), Object(loginmodule\view\RegisterView))
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(65): loginmodule\LoginModule->initiateControllers()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(40): loginmodule\LoginModule->in in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 93
+[Wed Oct 11 13:26:15 2017] 127.0.0.1:51394 Invalid request (Unexpected EOF)
+[Wed Oct 11 13:28:01 2017] PHP Fatal error:  Uncaught Error: Cannot access private property loginmodule\model\Username::$MIN_VALID_LENGTH in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:98
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(34): loginmodule\model\User->getMinimumUsernameCharacters()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(83): loginmodule\controller\RegisterUserController->__construct(Object(loginmodule\model\User), Object(loginmodule\model\TemporaryUser), Object(loginmodule\view\RegisterView))
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(65): loginmodule\LoginModule->initiateControllers()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(4 in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 98
+[Wed Oct 11 13:28:01 2017] 127.0.0.1:51446 [200]: /?register - Uncaught Error: Cannot access private property loginmodule\model\Username::$MIN_VALID_LENGTH in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:98
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(34): loginmodule\model\User->getMinimumUsernameCharacters()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(83): loginmodule\controller\RegisterUserController->__construct(Object(loginmodule\model\User), Object(loginmodule\model\TemporaryUser), Object(loginmodule\view\RegisterView))
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(65): loginmodule\LoginModule->initiateControllers()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(4 in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 98
+[Wed Oct 11 13:28:29 2017] 127.0.0.1:51450 Invalid request (Unexpected EOF)
+[Wed Oct 11 13:28:29 2017] PHP Fatal error:  Uncaught Error: Access to undeclared static property: loginmodule\model\Username::$MIN_VALID_LENGTH in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:98
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(34): loginmodule\model\User->getMinimumUsernameCharacters()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(83): loginmodule\controller\RegisterUserController->__construct(Object(loginmodule\model\User), Object(loginmodule\model\TemporaryUser), Object(loginmodule\view\RegisterView))
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(65): loginmodule\LoginModule->initiateControllers()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModul in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 98
+[Wed Oct 11 13:28:29 2017] 127.0.0.1:51460 [200]: /?register - Uncaught Error: Access to undeclared static property: loginmodule\model\Username::$MIN_VALID_LENGTH in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:98
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(34): loginmodule\model\User->getMinimumUsernameCharacters()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(83): loginmodule\controller\RegisterUserController->__construct(Object(loginmodule\model\User), Object(loginmodule\model\TemporaryUser), Object(loginmodule\view\RegisterView))
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php(65): loginmodule\LoginModule->initiateControllers()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModul in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 98
+[Wed Oct 11 13:28:54 2017] 127.0.0.1:51464 Invalid request (Unexpected EOF)
+[Wed Oct 11 13:28:54 2017] 127.0.0.1:51470 [200]: /?register
+[Wed Oct 11 13:28:58 2017] 127.0.0.1:51474 [200]: /?register
+[Wed Oct 11 13:29:04 2017] 127.0.0.1:51484 [200]: /?register
+[Wed Oct 11 13:29:12 2017] 127.0.0.1:51492 [200]: /?register
+[Wed Oct 11 13:29:22 2017] 127.0.0.1:51500 [302]: /?register
+[Wed Oct 11 13:29:22 2017] 127.0.0.1:51506 [200]: /added-functionality/
+[Wed Oct 11 13:29:27 2017] 127.0.0.1:51512 [200]: /added-functionality/
+[Wed Oct 11 13:29:28 2017] 127.0.0.1:51518 [200]: /added-functionality/
+[Wed Oct 11 13:29:34 2017] 127.0.0.1:51524 [200]: /added-functionality/
+[Wed Oct 11 13:29:35 2017] 127.0.0.1:51530 [200]: /added-functionality/
+[Wed Oct 11 13:29:38 2017] 127.0.0.1:51536 [200]: /added-functionality/?register

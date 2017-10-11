@@ -42,6 +42,22 @@ class UsernameIsMissingException extends UsernameIsNotValidException
     }
 }
 
+class PasswordIsTooShortException extends PasswordIsNotValidException
+{
+    public function __construct($message, $code = 0, \Exception $previous = null)
+    {
+        parent::__construct($message, $code, $previous);
+    }
+}
+
+class UsernameIsTooShortException extends UsernameIsNotValidException
+{
+    public function __construct($message, $code = 0, \Exception $previous = null)
+    {
+        parent::__construct($message, $code, $previous);
+    }
+}
+
 class UsernameHasInvalidCharactersException extends UsernameIsNotValidException
 {
     public function __construct($message, $code = 0, \Exception $previous = null)
