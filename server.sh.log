@@ -2184,3 +2184,32 @@ Stack trace:
 #2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php(63): loginmodule\model\User->userIsNotRegistredInDatabase()
 #3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php(130): loginmodule\model\User->validateUserAgainstDatabase()
 #4 /media/moll in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/LoginModulePersistance.php on line 70
+[Wed Oct 11 15:39:54 2017] PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'UpdatedUserRegistry' in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php on line 14
+[Wed Oct 11 15:39:54 2017] PHP Stack trace:
+[Wed Oct 11 15:39:54 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 15:39:54 2017] PHP   2. site\persistance\MSQLConnector::getConnection() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:19
+[Wed Oct 11 15:39:54 2017] PHP   3. site\persistance\MSQLConnector::connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:27
+[Wed Oct 11 15:39:54 2017] PHP   4. mysqli_connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:14
+[Wed Oct 11 15:39:54 2017] 127.0.0.1:53296 [200]: /added-functionality/?
+[Wed Oct 11 15:40:07 2017] 127.0.0.1:53300 Invalid request (Unexpected EOF)
+[Wed Oct 11 15:40:07 2017] 127.0.0.1:53308 [200]: /added-functionality/?
+[Wed Oct 11 15:40:13 2017] 127.0.0.1:53312 [200]: /added-functionality/?
+[Wed Oct 11 15:40:17 2017] 127.0.0.1:53320 [200]: /added-functionality/?
+[Wed Oct 11 15:41:47 2017] 127.0.0.1:53332 [200]: /added-functionality/?
+[Wed Oct 11 15:41:53 2017] 127.0.0.1:53336 [200]: /added-functionality/?
+[Wed Oct 11 15:41:56 2017] 127.0.0.1:53348 [200]: /added-functionality/?
+[Wed Oct 11 15:45:52 2017] 127.0.0.1:53372 [200]: /added-functionality/?
+[Wed Oct 11 15:45:55 2017] 127.0.0.1:53376 [200]: /added-functionality/?
+[Wed Oct 11 15:45:58 2017] 127.0.0.1:53386 [200]: /added-functionality/?
+[Wed Oct 11 15:46:00 2017] 127.0.0.1:53392 [200]: /added-functionality/?
+[Wed Oct 11 15:46:36 2017] 127.0.0.1:53396 Invalid request (Unexpected EOF)
+[Wed Oct 11 15:46:36 2017] 127.0.0.1:53402 [200]: /added-functionality/?
+[Wed Oct 11 15:46:39 2017] 127.0.0.1:53406 [200]: /added-functionality/?
+[Wed Oct 11 15:46:44 2017] 127.0.0.1:53412 [200]: /added-functionality/?
+[Wed Oct 11 15:46:46 2017] 127.0.0.1:53422 [200]: /added-functionality/?
+[Wed Oct 11 15:46:52 2017] 127.0.0.1:53426 [200]: /added-functionality/?
+[Wed Oct 11 15:46:55 2017] 127.0.0.1:53434 [200]: /added-functionality/?
+[Wed Oct 11 15:47:01 2017] 127.0.0.1:53438 [200]: /
+[Wed Oct 11 15:47:06 2017] 127.0.0.1:53446 [200]: /
+[Wed Oct 11 15:47:07 2017] 127.0.0.1:53454 [200]: /
+[Wed Oct 11 15:47:10 2017] 127.0.0.1:53458 [200]: /added-functionality/?

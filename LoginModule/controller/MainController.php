@@ -12,6 +12,8 @@ class MainController
 
     private $currentUser;
 
+    private static $int = 0;
+
     private $displayLoginForm = false;
     private $displayRegisterForm = false;
 
@@ -42,7 +44,6 @@ class MainController
     private function delegateControlDependingOnUseCase()
     {
         if ($this->userIsLoggedIn()) {
-            var_dump($this->currentUser->hasNotBeenHijacked());
             $this->determineResultOfLogoutAttempt();
             $this->currentFlashMessage = $this->loginUserController->getCurrentMessage();
         } else if ($this->registerUserController->userWantsToRegister()) {
