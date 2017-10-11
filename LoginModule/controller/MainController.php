@@ -113,9 +113,4 @@ class MainController
     {
         return ($this->currentUser->isLoggedIn() && $this->currentUser->hasNotBeenHijacked());
     }
-
-    private function updateCurrentUserLatestUsername()
-    {
-        $this->lastUsername = $this->user->getLatestUsername();
-    }
 }

@@ -6,7 +6,6 @@ class User
 {
     private static $userAgent = 'UpdatedLoginModule::User::UserAgent';
     private static $isLoggedIn = 'UpdatedLoginModule::User::IsLoggedIn';
-    private static $latestUsername = 'UpdatedLoginModule::User::LatestUserName';
     private static $serverUserAgent = 'HTTP_USER_AGENT';
 
     protected $username;
@@ -32,7 +31,7 @@ class User
 
     public function getUsername() : String
     {
-        return isset($_SESSION[self::$latestUsername]) ? $_SESSION[self::$latestUsername] : '';
+        return $this->username->getUsername();
     }
 
     public function getPassword() : String
@@ -96,11 +95,6 @@ class User
     public function getMinimumUsernameCharacters()
     {
         return \loginmodule\model\Username::$MIN_VALID_LENGTH;
-    }
-
-    private function rememberUsername()
-    {
-        $_SESSION[self::$latestUsername] = $this->username->getUsername();
     }
 
     private function userIsNotRegistredInDatabase()
