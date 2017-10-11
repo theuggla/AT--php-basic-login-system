@@ -97,7 +97,7 @@ class RegisterUserController
         {
             $this->currentUser->setUsername($this->registerView->getAttemptedUsername());
         }
-        catch (\loginmodule\model\UsernameNotValidException $e) 
+        catch (\loginmodule\model\UsernameIsNotValidException $e) 
         {
             $this->currentMessage .= self::$badUsernameMessage;
         }

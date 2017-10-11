@@ -1586,3 +1586,52 @@ Stack trace:
 [Wed Oct 11 13:29:34 2017] 127.0.0.1:51524 [200]: /added-functionality/
 [Wed Oct 11 13:29:35 2017] 127.0.0.1:51530 [200]: /added-functionality/
 [Wed Oct 11 13:29:38 2017] 127.0.0.1:51536 [200]: /added-functionality/?register
+[Wed Oct 11 13:57:04 2017] 127.0.0.1:51730 [200]: /added-functionality/?register
+[Wed Oct 11 13:57:06 2017] 127.0.0.1:51734 [200]: /added-functionality/?register
+[Wed Oct 11 13:57:12 2017] 127.0.0.1:51744 [200]: /added-functionality/?register
+[Wed Oct 11 13:57:16 2017] 127.0.0.1:51750 [200]: /added-functionality/?register
+[Wed Oct 11 13:57:19 2017] 127.0.0.1:51756 [200]: /added-functionality/?
+[Wed Oct 11 13:57:20 2017] 127.0.0.1:51762 [200]: /added-functionality/?register
+[Wed Oct 11 13:57:23 2017] 127.0.0.1:51768 [200]: /added-functionality/?register
+[Wed Oct 11 13:57:28 2017] 127.0.0.1:51774 [200]: /added-functionality/?register
+[Wed Oct 11 13:57:30 2017] 127.0.0.1:51780 [200]: /added-functionality/?register
+[Wed Oct 11 13:57:32 2017] 127.0.0.1:51786 [200]: /added-functionality/?register
+[Wed Oct 11 13:57:33 2017] 127.0.0.1:51792 [200]: /added-functionality/?register
+[Wed Oct 11 13:57:33 2017] 127.0.0.1:51798 [200]: /added-functionality/?register
+[Wed Oct 11 13:57:40 2017] 127.0.0.1:51804 [200]: /added-functionality/?register
+[Wed Oct 11 13:58:46 2017] 127.0.0.1:51814 [200]: /added-functionality/?register
+[Wed Oct 11 13:58:49 2017] PHP Fatal error:  Uncaught Error: Call to undefined method loginmodule\controller\RegisterUserController::currentMessage() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php:89
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(77): loginmodule\controller\RegisterUserController->setCurrentCredentialsFromForm()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(39): loginmodule\controller\RegisterUserController->attemptRegistration()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(78): loginmodule\controller\RegisterUserController->handleUserRegisterAttempt()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginMod in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php on line 89
+[Wed Oct 11 13:58:49 2017] 127.0.0.1:51818 [200]: /added-functionality/?register - Uncaught Error: Call to undefined method loginmodule\controller\RegisterUserController::currentMessage() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php:89
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(77): loginmodule\controller\RegisterUserController->setCurrentCredentialsFromForm()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php(39): loginmodule\controller\RegisterUserController->attemptRegistration()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php(78): loginmodule\controller\RegisterUserController->handleUserRegisterAttempt()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginMod in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php on line 89
+[Wed Oct 11 13:58:59 2017] 127.0.0.1:51826 [200]: /added-functionality/?register
+[Wed Oct 11 13:59:04 2017] 127.0.0.1:51830 [200]: /added-functionality/?register
+[Wed Oct 11 13:59:07 2017] 127.0.0.1:51838 [200]: /added-functionality/?register
+[Wed Oct 11 13:59:10 2017] 127.0.0.1:51844 [200]: /added-functionality/?register
+[Wed Oct 11 13:59:12 2017] 127.0.0.1:51852 [200]: /added-functionality/?register
+[Wed Oct 11 13:59:17 2017] 127.0.0.1:51858 [200]: /added-functionality/?register
+[Wed Oct 11 13:59:23 2017] 127.0.0.1:51866 [200]: /added-functionality/?register
+[Wed Oct 11 13:59:28 2017] 127.0.0.1:51872 [200]: /added-functionality/?register
+[Wed Oct 11 13:59:32 2017] 127.0.0.1:51878 [200]: /added-functionality/?register
+[Wed Oct 11 13:59:32 2017] 127.0.0.1:51884 [200]: /added-functionality/?register
+[Wed Oct 11 14:00:38 2017] PHP Notice:  Undefined variable: MIN_VALID_LENGTH in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 98
+[Wed Oct 11 14:00:38 2017] PHP Stack trace:
+[Wed Oct 11 14:00:38 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 14:00:38 2017] PHP   2. loginmodule\LoginModule->__construct() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:25
+[Wed Oct 11 14:00:38 2017] PHP   3. loginmodule\LoginModule->initiateDependencies() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:40
+[Wed Oct 11 14:00:38 2017] PHP   4. loginmodule\LoginModule->initiateControllers() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:65
+[Wed Oct 11 14:00:38 2017] PHP   5. loginmodule\controller\RegisterUserController->__construct() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:83
+[Wed Oct 11 14:00:38 2017] PHP   6. loginmodule\model\User->getMinimumUsernameCharacters() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/RegisterUserController.php:32
+[Wed Oct 11 14:00:38 2017] 127.0.0.1:51894 [200]: /added-functionality/?register
+[Wed Oct 11 14:01:24 2017] 127.0.0.1:51898 Invalid request (Unexpected EOF)
+[Wed Oct 11 14:01:24 2017] 127.0.0.1:51906 [200]: /added-functionality/?register
+[Wed Oct 11 14:01:27 2017] 127.0.0.1:51910 [200]: /added-functionality/?register
+[Wed Oct 11 14:01:35 2017] 127.0.0.1:51920 [200]: /added-functionality/?register
