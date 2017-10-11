@@ -2214,3 +2214,113 @@ Stack trace:
 [Wed Oct 11 15:47:07 2017] 127.0.0.1:53454 [200]: /
 [Wed Oct 11 15:47:10 2017] 127.0.0.1:53458 [200]: /added-functionality/?
 [Wed Oct 11 15:47:49 2017] 127.0.0.1:53464 Invalid request (Unexpected EOF)
+[Wed Oct 11 15:52:42 2017] PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'UpdatedUserRegistry' in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php on line 14
+[Wed Oct 11 15:52:42 2017] PHP Stack trace:
+[Wed Oct 11 15:52:42 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 15:52:42 2017] PHP   2. site\persistance\MSQLConnector::getConnection() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:19
+[Wed Oct 11 15:52:42 2017] PHP   3. site\persistance\MSQLConnector::connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:27
+[Wed Oct 11 15:52:42 2017] PHP   4. mysqli_connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:14
+[Wed Oct 11 15:52:42 2017] PHP Notice:  Undefined index: HTTP_USER_AGENT in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 96
+[Wed Oct 11 15:52:42 2017] PHP Stack trace:
+[Wed Oct 11 15:52:42 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 15:52:42 2017] PHP   2. loginmodule\LoginModule->startLoginModule() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:28
+[Wed Oct 11 15:52:42 2017] PHP   3. loginmodule\controller\MainController->listenForUserAccessAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:45
+[Wed Oct 11 15:52:42 2017] PHP   4. loginmodule\controller\MainController->delegateControlDependingOnUseCase() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:30
+[Wed Oct 11 15:52:42 2017] PHP   5. loginmodule\controller\MainController->userIsLoggedIn() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:46
+[Wed Oct 11 15:52:42 2017] PHP   6. loginmodule\model\User->hasNotBeenHijacked() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:116
+[Wed Oct 11 15:52:42 2017] 127.0.0.1:53494 [200]: /added-functionality/?
+[Wed Oct 11 15:53:18 2017] 127.0.0.1:53498 Invalid request (Unexpected EOF)
+[Wed Oct 11 15:53:18 2017] PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'UpdatedUserRegistry' in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php on line 14
+[Wed Oct 11 15:53:18 2017] PHP Stack trace:
+[Wed Oct 11 15:53:18 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 15:53:18 2017] PHP   2. site\persistance\MSQLConnector::getConnection() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:19
+[Wed Oct 11 15:53:18 2017] PHP   3. site\persistance\MSQLConnector::connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:27
+[Wed Oct 11 15:53:18 2017] PHP   4. mysqli_connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:14
+[Wed Oct 11 15:53:18 2017] PHP Notice:  Undefined index: HTTP_USER_AGENT in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 96
+[Wed Oct 11 15:53:18 2017] PHP Stack trace:
+[Wed Oct 11 15:53:18 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 15:53:18 2017] PHP   2. loginmodule\LoginModule->startLoginModule() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:28
+[Wed Oct 11 15:53:18 2017] PHP   3. loginmodule\controller\MainController->listenForUserAccessAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:45
+[Wed Oct 11 15:53:18 2017] PHP   4. loginmodule\controller\MainController->delegateControlDependingOnUseCase() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:30
+[Wed Oct 11 15:53:18 2017] PHP   5. loginmodule\controller\MainController->userIsLoggedIn() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:46
+[Wed Oct 11 15:53:18 2017] PHP   6. loginmodule\model\User->hasNotBeenHijacked() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:116
+[Wed Oct 11 15:53:18 2017] 127.0.0.1:53506 [200]: /added-functionality/?
+[Wed Oct 11 15:53:25 2017] PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'UpdatedUserRegistry' in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php on line 14
+[Wed Oct 11 15:53:25 2017] PHP Stack trace:
+[Wed Oct 11 15:53:25 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 15:53:25 2017] PHP   2. site\persistance\MSQLConnector::getConnection() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:19
+[Wed Oct 11 15:53:25 2017] PHP   3. site\persistance\MSQLConnector::connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:27
+[Wed Oct 11 15:53:25 2017] PHP   4. mysqli_connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:14
+[Wed Oct 11 15:53:25 2017] PHP Notice:  Undefined index: HTTP_USER_AGENT in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 96
+[Wed Oct 11 15:53:25 2017] PHP Stack trace:
+[Wed Oct 11 15:53:25 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 15:53:25 2017] PHP   2. loginmodule\LoginModule->startLoginModule() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:28
+[Wed Oct 11 15:53:25 2017] PHP   3. loginmodule\controller\MainController->listenForUserAccessAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:45
+[Wed Oct 11 15:53:25 2017] PHP   4. loginmodule\controller\MainController->delegateControlDependingOnUseCase() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:30
+[Wed Oct 11 15:53:25 2017] PHP   5. loginmodule\controller\MainController->userIsLoggedIn() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:46
+[Wed Oct 11 15:53:25 2017] PHP   6. loginmodule\model\User->hasNotBeenHijacked() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:116
+[Wed Oct 11 15:53:25 2017] PHP Warning:  Cannot modify header information - headers already sent by (output started at /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:96) in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/view/LoginView.php on line 75
+[Wed Oct 11 15:53:25 2017] PHP Stack trace:
+[Wed Oct 11 15:53:25 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 15:53:25 2017] PHP   2. loginmodule\LoginModule->startLoginModule() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:28
+[Wed Oct 11 15:53:25 2017] PHP   3. loginmodule\controller\MainController->listenForUserAccessAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:45
+[Wed Oct 11 15:53:25 2017] PHP   4. loginmodule\controller\MainController->delegateControlDependingOnUseCase() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:30
+[Wed Oct 11 15:53:25 2017] PHP   5. loginmodule\controller\MainController->determineResultOfLogoutAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:47
+[Wed Oct 11 15:53:25 2017] PHP   6. loginmodule\controller\LoginUserController->handleLoggedInUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:71
+[Wed Oct 11 15:53:25 2017] PHP   7. loginmodule\controller\LoginUserController->logoutUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:80
+[Wed Oct 11 15:53:25 2017] PHP   8. loginmodule\view\LoginView->removeCookieCredentials() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:149
+[Wed Oct 11 15:53:25 2017] PHP   9. setcookie() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/view/LoginView.php:75
+[Wed Oct 11 15:53:25 2017] PHP Warning:  Cannot modify header information - headers already sent by (output started at /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php:96) in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/view/LoginView.php on line 76
+[Wed Oct 11 15:53:25 2017] PHP Stack trace:
+[Wed Oct 11 15:53:25 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 15:53:25 2017] PHP   2. loginmodule\LoginModule->startLoginModule() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:28
+[Wed Oct 11 15:53:25 2017] PHP   3. loginmodule\controller\MainController->listenForUserAccessAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:45
+[Wed Oct 11 15:53:25 2017] PHP   4. loginmodule\controller\MainController->delegateControlDependingOnUseCase() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:30
+[Wed Oct 11 15:53:25 2017] PHP   5. loginmodule\controller\MainController->determineResultOfLogoutAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:47
+[Wed Oct 11 15:53:25 2017] PHP   6. loginmodule\controller\LoginUserController->handleLoggedInUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:71
+[Wed Oct 11 15:53:25 2017] PHP   7. loginmodule\controller\LoginUserController->logoutUser() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:80
+[Wed Oct 11 15:53:25 2017] PHP   8. loginmodule\view\LoginView->removeCookieCredentials() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/LoginUserController.php:149
+[Wed Oct 11 15:53:25 2017] PHP   9. setcookie() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/view/LoginView.php:76
+[Wed Oct 11 15:53:25 2017] 127.0.0.1:53510 [200]: /added-functionality/?
+[Wed Oct 11 15:53:42 2017] 127.0.0.1:53520 [200]: /added-functionality/?
+[Wed Oct 11 15:53:45 2017] 127.0.0.1:53524 [200]: /added-functionality/?
+[Wed Oct 11 15:54:14 2017] 127.0.0.1:53530 Invalid request (Unexpected EOF)
+[Wed Oct 11 15:54:14 2017] 127.0.0.1:53538 [200]: /added-functionality/?
+[Wed Oct 11 15:54:18 2017] PHP Notice:  Undefined index: HTTP_USER_AGENT in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 96
+[Wed Oct 11 15:54:18 2017] PHP Stack trace:
+[Wed Oct 11 15:54:18 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 15:54:18 2017] PHP   2. loginmodule\LoginModule->startLoginModule() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:28
+[Wed Oct 11 15:54:18 2017] PHP   3. loginmodule\controller\MainController->listenForUserAccessAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:45
+[Wed Oct 11 15:54:18 2017] PHP   4. loginmodule\controller\MainController->delegateControlDependingOnUseCase() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:30
+[Wed Oct 11 15:54:18 2017] PHP   5. loginmodule\controller\MainController->userIsLoggedIn() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:46
+[Wed Oct 11 15:54:18 2017] PHP   6. loginmodule\model\User->hasNotBeenHijacked() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:116
+[Wed Oct 11 15:54:18 2017] 127.0.0.1:53544 [200]: /added-functionality/?
+[Wed Oct 11 15:54:24 2017] PHP Notice:  Undefined index: HTTP_USER_AGENT in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/model/User.php on line 96
+[Wed Oct 11 15:54:24 2017] PHP Stack trace:
+[Wed Oct 11 15:54:24 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Wed Oct 11 15:54:24 2017] PHP   2. loginmodule\LoginModule->startLoginModule() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:28
+[Wed Oct 11 15:54:24 2017] PHP   3. loginmodule\controller\MainController->listenForUserAccessAttempt() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/LoginModule.php:45
+[Wed Oct 11 15:54:24 2017] PHP   4. loginmodule\controller\MainController->delegateControlDependingOnUseCase() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:30
+[Wed Oct 11 15:54:24 2017] PHP   5. loginmodule\controller\MainController->userIsLoggedIn() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:46
+[Wed Oct 11 15:54:24 2017] PHP   6. loginmodule\model\User->hasNotBeenHijacked() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/LoginModule/controller/MainController.php:116
+[Wed Oct 11 15:54:24 2017] 127.0.0.1:53548 [200]: /added-functionality/?
+[Wed Oct 11 15:54:27 2017] 127.0.0.1:53558 [200]: /added-functionality/?
+[Wed Oct 11 15:54:48 2017] 127.0.0.1:53562 Invalid request (Unexpected EOF)
+[Wed Oct 11 15:54:48 2017] 127.0.0.1:53568 [200]: /added-functionality/?
+[Wed Oct 11 15:54:51 2017] 127.0.0.1:53572 [200]: /added-functionality/?
+[Wed Oct 11 15:54:53 2017] 127.0.0.1:53582 [200]: /added-functionality/?
+[Wed Oct 11 15:55:00 2017] 127.0.0.1:53586 [200]: /added-functionality/?
+[Wed Oct 11 15:55:09 2017] 127.0.0.1:53594 [200]: /added-functionality/?
+[Wed Oct 11 15:55:23 2017] 127.0.0.1:53598 Invalid request (Unexpected EOF)
+[Wed Oct 11 15:56:20 2017] 127.0.0.1:53608 [200]: /added-functionality/?
+[Wed Oct 11 15:56:23 2017] 127.0.0.1:53614 [200]: /added-functionality/?
+[Wed Oct 11 15:56:31 2017] 127.0.0.1:53618 [200]: /added-functionality/?
+[Wed Oct 11 15:57:30 2017] 127.0.0.1:53624 Invalid request (Unexpected EOF)
+[Wed Oct 11 15:57:30 2017] 127.0.0.1:53632 [200]: /added-functionality/?
+[Wed Oct 11 15:57:33 2017] 127.0.0.1:53636 [200]: /added-functionality/?
+[Wed Oct 11 15:57:35 2017] 127.0.0.1:53642 [200]: /added-functionality/?
+[Wed Oct 11 15:57:40 2017] 127.0.0.1:53650 [200]: /added-functionality/?
+[Wed Oct 11 15:57:43 2017] 127.0.0.1:53658 [200]: /added-functionality/?
+[Wed Oct 11 15:57:46 2017] 127.0.0.1:53662 [200]: /added-functionality/?
+[Wed Oct 11 15:57:47 2017] 127.0.0.1:53670 [200]: /added-functionality/?
+[Wed Oct 11 15:57:52 2017] 127.0.0.1:53674 [200]: /added-functionality/?
