@@ -157,8 +157,8 @@ class LoginUserController
         $this->currentTempUser->setPassword($this->currentUser->getPassword());
         $expirytimestamp = time() + $this->currentTempUser->getExpiryTime();
 
-        $this->loginView->setCookieCredentials($this->currentTempUser->getUsername(), $this->currentTempUser->getUsername(), $expirytimestamp);
-        
         $this->currentTempUser->saveUser();
+
+        $this->loginView->setCookieCredentials($this->currentTempUser->getUsername(), $this->currentTempUser->getPassword(), $expirytimestamp);
     }
 }
