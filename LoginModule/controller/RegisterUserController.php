@@ -99,8 +99,9 @@ class RegisterUserController
         }
         catch (\loginmodule\model\UsernameHasInvalidCharactersException $e) 
         {
-            $this->currentMessage .= self::$usernameInvalidMessage;
+            $this->currentMessage = self::$usernameInvalidMessage;
             $this->currentUser->cleanUpUsername();
+            throw new \loginmodule\model\InvalidCredentialsException('Attempted credentials are not valid.');
         }
         catch (\loginmodule\model\UsernameIsNotValidException $e) 
         {

@@ -2149,3 +2149,4 @@ Stack trace:
 [Wed Oct 11 15:23:09 2017] PHP   3. site\persistance\MSQLConnector::connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:27
 [Wed Oct 11 15:23:09 2017] PHP   4. mysqli_connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:14
 [Wed Oct 11 15:23:09 2017] 127.0.0.1:53128 [200]: /added-functionality/?
+[Wed Oct 11 15:23:29 2017] 127.0.0.1:53132 Invalid request (Unexpected EOF)
