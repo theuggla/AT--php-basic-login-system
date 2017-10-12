@@ -6,6 +6,7 @@ require_once('TicTacToe/controller/GameController.php');
 require_once('TicTacToe/model/Game.php');
 require_once('TicTacToe/model/Square.php');
 require_once('TicTacToe/model/Player.php');
+require_once('TicTacToe/model/AI.php');
 require_once('TicTacToe/view/GameView.php');
 
 class TicTacToe {

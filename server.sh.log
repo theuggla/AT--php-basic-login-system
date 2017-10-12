@@ -2708,3 +2708,1106 @@ Stack trace:
 #2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
 #3 {main}
   thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 16
+[Thu Oct 12 12:05:27 2017] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to tictactoe\view\GameView::displayNewGameSetup() must be of the type boolean, none given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 34 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:16
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(34): tictactoe\view\GameView->displayNewGameSetup()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#3 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 16
+[Thu Oct 12 12:05:27 2017] 127.0.0.1:52878 [200]: /?newgame - Uncaught TypeError: Argument 1 passed to tictactoe\view\GameView::displayNewGameSetup() must be of the type boolean, none given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 34 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:16
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(34): tictactoe\view\GameView->displayNewGameSetup()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#3 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 16
+[Thu Oct 12 12:05:31 2017] 127.0.0.1:52882 [200]: /
+[Thu Oct 12 12:05:35 2017] 127.0.0.1:52914 [200]: /GET?
+[Thu Oct 12 12:05:38 2017] 127.0.0.1:52948 [200]: /GET?
+[Thu Oct 12 12:05:38 2017] 127.0.0.1:52954 [200]: /GET?
+[Thu Oct 12 12:05:39 2017] 127.0.0.1:52960 [200]: /GET?
+[Thu Oct 12 12:05:40 2017] 127.0.0.1:52966 [200]: /GET?
+[Thu Oct 12 12:05:41 2017] 127.0.0.1:52972 [200]: /GET?
+[Thu Oct 12 12:05:41 2017] 127.0.0.1:52978 [200]: /GET?
+[Thu Oct 12 12:05:42 2017] 127.0.0.1:52984 [200]: /GET?
+[Thu Oct 12 12:07:01 2017] PHP Notice:  Undefined variable: board in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 39
+[Thu Oct 12 12:07:01 2017] PHP Stack trace:
+[Thu Oct 12 12:07:01 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:07:01 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:07:01 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 12:07:01 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+[Thu Oct 12 12:07:01 2017] 127.0.0.1:52992 [200]: /
+[Thu Oct 12 12:07:08 2017] PHP Notice:  Undefined variable: board in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 39
+[Thu Oct 12 12:07:08 2017] PHP Stack trace:
+[Thu Oct 12 12:07:08 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:07:08 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:07:08 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 12:07:08 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+[Thu Oct 12 12:07:08 2017] 127.0.0.1:52996 [200]: /GET?
+[Thu Oct 12 12:07:10 2017] PHP Notice:  Undefined variable: board in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 39
+[Thu Oct 12 12:07:10 2017] PHP Stack trace:
+[Thu Oct 12 12:07:10 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:07:10 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:07:10 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 12:07:10 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+[Thu Oct 12 12:07:10 2017] 127.0.0.1:53006 [200]: /GET?
+[Thu Oct 12 12:07:11 2017] PHP Notice:  Undefined variable: board in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 39
+[Thu Oct 12 12:07:11 2017] PHP Stack trace:
+[Thu Oct 12 12:07:11 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:07:11 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:07:11 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 12:07:11 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+[Thu Oct 12 12:07:11 2017] 127.0.0.1:53012 [200]: /GET?
+[Thu Oct 12 12:07:12 2017] PHP Notice:  Undefined variable: board in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 39
+[Thu Oct 12 12:07:12 2017] PHP Stack trace:
+[Thu Oct 12 12:07:12 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:07:12 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:07:12 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 12:07:12 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+[Thu Oct 12 12:07:12 2017] 127.0.0.1:53018 [200]: /GET?
+[Thu Oct 12 12:07:13 2017] PHP Notice:  Undefined variable: board in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 39
+[Thu Oct 12 12:07:13 2017] PHP Stack trace:
+[Thu Oct 12 12:07:13 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:07:13 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:07:13 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 12:07:13 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+[Thu Oct 12 12:07:13 2017] 127.0.0.1:53024 [200]: /GET?
+[Thu Oct 12 12:07:13 2017] PHP Notice:  Undefined variable: board in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 39
+[Thu Oct 12 12:07:13 2017] PHP Stack trace:
+[Thu Oct 12 12:07:13 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:07:13 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:07:13 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 12:07:13 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+[Thu Oct 12 12:07:13 2017] 127.0.0.1:53030 [200]: /GET?
+[Thu Oct 12 12:07:14 2017] PHP Notice:  Undefined variable: board in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 39
+[Thu Oct 12 12:07:14 2017] PHP Stack trace:
+[Thu Oct 12 12:07:14 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:07:14 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:07:14 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 12:07:14 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+[Thu Oct 12 12:07:14 2017] 127.0.0.1:53036 [200]: /GET?
+[Thu Oct 12 12:07:15 2017] PHP Notice:  Undefined variable: board in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 39
+[Thu Oct 12 12:07:15 2017] PHP Stack trace:
+[Thu Oct 12 12:07:15 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:07:15 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:07:15 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 12:07:15 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+[Thu Oct 12 12:07:15 2017] 127.0.0.1:53042 [200]: /GET?
+[Thu Oct 12 12:07:15 2017] PHP Notice:  Undefined variable: board in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 39
+[Thu Oct 12 12:07:15 2017] PHP Stack trace:
+[Thu Oct 12 12:07:15 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:07:15 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:07:15 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 12:07:15 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+[Thu Oct 12 12:07:15 2017] 127.0.0.1:53050 [200]: /GET?
+[Thu Oct 12 12:07:15 2017] PHP Notice:  Undefined variable: board in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 39
+[Thu Oct 12 12:07:15 2017] PHP Stack trace:
+[Thu Oct 12 12:07:15 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:07:15 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:07:15 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 12:07:15 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+[Thu Oct 12 12:07:15 2017] 127.0.0.1:53056 [200]: /GET?
+[Thu Oct 12 12:09:04 2017] PHP Notice:  Undefined variable: board in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 39
+[Thu Oct 12 12:09:04 2017] PHP Stack trace:
+[Thu Oct 12 12:09:04 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:09:04 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:09:04 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 12:09:04 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+[Thu Oct 12 12:09:04 2017] 127.0.0.1:53094 [200]: /
+[Thu Oct 12 12:09:06 2017] PHP Notice:  Undefined variable: board in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 39
+[Thu Oct 12 12:09:06 2017] PHP Stack trace:
+[Thu Oct 12 12:09:06 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:09:06 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:09:06 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 12:09:06 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+[Thu Oct 12 12:09:06 2017] 127.0.0.1:53098 [200]: /GET?square=B3
+[Thu Oct 12 12:09:12 2017] PHP Notice:  Undefined variable: board in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 39
+[Thu Oct 12 12:09:12 2017] PHP Stack trace:
+[Thu Oct 12 12:09:12 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:09:12 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:09:12 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 12:09:12 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+[Thu Oct 12 12:09:12 2017] 127.0.0.1:53110 [200]: /GET?square=B2
+[Thu Oct 12 12:09:15 2017] PHP Notice:  Undefined variable: board in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 39
+[Thu Oct 12 12:09:15 2017] PHP Stack trace:
+[Thu Oct 12 12:09:15 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:09:15 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:09:15 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 12:09:15 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+[Thu Oct 12 12:09:15 2017] 127.0.0.1:53116 [200]: /GET?square=A2
+[Thu Oct 12 12:12:58 2017] PHP Notice:  Undefined variable: board in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 39
+[Thu Oct 12 12:12:58 2017] PHP Stack trace:
+[Thu Oct 12 12:12:58 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:12:58 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:12:58 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 12:12:58 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+[Thu Oct 12 12:12:58 2017] 127.0.0.1:53130 [200]: /GET?square=A2
+[Thu Oct 12 12:16:53 2017] 127.0.0.1:53134 Invalid request (Unexpected EOF)
+[Thu Oct 12 12:16:53 2017] PHP Notice:  Undefined variable: board in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 45
+[Thu Oct 12 12:16:53 2017] PHP Stack trace:
+[Thu Oct 12 12:16:53 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:16:53 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:16:53 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 12:16:53 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+[Thu Oct 12 12:16:53 2017] 127.0.0.1:53160 [200]: /
+[Thu Oct 12 12:16:55 2017] PHP Notice:  Undefined variable: board in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 45
+[Thu Oct 12 12:16:55 2017] PHP Stack trace:
+[Thu Oct 12 12:16:55 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:16:55 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:16:55 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 12:16:55 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+[Thu Oct 12 12:16:55 2017] 127.0.0.1:53164 [200]: /
+[Thu Oct 12 12:17:20 2017] 127.0.0.1:53170 Invalid request (Unexpected EOF)
+[Thu Oct 12 12:17:20 2017] PHP Notice:  Undefined variable: board in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 45
+[Thu Oct 12 12:17:20 2017] PHP Stack trace:
+[Thu Oct 12 12:17:20 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:17:20 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:17:20 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 12:17:20 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+[Thu Oct 12 12:17:20 2017] 127.0.0.1:53180 [200]: /
+[Thu Oct 12 12:18:12 2017] 127.0.0.1:53184 Invalid request (Unexpected EOF)
+[Thu Oct 12 12:19:07 2017] PHP Notice:  Undefined variable: board in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 46
+[Thu Oct 12 12:19:07 2017] PHP Stack trace:
+[Thu Oct 12 12:19:07 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:19:07 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:19:07 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 12:19:07 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+[Thu Oct 12 12:19:07 2017] 127.0.0.1:53198 [200]: /
+[Thu Oct 12 12:19:51 2017] 127.0.0.1:53202 Invalid request (Unexpected EOF)
+[Thu Oct 12 12:19:51 2017] PHP Notice:  Undefined variable: board in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 46
+[Thu Oct 12 12:19:51 2017] PHP Stack trace:
+[Thu Oct 12 12:19:51 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:19:51 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:19:51 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 12:19:51 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+[Thu Oct 12 12:19:51 2017] 127.0.0.1:53214 [200]: /
+[Thu Oct 12 12:20:08 2017] 127.0.0.1:53218 Invalid request (Unexpected EOF)
+[Thu Oct 12 12:20:08 2017] PHP Notice:  Undefined variable: board in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 46
+[Thu Oct 12 12:20:08 2017] PHP Stack trace:
+[Thu Oct 12 12:20:08 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:20:08 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:20:08 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 12:20:08 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+[Thu Oct 12 12:20:08 2017] 127.0.0.1:53226 [200]: /
+[Thu Oct 12 12:20:43 2017] 127.0.0.1:53230 Invalid request (Unexpected EOF)
+[Thu Oct 12 12:20:43 2017] PHP Notice:  Undefined variable: board in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 46
+[Thu Oct 12 12:20:43 2017] PHP Stack trace:
+[Thu Oct 12 12:20:43 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:20:43 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:20:43 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 12:20:43 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+[Thu Oct 12 12:20:43 2017] 127.0.0.1:53240 [200]: /
+[Thu Oct 12 12:21:17 2017] 127.0.0.1:53244 Invalid request (Unexpected EOF)
+[Thu Oct 12 12:21:17 2017] PHP Notice:  Undefined variable: board in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 46
+[Thu Oct 12 12:21:17 2017] PHP Stack trace:
+[Thu Oct 12 12:21:17 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:21:17 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:21:17 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 12:21:17 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+[Thu Oct 12 12:21:17 2017] 127.0.0.1:53252 [200]: /
+[Thu Oct 12 12:21:53 2017] 127.0.0.1:53256 Invalid request (Unexpected EOF)
+[Thu Oct 12 12:21:53 2017] 127.0.0.1:53264 [200]: /
+[Thu Oct 12 12:21:57 2017] 127.0.0.1:53268 [200]: /
+[Thu Oct 12 12:22:24 2017] 127.0.0.1:53274 Invalid request (Unexpected EOF)
+[Thu Oct 12 12:22:24 2017] 127.0.0.1:53284 [200]: /
+[Thu Oct 12 12:22:38 2017] 127.0.0.1:53288 Invalid request (Unexpected EOF)
+[Thu Oct 12 12:22:38 2017] 127.0.0.1:53296 [200]: /
+[Thu Oct 12 12:22:40 2017] 127.0.0.1:53300 [200]: /
+[Thu Oct 12 12:22:54 2017] 127.0.0.1:53306 Invalid request (Unexpected EOF)
+[Thu Oct 12 12:22:54 2017] 127.0.0.1:53314 [200]: /
+[Thu Oct 12 12:23:00 2017] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to tictactoe\view\GameView::displayNewGameSetup() must be of the type boolean, none given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 34 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:16
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(34): tictactoe\view\GameView->displayNewGameSetup()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#3 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 16
+[Thu Oct 12 12:23:00 2017] 127.0.0.1:53318 [200]: /?newgame - Uncaught TypeError: Argument 1 passed to tictactoe\view\GameView::displayNewGameSetup() must be of the type boolean, none given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 34 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:16
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(34): tictactoe\view\GameView->displayNewGameSetup()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#3 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 16
+[Thu Oct 12 12:23:02 2017] 127.0.0.1:53328 [200]: /
+[Thu Oct 12 12:23:04 2017] 127.0.0.1:53332 [200]: /GET?square=A1
+[Thu Oct 12 12:23:05 2017] 127.0.0.1:53340 [200]: /GET?square=A2
+[Thu Oct 12 12:23:05 2017] 127.0.0.1:53346 [200]: /GET?square=A3
+[Thu Oct 12 12:23:06 2017] 127.0.0.1:53352 [200]: /GET?square=B3
+[Thu Oct 12 12:23:07 2017] 127.0.0.1:53358 [200]: /GET?square=C3
+[Thu Oct 12 12:23:07 2017] 127.0.0.1:53364 [200]: /GET?square=C2
+[Thu Oct 12 12:23:08 2017] 127.0.0.1:53370 [200]: /GET?square=C1
+[Thu Oct 12 12:23:09 2017] 127.0.0.1:53376 [200]: /GET?square=B1
+[Thu Oct 12 12:23:10 2017] 127.0.0.1:53382 [200]: /GET?square=B2
+[Thu Oct 12 12:23:52 2017] 127.0.0.1:53392 [200]: /GET?square=B2
+[Thu Oct 12 12:23:56 2017] 127.0.0.1:53396 [200]: /GET?square=B2
+[Thu Oct 12 12:24:00 2017] 127.0.0.1:53402 [200]: /
+[Thu Oct 12 12:24:02 2017] 127.0.0.1:53410 [200]: /
+[Thu Oct 12 12:24:06 2017] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to tictactoe\view\GameView::displayNewGameSetup() must be of the type boolean, none given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 34 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:16
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(34): tictactoe\view\GameView->displayNewGameSetup()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#3 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 16
+[Thu Oct 12 12:24:06 2017] 127.0.0.1:53416 [200]: /?newgame - Uncaught TypeError: Argument 1 passed to tictactoe\view\GameView::displayNewGameSetup() must be of the type boolean, none given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 34 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:16
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(34): tictactoe\view\GameView->displayNewGameSetup()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#3 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 16
+[Thu Oct 12 12:24:08 2017] 127.0.0.1:53424 [200]: /
+[Thu Oct 12 12:24:32 2017] 127.0.0.1:53428 Invalid request (Unexpected EOF)
+[Thu Oct 12 12:24:32 2017] 127.0.0.1:53434 [200]: /
+[Thu Oct 12 12:24:34 2017] 127.0.0.1:53438 [200]: /
+[Thu Oct 12 12:24:36 2017] 127.0.0.1:53444 [200]: /GET?square=A1
+[Thu Oct 12 12:27:06 2017] 127.0.0.1:53472 [200]: /
+[Thu Oct 12 12:27:07 2017] PHP Notice:  Undefined property: tictactoe\model\Game::$player in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 38
+[Thu Oct 12 12:27:07 2017] PHP Stack trace:
+[Thu Oct 12 12:27:07 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:27:07 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:27:07 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 12:27:07 2017] PHP   4. tictactoe\model\Game->playOn() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:39
+[Thu Oct 12 12:27:07 2017] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to tictactoe\model\Square::select() must be an instance of tictactoe\model\Player, null given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 38 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php:34
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(38): tictactoe\model\Square->select(NULL)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(39): tictactoe\model\Game->playOn('A1')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(2 in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php on line 34
+[Thu Oct 12 12:27:07 2017] 127.0.0.1:53476 [200]: /GET?square=A1 - Uncaught TypeError: Argument 1 passed to tictactoe\model\Square::select() must be an instance of tictactoe\model\Player, null given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 38 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php:34
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(38): tictactoe\model\Square->select(NULL)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(39): tictactoe\model\Game->playOn('A1')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(2 in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php on line 34
+[Thu Oct 12 12:27:33 2017] 127.0.0.1:53488 [200]: /
+[Thu Oct 12 12:27:35 2017] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to tictactoe\model\Square::select() must be an instance of tictactoe\model\Player, null given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 40 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php:34
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(40): tictactoe\model\Square->select(NULL)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(39): tictactoe\model\Game->playOn('A1')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(2 in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php on line 34
+[Thu Oct 12 12:27:35 2017] 127.0.0.1:53492 [200]: /GET?square=A1 - Uncaught TypeError: Argument 1 passed to tictactoe\model\Square::select() must be an instance of tictactoe\model\Player, null given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 40 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php:34
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(40): tictactoe\model\Square->select(NULL)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(39): tictactoe\model\Game->playOn('A1')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(2 in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php on line 34
+[Thu Oct 12 12:28:10 2017] 127.0.0.1:53500 [200]: /
+[Thu Oct 12 12:28:11 2017] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to tictactoe\view\GameView::displayNewGameSetup() must be of the type boolean, none given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 34 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:16
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(34): tictactoe\view\GameView->displayNewGameSetup()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#3 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 16
+[Thu Oct 12 12:28:11 2017] 127.0.0.1:53504 [200]: /?newgame - Uncaught TypeError: Argument 1 passed to tictactoe\view\GameView::displayNewGameSetup() must be of the type boolean, none given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 34 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:16
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(34): tictactoe\view\GameView->displayNewGameSetup()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#3 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 16
+[Thu Oct 12 12:28:40 2017] 127.0.0.1:53514 [200]: /
+[Thu Oct 12 12:28:42 2017] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to tictactoe\model\Player::__construct() must be an instance of tictactoe\model\char, string given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 34 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Player.php:8
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(34): tictactoe\model\Player->__construct('X')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(35): tictactoe\model\Game->newGame()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index. in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Player.php on line 8
+[Thu Oct 12 12:28:42 2017] 127.0.0.1:53518 [200]: /?newgame - Uncaught TypeError: Argument 1 passed to tictactoe\model\Player::__construct() must be an instance of tictactoe\model\char, string given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 34 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Player.php:8
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(34): tictactoe\model\Player->__construct('X')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(35): tictactoe\model\Game->newGame()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index. in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Player.php on line 8
+[Thu Oct 12 12:28:56 2017] 127.0.0.1:53530 [200]: /?newgame
+[Thu Oct 12 12:28:58 2017] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to tictactoe\model\Square::select() must be an instance of tictactoe\model\Player, null given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 40 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php:34
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(40): tictactoe\model\Square->select(NULL)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(39): tictactoe\model\Game->playOn('A1')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(2 in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php on line 34
+[Thu Oct 12 12:28:58 2017] 127.0.0.1:53534 [200]: /GET?square=A1 - Uncaught TypeError: Argument 1 passed to tictactoe\model\Square::select() must be an instance of tictactoe\model\Player, null given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 40 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php:34
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(40): tictactoe\model\Square->select(NULL)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(39): tictactoe\model\Game->playOn('A1')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(2 in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php on line 34
+[Thu Oct 12 12:29:05 2017] 127.0.0.1:53542 [200]: /
+[Thu Oct 12 12:29:07 2017] 127.0.0.1:53546 [200]: /?newgame
+[Thu Oct 12 12:29:11 2017] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to tictactoe\model\Square::select() must be an instance of tictactoe\model\Player, null given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 40 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php:34
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(40): tictactoe\model\Square->select(NULL)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(39): tictactoe\model\Game->playOn('A1')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(2 in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php on line 34
+[Thu Oct 12 12:29:11 2017] 127.0.0.1:53556 [200]: /GET?square=A1 - Uncaught TypeError: Argument 1 passed to tictactoe\model\Square::select() must be an instance of tictactoe\model\Player, null given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 40 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php:34
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(40): tictactoe\model\Square->select(NULL)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(39): tictactoe\model\Game->playOn('A1')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(2 in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php on line 34
+[Thu Oct 12 12:29:45 2017] 127.0.0.1:53568 [200]: /
+[Thu Oct 12 12:29:46 2017] 127.0.0.1:53572 [200]: /?newgame
+[Thu Oct 12 12:29:50 2017] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to tictactoe\model\Square::select() must be an instance of tictactoe\model\Player, null given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 40 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php:34
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(40): tictactoe\model\Square->select(NULL)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(41): tictactoe\model\Game->playOn('A1')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(2 in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php on line 34
+[Thu Oct 12 12:29:50 2017] 127.0.0.1:53580 [200]: /GET?square=A1 - Uncaught TypeError: Argument 1 passed to tictactoe\model\Square::select() must be an instance of tictactoe\model\Player, null given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 40 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php:34
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(40): tictactoe\model\Square->select(NULL)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(41): tictactoe\model\Game->playOn('A1')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(2 in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php on line 34
+[Thu Oct 12 12:33:49 2017] 127.0.0.1:53628 [200]: /
+[Thu Oct 12 12:33:51 2017] 127.0.0.1:53632 [200]: /?newgame
+[Thu Oct 12 12:33:54 2017] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to tictactoe\model\Square::select() must be an instance of tictactoe\model\Player, null given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 40 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php:34
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(40): tictactoe\model\Square->select(NULL)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(41): tictactoe\model\Game->playOn('A1')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(2 in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php on line 34
+[Thu Oct 12 12:33:54 2017] 127.0.0.1:53640 [200]: /GET?square=A1 - Uncaught TypeError: Argument 1 passed to tictactoe\model\Square::select() must be an instance of tictactoe\model\Player, null given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 40 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php:34
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(40): tictactoe\model\Square->select(NULL)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(41): tictactoe\model\Game->playOn('A1')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(2 in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php on line 34
+[Thu Oct 12 12:35:18 2017] 127.0.0.1:53662 [200]: /
+[Thu Oct 12 12:35:20 2017] 127.0.0.1:53666 [200]: /?newgame
+[Thu Oct 12 12:35:23 2017] 127.0.0.1:53674 [200]: /GET?square=A1
+[Thu Oct 12 12:35:29 2017] 127.0.0.1:53680 [200]: /GET?newgame
+[Thu Oct 12 12:35:31 2017] 127.0.0.1:53686 [200]: /GET?square=A1
+[Thu Oct 12 12:35:58 2017] 127.0.0.1:53698 [200]: /
+[Thu Oct 12 12:36:01 2017] 127.0.0.1:53702 [200]: /?newgame
+[Thu Oct 12 12:36:02 2017] 127.0.0.1:53710 [200]: /GET?square=A1
+[Thu Oct 12 12:36:05 2017] 127.0.0.1:53716 [200]: /GET?square=B2
+[Thu Oct 12 12:36:06 2017] 127.0.0.1:53724 [200]: /GET?square=C3
+[Thu Oct 12 12:36:07 2017] 127.0.0.1:53730 [200]: /GET?square=C2
+[Thu Oct 12 12:36:08 2017] 127.0.0.1:53736 [200]: /GET?square=C1
+[Thu Oct 12 12:36:09 2017] 127.0.0.1:53742 [200]: /GET?square=B1
+[Thu Oct 12 12:36:10 2017] 127.0.0.1:53748 [200]: /GET?square=B2
+[Thu Oct 12 12:36:12 2017] 127.0.0.1:53754 [200]: /GET?square=B3
+[Thu Oct 12 12:36:14 2017] 127.0.0.1:53760 [200]: /GET?square=A3
+[Thu Oct 12 12:36:15 2017] 127.0.0.1:53766 [200]: /GET?square=A1
+[Thu Oct 12 12:36:16 2017] 127.0.0.1:53772 [200]: /GET?square=A2
+[Thu Oct 12 12:36:17 2017] 127.0.0.1:53778 [200]: /GET?square=B2
+[Thu Oct 12 12:36:18 2017] 127.0.0.1:53784 [200]: /GET?square=C2
+[Thu Oct 12 12:36:19 2017] 127.0.0.1:53792 [200]: /GET?square=C2
+[Thu Oct 12 12:36:22 2017] 127.0.0.1:53798 [200]: /GET?square=C2
+[Thu Oct 12 12:41:48 2017] 127.0.0.1:53826 [200]: /GET?square=C1
+[Thu Oct 12 12:41:49 2017] 127.0.0.1:53832 [200]: /GET?square=B1
+[Thu Oct 12 12:41:50 2017] 127.0.0.1:53838 [200]: /GET?square=B2
+[Thu Oct 12 12:41:51 2017] 127.0.0.1:53844 [200]: /GET?square=A3
+[Thu Oct 12 12:41:52 2017] 127.0.0.1:53850 [200]: /GET?square=A2
+[Thu Oct 12 12:41:53 2017] 127.0.0.1:53856 [200]: /GET?square=A1
+[Thu Oct 12 12:41:54 2017] 127.0.0.1:53862 [200]: /GET?square=B2
+[Thu Oct 12 12:41:55 2017] 127.0.0.1:53868 [200]: /GET?square=C3
+[Thu Oct 12 12:41:56 2017] 127.0.0.1:53874 [200]: /GET?square=C2
+[Thu Oct 12 12:41:57 2017] 127.0.0.1:53880 [200]: /GET?square=C1
+[Thu Oct 12 12:41:57 2017] 127.0.0.1:53886 [200]: /GET?square=B2
+[Thu Oct 12 12:41:58 2017] 127.0.0.1:53892 [200]: /GET?square=A3
+[Thu Oct 12 12:41:59 2017] 127.0.0.1:53898 [200]: /GET?square=B3
+[Thu Oct 12 12:41:59 2017] 127.0.0.1:53904 [200]: /GET?square=C3
+[Thu Oct 12 12:42:00 2017] 127.0.0.1:53910 [200]: /GET?square=C2
+[Thu Oct 12 12:42:01 2017] 127.0.0.1:53916 [200]: /GET?square=B1
+[Thu Oct 12 12:42:02 2017] 127.0.0.1:53922 [200]: /GET?square=A1
+[Thu Oct 12 12:43:50 2017] 127.0.0.1:53936 [200]: /
+[Thu Oct 12 12:43:52 2017] 127.0.0.1:53940 [200]: /?newgame
+[Thu Oct 12 12:43:54 2017] 127.0.0.1:53950 [200]: /GET?square=C1
+[Thu Oct 12 12:43:55 2017] 127.0.0.1:53956 [200]: /GET?square=C1
+[Thu Oct 12 12:43:56 2017] 127.0.0.1:53962 [200]: /GET?square=C1
+[Thu Oct 12 12:43:57 2017] 127.0.0.1:53968 [200]: /GET?square=B2
+[Thu Oct 12 12:43:57 2017] 127.0.0.1:53974 [200]: /GET?square=A2
+[Thu Oct 12 12:43:58 2017] 127.0.0.1:53980 [200]: /GET?square=A3
+[Thu Oct 12 12:43:58 2017] 127.0.0.1:53986 [200]: /GET?square=B3
+[Thu Oct 12 12:43:59 2017] 127.0.0.1:53992 [200]: /GET?square=B3
+[Thu Oct 12 12:43:59 2017] 127.0.0.1:53998 [200]: /GET?square=C3
+[Thu Oct 12 12:43:59 2017] 127.0.0.1:54004 [200]: /GET?square=C3
+[Thu Oct 12 12:44:00 2017] 127.0.0.1:54010 [200]: /GET?square=C2
+[Thu Oct 12 12:44:00 2017] 127.0.0.1:54016 [200]: /GET?square=C1
+[Thu Oct 12 12:44:00 2017] 127.0.0.1:54022 [200]: /GET?square=C1
+[Thu Oct 12 12:44:01 2017] 127.0.0.1:54028 [200]: /GET?square=B1
+[Thu Oct 12 12:47:57 2017] 127.0.0.1:54052 [200]: /
+[Thu Oct 12 12:48:00 2017] 127.0.0.1:54056 [200]: /?newgame
+[Thu Oct 12 12:48:01 2017] 127.0.0.1:54064 [200]: /GET?square=C1
+[Thu Oct 12 12:48:06 2017] 127.0.0.1:54070 [200]: /GET?newgame
+[Thu Oct 12 12:48:13 2017] 127.0.0.1:54076 [200]: /
+[Thu Oct 12 12:48:20 2017] 127.0.0.1:54080 [200]: /?newgame
+[Thu Oct 12 12:48:22 2017] 127.0.0.1:54088 [200]: /GET?square=C1
+[Thu Oct 12 12:48:30 2017] 127.0.0.1:54094 [200]: /GET?square=C1
+[Thu Oct 12 12:49:14 2017] 127.0.0.1:54098 Invalid request (Unexpected EOF)
+[Thu Oct 12 12:49:14 2017] 127.0.0.1:54106 [200]: /GET?newgame
+[Thu Oct 12 12:49:15 2017] 127.0.0.1:54114 [200]: /GET?square=C1
+[Thu Oct 12 12:49:17 2017] 127.0.0.1:54120 [200]: /GET?square=B2
+[Thu Oct 12 12:49:18 2017] 127.0.0.1:54126 [200]: /GET?square=A3
+[Thu Oct 12 12:49:19 2017] 127.0.0.1:54132 [200]: /GET?square=B3
+[Thu Oct 12 12:49:19 2017] 127.0.0.1:54138 [200]: /GET?square=C3
+[Thu Oct 12 12:49:19 2017] 127.0.0.1:54144 [200]: /GET?square=C3
+[Thu Oct 12 12:49:20 2017] 127.0.0.1:54150 [200]: /GET?square=C3
+[Thu Oct 12 12:49:21 2017] 127.0.0.1:54156 [200]: /GET?square=C2
+[Thu Oct 12 12:49:22 2017] 127.0.0.1:54162 [200]: /GET?square=B1
+[Thu Oct 12 12:49:22 2017] 127.0.0.1:54168 [200]: /GET?square=A1
+[Thu Oct 12 12:49:23 2017] 127.0.0.1:54174 [200]: /GET?square=A2
+[Thu Oct 12 12:49:27 2017] 127.0.0.1:54180 [200]: /
+[Thu Oct 12 12:49:29 2017] 127.0.0.1:54184 [200]: /?newgame
+[Thu Oct 12 12:49:30 2017] 127.0.0.1:54192 [200]: /GET?square=B1
+[Thu Oct 12 12:49:31 2017] 127.0.0.1:54198 [200]: /GET?square=B2
+[Thu Oct 12 12:49:32 2017] 127.0.0.1:54204 [200]: /GET?quit
+[Thu Oct 12 12:49:33 2017] 127.0.0.1:54210 [200]: /GET?newgame
+[Thu Oct 12 12:49:34 2017] 127.0.0.1:54216 [200]: /GET?square=C1
+[Thu Oct 12 12:49:35 2017] 127.0.0.1:54222 [200]: /GET?square=B2
+[Thu Oct 12 12:49:36 2017] 127.0.0.1:54228 [200]: /GET?square=B3
+[Thu Oct 12 12:49:36 2017] 127.0.0.1:54234 [200]: /GET?square=A3
+[Thu Oct 12 12:58:59 2017] 127.0.0.1:54310 [200]: /
+[Thu Oct 12 12:59:01 2017] 127.0.0.1:54314 [200]: /?newgame
+[Thu Oct 12 12:59:02 2017] PHP Notice:  Undefined property: tictactoe\model\Player::$squares in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Player.php on line 20
+[Thu Oct 12 12:59:02 2017] PHP Stack trace:
+[Thu Oct 12 12:59:02 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:59:02 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:59:02 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:22
+[Thu Oct 12 12:59:02 2017] PHP   4. tictactoe\model\Game->playOn() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:41
+[Thu Oct 12 12:59:02 2017] PHP   5. tictactoe\model\Player->play() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:42
+[Thu Oct 12 12:59:02 2017] PHP Fatal error:  Uncaught Error: Call to a member function select() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Player.php:20
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(42): tictactoe\model\Player->play('A1')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(41): tictactoe\model\Game->playOn('A1')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(22): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#4 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Player.php on line 20
+[Thu Oct 12 12:59:02 2017] 127.0.0.1:54322 [200]: /GET?square=A1 - Uncaught Error: Call to a member function select() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Player.php:20
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(42): tictactoe\model\Player->play('A1')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(41): tictactoe\model\Game->playOn('A1')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(22): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#4 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Player.php on line 20
+[Thu Oct 12 12:59:44 2017] 127.0.0.1:54336 [200]: /
+[Thu Oct 12 12:59:45 2017] 127.0.0.1:54340 [200]: /?newgame
+[Thu Oct 12 12:59:46 2017] PHP Notice:  Undefined property: tictactoe\model\Player::$squares in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Player.php on line 20
+[Thu Oct 12 12:59:46 2017] PHP Stack trace:
+[Thu Oct 12 12:59:46 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 12:59:46 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 12:59:46 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:22
+[Thu Oct 12 12:59:46 2017] PHP   4. tictactoe\model\Game->playOn() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:41
+[Thu Oct 12 12:59:46 2017] PHP   5. tictactoe\model\Player->play() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:42
+[Thu Oct 12 12:59:46 2017] PHP Fatal error:  Uncaught Error: Call to a member function select() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Player.php:20
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(42): tictactoe\model\Player->play('A1')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(41): tictactoe\model\Game->playOn('A1')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(22): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#4 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Player.php on line 20
+[Thu Oct 12 12:59:46 2017] 127.0.0.1:54348 [200]: /GET?square=A1 - Uncaught Error: Call to a member function select() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Player.php:20
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(42): tictactoe\model\Player->play('A1')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(41): tictactoe\model\Game->playOn('A1')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(22): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#4 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Player.php on line 20
+[Thu Oct 12 13:01:09 2017] 127.0.0.1:54358 [200]: /
+[Thu Oct 12 13:01:11 2017] 127.0.0.1:54362 [200]: /?newgame
+[Thu Oct 12 13:01:12 2017] PHP Notice:  Undefined property: tictactoe\model\Player::$squares in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Player.php on line 20
+[Thu Oct 12 13:01:12 2017] PHP Stack trace:
+[Thu Oct 12 13:01:12 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 13:01:12 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 13:01:12 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:22
+[Thu Oct 12 13:01:12 2017] PHP   4. tictactoe\model\Game->playOn() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:41
+[Thu Oct 12 13:01:12 2017] PHP   5. tictactoe\model\Player->play() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:42
+[Thu Oct 12 13:01:12 2017] PHP Fatal error:  Uncaught Error: Call to a member function select() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Player.php:20
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(42): tictactoe\model\Player->play(Array, 'B1')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(41): tictactoe\model\Game->playOn('B1')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(22): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#4 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Player.php on line 20
+[Thu Oct 12 13:01:12 2017] 127.0.0.1:54372 [200]: /GET?square=B1 - Uncaught Error: Call to a member function select() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Player.php:20
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(42): tictactoe\model\Player->play(Array, 'B1')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(41): tictactoe\model\Game->playOn('B1')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(22): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#4 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Player.php on line 20
+[Thu Oct 12 13:01:29 2017] 127.0.0.1:54380 [200]: /
+[Thu Oct 12 13:01:30 2017] 127.0.0.1:54384 [200]: /?newgame
+[Thu Oct 12 13:01:31 2017] PHP Fatal error:  Uncaught Error: Call to undefined function tictactoe\model\isSelected() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/AI.php:11
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(43): tictactoe\model\AI->getSquareToPlayOn(Array, Array)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(41): tictactoe\model\Game->playOn('A1')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(22): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#4 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/AI.php on line 11
+[Thu Oct 12 13:01:31 2017] 127.0.0.1:54392 [200]: /GET?square=A1 - Uncaught Error: Call to undefined function tictactoe\model\isSelected() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/AI.php:11
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(43): tictactoe\model\AI->getSquareToPlayOn(Array, Array)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(41): tictactoe\model\Game->playOn('A1')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(22): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#4 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/AI.php on line 11
+[Thu Oct 12 13:02:32 2017] 127.0.0.1:54404 [200]: /
+[Thu Oct 12 13:02:33 2017] 127.0.0.1:54408 [200]: /?newgame
+[Thu Oct 12 13:02:34 2017] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to tictactoe\model\Player::play() must be of the type array, string given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 43 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Player.php:18
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(43): tictactoe\model\Player->play('A2')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(41): tictactoe\model\Game->playOn('A1')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(22): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacTo in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Player.php on line 18
+[Thu Oct 12 13:02:34 2017] 127.0.0.1:54416 [200]: /GET?square=A1 - Uncaught TypeError: Argument 1 passed to tictactoe\model\Player::play() must be of the type array, string given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 43 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Player.php:18
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(43): tictactoe\model\Player->play('A2')
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(41): tictactoe\model\Game->playOn('A1')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(22): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacTo in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Player.php on line 18
+[Thu Oct 12 13:03:09 2017] 127.0.0.1:54424 [200]: /
+[Thu Oct 12 13:03:11 2017] 127.0.0.1:54428 [200]: /?newgame
+[Thu Oct 12 13:03:13 2017] 127.0.0.1:54436 [200]: /GET?square=A1
+[Thu Oct 12 13:03:17 2017] 127.0.0.1:54444 [200]: /GET?square=A3
+[Thu Oct 12 13:03:18 2017] 127.0.0.1:54450 [200]: /GET?square=B2
+[Thu Oct 12 13:03:20 2017] 127.0.0.1:54456 [200]: /GET?square=C2
+[Thu Oct 12 13:03:20 2017] 127.0.0.1:54462 [200]: /GET?square=C2
+[Thu Oct 12 13:03:24 2017] PHP Fatal error:  Uncaught TypeError: Return value of tictactoe\model\AI::getSquareToPlayOn() must be of the type string, none returned in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/AI.php:16
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(43): tictactoe\model\AI->getSquareToPlayOn(Array)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(41): tictactoe\model\Game->playOn('C3')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(22): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#4 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/AI.php on line 16
+[Thu Oct 12 13:03:24 2017] 127.0.0.1:54468 [200]: /GET?square=C3 - Uncaught TypeError: Return value of tictactoe\model\AI::getSquareToPlayOn() must be of the type string, none returned in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/AI.php:16
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(43): tictactoe\model\AI->getSquareToPlayOn(Array)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(41): tictactoe\model\Game->playOn('C3')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(22): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#4 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/AI.php on line 16
+[Thu Oct 12 13:03:59 2017] 127.0.0.1:54474 [200]: /
+[Thu Oct 12 13:04:01 2017] 127.0.0.1:54478 [200]: /?newgame
+[Thu Oct 12 13:04:03 2017] 127.0.0.1:54486 [200]: /GET?square=A1
+[Thu Oct 12 13:04:07 2017] 127.0.0.1:54492 [200]: /GET?square=B1
+[Thu Oct 12 13:04:14 2017] 127.0.0.1:54498 [200]: /GET?square=C1
+[Thu Oct 12 13:04:16 2017] 127.0.0.1:54506 [200]: /GET?square=B3
+[Thu Oct 12 13:04:18 2017] PHP Fatal error:  Uncaught TypeError: Return value of tictactoe\model\AI::getSquareToPlayOn() must be of the type string, none returned in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/AI.php:16
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(43): tictactoe\model\AI->getSquareToPlayOn(Array)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(41): tictactoe\model\Game->playOn('C3')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(22): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#4 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/AI.php on line 16
+[Thu Oct 12 13:04:18 2017] 127.0.0.1:54512 [200]: /GET?square=C3 - Uncaught TypeError: Return value of tictactoe\model\AI::getSquareToPlayOn() must be of the type string, none returned in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/AI.php:16
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(43): tictactoe\model\AI->getSquareToPlayOn(Array)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(41): tictactoe\model\Game->playOn('C3')
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(22): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#4 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/AI.php on line 16
+[Thu Oct 12 13:15:08 2017] 127.0.0.1:54746 [200]: /
+[Thu Oct 12 13:15:10 2017] PHP Fatal error:  Uncaught Error: Call to a member function unselect() on array in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:34
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(35): tictactoe\model\Game->newGame()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(22): tictactoe\controller\GameController->playGame()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#3 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 34
+[Thu Oct 12 13:15:10 2017] 127.0.0.1:54750 [200]: /?newgame - Uncaught Error: Call to a member function unselect() on array in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:34
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(35): tictactoe\model\Game->newGame()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(22): tictactoe\controller\GameController->playGame()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#3 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 34
+[Thu Oct 12 13:27:18 2017] 127.0.0.1:54818 [200]: /
+[Thu Oct 12 13:27:20 2017] PHP Notice:  Undefined property: tictactoe\model\Game::$rows in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 32
+[Thu Oct 12 13:27:20 2017] PHP Stack trace:
+[Thu Oct 12 13:27:20 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 13:27:20 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 13:27:20 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:22
+[Thu Oct 12 13:27:20 2017] PHP   4. tictactoe\model\Game->newGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:35
+[Thu Oct 12 13:27:20 2017] PHP Warning:  Invalid argument supplied for foreach() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 32
+[Thu Oct 12 13:27:20 2017] PHP Stack trace:
+[Thu Oct 12 13:27:20 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 13:27:20 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 13:27:20 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:22
+[Thu Oct 12 13:27:20 2017] PHP   4. tictactoe\model\Game->newGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:35
+[Thu Oct 12 13:27:20 2017] PHP Notice:  Undefined property: tictactoe\model\Game::$squares in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 54
+[Thu Oct 12 13:27:20 2017] PHP Stack trace:
+[Thu Oct 12 13:27:20 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 13:27:20 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 13:27:20 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:22
+[Thu Oct 12 13:27:20 2017] PHP   4. tictactoe\model\Game->getBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:36
+[Thu Oct 12 13:27:20 2017] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to tictactoe\view\GameView::displayBoard() must be of the type array, null given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 36 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:34
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(36): tictactoe\view\GameView->displayBoard(NULL)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(22): tictactoe\controller\GameController->playGame()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#3 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 34
+[Thu Oct 12 13:27:20 2017] 127.0.0.1:54822 [200]: /?newgame - Uncaught TypeError: Argument 1 passed to tictactoe\view\GameView::displayBoard() must be of the type array, null given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 36 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:34
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(36): tictactoe\view\GameView->displayBoard(NULL)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(22): tictactoe\controller\GameController->playGame()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#3 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 34
+[Thu Oct 12 13:33:22 2017] 127.0.0.1:54874 [200]: /
+[Thu Oct 12 13:33:24 2017] PHP Notice:  Undefined variable: squares in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 39
+[Thu Oct 12 13:33:24 2017] PHP Stack trace:
+[Thu Oct 12 13:33:24 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 13:33:24 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 13:33:24 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:22
+[Thu Oct 12 13:33:24 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:36
+[Thu Oct 12 13:33:24 2017] PHP Warning:  Invalid argument supplied for foreach() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 39
+[Thu Oct 12 13:33:24 2017] PHP Stack trace:
+[Thu Oct 12 13:33:24 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 13:33:24 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 13:33:24 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:22
+[Thu Oct 12 13:33:24 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:36
+[Thu Oct 12 13:33:24 2017] 127.0.0.1:54878 [200]: /?newgame
+[Thu Oct 12 13:33:43 2017] 127.0.0.1:54888 [200]: /?
+[Thu Oct 12 13:33:45 2017] 127.0.0.1:54892 [200]: /?newgame
+[Thu Oct 12 13:33:46 2017] 127.0.0.1:54900 [200]: /GET?square=A1
+[Thu Oct 12 13:33:48 2017] 127.0.0.1:54906 [200]: /GET?square=A3
+[Thu Oct 12 13:33:49 2017] 127.0.0.1:54912 [200]: /GET?square=B2
+[Thu Oct 12 13:33:49 2017] 127.0.0.1:54918 [200]: /GET?square=B3
+[Thu Oct 12 13:33:50 2017] 127.0.0.1:54924 [200]: /GET?square=C1
+[Thu Oct 12 13:33:51 2017] 127.0.0.1:54930 [200]: /GET?square=B2
+[Thu Oct 12 13:33:52 2017] 127.0.0.1:54936 [200]: /GET?square=B1
+[Thu Oct 12 13:33:53 2017] 127.0.0.1:54942 [200]: /GET?square=C3
+[Thu Oct 12 13:35:17 2017] 127.0.0.1:54962 [200]: /
+[Thu Oct 12 13:35:19 2017] 127.0.0.1:54966 [200]: /?newgame
+[Thu Oct 12 13:35:20 2017] 127.0.0.1:54974 [200]: /GET?square=A1
+[Thu Oct 12 13:35:22 2017] 127.0.0.1:54980 [200]: /GET?square=A3
+[Thu Oct 12 13:35:23 2017] 127.0.0.1:54986 [200]: /GET?square=B2
+[Thu Oct 12 13:35:24 2017] 127.0.0.1:54992 [200]: /GET?square=C1
+[Thu Oct 12 13:35:25 2017] 127.0.0.1:54998 [200]: /GET?square=C3
+[Thu Oct 12 13:36:02 2017] 127.0.0.1:55004 [200]: /
+[Thu Oct 12 13:36:04 2017] 127.0.0.1:55008 [200]: /?newgame
+[Thu Oct 12 13:36:05 2017] 127.0.0.1:55016 [200]: /GET?square=C1
+[Thu Oct 12 13:36:08 2017] 127.0.0.1:55022 [200]: /GET?square=B2
+[Thu Oct 12 13:36:09 2017] 127.0.0.1:55028 [200]: /GET?square=B3
+[Thu Oct 12 13:36:11 2017] 127.0.0.1:55034 [200]: /GET?square=C3
+[Thu Oct 12 13:36:11 2017] 127.0.0.1:55042 [200]: /GET?square=C2
+[Thu Oct 12 13:37:26 2017] 127.0.0.1:55056 [200]: /
+[Thu Oct 12 13:37:29 2017] 127.0.0.1:55060 [200]: /
+[Thu Oct 12 13:37:30 2017] 127.0.0.1:55066 [200]: /
+[Thu Oct 12 13:37:30 2017] 127.0.0.1:55072 [404]: /favicon.ico - No such file or directory
+[Thu Oct 12 13:37:39 2017] 127.0.0.1:55078 [200]: /?newgame
+[Thu Oct 12 13:37:41 2017] PHP Fatal error:  Uncaught TypeError: Return value of tictactoe\model\Game::gameIsOver() must be of the type boolean, none returned in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:60
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(27): tictactoe\model\Game->gameIsOver()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(22): tictactoe\controller\GameController->playGame()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#3 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 60
+[Thu Oct 12 13:37:41 2017] 127.0.0.1:55082 [200]: /GET?square=A1 - Uncaught TypeError: Return value of tictactoe\model\Game::gameIsOver() must be of the type boolean, none returned in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:60
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(27): tictactoe\model\Game->gameIsOver()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(22): tictactoe\controller\GameController->playGame()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#3 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 60
+[Thu Oct 12 13:38:16 2017] 127.0.0.1:55086 Invalid request (Unexpected EOF)
+[Thu Oct 12 13:38:16 2017] 127.0.0.1:55090 Invalid request (Unexpected EOF)
+[Thu Oct 12 13:38:16 2017] 127.0.0.1:55102 [200]: /
+[Thu Oct 12 13:38:18 2017] 127.0.0.1:55106 [200]: /?newgame
+[Thu Oct 12 13:38:20 2017] 127.0.0.1:55110 [200]: /GET?square=A1
+[Thu Oct 12 13:38:21 2017] 127.0.0.1:55120 [200]: /GET?square=B2
+[Thu Oct 12 13:38:22 2017] 127.0.0.1:55126 [200]: /GET?square=C3
+[Thu Oct 12 13:38:23 2017] 127.0.0.1:55132 [200]: /GET?square=C2
+[Thu Oct 12 13:38:24 2017] 127.0.0.1:55138 [200]: /GET?square=C1
+[Thu Oct 12 13:38:32 2017] 127.0.0.1:55146 [200]: /
+[Thu Oct 12 13:40:30 2017] 127.0.0.1:55150 Invalid request (Unexpected EOF)
+[Thu Oct 12 13:40:30 2017] 127.0.0.1:55154 Invalid request (Unexpected EOF)
+[Thu Oct 12 13:40:30 2017] 127.0.0.1:55170 [200]: /
+[Thu Oct 12 13:40:52 2017] 127.0.0.1:55178 [200]: /
+[Thu Oct 12 13:41:00 2017] 127.0.0.1:55184 [200]: /?newgame
+[Thu Oct 12 13:41:31 2017] 127.0.0.1:55192 [200]: /GET?square=A1
+[Thu Oct 12 13:41:35 2017] 127.0.0.1:55198 [200]: /GET?square=B1
+[Thu Oct 12 13:41:36 2017] 127.0.0.1:55204 [200]: /GET?square=C1
+[Thu Oct 12 13:41:37 2017] 127.0.0.1:55210 [200]: /GET?square=C2
+[Thu Oct 12 13:41:39 2017] 127.0.0.1:55216 [200]: /GET?square=C3
+[Thu Oct 12 13:48:26 2017] 127.0.0.1:55242 [200]: /
+[Thu Oct 12 13:48:32 2017] 127.0.0.1:55248 [200]: /?newgame
+[Thu Oct 12 13:48:35 2017] 127.0.0.1:55256 [200]: /?newgame
+[Thu Oct 12 13:49:42 2017] 127.0.0.1:55268 [200]: /?newgame
+[Thu Oct 12 13:49:44 2017] 127.0.0.1:55274 [200]: /GET?square=A1
+[Thu Oct 12 13:49:45 2017] 127.0.0.1:55280 [200]: /GET?square=B1
+[Thu Oct 12 13:49:45 2017] 127.0.0.1:55286 [200]: /GET?square=C1
+[Thu Oct 12 13:49:46 2017] 127.0.0.1:55292 [200]: /GET?square=C2
+[Thu Oct 12 13:49:47 2017] 127.0.0.1:55300 [200]: /GET?square=C3
+[Thu Oct 12 13:49:56 2017] 127.0.0.1:55306 [200]: /GET?square=C3
+[Thu Oct 12 13:51:59 2017] 127.0.0.1:55326 [200]: /
+[Thu Oct 12 13:52:00 2017] 127.0.0.1:55330 [200]: /?newgame
+[Thu Oct 12 13:52:02 2017] 127.0.0.1:55338 [200]: /GET?square=A1
+[Thu Oct 12 13:52:02 2017] 127.0.0.1:55344 [200]: /GET?square=C2
+[Thu Oct 12 13:52:03 2017] 127.0.0.1:55350 [200]: /GET?square=B2
+[Thu Oct 12 13:52:04 2017] 127.0.0.1:55356 [200]: /GET?square=C1
+[Thu Oct 12 13:52:05 2017] 127.0.0.1:55362 [200]: /GET?square=C3
+[Thu Oct 12 13:53:10 2017] 127.0.0.1:55388 [200]: /GET?square=C3
+[Thu Oct 12 13:53:13 2017] 127.0.0.1:55392 [200]: /
+[Thu Oct 12 13:53:14 2017] 127.0.0.1:55402 [200]: /?newgame
+[Thu Oct 12 13:53:16 2017] 127.0.0.1:55410 [200]: /GET?square=B1
+[Thu Oct 12 13:53:16 2017] 127.0.0.1:55416 [200]: /GET?square=B2
+[Thu Oct 12 13:53:17 2017] 127.0.0.1:55422 [200]: /GET?square=B2
+[Thu Oct 12 13:53:17 2017] 127.0.0.1:55428 [200]: /GET?square=C2
+[Thu Oct 12 13:53:18 2017] 127.0.0.1:55434 [200]: /GET?square=C1
+[Thu Oct 12 13:53:19 2017] 127.0.0.1:55440 [200]: /GET?square=C3
+[Thu Oct 12 14:21:36 2017] PHP Notice:  Undefined offset: 3 in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 137
+[Thu Oct 12 14:21:36 2017] PHP Stack trace:
+[Thu Oct 12 14:21:36 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 14:21:36 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 14:21:36 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:22
+[Thu Oct 12 14:21:36 2017] PHP   4. tictactoe\model\Game->gameIsOver() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:39
+[Thu Oct 12 14:21:36 2017] PHP   5. tictactoe\model\Game->thereIsAWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:100
+[Thu Oct 12 14:21:36 2017] PHP   6. tictactoe\model\Game->isRowWon() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:126
+[Thu Oct 12 14:21:36 2017] PHP Fatal error:  Uncaught Error: Call to a member function isSelected() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:137
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(126): tictactoe\model\Game->isRowWon(Array)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(100): tictactoe\model\Game->thereIsAWinner()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(39): tictactoe\model\Game->gameIsOver()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(22): tictactoe\controller\GameController->playGame()
+#4 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#5 {main}
+  th in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 137
+[Thu Oct 12 14:21:36 2017] 127.0.0.1:57598 [200]: /GET?square=C3 - Uncaught Error: Call to a member function isSelected() on null in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:137
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(126): tictactoe\model\Game->isRowWon(Array)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php(100): tictactoe\model\Game->thereIsAWinner()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(39): tictactoe\model\Game->gameIsOver()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(22): tictactoe\controller\GameController->playGame()
+#4 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#5 {main}
+  th in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 137
+[Thu Oct 12 14:22:09 2017] 127.0.0.1:57602 Invalid request (Unexpected EOF)
+[Thu Oct 12 14:22:09 2017] 127.0.0.1:57608 [200]: /
+[Thu Oct 12 14:22:12 2017] 127.0.0.1:57612 [200]: /?newgame
+[Thu Oct 12 14:22:13 2017] 127.0.0.1:57620 [200]: /GET?square=A1
+[Thu Oct 12 14:22:15 2017] 127.0.0.1:57626 [200]: /GET?square=B2
+[Thu Oct 12 14:22:17 2017] 127.0.0.1:57634 [200]: /GET?square=C3
+[Thu Oct 12 14:25:25 2017] 127.0.0.1:57670 [200]: /
+[Thu Oct 12 14:25:27 2017] 127.0.0.1:57674 [200]: /?newgame
+[Thu Oct 12 14:25:28 2017] 127.0.0.1:57684 [200]: /GET?square=B1
+[Thu Oct 12 14:25:29 2017] 127.0.0.1:57690 [200]: /GET?square=B2
+[Thu Oct 12 14:25:30 2017] PHP Fatal error:  Maximum function nesting level of '256' reached, aborting! in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 152
+[Thu Oct 12 14:25:30 2017] PHP Stack trace:
+[Thu Oct 12 14:25:30 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 14:25:30 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 14:25:30 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:22
+[Thu Oct 12 14:25:30 2017] PHP   4. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:41
+[Thu Oct 12 14:25:30 2017] PHP   5. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP   6. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP   7. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP   8. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP   9. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  10. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  11. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  12. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  13. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  14. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  15. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  16. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  17. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  18. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  19. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  20. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  21. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  22. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  23. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  24. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  25. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  26. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  27. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  28. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  29. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  30. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  31. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  32. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  33. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  34. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  35. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  36. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  37. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  38. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  39. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  40. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  41. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  42. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  43. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  44. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  45. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  46. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  47. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  48. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  49. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  50. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  51. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  52. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  53. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  54. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  55. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  56. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  57. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  58. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  59. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  60. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  61. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  62. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  63. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  64. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  65. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  66. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  67. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  68. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  69. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  70. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  71. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  72. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  73. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  74. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  75. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  76. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  77. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  78. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  79. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  80. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  81. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  82. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  83. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  84. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  85. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  86. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  87. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  88. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  89. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  90. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  91. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  92. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  93. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  94. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  95. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  96. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  97. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  98. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP  99. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 100. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 101. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 102. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 103. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 104. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 105. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 106. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 107. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 108. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 109. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 110. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 111. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 112. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 113. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 114. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 115. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 116. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 117. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 118. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 119. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 120. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 121. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 122. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 123. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 124. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 125. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 126. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 127. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 128. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 129. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 130. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 131. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 132. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 133. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 134. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 135. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 136. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 137. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 138. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 139. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 140. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 141. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 142. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 143. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 144. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 145. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 146. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 147. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 148. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 149. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 150. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 151. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 152. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 153. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 154. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 155. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 156. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 157. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 158. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 159. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 160. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 161. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 162. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 163. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 164. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 165. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 166. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 167. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 168. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 169. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 170. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 171. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 172. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 173. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 174. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 175. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 176. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 177. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 178. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 179. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 180. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 181. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 182. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 183. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 184. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 185. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 186. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 187. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 188. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 189. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 190. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 191. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 192. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 193. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 194. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 195. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 196. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 197. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 198. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 199. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 200. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 201. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 202. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 203. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 204. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 205. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 206. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 207. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 208. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 209. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 210. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 211. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 212. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 213. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 214. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 215. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 216. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 217. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 218. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 219. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 220. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 221. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 222. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 223. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 224. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 225. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 226. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 227. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 228. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 229. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 230. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 231. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 232. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 233. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 234. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 235. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 236. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 237. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 238. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 239. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 240. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 241. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 242. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 243. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 244. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 245. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 246. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 247. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 248. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 249. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 250. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 251. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 252. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 253. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 254. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 255. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] PHP 256. tictactoe\model\Game->isAIWinner() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:154
+[Thu Oct 12 14:25:30 2017] 127.0.0.1:57696 [200]: /GET?square=B3 - Maximum function nesting level of '256' reached, aborting! in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 152
+[Thu Oct 12 14:26:18 2017] 127.0.0.1:57706 [200]: /
+[Thu Oct 12 14:26:19 2017] 127.0.0.1:57710 [200]: /?newgame
+[Thu Oct 12 14:26:21 2017] 127.0.0.1:57718 [200]: /GET?square=C1
+[Thu Oct 12 14:26:21 2017] 127.0.0.1:57724 [200]: /GET?square=B2
+[Thu Oct 12 14:26:23 2017] 127.0.0.1:57730 [200]: /GET?square=A3
+[Thu Oct 12 14:28:12 2017] 127.0.0.1:57742 [200]: /
+[Thu Oct 12 14:28:15 2017] 127.0.0.1:57746 [200]: /?newgame
+[Thu Oct 12 14:28:17 2017] 127.0.0.1:57756 [200]: /GET?square=B1
+[Thu Oct 12 14:28:17 2017] 127.0.0.1:57762 [200]: /GET?square=B2
+[Thu Oct 12 14:28:18 2017] 127.0.0.1:57768 [200]: /GET?square=B3
+[Thu Oct 12 14:29:28 2017] 127.0.0.1:57786 [200]: /
+[Thu Oct 12 14:29:29 2017] 127.0.0.1:57790 [200]: /?newgame
+[Thu Oct 12 14:29:31 2017] 127.0.0.1:57798 [200]: /GET?square=C1
+[Thu Oct 12 14:29:32 2017] 127.0.0.1:57804 [200]: /GET?square=B2
+[Thu Oct 12 14:29:33 2017] 127.0.0.1:57810 [200]: /GET?square=A3
+[Thu Oct 12 14:29:38 2017] 127.0.0.1:57818 [200]: /GET?newgame
+[Thu Oct 12 14:29:41 2017] 127.0.0.1:57824 [200]: /GET?square=C1
+[Thu Oct 12 14:29:41 2017] 127.0.0.1:57830 [200]: /GET?square=B2
+[Thu Oct 12 14:29:43 2017] 127.0.0.1:57836 [200]: /GET?quit
+[Thu Oct 12 14:29:44 2017] 127.0.0.1:57842 [200]: /GET?newgame
+[Thu Oct 12 14:29:45 2017] 127.0.0.1:57848 [200]: /GET?square=B1
+[Thu Oct 12 14:29:46 2017] 127.0.0.1:57854 [200]: /GET?square=B2
+[Thu Oct 12 14:29:47 2017] 127.0.0.1:57860 [200]: /GET?square=B3
+[Thu Oct 12 14:29:49 2017] 127.0.0.1:57866 [200]: /GET?newgame
+[Thu Oct 12 14:29:51 2017] 127.0.0.1:57872 [200]: /GET?square=A3
+[Thu Oct 12 14:30:00 2017] 127.0.0.1:57878 [200]: /GET?square=B2
+[Thu Oct 12 14:30:02 2017] 127.0.0.1:57884 [200]: /GET?square=B3
+[Thu Oct 12 14:30:04 2017] 127.0.0.1:57890 [200]: /GET?square=C2
+[Thu Oct 12 14:30:18 2017] 127.0.0.1:57896 [200]: /GET?newgame
+[Thu Oct 12 14:30:19 2017] 127.0.0.1:57902 [200]: /GET?square=B1
+[Thu Oct 12 14:30:21 2017] 127.0.0.1:57908 [200]: /GET?square=B2
+[Thu Oct 12 14:30:29 2017] 127.0.0.1:57914 [200]: /GET?square=B2
+[Thu Oct 12 14:30:32 2017] 127.0.0.1:57920 [200]: /GET?square=B3
+[Thu Oct 12 14:30:36 2017] 127.0.0.1:57926 [200]: /GET?newgame
+[Thu Oct 12 14:42:04 2017] 127.0.0.1:58016 [200]: /GET?square=B1
+[Thu Oct 12 14:42:06 2017] 127.0.0.1:58022 [200]: /GET?square=B2
+[Thu Oct 12 14:42:08 2017] 127.0.0.1:58028 [200]: /GET?square=B3
+[Thu Oct 12 14:42:10 2017] 127.0.0.1:58036 [200]: /GET?newgame
+[Thu Oct 12 14:42:12 2017] 127.0.0.1:58042 [200]: /GET?square=C1
+[Thu Oct 12 14:42:13 2017] 127.0.0.1:58048 [200]: /GET?square=B2
+[Thu Oct 12 14:42:14 2017] 127.0.0.1:58054 [200]: /GET?quit
+[Thu Oct 12 14:42:15 2017] 127.0.0.1:58060 [200]: /GET?newgame
+[Thu Oct 12 14:42:16 2017] 127.0.0.1:58066 [200]: /GET?square=C1
+[Thu Oct 12 14:42:17 2017] 127.0.0.1:58072 [200]: /GET?square=B2
+[Thu Oct 12 14:42:19 2017] 127.0.0.1:58078 [200]: /GET?square=B3
+[Thu Oct 12 14:42:20 2017] 127.0.0.1:58084 [200]: /GET?newgame
+[Thu Oct 12 14:42:22 2017] 127.0.0.1:58090 [200]: /GET?square=B1
+[Thu Oct 12 14:42:23 2017] 127.0.0.1:58096 [200]: /GET?square=C2
+[Thu Oct 12 14:42:24 2017] 127.0.0.1:58102 [200]: /GET?square=C3

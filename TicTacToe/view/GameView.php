@@ -13,16 +13,17 @@ class GameView {
         ;
     }
 
-    public function displayNewGameSetup(bool $isAIWinner)
+    public function displayNewGameSetup()
     {
         return "Click on the square you want to play on!";
     }
 
     public function displayGameOver(bool $isAIWinner)
     {
-        return "<p>Game over! "
-                . $isAIWinner ? "You lost!" : "You won!" .
-                "</p>"
+        $winner = $isAIWinner ? "You lost!" : "You won!";
+        return '<p>Game over! '
+                . $winner .
+                '</p> <a href="?newgame">Play again?</a> </p>'
         ;
     }
 
@@ -33,33 +34,45 @@ class GameView {
 
     public function displayBoard(array $squares) : string
     {
-        $board = '___________\n';
+        $board =            '
+                            ';
+        $count = 1;
 
         foreach ($squares as $square)
         {
-			$board .= $this->getSquare($square);
+            if ($count % 3 == 0)
+            {
+                $board .= $this->getSquare($square);
+                $board .=   '
+                            ';
+            }
+            else {
+                $board .= $this->getSquare($square);
+            }
+
+            $count++;
         }
         
         return
-            '<form action="POST">'
+            '<form action="GET"> <pre>'
                 . $board .
-            "</form>"
+            '</pre></form>'
         ;
     }
 
     public function squareSelected() : bool
     {
-        return isset($_POST['square']);
+        return isset($_GET['square']);
     }
 
     public function collectDesiredSquare()
     {
-        return $_POST['square']; 
+        return $_GET['square']; 
     }
 
     private function getSquare(\tictactoe\model\Square $square)
     {
-        return '<button type="submit" form="form1" value="' . $square->getValue() . '">' . $square->isSelectedBy() . '</button>';
+        return '<button type="submit" name="square" value="' . $square->getValue() . '">' . $square->isSelectedBy() . '</button>';
     }
 
     private function getActionsHTML()
