@@ -2324,3 +2324,81 @@ Stack trace:
 [Wed Oct 11 15:57:46 2017] 127.0.0.1:53662 [200]: /added-functionality/?
 [Wed Oct 11 15:57:47 2017] 127.0.0.1:53670 [200]: /added-functionality/?
 [Wed Oct 11 15:57:52 2017] 127.0.0.1:53674 [200]: /added-functionality/?
+[Thu Oct 12 09:56:02 2017] PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'UpdatedUserRegistry' in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php on line 14
+[Thu Oct 12 09:56:02 2017] PHP Stack trace:
+[Thu Oct 12 09:56:02 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 09:56:02 2017] PHP   2. site\persistance\MSQLConnector::getConnection() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:19
+[Thu Oct 12 09:56:02 2017] PHP   3. site\persistance\MSQLConnector::connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:27
+[Thu Oct 12 09:56:02 2017] PHP   4. mysqli_connect() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/Site/persistance/MSQLConnector.php:14
+[Thu Oct 12 09:56:02 2017] PHP Fatal error:  Uncaught Error: Class 'tictactoe\model\Game' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:11
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php on line 11
+[Thu Oct 12 09:56:02 2017] 127.0.0.1:47760 [200]: / - Uncaught Error: Class 'tictactoe\model\Game' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:11
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php on line 11
+[Thu Oct 12 09:56:02 2017] 127.0.0.1:47764 [404]: /favicon.ico - No such file or directory
+[Thu Oct 12 09:56:16 2017] PHP Fatal error:  Uncaught Error: Class 'tictactoe\model\Game' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:11
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php on line 11
+[Thu Oct 12 09:56:16 2017] 127.0.0.1:47772 [200]: / - Uncaught Error: Class 'tictactoe\model\Game' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:11
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#1 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php on line 11
+[Thu Oct 12 09:57:31 2017] 127.0.0.1:47776 Invalid request (Unexpected EOF)
+[Thu Oct 12 09:57:31 2017] 127.0.0.1:47780 Invalid request (Unexpected EOF)
+[Thu Oct 12 09:57:31 2017] 127.0.0.1:47784 Invalid request (Unexpected EOF)
+[Thu Oct 12 09:57:31 2017] PHP Fatal error:  Uncaught Error: Call to undefined method tictactoe\view\GameView::getActionButtonHTML() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:10
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(25): tictactoe\view\GameView->displayInstructions()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(19): tictactoe\controller\GameController->playGame()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#3 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 10
+[Thu Oct 12 09:57:31 2017] 127.0.0.1:47798 [200]: / - Uncaught Error: Call to undefined method tictactoe\view\GameView::getActionButtonHTML() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:10
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(25): tictactoe\view\GameView->displayInstructions()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(19): tictactoe\controller\GameController->playGame()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#3 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 10
+[Thu Oct 12 09:57:48 2017] 127.0.0.1:47802 Invalid request (Unexpected EOF)
+[Thu Oct 12 09:57:48 2017] 127.0.0.1:47806 Invalid request (Unexpected EOF)
+[Thu Oct 12 09:57:48 2017] 127.0.0.1:47814 [200]: /
+[Thu Oct 12 09:58:21 2017] 127.0.0.1:47818 Invalid request (Unexpected EOF)
+[Thu Oct 12 09:58:21 2017] 127.0.0.1:47822 Invalid request (Unexpected EOF)
+[Thu Oct 12 09:58:21 2017] 127.0.0.1:47830 [200]: /
+[Thu Oct 12 09:58:56 2017] 127.0.0.1:47840 [200]: /
+[Thu Oct 12 09:59:11 2017] 127.0.0.1:47850 [200]: /
+[Thu Oct 12 09:59:27 2017] 127.0.0.1:47858 [200]: /
+[Thu Oct 12 10:00:05 2017] 127.0.0.1:47864 [200]: /?newgame
+[Thu Oct 12 10:00:09 2017] 127.0.0.1:47872 [200]: /?newgame
+[Thu Oct 12 10:02:05 2017] 127.0.0.1:47884 [200]: /
+[Thu Oct 12 10:02:08 2017] 127.0.0.1:47894 [200]: /?newgame
+[Thu Oct 12 10:02:12 2017] 127.0.0.1:47900 [200]: /?register
+[Thu Oct 12 10:02:14 2017] 127.0.0.1:47908 [200]: /?newgame
+[Thu Oct 12 10:02:16 2017] 127.0.0.1:47914 [200]: /?register
+[Thu Oct 12 10:02:17 2017] 127.0.0.1:47920 [200]: /?newgame
+[Thu Oct 12 10:02:19 2017] 127.0.0.1:47926 [200]: /?register
+[Thu Oct 12 10:02:21 2017] 127.0.0.1:47932 [200]: /?newgame
+[Thu Oct 12 10:08:53 2017] 127.0.0.1:47994 [200]: /?newgame
+[Thu Oct 12 10:09:49 2017] 127.0.0.1:48008 [200]: /?newgame
+[Thu Oct 12 10:10:09 2017] 127.0.0.1:48016 [200]: /?newgame
+[Thu Oct 12 10:10:16 2017] 127.0.0.1:48022 [200]: /?newgame
+[Thu Oct 12 10:17:16 2017] 127.0.0.1:48052 [200]: /?newgame
+[Thu Oct 12 10:17:24 2017] 127.0.0.1:48056 [200]: /?newgame
+[Thu Oct 12 10:17:29 2017] 127.0.0.1:48066 [200]: /?newgame
+[Thu Oct 12 10:17:32 2017] 127.0.0.1:48072 [200]: /?newgame
+[Thu Oct 12 10:17:33 2017] 127.0.0.1:48078 [200]: /?newgame
+[Thu Oct 12 10:17:35 2017] 127.0.0.1:48084 [200]: /?newgame
+[Thu Oct 12 10:17:46 2017] 127.0.0.1:48092 [200]: /?newgame
+[Thu Oct 12 10:38:25 2017] 127.0.0.1:48198 [200]: /?newgame
+[Thu Oct 12 10:38:28 2017] 127.0.0.1:48202 [200]: /
+[Thu Oct 12 10:38:30 2017] 127.0.0.1:48208 [200]: /?newgame
+[Thu Oct 12 10:38:35 2017] 127.0.0.1:48218 [200]: /?newgame

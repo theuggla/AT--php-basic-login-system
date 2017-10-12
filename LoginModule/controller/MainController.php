@@ -96,7 +96,7 @@ class MainController
     {
         $this->loginUserController->handleLoggedOutUser();
 
-        if ($this->loginUserController->loginSuccessful() && $this->currentUser->hasNotBeenHijacked()) {
+        if ($this->loginUserController->loginSuccessful()) {
             $this->displayLoginForm = false;
         }
     }
