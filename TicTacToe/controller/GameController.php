@@ -24,10 +24,22 @@ class GameController {
     {
         $this->currentHTML = $this->gameView->displayInstructions();
 
+        if ($this->game->gameIsOver())
+        {
+            $this->gameView->displayGameOver($this->game->isAIWinner());
+        }
+
         if ($this->gameView->wantsToPlay())
         {
-            $this->currentHTML .= $this->game->newGame();
+            $this->gameView->displayNewGameSetup();
+            $this->game->newGame();
         }
+        else if ($this->gameView->squareSelected())
+        {
+            $this->game->playOn($this->gameView->collectDesiredSquare());
+        }
+
+        $this->currentHTML .= $this->gameView->displayBoard($this->game->getBoard());
     }
 
 

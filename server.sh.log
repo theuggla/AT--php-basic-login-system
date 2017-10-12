@@ -2402,3 +2402,309 @@ Stack trace:
 [Thu Oct 12 10:38:28 2017] 127.0.0.1:48202 [200]: /
 [Thu Oct 12 10:38:30 2017] 127.0.0.1:48208 [200]: /?newgame
 [Thu Oct 12 10:38:35 2017] 127.0.0.1:48218 [200]: /?newgame
+[Thu Oct 12 10:41:20 2017] 127.0.0.1:48246 [200]: /?newgame
+[Thu Oct 12 10:41:22 2017] 127.0.0.1:48250 [200]: /?quit
+[Thu Oct 12 10:41:25 2017] 127.0.0.1:48258 [200]: /?newgame
+[Thu Oct 12 10:41:26 2017] 127.0.0.1:48264 [200]: /?quit
+[Thu Oct 12 10:41:26 2017] 127.0.0.1:48270 [200]: /?newgame
+[Thu Oct 12 10:41:27 2017] 127.0.0.1:48276 [200]: /?quit
+[Thu Oct 12 10:41:28 2017] 127.0.0.1:48282 [200]: /?newgame
+[Thu Oct 12 10:41:28 2017] 127.0.0.1:48288 [200]: /?newgame
+[Thu Oct 12 10:41:29 2017] 127.0.0.1:48294 [200]: /?quit
+[Thu Oct 12 11:09:42 2017] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to tictactoe\view\GameView::getBoard() must be an instance of tictactoe\view\iterable, none given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 13 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:23
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php(13): tictactoe\view\GameView->getBoard()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(25): tictactoe\view\GameView->displayInstructions()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(19): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-fun in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 23
+[Thu Oct 12 11:09:42 2017] 127.0.0.1:48478 [200]: /?quit - Uncaught TypeError: Argument 1 passed to tictactoe\view\GameView::getBoard() must be an instance of tictactoe\view\iterable, none given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 13 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:23
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php(13): tictactoe\view\GameView->getBoard()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(25): tictactoe\view\GameView->displayInstructions()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(19): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-fun in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 23
+[Thu Oct 12 11:09:45 2017] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to tictactoe\view\GameView::getBoard() must be an instance of tictactoe\view\iterable, none given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 13 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:23
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php(13): tictactoe\view\GameView->getBoard()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(25): tictactoe\view\GameView->displayInstructions()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(19): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-fun in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 23
+[Thu Oct 12 11:09:45 2017] 127.0.0.1:48482 [200]: / - Uncaught TypeError: Argument 1 passed to tictactoe\view\GameView::getBoard() must be an instance of tictactoe\view\iterable, none given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 13 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:23
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php(13): tictactoe\view\GameView->getBoard()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(25): tictactoe\view\GameView->displayInstructions()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(19): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-fun in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 23
+[Thu Oct 12 11:10:13 2017] 127.0.0.1:48490 Invalid request (Unexpected EOF)
+[Thu Oct 12 11:10:13 2017] PHP Fatal error:  Uncaught Error: Call to undefined function tictactoe\controller\gameIsOver() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:27
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(19): tictactoe\controller\GameController->playGame()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 27
+[Thu Oct 12 11:10:13 2017] 127.0.0.1:48496 [200]: / - Uncaught Error: Call to undefined function tictactoe\controller\gameIsOver() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:27
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(19): tictactoe\controller\GameController->playGame()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 27
+[Thu Oct 12 11:11:04 2017] 127.0.0.1:48500 Invalid request (Unexpected EOF)
+[Thu Oct 12 11:11:04 2017] PHP Fatal error:  Uncaught Error: Call to undefined function tictactoe\controller\gameIsOver() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:27
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(19): tictactoe\controller\GameController->playGame()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 27
+[Thu Oct 12 11:11:04 2017] 127.0.0.1:48510 [200]: / - Uncaught Error: Call to undefined function tictactoe\controller\gameIsOver() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:27
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(19): tictactoe\controller\GameController->playGame()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 27
+[Thu Oct 12 11:11:06 2017] PHP Fatal error:  Uncaught Error: Call to undefined function tictactoe\controller\gameIsOver() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:27
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(19): tictactoe\controller\GameController->playGame()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 27
+[Thu Oct 12 11:11:06 2017] 127.0.0.1:48514 [200]: / - Uncaught Error: Call to undefined function tictactoe\controller\gameIsOver() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:27
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(19): tictactoe\controller\GameController->playGame()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 27
+[Thu Oct 12 11:11:20 2017] 127.0.0.1:48520 Invalid request (Unexpected EOF)
+[Thu Oct 12 11:11:20 2017] PHP Fatal error:  Uncaught Error: Call to undefined function tictactoe\controller\gameIsOver() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:27
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(19): tictactoe\controller\GameController->playGame()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 27
+[Thu Oct 12 11:11:20 2017] 127.0.0.1:48530 [200]: / - Uncaught Error: Call to undefined function tictactoe\controller\gameIsOver() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:27
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(19): tictactoe\controller\GameController->playGame()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 27
+[Thu Oct 12 11:11:40 2017] 127.0.0.1:48534 Invalid request (Unexpected EOF)
+[Thu Oct 12 11:11:40 2017] PHP Fatal error:  Uncaught Error: Call to undefined function tictactoe\controller\displayGameOver() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:29
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(19): tictactoe\controller\GameController->playGame()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 29
+[Thu Oct 12 11:11:40 2017] 127.0.0.1:48542 [200]: / - Uncaught Error: Call to undefined function tictactoe\controller\displayGameOver() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:29
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(19): tictactoe\controller\GameController->playGame()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 29
+[Thu Oct 12 11:13:26 2017] 127.0.0.1:48546 Invalid request (Unexpected EOF)
+[Thu Oct 12 11:13:26 2017] PHP Fatal error:  Uncaught Error: Call to undefined function tictactoe\controller\displayGameOver() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:29
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(19): tictactoe\controller\GameController->playGame()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 29
+[Thu Oct 12 11:13:26 2017] 127.0.0.1:48562 [200]: / - Uncaught Error: Call to undefined function tictactoe\controller\displayGameOver() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:29
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(19): tictactoe\controller\GameController->playGame()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 29
+[Thu Oct 12 11:13:45 2017] 127.0.0.1:48566 Invalid request (Unexpected EOF)
+[Thu Oct 12 11:13:45 2017] PHP Fatal error:  Uncaught Error: Call to undefined method tictactoe\model\Game::isAIWinner() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:29
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(19): tictactoe\controller\GameController->playGame()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 29
+[Thu Oct 12 11:13:45 2017] 127.0.0.1:48574 [200]: / - Uncaught Error: Call to undefined method tictactoe\model\Game::isAIWinner() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:29
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(19): tictactoe\controller\GameController->playGame()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 29
+[Thu Oct 12 11:15:34 2017] 127.0.0.1:48578 Invalid request (Unexpected EOF)
+[Thu Oct 12 11:15:34 2017] PHP Fatal error:  Uncaught Error: Call to undefined function tictactoe\controller\playOn() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:39
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(19): tictactoe\controller\GameController->playGame()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 39
+[Thu Oct 12 11:15:34 2017] 127.0.0.1:48598 [200]: / - Uncaught Error: Call to undefined function tictactoe\controller\playOn() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:39
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(19): tictactoe\controller\GameController->playGame()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 39
+[Thu Oct 12 11:16:19 2017] 127.0.0.1:48602 Invalid request (Unexpected EOF)
+[Thu Oct 12 11:16:19 2017] PHP Fatal error:  Uncaught Error: Call to undefined method tictactoe\model\Game::playOn() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:39
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(19): tictactoe\controller\GameController->playGame()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 39
+[Thu Oct 12 11:16:19 2017] 127.0.0.1:48612 [200]: / - Uncaught Error: Call to undefined method tictactoe\model\Game::playOn() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:39
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(19): tictactoe\controller\GameController->playGame()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 39
+[Thu Oct 12 11:21:48 2017] 127.0.0.1:48616 Invalid request (Unexpected EOF)
+[Thu Oct 12 11:51:41 2017] PHP Fatal error:  Uncaught Error: Class 'tictactoe\model\Square' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:13
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(15): tictactoe\model\Game->__construct(false)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 13
+[Thu Oct 12 11:51:41 2017] 127.0.0.1:51194 [200]: / - Uncaught Error: Class 'tictactoe\model\Square' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:13
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(15): tictactoe\model\Game->__construct(false)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 13
+[Thu Oct 12 11:52:12 2017] 127.0.0.1:51198 Invalid request (Unexpected EOF)
+[Thu Oct 12 11:52:31 2017] PHP Fatal error:  Uncaught Error: Undefined constant 'tictactoe\model' in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php:3
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(7): require_once()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(10): require_once('/media/molly/DA...')
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php on line 3
+[Thu Oct 12 11:52:31 2017] 127.0.0.1:51214 [200]: / - Uncaught Error: Undefined constant 'tictactoe\model' in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php:3
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(7): require_once()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(10): require_once('/media/molly/DA...')
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Square.php on line 3
+[Thu Oct 12 11:52:45 2017] 127.0.0.1:51218 Invalid request (Unexpected EOF)
+[Thu Oct 12 11:52:45 2017] PHP Fatal error:  Uncaught Error: Call to undefined method tictactoe\view\GameView::displayBoard() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 42
+[Thu Oct 12 11:52:45 2017] 127.0.0.1:51226 [200]: / - Uncaught Error: Call to undefined method tictactoe\view\GameView::displayBoard() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 42
+[Thu Oct 12 11:53:19 2017] 127.0.0.1:51230 Invalid request (Unexpected EOF)
+[Thu Oct 12 11:53:19 2017] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to tictactoe\view\GameView::displayBoard() must be an instance of tictactoe\view\iterable, array given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 42 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:34
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(42): tictactoe\view\GameView->displayBoard(Array)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#3 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 34
+[Thu Oct 12 11:53:19 2017] 127.0.0.1:51238 [200]: / - Uncaught TypeError: Argument 1 passed to tictactoe\view\GameView::displayBoard() must be an instance of tictactoe\view\iterable, array given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 42 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:34
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(42): tictactoe\view\GameView->displayBoard(Array)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#3 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 34
+[Thu Oct 12 11:53:39 2017] 127.0.0.1:51242 Invalid request (Unexpected EOF)
+[Thu Oct 12 11:53:39 2017] PHP Notice:  Undefined offset: 0 in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 40
+[Thu Oct 12 11:53:39 2017] PHP Stack trace:
+[Thu Oct 12 11:53:39 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 11:53:39 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 11:53:39 2017] PHP   3. tictactoe\controller\GameController->playGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:21
+[Thu Oct 12 11:53:39 2017] PHP   4. tictactoe\view\GameView->displayBoard() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php:42
+[Thu Oct 12 11:53:39 2017] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to tictactoe\view\GameView::getSquare() must be an instance of tictactoe\model\Square, null given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 40 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:60
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php(40): tictactoe\view\GameView->getSquare(NULL)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(42): tictactoe\view\GameView->displayBoard(Array)
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added- in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 60
+[Thu Oct 12 11:53:39 2017] 127.0.0.1:51254 [200]: / - Uncaught TypeError: Argument 1 passed to tictactoe\view\GameView::getSquare() must be an instance of tictactoe\model\Square, null given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 40 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:60
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php(40): tictactoe\view\GameView->getSquare(NULL)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(42): tictactoe\view\GameView->displayBoard(Array)
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added- in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 60
+[Thu Oct 12 11:55:08 2017] 127.0.0.1:51258 Invalid request (Unexpected EOF)
+[Thu Oct 12 11:55:09 2017] PHP Fatal error:  Uncaught Error: Call to undefined method tictactoe\model\Square::selectedBy() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:62
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php(40): tictactoe\view\GameView->getSquare(Object(tictactoe\model\Square))
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(42): tictactoe\view\GameView->displayBoard(Array)
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#4 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 62
+[Thu Oct 12 11:55:09 2017] 127.0.0.1:51276 [200]: / - Uncaught Error: Call to undefined method tictactoe\model\Square::selectedBy() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:62
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php(40): tictactoe\view\GameView->getSquare(Object(tictactoe\model\Square))
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(42): tictactoe\view\GameView->displayBoard(Array)
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#4 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 62
+[Thu Oct 12 11:55:41 2017] 127.0.0.1:51280 Invalid request (Unexpected EOF)
+[Thu Oct 12 11:55:41 2017] PHP Fatal error:  Uncaught Error: Call to undefined method tictactoe\model\Square::selectedBy() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:62
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php(40): tictactoe\view\GameView->getSquare(Object(tictactoe\model\Square))
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(42): tictactoe\view\GameView->displayBoard(Array)
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#4 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 62
+[Thu Oct 12 11:55:41 2017] 127.0.0.1:51288 [200]: / - Uncaught Error: Call to undefined method tictactoe\model\Square::selectedBy() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:62
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php(40): tictactoe\view\GameView->getSquare(Object(tictactoe\model\Square))
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(42): tictactoe\view\GameView->displayBoard(Array)
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#4 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 62
+[Thu Oct 12 11:56:40 2017] 127.0.0.1:51292 Invalid request (Unexpected EOF)
+[Thu Oct 12 11:56:40 2017] PHP Fatal error:  Uncaught Error: Call to undefined method tictactoe\model\Square::selectedBy() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:62
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php(40): tictactoe\view\GameView->getSquare(Object(tictactoe\model\Square))
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(42): tictactoe\view\GameView->displayBoard(Array)
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#4 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 62
+[Thu Oct 12 11:56:40 2017] 127.0.0.1:51302 [200]: / - Uncaught Error: Call to undefined method tictactoe\model\Square::selectedBy() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:62
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php(40): tictactoe\view\GameView->getSquare(Object(tictactoe\model\Square))
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(42): tictactoe\view\GameView->displayBoard(Array)
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#4 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 62
+[Thu Oct 12 11:56:42 2017] PHP Fatal error:  Uncaught Error: Call to undefined method tictactoe\model\Square::selectedBy() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:62
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php(40): tictactoe\view\GameView->getSquare(Object(tictactoe\model\Square))
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(42): tictactoe\view\GameView->displayBoard(Array)
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#4 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 62
+[Thu Oct 12 11:56:42 2017] 127.0.0.1:51306 [200]: / - Uncaught Error: Call to undefined method tictactoe\model\Square::selectedBy() in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:62
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php(40): tictactoe\view\GameView->getSquare(Object(tictactoe\model\Square))
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(42): tictactoe\view\GameView->displayBoard(Array)
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#3 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#4 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 62
+[Thu Oct 12 11:57:00 2017] 127.0.0.1:51314 Invalid request (Unexpected EOF)
+[Thu Oct 12 11:57:00 2017] 127.0.0.1:51322 [200]: /
+[Thu Oct 12 11:57:38 2017] 127.0.0.1:51326 Invalid request (Unexpected EOF)
+[Thu Oct 12 11:57:47 2017] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to tictactoe\view\GameView::displayNewGameSetup() must be of the type boolean, none given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 34 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:16
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(34): tictactoe\view\GameView->displayNewGameSetup()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#3 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 16
+[Thu Oct 12 11:57:47 2017] 127.0.0.1:51642 [200]: /?newgame - Uncaught TypeError: Argument 1 passed to tictactoe\view\GameView::displayNewGameSetup() must be of the type boolean, none given, called in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php on line 34 and defined in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php:16
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/controller/GameController.php(34): tictactoe\view\GameView->displayNewGameSetup()
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(21): tictactoe\controller\GameController->playGame()
+#2 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(false)
+#3 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/view/GameView.php on line 16
