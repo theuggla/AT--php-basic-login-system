@@ -34,7 +34,7 @@ class LoginModulePersistance implements \loginmodule\persistance\IPersistance
         $password = self::$dbconnection->real_escape_string($password);
         $username = self::$dbconnection->real_escape_string($username);
 
-        $query = 'INSERT INTO TemporaryPassword (cookiepassword, username, expiry) VALUES ("' . $password . '", "' . $username . '", ' . $timestamp . ')';
+        $query = 'INSERT INTO TemporaryPassword (password, username, expiry) VALUES ("' . $password . '", "' . $username . '", ' . $timestamp . ')';
     
         self::$dbconnection->query($query);
     }
