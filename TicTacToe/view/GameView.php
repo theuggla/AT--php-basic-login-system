@@ -48,7 +48,7 @@ class GameView
         }
         
         return
-            '<form action="GET"> <pre>'
+            '<form> <pre>'
                 . $board .
             '</pre></form>'
         ;
