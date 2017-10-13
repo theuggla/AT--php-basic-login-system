@@ -1,2 +1,2 @@
 # basic-php-login-system
-Basic login module written in php.
+This branch shows how to integrate the login module with another system.
