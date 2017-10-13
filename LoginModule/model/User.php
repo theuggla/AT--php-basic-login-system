@@ -93,7 +93,7 @@ class User
 
     public function hasNotBeenHijacked()
     {
-        return isset($_SESSION[self::$userAgent]) && $_SESSION[self::$userAgent] == $_SERVER[self::$serverUserAgent];
+        return isset($_SESSION[self::$userAgent]) && $_SESSION[self::$userAgent] === $_SERVER[self::$serverUserAgent];
     }
 
     public function getMinimumPasswordCharacters()
