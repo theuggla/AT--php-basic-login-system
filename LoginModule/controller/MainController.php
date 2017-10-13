@@ -109,6 +109,6 @@ class MainController
 
     private function userIsLoggedIn()
     {
-        return ($this->currentUser->isLoggedIn() && $this->currentUser->hasNotBeenHijacked());
+        return ($this->currentUser->hasNotBeenHijacked() && $this->currentUser->isLoggedIn());
     }
 }
