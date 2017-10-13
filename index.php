@@ -15,9 +15,9 @@
     require_once('Site/persistance/LoginModulePersistance.php');
 
     $cookieExpiryTimeInSeconds = 1000;
-
-    $msqlconnection = \site\persistance\MSQLConnector::getConnection('UserRegistry');
-    $persistanceHandler = new \loginmodule\persistance\LoginModulePersistance($msqlconnection);
+    $databaseName = 'UserRegistry';
+    $msqlconnection = \site\persistance\MSQLConnector::getConnection($databaseName);
+    $persistanceHandler = new \site\persistance\LoginModulePersistance($msqlconnection);
 
     $dateTimeView = new \site\view\DateTimeView();
     $layoutView = new \site\view\LayoutView($dateTimeView);

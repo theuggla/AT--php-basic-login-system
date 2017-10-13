@@ -32,7 +32,7 @@ class LoginModule {
     private $loginController;
     private $registerController;
 
-    public function __construct(\loginmodule\persistance\IPersistance $persistanceHandler, int $cookieExpiryTimeInSeconds)
+    public function __construct(\loginmodule\persistance\IPersistance $persistanceHandler, int $cookieExpiryTimeInSeconds = 2592000)
     {
         $this->persistanceHandler = $persistanceHandler;
         $this->cookieExpiryTimeInSeconds = $cookieExpiryTimeInSeconds;   

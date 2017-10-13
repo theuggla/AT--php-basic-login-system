@@ -1,6 +1,6 @@
 <?php
 
-namespace loginmodule\persistance;
+namespace site\persistance;
 
 class LoginModulePersistance implements \loginmodule\persistance\IPersistance
 {
