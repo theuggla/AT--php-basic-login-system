@@ -15,8 +15,10 @@ class TicTacToe {
 
     private $currentHTML;
     
-    public function runGame(bool $harderDifficulty)
+    public function runGame(bool $harderDifficulty = false)
     {
+        $this->assertThereIsASession();
+
         $game = new \tictactoe\model\Game($harderDifficulty);
         $gameview = new \tictactoe\view\GameView();
         $gamecontroller = new \tictactoe\controller\GameController($game, $gameview);
@@ -28,5 +30,10 @@ class TicTacToe {
     public function getCurrentHTML()
     {
         return $this->currentHTML;
+    }
+
+    private function assertThereIsASession()
+    {
+        assert(isset($_SESSION));
     }
 }
