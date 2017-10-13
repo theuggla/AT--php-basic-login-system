@@ -55,7 +55,7 @@ The following is an example code snippet from an `index.php` file, to show how t
                                 $loginModule->getCurrentHTML());
 ```
     
-1. Pull down the module to your computer, either with `git clone` or by downloading the zip-file from the realeases tab of this repo -> php-login L", release 2.0.
+1. Pull down the module to your computer, either with `git clone` or by downloading the zip-file from the realeases tab of this repo -> php-login L2, release 2.0.
 2. Place the folder named LoginModule in the root directory of the site that wishes to use it.
 3. In your `index.php`, set up the module.
 
@@ -80,14 +80,16 @@ The Login module will supply:
 session_start();
 ```
 
-2. Require the module s and the IPersistance interface. This should probably be done first, before requiring the class you have written, that implements this interface.
+2. Require the module and the IPersistance interface. This should probably be done first, before requiring the class you have written, that implements this interface.
 
 ```
 require_once('LoginModule/model/IPersistance.php');
 require_once('LoginModule/LoginModule.php');
 ```
 
-3. Require the class you have written that implements this interface and it's dependencies. In this case it is a simple MYSQL-database, but it could be any sort of persistance, even a text file. The interface-specification can be found [here](https://github.com/theuggla/basic-php-login-system/blob/added-functionality/LoginModule/model/IPersistance.php), and the fully qualified classname of the interface it needs to implement would be `\loginmodule\persistance\IPersistance`
+3. Require the class you have written that implements this interface and it's dependencies. In this case it is a simple MYSQL-database, but it could be any sort of persistance, even a text file. The interface-specification can be found [here](https://github.com/theuggla/basic-php-login-system/blob/added-functionality/LoginModule/model/IPersistance.php), and the fully qualified classname of the interface it needs to implement would be    
+`\loginmodule\persistance\IPersistance`.
+If you are using more than one login module on the same site and would not like the same usernames to work for both, I advice you to supply different instances of persistance-classes here, perhaps with different databases connected to them.
 
 ```
 require_once('Site/persistance/MSQLConnector.php');
