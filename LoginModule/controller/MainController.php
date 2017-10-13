@@ -43,7 +43,7 @@ class MainController
 
     private function delegateControlDependingOnUseCase()
     {
-        if ($this->userIsLoggedIn()) {
+        if ($this->currentUser->isLoggedIn() && $this->currentUser->isLoggedIn()) {
             $this->determineResultOfLogoutAttempt();
         } else if ($this->registerUserController->userWantsToRegister()) {
             $this->displayRegisterForm = true;
@@ -105,10 +105,5 @@ class MainController
     private function setRegisterFormHTML()
     {
         $this->currentHTML = $this->registerUserController->getHTML($this->currentFlashMessage->getCurrentMessage(), $this->currentUser->getUsername());
-    }
-
-    private function userIsLoggedIn()
-    {
-        return ($this->currentUser->hasNotBeenHijacked() && $this->currentUser->isLoggedIn());
     }
 }
