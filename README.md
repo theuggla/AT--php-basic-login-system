@@ -17,7 +17,7 @@ A live version of only the login-module can be found [here](http://178.62.87.11/
 
 #### Use Cases
 
-[List of Use Cases the TicTacToe module is fullfilling](https://github.com/dntoll/1dv610/blob/master/assignments/A2_resources/UseCases.md)
+[List of Use Cases the TicTacToe module is fullfilling](https://github.com/theuggla/basic-php-login-system/wiki/Use-Cases)
 
 ## Install
 
@@ -137,9 +137,92 @@ $layoutView->renderToOutput($loginModule->getLoggedInStatus(), $loginModule->get
 
 ##### Integrating the module with other parts of the site
 
-For an example of integrating the module with other parts of your site and adjust them depending on log in-status, read on under the TicTacToe Game header below.
+For an example of integrating the module with other parts of your site and adjust them depending on log in-status, supply the loginstatus to the desired module as needed: for example see the TicTacToe module heading below., where the difficulty is adjusted depending on login-status.
 
 ### TicTacToe Game
+
+#### Getting the module
+The following is an example code snippet from an `index.php` file, to show how to install and integrate the Tictactoe module on your site together with a login system that toggles difficulty. We will go through it step by step.
+
+```
+    session_start();
+
+    require_once('LoginModule/model/IPersistance.php');
+    require_once('LoginModule/LoginModule.php');
+
+    require_once('TicTacToe/TicTacToe.php');
+
+    require_once('Site/view/LayoutView.php');
+    require_once('Site/view/DateTimeView.php');
+    require_once('Site/persistance/MSQLConnector.php');
+    require_once('Site/persistance/LoginModulePersistance.php');
+
+    $databaseName = 'UpdatedUserRegistry';
+    $msqlconnection = \site\persistance\MSQLConnector::getConnection($databaseName);
+    $persistanceHandler = new \site\persistance\LoginModulePersistance($msqlconnection);
+
+    $dateTimeView = new \site\view\DateTimeView();
+    $layoutView = new \site\view\LayoutView($dateTimeView);
+
+    $cookieExpiryTimeInSeconds = 1000;
+    $loginModule = new \loginmodule\LoginModule($persistanceHandler, $cookieExpiryTimeInSeconds);
+    $ticTacToe = new \tictactoe\TicTacToe();
+
+    $loginModule->startLoginModule();
+    $ticTacToe->runGame($loginModule->getLoggedInStatus());
+    
+    $layoutView->renderToOutput($loginModule->getLoggedInStatus(),
+                                $loginModule->getCurrentHTML(),
+                                $ticTacToe->getCurrentHTML());
+```
+    
+1. Pull down the module to your computer by `git clone` this repository.
+2. Place the folder named TicTacToe in the root directory of the site that wishes to use it.
+3. In your `index.php`, set up the module.
+
+#### Setting up the module in index.php
+
+The TicTacToe module demands the following:
+* An ongoing session.
+* A boolean poiner on wheter or not to switch on harder difficulty, which defaults to false if not supplied.
+
+The TicTacToe module will supply:
+* An HTML-string of the module and it's current status.
+
+##### The basics
+
+###### Initiating the module
+
+1. Make sure there is a session running. If there is not, the module will crash on upstart.
+
+```
+session_start();
+```
+
+2. Require the module.
+
+```
+require_once('TicTacToe/TicTacToe.php');
+```
+
+3. Do whatever you need to do to ensure the running of the rest of your site. For the use of the TicTacToe-module together with the login module as in this example, see how to set up the login module above.
+
+4. Initialte the module and start it, supplying a difficulty. In this scenario we are supplying the difficulty based on whether the user is logged in or not.
+
+```
+$ticTacToe = new \tictactoe\TicTacToe();
+$ticTacToe->runGame($loginModule->getLoggedInStatus());
+```
+
+###### Displaying the module
+
+The displaying of the module will of course depend on how the rest of your site is built - this is an  that only displays the module itseld, and the current date and time. You need to set up a view of some sort that takes the tictactoe-module as a HTML-string argument.
+
+1. Pass in the TicTacToe module HTML.
+
+```
+$layoutView->renderToOutput($ticTacToe->getCurrentHTML());
+```
 
 ## Test
 
@@ -161,8 +244,8 @@ To test the login-module, either manually go through the test cases or run the p
 
 #### Manual Test Cases
 
-[A list of manual test cases here](https://www.google.com).
+[A list of manual test cases here](https://github.com/theuggla/basic-php-login-system/wiki/Test-Cases).
 
 To test the TicTacToe-game, manually go through the test cases.
 
-Not all the test cases are working at the applications current state - a reference of what test cases are current working can be found [here](https://www.google.com).
+Not all the test cases are working at the applications current state - a reference of what test cases are current ly working can be found [here](https://github.com/theuggla/basic-php-login-system/wiki/Work-In-Progress-(test-cases-currently-not-working)).
