@@ -3811,3 +3811,70 @@ Stack trace:
 [Thu Oct 12 14:42:22 2017] 127.0.0.1:58090 [200]: /GET?square=B1
 [Thu Oct 12 14:42:23 2017] 127.0.0.1:58096 [200]: /GET?square=C2
 [Thu Oct 12 14:42:24 2017] 127.0.0.1:58102 [200]: /GET?square=C3
+[Thu Oct 12 14:52:34 2017] PHP Notice:  Undefined variable: isLoggedIn in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 16
+[Thu Oct 12 14:52:34 2017] PHP Stack trace:
+[Thu Oct 12 14:52:34 2017] PHP   1. {main}() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:0
+[Thu Oct 12 14:52:34 2017] PHP   2. tictactoe\TicTacToe->runGame() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php:29
+[Thu Oct 12 14:52:34 2017] PHP   3. tictactoe\model\Game->__construct() /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php:18
+[Thu Oct 12 14:52:34 2017] PHP Fatal error:  Uncaught Error: Class 'tictactoe\model\CleverAI' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:29
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(18): tictactoe\model\Game->__construct(true)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(true)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 29
+[Thu Oct 12 14:52:34 2017] 127.0.0.1:58188 [200]: /GET?square=C3 - Uncaught Error: Class 'tictactoe\model\CleverAI' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:29
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(18): tictactoe\model\Game->__construct(true)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(true)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 29
+[Thu Oct 12 14:53:01 2017] 127.0.0.1:58192 Invalid request (Unexpected EOF)
+[Thu Oct 12 14:53:01 2017] PHP Fatal error:  Uncaught Error: Class 'tictactoe\model\CleverAI' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:27
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(18): tictactoe\model\Game->__construct(true)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(true)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 27
+[Thu Oct 12 14:53:01 2017] 127.0.0.1:58200 [200]: / - Uncaught Error: Class 'tictactoe\model\CleverAI' not found in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php:27
+Stack trace:
+#0 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/TicTacToe.php(18): tictactoe\model\Game->__construct(true)
+#1 /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/index.php(29): tictactoe\TicTacToe->runGame(true)
+#2 {main}
+  thrown in /media/molly/DATA/code/wp/2/1dv610/assignments/basic-php-login-system-added-functionality/TicTacToe/model/Game.php on line 27
+[Thu Oct 12 14:53:27 2017] 127.0.0.1:58204 Invalid request (Unexpected EOF)
+[Thu Oct 12 14:53:27 2017] 127.0.0.1:58214 [200]: /
+[Thu Oct 12 14:53:29 2017] 127.0.0.1:58218 [200]: /?newgame
+[Thu Oct 12 14:53:31 2017] 127.0.0.1:58228 [200]: /GET?square=A1
+[Thu Oct 12 14:53:33 2017] 127.0.0.1:58234 [200]: /GET?square=C2
+[Thu Oct 12 14:53:36 2017] 127.0.0.1:58240 [200]: /GET?square=C3
+[Thu Oct 12 14:53:39 2017] 127.0.0.1:58246 [200]: /GET?square=C3
+[Thu Oct 12 14:53:41 2017] 127.0.0.1:58252 [200]: /GET?newgame
+[Thu Oct 12 14:53:42 2017] 127.0.0.1:58258 [200]: /GET?square=A1
+[Thu Oct 12 14:53:44 2017] 127.0.0.1:58264 [200]: /GET?square=B2
+[Thu Oct 12 14:53:45 2017] 127.0.0.1:58270 [200]: /GET?square=C1
+[Thu Oct 12 14:53:47 2017] 127.0.0.1:58276 [200]: /GET?square=C2
+[Thu Oct 12 14:53:49 2017] 127.0.0.1:58282 [200]: /GET?square=C3
+[Thu Oct 12 14:53:55 2017] 127.0.0.1:58288 [200]: /GET?square=C3
+[Thu Oct 12 14:53:57 2017] 127.0.0.1:58294 [200]: /GET?newgame
+[Thu Oct 12 14:54:00 2017] 127.0.0.1:58300 [200]: /GET?square=A2
+[Thu Oct 12 14:54:02 2017] 127.0.0.1:58306 [200]: /GET?square=C2
+[Thu Oct 12 14:54:04 2017] 127.0.0.1:58312 [200]: /GET?square=C1
+[Thu Oct 12 14:54:07 2017] 127.0.0.1:58318 [200]: /GET?square=B1
+[Thu Oct 12 14:54:13 2017] 127.0.0.1:58324 [200]: /GET?newgame
+[Thu Oct 12 14:54:17 2017] 127.0.0.1:58330 [200]: /GET?square=B2
+[Thu Oct 12 14:54:19 2017] 127.0.0.1:58336 [200]: /GET?square=A2
+[Thu Oct 12 14:54:21 2017] 127.0.0.1:58342 [200]: /GET?square=C2
+[Thu Oct 12 14:54:27 2017] 127.0.0.1:58348 [200]: /GET?newgame
+[Thu Oct 12 14:54:28 2017] 127.0.0.1:58354 [200]: /GET?square=C1
+[Thu Oct 12 14:54:34 2017] 127.0.0.1:58360 [200]: /GET?square=C2
+[Thu Oct 12 14:54:41 2017] 127.0.0.1:58366 [200]: /GET?square=A3
+[Thu Oct 12 14:54:49 2017] 127.0.0.1:58372 [200]: /GET?newgame
+[Thu Oct 12 14:54:51 2017] 127.0.0.1:58378 [200]: /GET?square=A3
+[Thu Oct 12 14:54:53 2017] 127.0.0.1:58384 [200]: /GET?square=B1
+[Thu Oct 12 14:54:55 2017] 127.0.0.1:58390 [200]: /GET?square=C3
+[Thu Oct 12 14:55:03 2017] 127.0.0.1:58396 [200]: /GET?square=B3
+[Thu Oct 12 14:55:08 2017] 127.0.0.1:58402 [200]: /GET?newgame
+[Thu Oct 12 14:55:14 2017] 127.0.0.1:58408 [200]: /GET?square=B1
+[Thu Oct 12 14:55:16 2017] 127.0.0.1:58416 [200]: /GET?square=C1
+[Thu Oct 12 14:55:18 2017] 127.0.0.1:58422 [200]: /GET?square=C2
+[Thu Oct 12 14:55:23 2017] 127.0.0.1:58428 [200]: /GET?square=C3

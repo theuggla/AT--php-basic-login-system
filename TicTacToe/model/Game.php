@@ -5,15 +5,13 @@ namespace tictactoe\model;
 class Game {
 
     private $winningRows;
-    private $isLoggedIn;
     private $board;
     private $player;
     private $AI;
     private $isAIWinner;
 
-    public function __construct(bool $isLoggedIn)
+    public function __construct(bool $cleverAI)
     {
-        $this->isLoggedIn = $isLoggedIn;
         $this->squares = array( "A1" => new Square("A1"),
                                 "A2" => new Square("A2"), 
                                 "A3" => new Square("A3"),
@@ -26,7 +24,7 @@ class Game {
                             );
 
                             $this->player = new Player('X');
-                            $this->AI = new AI('O');
+                            $this->AI = $cleverAI ? new CleverAI('O') : new DumbAI('O');
 
                             $this->winningRows = array(
                                 array(
