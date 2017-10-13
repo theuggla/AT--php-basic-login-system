@@ -48,7 +48,6 @@ class User
     public function loginUser()
     {
         $_SESSION[self::$isLoggedIn] = true;
-        $_SESSION[self::$userAgent] = $_SERVER[self::$serverUserAgent];
     }
 
     public function validateUserAgainstDatabase()
