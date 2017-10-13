@@ -43,8 +43,15 @@ class MainController
 
     private function delegateControlDependingOnUseCase()
     {
-        if ($this->currentUser->isLoggedIn() && $this->currentUser->hasNotBeenHijacked()) {
-            $this->determineResultOfLogoutAttempt();
+        if ($this->currentUser->isLoggedIn()) {
+            if ($this->currentUser->hasNotBeenHijacked())
+            {
+                $this->determineResultOfLogoutAttempt();
+            }
+            else {
+                $this->displayLoginForm = true;
+                $this->determineResultOfLoginAttempt();
+            }
         } else if ($this->registerUserController->userWantsToRegister()) {
             $this->displayRegisterForm = true;
             $this->determineResultOfRegisterAttempt();
