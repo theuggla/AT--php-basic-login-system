@@ -14,7 +14,7 @@
     require_once('Site/persistance/MSQLConnector.php');
     require_once('Site/persistance/LoginModulePersistance.php');
 
-    $databaseName = 'UserRegistry';
+    $databaseName = 'UpdatedUserRegistry';
     $msqlconnection = \site\persistance\MSQLConnector::getConnection($databaseName);
     $persistanceHandler = new \site\persistance\LoginModulePersistance($msqlconnection);
 
