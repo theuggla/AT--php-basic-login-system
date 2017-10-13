@@ -55,7 +55,7 @@ The following is an example code snippet from an `index.php` file, to show how t
                                 $loginModule->getCurrentHTML());
 ```
     
-1. Pull down the module to your computer, either with `git clone` or by downloading the zip-file from the realeases tab of this repo -> php-login L2, release 2.0.
+1. Pull down the module to your computer, with `git clone`.
 2. Place the folder named LoginModule in the root directory of the site that wishes to use it.
 3. In your `index.php`, set up the module.
 

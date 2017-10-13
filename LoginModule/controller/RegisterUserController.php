@@ -17,15 +17,15 @@ class RegisterUserController
     private $registerView = 'RegisterUserController::RegisterView';
     
     private $currentUser = 'RegisterUserController::User';
-    private $currentTempUser = 'RegisterUserController::TempUser';
+    private $currentMessage;
 
-    private $currentMessage = '';
     private $registrySucceeded = false;
 
-    public function __construct($currentUser, $currentTempUser, $registerView)
+    public function __construct($currentUser, $currentFlashMessage, $registerView)
     {
         $this->currentUser = $currentUser;
-        $this->currentTempUser = $currentTempUser;
+        $this->currentMessage = $currentFlashMessage;
+        
         $this->registerView = $registerView;
 
         self::$badPasswordMessage = "Password has too few characters, at least " . $this->currentUser->getMinimumPasswordCharacters() . " characters.";
@@ -38,11 +38,11 @@ class RegisterUserController
             try {
                 $this->attemptRegistration();
             } catch (\loginmodule\model\UsernameHasInvalidCharactersException $e) {
-                $this->currentMessage = self::$usernameInvalidMessage;
+                $this->currentMessage->setCurrentMessage(self::$usernameInvalidMessage);
             } catch (\loginmodule\model\PasswordMisMatchException $e) {
-                $this->currentMessage = self::$passwordMisMatchMessage;
+                $this->currentMessage->setCurrentMessage(self::$passwordMisMatchMessage);
             } catch (\loginmodule\model\DuplicateUserException $e) {
-                $this->currentMessage = self::$takenUsernameMessage;
+                $this->currentMessage->setCurrentMessage(self::$takenUsernameMessage);
             } catch (\loginmodule\model\InvalidCredentialsException $e) {}
         }
     }
@@ -50,11 +50,6 @@ class RegisterUserController
     public function registrationWasSuccessful()
     {
         return $this->registrySucceeded;
-    }
-
-    public function getCurrentMessage()
-    {
-        return $this->currentMessage;
     }
 
     public function getHTML(string $message, string $latestUsername)
@@ -99,13 +94,13 @@ class RegisterUserController
         }
         catch (\loginmodule\model\UsernameHasInvalidCharactersException $e) 
         {
-            $this->currentMessage = self::$usernameInvalidMessage;
+            $this->currentMessage->setCurrentMessage(self::$usernameInvalidMessage);
             $this->currentUser->cleanUpUsername();
             throw new \loginmodule\model\InvalidCredentialsException('Attempted credentials are not valid.');
         }
         catch (\loginmodule\model\UsernameIsNotValidException $e) 
         {
-            $this->currentMessage .= self::$badUsernameMessage;
+            $this->currentMessage->addToCurrentMessage(self::$badUsernameMessage);
         }
     }
 
@@ -117,7 +112,7 @@ class RegisterUserController
         }
         catch (\loginmodule\model\PasswordIsNotValidException $e) 
         {
-            $this->currentMessage .= self::$badPasswordMessage;
+            $this->currentMessage->addToCurrentMessage(self::$badPasswordMessage);
         }
     }
 
@@ -142,7 +137,7 @@ class RegisterUserController
     private function createNewUser()
     {
         $this->currentUser->saveUser();
-        $this->currentMessage = self::$registrationSucessfulMessage;
+        $this->currentMessage->setCurrentMessage(self::$registrationSucessfulMessage);
         $this->registrySucceeded = true;
     }
 }

@@ -7,28 +7,28 @@ class MainController
     private $loginUserController = 'MainController::LoginController';
     private $registerUserController = 'MainController::RegisterController';
 
-    private $currentFlashMessage = '';
     private $currentHTML = 'MainController::CurrentHTML';
 
+    private $currentFlashMessage;
     private $currentUser;
-
-    private static $int = 0;
 
     private $displayLoginForm = false;
     private $displayRegisterForm = false;
 
-    public function __construct($currentUser, $loginUserController, $registerUserController)
+    public function __construct($currentUser, $currentFlashMessage, $loginUserController, $registerUserController)
     {
         $this->loginUserController = $loginUserController;
         $this->registerUserController = $registerUserController;
 
         $this->currentUser = $currentUser;
+        $this->currentFlashMessage = $currentFlashMessage;
     }
 
     public function listenForUserAccessAttempt()
     {
         $this->delegateControlDependingOnUseCase();
         $this->setCorrectViewHTML();
+        $this->currentFlashMessage->resetMessage();
     }
 
     public function getCurrentHTML()
@@ -45,15 +45,12 @@ class MainController
     {
         if ($this->userIsLoggedIn()) {
             $this->determineResultOfLogoutAttempt();
-            $this->currentFlashMessage = $this->loginUserController->getCurrentMessage();
         } else if ($this->registerUserController->userWantsToRegister()) {
             $this->displayRegisterForm = true;
             $this->determineResultOfRegisterAttempt();
-            $this->currentFlashMessage = $this->registerUserController->getCurrentMessage();
         } else {
             $this->displayLoginForm = true;
             $this->determineResultOfLoginAttempt();
-            $this->currentFlashMessage = $this->loginUserController->getCurrentMessage();
         }
     }
 
@@ -80,7 +77,6 @@ class MainController
         $this->registerUserController->handleUserRegisterAttempt();
 
         if ($this->registerUserController->registrationWasSuccessful()) {
-            $this->currentFlashMessage = $this->registerUserController->getCurrentMessage();
             $this->sendUserToLoginPage();
         }
     }
@@ -103,12 +99,12 @@ class MainController
 
     private function setLoginHTMLDependingOnLoginStatus()
     {
-        $this->currentHTML = $this->loginUserController->getHTML($this->currentFlashMessage);
+        $this->currentHTML = $this->loginUserController->getHTML($this->currentFlashMessage->getCurrentMessage());
     }
 
     private function setRegisterFormHTML()
     {
-        $this->currentHTML = $this->registerUserController->getHTML($this->currentFlashMessage, $this->currentUser->getUsername());
+        $this->currentHTML = $this->registerUserController->getHTML($this->currentFlashMessage->getCurrentMessage(), $this->currentUser->getUsername());
     }
 
     private function userIsLoggedIn()

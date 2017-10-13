@@ -18,15 +18,16 @@ class LoginUserController
     private $currentUser = 'LoginModule::LoginUserController::User';
     private $currentTempUser = 'LoginModule::LoginUserController::TempUser';
 
-    private $currentMessage = '';
+    private $currentMessage;
 
     private $loginSucceeded = false;
     private $logoutSucceeded = false;
 
-    public function __construct($currentUser, $currentTempUser, $loginView)
+    public function __construct($currentUser, $currentTempUser, $currentFlashMessage, $loginView)
     {
         $this->currentUser = $currentUser;
         $this->currentTempUser = $currentTempUser;
+        $this->currentMessage = $currentFlashMessage;
         $this->loginView = $loginView;
     }
 
@@ -45,11 +46,6 @@ class LoginUserController
         return $this->loginView->getHTML($this->currentUser->isLoggedIn(), $message, $this->currentUser->getUsername());
     }
 
-    public function getCurrentMessage()
-    {
-        return $this->currentMessage;
-    }
-
     public function handleLoggedOutUser()
     {
         try {
@@ -59,18 +55,18 @@ class LoginUserController
                 $this->attemptLoginWithNewCredentials();
             }
         } catch (\loginmodule\model\WrongInfoInTempPasswordException $e) {
-            $this->currentMessage = self::$manipulatedTempUserCredentialsMessage;
+            $this->currentMessage->setCurrentMessage(self::$manipulatedTempUserCredentialsMessage);
             $this->loginView->removeCookieCredentials();
         } catch (\loginmodule\model\UsernameIsMissingException $e) {
-            $this->currentMessage = self::$noUsernameMessage;
+            $this->currentMessage->setCurrentMessage(self::$noUsernameMessage);
         } catch (\loginmodule\model\PasswordIsMissingException $e) {
-            $this->currentMessage = self::$noPasswordMessage;
+            $this->currentMessage->setCurrentMessage(self::$noPasswordMessage);
         } catch (\loginmodule\model\UserIsMissingException $e) {
-            $this->currentMessage = self::$wrongCredentialsMessage;
+            $this->currentMessage->setCurrentMessage(self::$wrongCredentialsMessage);
         } catch (\loginmodule\model\WrongCredentialsException $e) {
-            $this->currentMessage = self::$wrongCredentialsMessage;
+            $this->currentMessage->setCurrentMessage(self::$wrongCredentialsMessage);
         } catch (\loginmodule\model\InvalidCredentialsException $e) {
-            $this->currentMessage = self::$wrongCredentialsMessage;
+            $this->currentMessage->setCurrentMessage(self::$wrongCredentialsMessage);
         }
     }
 
@@ -86,7 +82,7 @@ class LoginUserController
         $this->createTempUserFromCookie();
         $this->ensureTempUserCredentialsHaveNotBeenManipulated();
         $this->loginUserWithTempUserCredentials();
-        $this->currentMessage = self::$tempUserLoginSuccessfulMessage;
+        $this->currentMessage->setCurrentMessage(self::$tempUserLoginSuccessfulMessage);
     }
 
     private function createTempUserFromCookie()
@@ -137,9 +133,9 @@ class LoginUserController
 
         if ($this->loginView->userWantsToKeepCredentials()) {
             $this->createCookieFromTempUser();
-            $this->currentMessage = self::$saveCookieUserLoginSucessfullMessage;
+            $this->currentMessage->setCurrentMessage(self::$saveCookieUserLoginSucessfullMessage);
         } else {
-            $this->currentMessage = self::$newCredentialsLoginSucessfullMessage;
+            $this->currentMessage->setCurrentMessage(self::$newCredentialsLoginSucessfullMessage);
         }
     }
 
@@ -148,7 +144,7 @@ class LoginUserController
         $this->currentUser->logoutUser();
         $this->loginView->removeCookieCredentials();
         $this->logoutSucceeded = true;
-        $this->currentMessage = self::$logoutSucessfulMessage;
+        $this->currentMessage->setCurrentMessage(self::$logoutSucessfulMessage);
     }
 
     private function createCookieFromTempUser()
