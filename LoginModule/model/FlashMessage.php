@@ -4,7 +4,6 @@ namespace loginmodule\model;
 
 class FlashMessage
 {
-
     private static $currentMessage = 'UpdatedLoginModule::MainController::CurrentFlashMessage';
 
     public function getCurrentMessage() : String

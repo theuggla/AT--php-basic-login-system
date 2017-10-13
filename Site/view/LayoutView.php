@@ -14,7 +14,7 @@ class LayoutView
   
     public function renderToOutput(bool $isLoggedIn, string $loginViewHTML, string $gameViewHTML)
     {
-    echo '<!DOCTYPE html>
+        echo '<!DOCTYPE html>
       <html>
         <head>
           <meta charset="utf-8">
@@ -36,7 +36,7 @@ class LayoutView
     ';
     }
 
-    private function getCorrectNavigation($isLoggedIn)
+    private function getCorrectNavigation(bool $isLoggedIn) : string
     {
         $response;
 
@@ -51,7 +51,7 @@ class LayoutView
           return $response;
     }
 
-    private function getCorrectLoggedInStatus($isLoggedIn)
+    private function getCorrectLoggedInStatus(bool $isLoggedIn) : string
     {
         if ($isLoggedIn) {
             return '<h2>Logged in</h2>';
@@ -60,7 +60,7 @@ class LayoutView
         }
     }
 
-    private function userWantsToRegister()
+    private function userWantsToRegister() : bool
     {
         return isset($_GET['register']);
     }

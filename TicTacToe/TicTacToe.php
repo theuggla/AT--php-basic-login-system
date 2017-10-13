@@ -11,9 +11,10 @@ require_once('TicTacToe/model/CleverAI.php');
 require_once('TicTacToe/model/DumbAI.php');
 require_once('TicTacToe/view/GameView.php');
 
-class TicTacToe {
+class TicTacToe
+{
 
-    private $currentHTML;
+    private $currentHTML = 'TicTacToeGame::CurrentHTML';
     
     public function runGame(bool $harderDifficulty = false)
     {
@@ -27,7 +28,7 @@ class TicTacToe {
         $this->currentHTML = $gamecontroller->getCurrentHTML();
     }
 
-    public function getCurrentHTML()
+    public function getCurrentHTML() : string
     {
         return $this->currentHTML;
     }

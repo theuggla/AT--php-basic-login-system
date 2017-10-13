@@ -13,11 +13,15 @@ A live version of only the login-module can be found [here](http://178.62.87.11/
 
 [List of Use Cases the Login module is fullfilling](https://github.com/dntoll/1dv610/blob/master/assignments/A2_resources/UseCases.md)
 
+Not all the test cases are working at the applications current state - a reference of what test cases are current ly working can be found [here](https://github.com/theuggla/basic-php-login-system/wiki/Work-In-Progress-(test-cases-currently-not-working)).
+
 ### TicTacToe Game
 
 #### Use Cases
 
 [List of Use Cases the TicTacToe module is fullfilling](https://github.com/theuggla/basic-php-login-system/wiki/Use-Cases)
+
+Not all the test cases are working at the applications current state - a reference of what test cases are current ly working can be found [here](https://github.com/theuggla/basic-php-login-system/wiki/Work-In-Progress-(test-cases-currently-not-working)).
 
 ## Install
 

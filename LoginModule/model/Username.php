@@ -15,7 +15,7 @@ class Username
         $stripOfHTML ? $this->stripUsernameOfHTMLTags() : $this->validate($username);
     }
 
-    public function getUsername() : String
+    public function getUsername() : string
     {
         return $this->username;
     }

@@ -11,7 +11,7 @@ class Player {
         $this->sign = $sign;
     }
 
-    public function getSign()
+    public function getSign() : string
     {
         return $this->sign;
     }

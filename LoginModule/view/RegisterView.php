@@ -11,39 +11,39 @@ class RegisterView
     private static $passwordRepeat = 'RegisterView::PasswordRepeat';
     private static $messageId = 'RegisterView::Message';
         
-    public function getHTML($message, $lastUsernameTried)
+    public function getHTML(string $message, string $lastUsernameTried) : string
     {
         $response = $this->generateRegisterFormHTML($message, $lastUsernameTried);
         return $response;
     }
 
-    public function userWantsToViewForm()
+    public function userWantsToViewForm() : bool
     {
         return isset($_GET['register']);
     }
 
-    public function userWantsToRegister()
+    public function userWantsToRegister() : bool
     {
         return isset($_POST[self::$register]);
     }
 
-    public function getAttemptedUsername()
+    public function getAttemptedUsername() : string
     {
         $username = isset($_POST[self::$name]) ? $_POST[self::$name] : '';
         return $username;
     }
 
-    public function getAttemptedPassword()
+    public function getAttemptedPassword() : string
     {
         return isset($_POST[self::$password]) ? $_POST[self::$password]: '' ;
     }
 
-    public function getAttemptedRepeatedPassword()
+    public function getAttemptedRepeatedPassword() : string
     {
         return isset($_POST[self::$passwordRepeat]) ? $_POST[self::$passwordRepeat]: '' ;
     }
 
-    private function generateRegisterFormHTML($message, $lastUsernameTried)
+    private function generateRegisterFormHTML(string $message, string $lastUsernameTried) : string
     {
         return '
 				<form action="?register" method="post" enctype="multipart/form-data"> 

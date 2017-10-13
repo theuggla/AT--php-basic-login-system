@@ -14,7 +14,7 @@ class GameController {
         $this->gameView = $gameView;
     }
 
-    public function getCurrentHTML()
+    public function getCurrentHTML() : string
     {
         return $this->currentHTML;
     }

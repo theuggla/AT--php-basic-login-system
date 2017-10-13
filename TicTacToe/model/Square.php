@@ -2,9 +2,10 @@
 
 namespace tictactoe\model;
 
-class Square {
+class Square
+{
     private $selectedBy = 'TicTacToe::Model::Square::SelectedBy::';
-    private $value;
+    private $value = 'TicTacToe::Model::Square::Value';
 
     public function __construct(string $value)
     {
@@ -19,17 +20,17 @@ class Square {
 
     public function isFree() : bool
     {
-       return !isset($_SESSION[$this->selectedBy]);
+        return !isset($_SESSION[$this->selectedBy]);
     }
 
     public function isSelected() : bool
     {
-       return isset($_SESSION[$this->selectedBy]);
+        return isset($_SESSION[$this->selectedBy]);
     }
 
     public function isSelectedBy() : string
     {
-       return $_SESSION[$this->selectedBy];
+        return $_SESSION[$this->selectedBy];
     }
 
     public function getValue() : string

@@ -5,7 +5,7 @@ namespace site\view;
 class DateTimeView
 {
 
-    public function getFormattedDateString()
+    public function getFormattedDateString() : string
     {
         $dateString = date('j');
         $ordialDate = new \NumberFormatter( 'en', \NumberFormatter::ORDINAL );

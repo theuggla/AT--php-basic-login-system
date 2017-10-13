@@ -2,7 +2,8 @@
 
 namespace tictactoe\model;
 
-class CleverAI extends AI {
+class CleverAI extends AI
+{
 
     public function getSquareToPlayOn(array $squares) : Square
     {

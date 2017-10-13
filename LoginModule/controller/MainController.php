@@ -8,15 +8,19 @@ class MainController
     private $registerUserController = 'MainController::RegisterController';
 
     private $currentHTML = 'MainController::CurrentHTML';
-
-    private $currentFlashMessage;
-    private $currentUser;
+    private $currentFlashMessage = 'MainController::CurrentFlashMessage';
+    private $currentUser = 'MainController::CurrentUser';
 
     private $displayLoginForm = false;
     private $displayRegisterForm = false;
 
-    public function __construct($currentUser, $currentFlashMessage, $loginUserController, $registerUserController)
-    {
+    public function __construct(
+        \loginmodule\model\User $currentUser,
+        \loginmodule\model\FlashMessage $currentFlashMessage,
+        \loginmodule\controller\LoginUserController $loginUserController,
+        \loginmodule\controller\RegisterUserController $registerUserController
+    ) {
+    
         $this->loginUserController = $loginUserController;
         $this->registerUserController = $registerUserController;
 
@@ -31,12 +35,12 @@ class MainController
         $this->currentFlashMessage->resetMessage();
     }
 
-    public function getCurrentHTML()
+    public function getCurrentHTML() : string
     {
         return $this->currentHTML;
     }
 
-    public function getLoggedInStatus()
+    public function getLoggedInStatus() : bool
     {
         return $this->currentUser->isLoggedIn();
     }
@@ -44,15 +48,8 @@ class MainController
     private function delegateControlDependingOnUseCase()
     {
         if ($this->currentUser->isLoggedIn()) {
-            if ($this->currentUser->hasNotBeenHijacked())
-            {
-                $this->determineResultOfLogoutAttempt();
-            }
-            else {
-                $this->displayLoginForm = true;
-                $this->determineResultOfLoginAttempt();
-            }
-        } else if ($this->registerUserController->userWantsToRegister()) {
+            $this->determineResultOfLogoutAttempt();
+        } elseif ($this->registerUserController->userWantsToRegister()) {
             $this->displayRegisterForm = true;
             $this->determineResultOfRegisterAttempt();
         } else {

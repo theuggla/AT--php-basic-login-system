@@ -16,7 +16,8 @@ require_once('LoginModule/model/FlashMessage.php');
 require_once('LoginModule/view/RegisterView.php');
 require_once('LoginModule/view/LoginView.php');
 
-class LoginModule {
+class LoginModule
+{
 
     private $currentHTML;
     private $isLoggedIn;
@@ -39,7 +40,7 @@ class LoginModule {
         $this->assertThereIsASession();
 
         $this->persistanceHandler = $persistanceHandler;
-        $this->cookieExpiryTimeInSeconds = $cookieExpiryTimeInSeconds;   
+        $this->cookieExpiryTimeInSeconds = $cookieExpiryTimeInSeconds;
 
         $this->initiateDependencies();
     }
@@ -52,7 +53,7 @@ class LoginModule {
         $this->isLoggedIn = $this->mainController->getLoggedInStatus();
     }
 
-    public function getCurrentHTML() : String
+    public function getCurrentHTML() : string
     {
         return $this->currentHTML;
     }

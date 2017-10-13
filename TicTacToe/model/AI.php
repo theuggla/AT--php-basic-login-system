@@ -2,8 +2,10 @@
 
 namespace tictactoe\model;
 
-abstract class AI extends Player {
+abstract class AI extends Player
+{
 
     public function getSquareToPlayOn(array $squares) : Square
-    {}
+    {
+    }
 }

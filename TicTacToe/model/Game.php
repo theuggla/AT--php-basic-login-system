@@ -4,7 +4,6 @@ namespace tictactoe\model;
 
 class Game
 {
-
     private $winningRows;
     private $squares;
     private $player;
@@ -39,7 +38,7 @@ class Game
         }
     }
 
-    public function getBoard()
+    public function getBoard() : array
     {
         return $this->squares;
     }
@@ -53,7 +52,7 @@ class Game
         return false;
     }
 
-    public function isPlayerWinner()
+    public function isPlayerWinner() : bool
     {
         return $this->isPlayerWinner;
     }
@@ -70,7 +69,7 @@ class Game
         return true;
     }
 
-    private function thereIsAWinner()
+    private function thereIsAWinner() : bool
     {
         foreach ($this->winningRows as $row) {
             if ($this->isRowWon($row)) {

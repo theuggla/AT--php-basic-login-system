@@ -16,13 +16,17 @@ class RegisterUserController
 
     private $registerView = 'RegisterUserController::RegisterView';
     
-    private $currentUser = 'RegisterUserController::User';
-    private $currentMessage;
+    private $currentUser = 'RegisterUserController::CurrentUser';
+    private $currentMessage = 'RegisterUserController::CurrentMessage';
 
     private $registrySucceeded = false;
 
-    public function __construct($currentUser, $currentFlashMessage, $registerView)
-    {
+    public function __construct(
+        \loginmodule\model\User $currentUser,
+        \loginmodule\model\FlashMessage $currentFlashMessage,
+        \loginmodule\view\RegisterView $registerView
+    ) {
+    
         $this->currentUser = $currentUser;
         $this->currentMessage = $currentFlashMessage;
         
@@ -43,26 +47,27 @@ class RegisterUserController
                 $this->currentMessage->setCurrentMessage(self::$passwordMisMatchMessage);
             } catch (\loginmodule\model\DuplicateUserException $e) {
                 $this->currentMessage->setCurrentMessage(self::$takenUsernameMessage);
-            } catch (\loginmodule\model\InvalidCredentialsException $e) {}
+            } catch (\loginmodule\model\InvalidCredentialsException $e) {
+            }
         }
     }
 
-    public function registrationWasSuccessful()
-    {
-        return $this->registrySucceeded;
-    }
-
-    public function getHTML(string $message, string $latestUsername)
-    {
-        return $this->registerView->getHTML($message, $latestUsername);
-    }
-
-    public function userWantsToRegister()
+    public function userWantsToRegister() : bool
     {
         return $this->registerView->userWantsToViewForm();
     }
 
-    private function userHasPressedRegisterButton()
+    public function getHTML(string $message, string $latestUsername) : string
+    {
+        return $this->registerView->getHTML($message, $latestUsername);
+    }
+
+    public function registrationWasSuccessful() : bool
+    {
+        return $this->registrySucceeded;
+    }
+
+    private function userHasPressedRegisterButton() : bool
     {
         return $this->registerView->userWantsToRegister();
     }
@@ -79,39 +84,29 @@ class RegisterUserController
         $this->setUsernameOrErrorMessage();
         $this->setPasswordOrErrorMessage();
 
-        if (($this->currentUser->isMissingCrendentials()))
-        {
+        if (($this->currentUser->isMissingCrendentials())) {
             throw new \loginmodule\model\InvalidCredentialsException('Attempted credentials are not valid.');
         }
-
     }
 
     private function setUsernameOrErrorMessage()
     {
-        try
-        {
+        try {
             $this->currentUser->setUsername($this->registerView->getAttemptedUsername());
-        }
-        catch (\loginmodule\model\UsernameHasInvalidCharactersException $e) 
-        {
+        } catch (\loginmodule\model\UsernameHasInvalidCharactersException $e) {
             $this->currentMessage->setCurrentMessage(self::$usernameInvalidMessage);
             $this->currentUser->cleanUpUsername();
             throw new \loginmodule\model\InvalidCredentialsException('Attempted credentials are not valid.');
-        }
-        catch (\loginmodule\model\UsernameIsNotValidException $e) 
-        {
+        } catch (\loginmodule\model\UsernameIsNotValidException $e) {
             $this->currentMessage->addToCurrentMessage(self::$badUsernameMessage);
         }
     }
 
     private function setPasswordOrErrorMessage()
     {
-        try
-        {
+        try {
             $this->currentUser->setPassword($this->registerView->getAttemptedPassword());
-        }
-        catch (\loginmodule\model\PasswordIsNotValidException $e) 
-        {
+        } catch (\loginmodule\model\PasswordIsNotValidException $e) {
             $this->currentMessage->addToCurrentMessage(self::$badPasswordMessage);
         }
     }

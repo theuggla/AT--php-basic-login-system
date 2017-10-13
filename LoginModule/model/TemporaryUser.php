@@ -26,7 +26,7 @@ class TemporaryUser extends \loginmodule\model\User
         }
     }
 
-    public function getExpiryTime()
+    public function getExpiryTime() : int
     {
         return $this->expiryTimeInSeconds;
     }

@@ -13,7 +13,7 @@ class LoginView
     private static $keep = 'LoginView::KeepMeLoggedIn';
     private static $messageId = 'LoginView::Message';
 
-    public function getHTML(bool $isLoggedIn, string $message, string $lastUsernameTried)
+    public function getHTML(bool $isLoggedIn, string $message, string $lastUsernameTried) : string
     {
         if ($isLoggedIn) {
             $response = $this->generateLogoutButtonHTML($message);
@@ -24,42 +24,42 @@ class LoginView
         return $response;
     }
 
-    public function userWantsToLogin()
+    public function userWantsToLogin() : bool
     {
         return isset($_POST[self::$login]);
     }
 
-    public function userWantsToLogout()
+    public function userWantsToLogout() : bool
     {
         return isset($_POST[self::$logout]);
     }
 
-    public function userWantsToKeepCredentials()
+    public function userWantsToKeepCredentials() : bool
     {
         return isset($_POST[self::$keep]);
     }
 
-    public function getLoginFormUsername()
+    public function getLoginFormUsername() : string
     {
         return isset($_POST[self::$name]) ? $_POST[self::$name] : '' ;
     }
 
-    public function getLoginFormPassword()
+    public function getLoginFormPassword() : string
     {
         return isset($_POST[self::$password]) ? $_POST[self::$password]: '' ;
     }
 
-    public function getCookieUsername()
+    public function getCookieUsername() : string
     {
         return isset($_COOKIE[self::$cookieName]) ? $_COOKIE[self::$cookieName] : '' ;
     }
 
-    public function getCookiePassword()
+    public function getCookiePassword() : string
     {
         return isset($_COOKIE[self::$cookiePassword]) ? $_COOKIE[self::$cookiePassword] : '' ;
     }
 
-    public function cookieCredentialsArePresent()
+    public function cookieCredentialsArePresent() : bool
     {
         return isset($_COOKIE[self::$cookieName]) && isset($_COOKIE[self::$cookiePassword]);
     }
@@ -76,7 +76,7 @@ class LoginView
         setcookie(self::$cookiePassword, "", time()-3600);
     }
 
-    private function generateLoginFormHTML($message, $lastUsernameTried)
+    private function generateLoginFormHTML(string $message, string $lastUsernameTried) : string
     {
         return '
 				<form method="post" > 
@@ -99,7 +99,7 @@ class LoginView
 			';
     }
 
-    private function generateLogoutButtonHTML($message)
+    private function generateLogoutButtonHTML(string $message) : string
     {
         return '
 				<form  method="post" >

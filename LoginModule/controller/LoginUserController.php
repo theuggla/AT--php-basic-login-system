@@ -15,15 +15,17 @@ class LoginUserController
 
     private $loginView = 'LoginModule::LoginUserController::LoginView';
 
-    private $currentUser = 'LoginModule::LoginUserController::User';
-    private $currentTempUser = 'LoginModule::LoginUserController::TempUser';
-
-    private $currentMessage;
+    private $currentUser = 'LoginModule::LoginUserController::CurrentUser';
+    private $currentTempUser = 'LoginModule::LoginUserController::CurrentTempUser';
+    private $currentMessage = 'LoginModule::LoginUserController::CurrentMessage';
 
     private $loginSucceeded = false;
     private $logoutSucceeded = false;
 
-    public function __construct($currentUser, $currentTempUser, $currentFlashMessage, $loginView)
+    public function __construct(\loginmodule\model\User $currentUser,
+                                \loginmodule\model\TemporaryUser $currentTempUser, 
+                                \loginmodule\model\FlashMessage $currentFlashMessage, 
+                                \loginmodule\view\LoginView $loginView)
     {
         $this->currentUser = $currentUser;
         $this->currentTempUser = $currentTempUser;
@@ -31,17 +33,7 @@ class LoginUserController
         $this->loginView = $loginView;
     }
 
-    public function loginSuccessful()
-    {
-        return $this->loginSucceeded;
-    }
-
-    public function logoutSuccessful()
-    {
-        return $this->logoutSucceeded;
-    }
-
-    public function getHTML(string $message)
+    public function getHTML(string $message) : string
     {
         return $this->loginView->getHTML($this->currentUser->isLoggedIn(), $message, $this->currentUser->getUsername());
     }
@@ -70,11 +62,29 @@ class LoginUserController
         }
     }
 
+    public function logoutSuccessful() : bool
+    {
+        return $this->logoutSucceeded;
+    }
+
     public function handleLoggedInUser()
     {
         if ($this->loginView->userWantsToLogout()) {
             $this->logoutUser();
         }
+    }
+
+    private function logoutUser()
+    {
+        $this->currentUser->logoutUser();
+        $this->loginView->removeCookieCredentials();
+        $this->logoutSucceeded = true;
+        $this->currentMessage->setCurrentMessage(self::$logoutSucessfulMessage);
+    }
+
+    public function loginSuccessful() : bool
+    {
+        return $this->loginSucceeded;
     }
 
     private function attemptLoginWithCookieCredentials()
@@ -108,6 +118,30 @@ class LoginUserController
         $this->currentUser->setPassword($this->currentTempUser->getPassword());
     }
 
+    private function loginCurrentUser()
+    {
+        $this->currentUser->loginUser();
+        $this->loginSucceeded = true;
+
+        if ($this->loginView->userWantsToKeepCredentials()) {
+            $this->createCookieFromTempUser();
+            $this->currentMessage->setCurrentMessage(self::$saveCookieUserLoginSucessfullMessage);
+        } else {
+            $this->currentMessage->setCurrentMessage(self::$newCredentialsLoginSucessfullMessage);
+        }
+    }
+
+    private function createCookieFromTempUser()
+    {
+        $this->currentTempUser->setUsername($this->currentUser->getUsername());
+        $this->currentTempUser->setPassword($this->currentUser->getPassword());
+        $expirytimestamp = time() + $this->currentTempUser->getExpiryTime();
+
+        $this->currentTempUser->saveUser();
+
+        $this->loginView->setCookieCredentials($this->currentTempUser->getUsername(), $this->currentTempUser->getPassword(), $expirytimestamp);
+    }
+
     private function attemptLoginWithNewCredentials()
     {
         $this->setCurrentCredentialsFromLoginForm();
@@ -124,37 +158,5 @@ class LoginUserController
     private function validateCurrentUser()
     {
         $this->currentUser->validateUserAgainstDatabase();
-    }
-
-    private function loginCurrentUser()
-    {
-        $this->currentUser->loginUser();
-        $this->loginSucceeded = true;
-
-        if ($this->loginView->userWantsToKeepCredentials()) {
-            $this->createCookieFromTempUser();
-            $this->currentMessage->setCurrentMessage(self::$saveCookieUserLoginSucessfullMessage);
-        } else {
-            $this->currentMessage->setCurrentMessage(self::$newCredentialsLoginSucessfullMessage);
-        }
-    }
-
-    private function logoutUser()
-    {
-        $this->currentUser->logoutUser();
-        $this->loginView->removeCookieCredentials();
-        $this->logoutSucceeded = true;
-        $this->currentMessage->setCurrentMessage(self::$logoutSucessfulMessage);
-    }
-
-    private function createCookieFromTempUser()
-    {
-        $this->currentTempUser->setUsername($this->currentUser->getUsername());
-        $this->currentTempUser->setPassword($this->currentUser->getPassword());
-        $expirytimestamp = time() + $this->currentTempUser->getExpiryTime();
-
-        $this->currentTempUser->saveUser();
-
-        $this->loginView->setCookieCredentials($this->currentTempUser->getUsername(), $this->currentTempUser->getPassword(), $expirytimestamp);
     }
 }
