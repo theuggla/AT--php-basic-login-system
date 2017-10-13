@@ -25,7 +25,6 @@ class GameController {
 
         if ($this->gameView->wantsToPlay())
         {
-            $this->gameView->displayNewGameSetup();
             $this->game->newGame();
             $this->currentHTML .= $this->gameView->displayBoard($this->game->getBoard());
         }
@@ -37,7 +36,7 @@ class GameController {
 
             if ($this->game->gameIsOver())
             {
-                $this->currentHTML = $this->gameView->displayGameOver($this->game->isAIWinner());
+                $this->currentHTML = $this->gameView->displayGameOver($this->game->isPlayerWinner());
             }
         }
     }

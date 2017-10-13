@@ -3,42 +3,43 @@
 namespace tictactoe\model;
 
 class CleverAI extends AI {
-    public function getSquareToPlayOn(array $squares) : string
+
+    public function getSquareToPlayOn(array $squares) : Square
     {
-        if (!$squares["B2"]->isSelected()) {
-            return $squares["B2"]->getValue();
+        if ($squares[4]->isFree()) {
+            return $squares[4];
         }
 
-        if (!$squares["A1"]->isSelected()) {
-            return $squares["A1"]->getValue();
+        if ($squares[0]->isFree()) {
+            return $squares[0];
         }
 
-        if (!$squares["A3"]->isSelected()) {
-            return $squares["A3"]->getValue();
+        if ($squares[2]->isFree()) {
+            return $squares[2];
         }
 
-        if (!$squares["C1"]->isSelected()) {
-            return $squares["C1"]->getValue();
+        if ($squares[6]->isFree()) {
+            return $squares[6];
         }
 
-        if (!$squares["C3"]->isSelected()) {
-            return $squares["C3"]->getValue();
+        if ($squares[8]->isFree()) {
+            return $squares[8];
         }
 
-        if (!$squares["A2"]->isSelected()) {
-            return $squares["A2"]->getValue();
+        if ($squares[1]->isFree()) {
+            return $squares[1];
         }
 
-        if (!$squares["B1"]->isSelected()) {
-            return $squares["B1"]->getValue();
+        if ($squares[3]->isFree()) {
+            return $squares[3];
         }
 
-        if (!$squares["B3"]->isSelected()) {
-            return $squares["B3"]->getValue();
+        if ($squares[5]->isFree()) {
+            return $squares[5];
         }
 
-        if (!$squares["C2"]->isSelected()) {
-            return $squares["C2"]->getValue();
+        if ($squares[7]->isFree()) {
+            return $squares[7];
         }
     }
 }

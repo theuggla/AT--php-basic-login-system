@@ -2,55 +2,49 @@
 
 namespace tictactoe\view;
 
-class GameView {
+class GameView
+{
+    private static $newGame = 'newgame';
+    private static $quit = 'quit';
+    private static $squareChosen = 'square';
 
     public function displayInstructions()
     {
-        return "<p>Welcome!</p>"
-        ."<p>"
-        . $this->getActionsHTML()
-        ."</p>"
+        return
+            "<p>Welcome to the TicTacToe-Game!</p>"
+            . "<p>Click on the square you want to play on. If you are logged in, the difficulty will
+                be harder.</p>"
+            ."<p>"
+            . $this->getActionsHTML()
+            ."</p>"
         ;
     }
 
-    public function displayNewGameSetup()
+    public function displayGameOver(bool $isPlayerWinner)
     {
-        return "Click on the square you want to play on!";
-    }
-
-    public function displayGameOver(bool $isAIWinner)
-    {
-        $winner = $isAIWinner ? "You lost!" : "You won!";
+        $winner = $isPlayerWinner ? "You won!" : "You lost!";
         return '<p>Game over! '
                 . $winner .
-                '</p> <a href="?newgame">Play again?</a> </p>'
+                '</p> <a href="?' . self::$newGame . '">Play again?</a> </p>'
         ;
     }
 
     public function wantsToPlay()
     {
-        return isset($_GET['newgame']);
+        return isset($_GET[self::$newGame]);
     }
 
     public function displayBoard(array $squares) : string
     {
-        $board =            '
-                            ';
-        $count = 1;
+        $board = '';
 
-        foreach ($squares as $square)
-        {
-            if ($count % 3 == 0)
-            {
-                $board .= $this->getSquare($square);
-                $board .=   '
-                            ';
+        foreach ($squares as $index => $square) {
+            if (($index + 1) % 3 == 0) {
+                $board .= $this->getSquare($index, $square);
+                $board .= '</br>';
+            } else {
+                $board .= $this->getSquare($index, $square);
             }
-            else {
-                $board .= $this->getSquare($square);
-            }
-
-            $count++;
         }
         
         return
@@ -62,25 +56,26 @@ class GameView {
 
     public function squareSelected() : bool
     {
-        return isset($_GET['square']);
+        return isset($_GET[self::$squareChosen]);
     }
 
     public function collectDesiredSquare()
     {
-        return $_GET['square']; 
+        return $_GET[self::$squareChosen];
     }
 
-    private function getSquare(\tictactoe\model\Square $square)
+    private function getSquare(int $index, \tictactoe\model\Square $square)
     {
-        return '<button type="submit" name="square" value="' . $square->getValue() . '">' . $square->isSelectedBy() . '</button>';
+        $sign = $square->isSelected() ? $square->isSelectedBy() : '  ';
+        return '<button type="submit" name="' . self::$squareChosen . '" value="' . $index . '">' . $sign . '</button>';
     }
 
     private function getActionsHTML()
     {
         return
         '
-            <a href="?newgame">Play new game</a>
-            <a href="?quit">Quit</a>
+            <a href="?' . self::$newGame . '">Play new game</a>
+            <a href="?' . self::$quit . '">Quit</a>
         ';
     }
 }

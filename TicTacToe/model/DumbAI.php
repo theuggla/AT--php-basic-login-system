@@ -3,13 +3,13 @@
 namespace tictactoe\model;
 
 class DumbAI extends AI {
-    public function getSquareToPlayOn(array $squares) : string
+    public function getSquareToPlayOn(array $squares) : Square
     {
         foreach($squares as $square)
         {
-            if (!$square->isSelected())
+            if ($square->isFree())
             {
-                return $square->getValue();
+                return $square;
             }
         }
     }

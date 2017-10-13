@@ -17,6 +17,11 @@ class Square {
         unset($_SESSION[$this->selectedBy]);
     }
 
+    public function isFree() : bool
+    {
+       return !isset($_SESSION[$this->selectedBy]);
+    }
+
     public function isSelected() : bool
     {
        return isset($_SESSION[$this->selectedBy]);
@@ -24,10 +29,10 @@ class Square {
 
     public function isSelectedBy() : string
     {
-       return $this->isSelected() ? $_SESSION[$this->selectedBy] : '  ';
+       return $_SESSION[$this->selectedBy];
     }
 
-    public function getValue()
+    public function getValue() : string
     {
         return $this->value;
     }

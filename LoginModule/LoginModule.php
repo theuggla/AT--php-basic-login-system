@@ -34,6 +34,8 @@ class LoginModule {
 
     public function __construct(\loginmodule\persistance\IPersistance $persistanceHandler, int $cookieExpiryTimeInSeconds = 2592000)
     {
+        $this->assertThereIsASession();
+
         $this->persistanceHandler = $persistanceHandler;
         $this->cookieExpiryTimeInSeconds = $cookieExpiryTimeInSeconds;   
 
@@ -56,6 +58,11 @@ class LoginModule {
     public function getLoggedInStatus() : bool
     {
         return $this->isLoggedIn;
+    }
+
+    private function assertThereIsASession()
+    {
+        assert(isset($_SESSION));
     }
 
     private function initiateDependencies()

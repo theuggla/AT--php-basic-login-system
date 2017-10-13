@@ -14,7 +14,6 @@
     require_once('Site/persistance/MSQLConnector.php');
     require_once('Site/persistance/LoginModulePersistance.php');
 
-    $cookieExpiryTimeInSeconds = 1000;
     $databaseName = 'UserRegistry';
     $msqlconnection = \site\persistance\MSQLConnector::getConnection($databaseName);
     $persistanceHandler = new \site\persistance\LoginModulePersistance($msqlconnection);
@@ -22,6 +21,7 @@
     $dateTimeView = new \site\view\DateTimeView();
     $layoutView = new \site\view\LayoutView($dateTimeView);
 
+    $cookieExpiryTimeInSeconds = 1000;
     $loginModule = new \loginmodule\LoginModule($persistanceHandler, $cookieExpiryTimeInSeconds);
     $ticTacToe = new \tictactoe\TicTacToe();
 

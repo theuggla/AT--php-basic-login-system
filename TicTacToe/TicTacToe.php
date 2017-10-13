@@ -15,9 +15,9 @@ class TicTacToe {
 
     private $currentHTML;
     
-    public function runGame(bool $isLoggedIn)
+    public function runGame(bool $harderDifficulty)
     {
-        $game = new \tictactoe\model\Game($isLoggedIn);
+        $game = new \tictactoe\model\Game($harderDifficulty);
         $gameview = new \tictactoe\view\GameView();
         $gamecontroller = new \tictactoe\controller\GameController($game, $gameview);
 

@@ -4,6 +4,13 @@ namespace site\persistance;
 
 class LoginModulePersistance implements \loginmodule\persistance\IPersistance
 {
+    private static $tempUserDatabase = 'TemporaryPassword';
+    private static $userDatabase = 'User';
+    private static $usernameColumn = 'username';
+    private static $passwordColumn = 'password';
+
+    private static $selectAllFromQuery = 'SELECT * FROM ';
+    private static $insertIntoQuery = 'INSERT INTO ';
 
     private static $dbconnection;
 
@@ -14,13 +21,12 @@ class LoginModulePersistance implements \loginmodule\persistance\IPersistance
 
     public function didTempUserExpire(string $username, string $password) : bool
     {
-        $query='SELECT * FROM TemporaryPassword WHERE BINARY username="' . $username . '" AND cookiepassword="' . $password . '"';
+        $query= $this->getSelectAllQuery(self::$userDatabase, array(self::$usernameColumn => $username, 
+                                                                    self::$passwordColumn => $password));
         $result = self::$dbconnection->query($query);
-             
         $cookie = $result->fetch_object();
 
         return ($result->num_rows <= 0 || $cookie->expiry < time());
-
     }
 
     public function saveTempUser(string $username, string $password, int $timestamp)
@@ -66,9 +72,34 @@ class LoginModulePersistance implements \loginmodule\persistance\IPersistance
 
     private function getUserByUsername(string $username)
     {
-        $query='SELECT * FROM User WHERE BINARY username="' . $username . '"';
+        $query= $this->getSelectAllQuery(self::$userDatabase, array(self::$usernameColumn => $username));
         $result = self::$dbconnection->query($query);
 
         return $result;
     }
+
+    private function getSelectAllQuery(string $database, array $values)
+    {
+        $query = self::$selectAllFromQuery;
+        $query .= $database;
+
+        if (count($values) > 1)
+        {
+            foreach ($values as $key => $value)
+            {
+                $query .= ' WHERE BINARY ' . $key . '="' . $value . '" AND '; 
+            }
+
+            $query .= ' * '; 
+        }
+        else {
+            foreach ($values as $key => $value)
+            {
+                $query .= ' WHERE BINARY ' . $key . '="' . $value . '"'; 
+            }
+        }
+
+        return $query;
+    }
+
 }

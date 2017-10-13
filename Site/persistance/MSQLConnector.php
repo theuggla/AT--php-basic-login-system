@@ -5,12 +5,15 @@ namespace site\persistance;
 class MSQLConnector
 {
     private static $connection;
+    private static $host = 'localhost';
+    private static $mysqlUsername = "MYSQL_USERNAME";
+    private static $mysqlPassword = "MYSQL_PASSWORD";
 
     private static function connect(string $dbName)
     {
-        $host = 'localhost';
-        $user = $_ENV["MYSQL_USERNAME"];
-        $password = $_ENV["MYSQL_PASSWORD"];
+        $host = self::$host;
+        $user = $_ENV[self::$mysqlUsername];
+        $password = $_ENV[self::$mysqlPassword];
         self::$connection[$dbName] = mysqli_connect($host, $user, $password, $dbName);
     }
 
