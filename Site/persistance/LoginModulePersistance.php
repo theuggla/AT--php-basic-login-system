@@ -5,10 +5,12 @@ namespace site\persistance;
 class LoginModulePersistance implements \loginmodule\persistance\IPersistance
 {
     private static $dbconnection;
+
     public function __construct($dbconnection)
     {
         self::$dbconnection = $dbconnection;
     }
+
     public function didTempUserExpire(string $username, string $password) : bool
     {
         $query='SELECT * FROM TemporaryPassword WHERE BINARY username="' . $username . '" AND password="' . $password . '"';
@@ -17,6 +19,7 @@ class LoginModulePersistance implements \loginmodule\persistance\IPersistance
         $cookie = $result->fetch_object();
         return ($result->num_rows <= 0 || $cookie->expiry < time());
     }
+
     public function saveTempUser(string $username, string $password, int $timestamp)
     {
         $password = self::$dbconnection->real_escape_string($password);
@@ -25,6 +28,7 @@ class LoginModulePersistance implements \loginmodule\persistance\IPersistance
     
         self::$dbconnection->query($query);
     }
+
     public function doesUserExist(string $username) : bool
     {
         $result = $this->getUserByUsername($username);
@@ -35,6 +39,7 @@ class LoginModulePersistance implements \loginmodule\persistance\IPersistance
             return true;
         }
     }
+
     public function getUserPassword(string $username) : String
     {
         $result = $this->getUserByUsername($username);
@@ -46,6 +51,7 @@ class LoginModulePersistance implements \loginmodule\persistance\IPersistance
             return $user->password;
         }
     }
+
     public function saveUser(string $username, string $password)
     {
         $username = self::$dbconnection->real_escape_string($username);
@@ -53,6 +59,7 @@ class LoginModulePersistance implements \loginmodule\persistance\IPersistance
         
         $result = self::$dbconnection->query($query);
     }
+    
     private function getUserByUsername(string $username)
     {
         $query='SELECT * FROM User WHERE BINARY username="' . $username . '"';

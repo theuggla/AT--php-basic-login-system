@@ -4,32 +4,24 @@ namespace site\view;
 
 class LayoutView
 {
-
-    private $dateTimeView;
-
-    public function __construct(DateTimeView $dateTimeView)
-    {
-        $this->dateTimeView = $dateTimeView;
-    }
-  
-    public function renderToOutput(bool $isLoggedIn, string $loginViewHTML, string $gameViewHTML)
+    public function renderToOutput(bool $isLoggedIn, string $loginViewHTML, string $dbViewHTML)
     {
         echo '<!DOCTYPE html>
       <html>
         <head>
           <meta charset="utf-8">
-          <title>Login Example With Added Functionality</title>
+          <title>ABIS</title>
+          <link rel="stylesheet" type="text/css" href="/style.css">
         </head>
         <body>
-          <h1>Assignment 2</h1>
-          ' . $this->getCorrectNavigation($isLoggedIn) . '
-          ' . $this->getCorrectLoggedInStatus($isLoggedIn) . '
-          <div class="container">
+          <h1>Simple Abis Database</h1>
+          <div class="login-container">
+              ' . $this->getCorrectNavigation($isLoggedIn) . '
+              ' . $this->getCorrectLoggedInStatus($isLoggedIn) . '
               ' . $loginViewHTML . '
-              ' . $this->dateTimeView->getFormattedDateString() . '
           </div>
-          <div class="game">
-          ' . $gameViewHTML . '
+          <div class="db">
+          ' . $dbViewHTML . '
           </div>
          </body>
       </html>
@@ -54,9 +46,9 @@ class LayoutView
     private function getCorrectLoggedInStatus(bool $isLoggedIn) : string
     {
         if ($isLoggedIn) {
-            return '<h2>Logged in</h2>';
+            return '<h4>Logged in</h4>';
         } else {
-            return '<h2>Not logged in</h2>';
+            return '<h4>Not logged in</h4>';
         }
     }
 

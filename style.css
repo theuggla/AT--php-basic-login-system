@@ -1,0 +1,47 @@
+body {
+    background: rgba(17, 16, 16, 0.192);
+}
+
+h1 {
+    text-align: center;
+}
+
+.login-container {
+    float: right;
+    margin: 5em;
+    margin-top: -3em;
+    max-width: 12em;
+    padding-right: 2em;
+    text-align: center;
+}
+
+.db {
+    clear: both;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.result {
+    clear: both;
+    text-align: left;
+}
+
+.result h3 {
+    text-align: center;
+}
+
+.queries {
+    float: left;
+}
+
+.forms {
+    float: right;
+}
+
+.form {
+    clear: both;
+    text-align: justify;
+    margin: 0 auto;
+    width: 40%;
+}

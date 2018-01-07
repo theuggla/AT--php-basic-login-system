@@ -17,14 +17,9 @@ class MSQLConnector
         self::$connection[$dbName] = mysqli_connect($host, $user, $password, $dbName);
     }
 
-    public static function queryDB(string $query)
-    {
-        $result = mysqli_query(self::$connection, $query);
-    }
-
     public static function getConnection(string $dbName)
     {
-        if (self::$connection) {
+        if (isset(self::$connection[$dbName])) {
             return self::$connection[$dbName];
         } else {
             self::connect($dbName);
