@@ -46,15 +46,9 @@ class PutDataQuery
 
     private function normalizeKeys($forms)
     {
-        var_dump($forms);
         $arrayKeys = array_keys($forms);
-        var_dump($arrayKeys);
-
         $keys = array_intersect_key($forms[$arrayKeys[0]], $forms[$arrayKeys[1]]);
-        var_dump($keys);
-
         $result = array_merge($forms[$arrayKeys[1]], $keys);
-        var_dump($result);
         $forms[$arrayKeys[1]] = $result;
 
         return $forms;
