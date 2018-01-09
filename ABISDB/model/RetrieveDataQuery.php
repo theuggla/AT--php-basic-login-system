@@ -14,7 +14,16 @@ class RetrieveDataQuery
 
     public function getAllMembers()
     {
-        $query='SELECT firstName AS "First name", lastName AS "Last name", mail AS "Email" FROM Person WHERE personID IN (SELECT personID FROM Member WHERE (datePaid > DATE_SUB(NOW(), INTERVAL 1 YEAR)))';
+        $query="SELECT 
+    firstName AS 'First name', 
+    lastName AS 'Last name', 
+    mail AS 'Email' 
+FROM 
+    Person 
+INNER JOIN
+	Member
+ON (Person.personID = Member.personID AND Member.datePaid > DATE_SUB(NOW(), INTERVAL 1 YEAR))";
+
         $result = self::$dbconnection->query($query);
 
         return (new \abisDB\model\ListResult($result->fetch_all(MYSQLI_ASSOC), "Members"));
@@ -117,40 +126,88 @@ class RetrieveDataQuery
 
     public function getPermanentExpulsionRisk()
     {
-        $query='SELECT 
-        firstName AS "First name", 
-        lastName AS "Last name",
-        DATE(validityDate) as "Second denial valid from",
+        $query="SELECT 
+        firstName AS 'First name', 
+        lastName AS 'Last name',
+        DATE(validityDate) as 'Second denial valid from',
         CASE
-        WHEN mail IS NOT NULL THEN mail
-       ELSE "No personal mail"
-       END AS "Personal email",
-      CASE
-        WHEN phoneNumber IS NOT NULL THEN phoneNumber
-       ELSE "No personal phone"
-       END AS "Personal phone",
-      CASE
-        WHEN contactMail IS NOT NULL THEN contactMail
-       ELSE "No person of contact"
-       END AS "Contact email",
-      CASE
-        WHEN contactPhone IS NOT NULL THEN contactPhone
-       ELSE "No person of contact"
-       END AS "Contact phone"
-        FROM
-        ((SELECT lastName, firstName, mail, phoneNumber, validityDate, personOfContact 
-            FROM Person INNER JOIN Employee ON Person.personID = Employee.personID
-            INNER JOIN (select * from Application WHERE dateMade IN (SELECT MAX(dateMade) FROM Application GROUP BY empID)) as latestApplication ON latestApplication.empID = Employee.empID
-            INNER JOIN (SELECT validityDate, caseNumber FROM
-            Decision INNER JOIN  (SELECT Appeal.caseNumber, Appeal.dateMade 
-                FROM Appeal INNER JOIN (select * from 
-                    RefugeeApplication INNER JOIN Decision 
-                    ON (Decision.desicionForCase = RefugeeApplication.caseNumber AND Decision.desicionForDateMade = RefugeeApplication.dateMade AND denied = true)) as denials
-                ON Appeal.appealOfCaseNumber = denials.caseNumber AND Appeal.appealOfCaseNumberDateMade = denials.dateMade) as firstAppeal
-            ON (firstAppeal.caseNumber =  Decision.desicionForCase AND firstAppeal.dateMade = Decision.desicionForDateMade AND denied = true)) as secondDenials ON secondDenials.caseNumber = latestApplication.caseNumber) as deniedEmployees
-        LEFT JOIN
-        (SELECT personID as contactID, mail as contactMail, phoneNumber as contactPhone from Person) as contacts
-        ON deniedEmployees.personOfContact = contacts.contactID);';
+            WHEN mail IS NOT NULL THEN mail
+            ELSE 'No personal mail'
+        END AS 'Personal email',
+        CASE
+            WHEN phoneNumber IS NOT NULL THEN phoneNumber
+            ELSE 'No personal phone'
+        END AS 'Personal phone',
+        CASE
+            WHEN contactMail IS NOT NULL THEN contactMail
+            ELSE 'No person of contact'
+        END AS 'Contact email',
+        CASE
+            WHEN contactPhone IS NOT NULL THEN contactPhone
+            ELSE 'No person of contact'
+        END AS 'Contact phone'
+    FROM
+        ((SELECT 
+            lastName, 
+            firstName, 
+            mail, 
+            phoneNumber, 
+            validityDate, 
+            personOfContact 
+        FROM 
+            Person 
+        INNER JOIN 
+            Employee 
+        ON Person.personID = Employee.personID
+        INNER JOIN 
+            (SELECT 
+                validityDate, 
+                caseNumber,
+                empID
+             FROM
+                Decision 
+            INNER JOIN 
+                (SELECT 
+                    Appeal.caseNumber, 
+                    denials.empID
+                 FROM 
+                    Appeal 
+                 INNER JOIN 
+                    (SELECT caseNumber, empID
+                     FROM 
+                        (SELECT RefugeeApplication.caseNumber, empID
+                         FROM 
+                            RefugeeApplication INNER JOIN Application ON RefugeeApplication.caseNumber = Application.caseNumber
+                         WHERE 
+                            RefugeeApplication.dateMade 
+                         IN 
+                            (SELECT 
+                                MAX(RefugeeApplication.dateMade) 
+                            FROM 
+                                RefugeeApplication INNER JOIN Application ON RefugeeApplication.caseNumber = Application.caseNumber
+                            GROUP BY 
+                                empID)
+                            ) AS latestApplication 
+                     INNER JOIN 
+                        Decision 
+                     ON (Decision.desicionForCase = latestApplication.caseNumber 
+                         AND denied = true)
+                     ) AS denials
+                 ON Appeal.appealOfCaseNumber = denials.caseNumber 
+                 ) AS firstAppeal
+            ON (firstAppeal.caseNumber = Decision.desicionForCase 
+                 AND denied = true)
+            ) AS secondDenials 
+        ON secondDenials.empID = Employee.empID
+        ) AS deniedEmployees
+    LEFT JOIN
+        (SELECT 
+            personID AS contactID, 
+            mail AS contactMail, 
+            phoneNumber AS contactPhone 
+        FROM Person
+        ) AS contacts
+    ON deniedEmployees.personOfContact = contacts.contactID)";
         
         $result = self::$dbconnection->query($query);
 
@@ -204,7 +261,40 @@ class RetrieveDataQuery
 
     public function getAllPeople()
     {
-        $query='SELECT * FROM Person';
+        $query="SELECT 
+        personID AS 'PersonID',
+        address AS 'Address',
+        accountNumber AS 'Account',
+        firstName AS 'First name',
+        lastName AS 'Last name',
+        SSID AS 'SSID',
+            CASE
+                WHEN mail IS NOT NULL THEN mail
+                ELSE 'No personal mail'
+            END AS 'Personal email',
+            CASE
+                WHEN phoneNumber IS NOT NULL THEN phoneNumber
+                ELSE 'No personal phone'
+            END AS 'Personal phone',
+            CASE
+                WHEN contactMail IS NOT NULL THEN contactMail
+                ELSE 'No person of contact'
+            END AS 'Contact email',
+            CASE
+                WHEN contactPhone IS NOT NULL THEN contactPhone
+                ELSE 'No person of contact'
+            END AS 'Contact phone'
+        FROM 
+        Person INNER JOIN Employee on Person.personID = Employee.personID
+        LEFT JOIN
+    (SELECT 
+        personID AS contactID, 
+        mail AS contactMail, 
+        phoneNumber AS contactPhone 
+    FROM Person
+    ) AS contacts
+ON Person.personOfContact = contacts.contactID
+        ";
 
         $result = self::$dbconnection->query($query);
         
@@ -213,7 +303,38 @@ class RetrieveDataQuery
 
     public function getAllEmployees()
     {
-        $query='SELECT * FROM Person INNER JOIN Employee ON Employee.personID = Person.personID';
+        $query="SELECT 
+        Person.personID AS 'PersonID',
+        address AS 'Address',
+        accountNumber AS 'Account',
+        firstName AS 'First name',
+        lastName AS 'Last name',
+        SSID AS 'SSID',
+        empID AS 'Employee ID',
+        nationality AS 'Nationality',
+        gender AS 'Gender',
+        education AS 'Education',
+            CASE
+                WHEN mail IS NOT NULL THEN mail
+                ELSE 'No personal mail'
+            END AS 'Personal email',
+            CASE
+                WHEN phoneNumber IS NOT NULL THEN phoneNumber
+                ELSE 'No personal phone'
+            END AS 'Personal phone',
+            CASE
+                WHEN contactMail IS NOT NULL THEN contactMail
+                ELSE 'No person of contact'
+            END AS 'Contact email',
+            CASE
+                WHEN contactPhone IS NOT NULL THEN contactPhone
+                ELSE 'No person of contact'
+            END AS 'Contact phone'
+        FROM 
+        Person INNER JOIN Employee ON Person.personID = Employee.personID
+		LEFT JOIN
+		(SELECT personID as contactID, mail as contactMail, phoneNumber as contactPhone from Person) as contacts
+		ON personOfContact = contacts.contactID;";
         
         $result = self::$dbconnection->query($query);
                 

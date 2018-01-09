@@ -162,8 +162,8 @@ class DBView
             <p><a href="?' . self::$query3 . '">Get all people eligible for a permanent work permit</a></p>
             <p><a href="?' . self::$query4 . '">Get everyone in risk of being permanently denied to stay in the country</a></p>
             <p><a href="?' . self::$query5 . '">Get the material for a specific employee\'s Working Permit </a></p>
-            <p><a href="?' . self::$query6 . '">Get all persons information</a></p>
-            <p><a href="?' . self::$query7 . '">Get all employees information</a></p>
+            <p><a href="?' . self::$query6 . '">Get information about all people in the database</a></p>
+            <p><a href="?' . self::$query7 . '">Get all employees\' information</a></p>
             </div>
             <div class="forms">
             <p>Choose the form you want to use.</p>
