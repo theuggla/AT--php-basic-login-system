@@ -1,4 +1,9 @@
 # Adventures in PHP
-Basic login module written in php.
 
-For expanded functionality, examples andinstructions on how to integrate the login module with another system, see the branch `added-functionality`
+**login-module-standalone:** Basic login module written in php.
+
+**login-module-tictactoe-integration:** An example with instructions on how to integrate the login module with another module written in php, here using tic tac toe as the example.
+
+**login-module-db-integration:**An example with instructions on how to integrate the login module with another module written in php, here using another php module integrating with a MYSQL-database as the example.
+
+**mvc-draw-sticks:** Small draw-sticks game in php. Excercising tiny MVC structuring.
