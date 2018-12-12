@@ -1,5 +1,6 @@
 # Adventures in PHP
 
+## Branches
 **login-module-standalone:** Basic login module written in php.
 
 **login-module-tictactoe-integration:** An example with instructions on how to integrate the login module with another module written in php, here using tic tac toe as the example.
