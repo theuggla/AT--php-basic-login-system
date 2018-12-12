@@ -1,0 +1,1 @@
+ Another example of integrating the login module with a separate module, as well as a small php-integration with a MYSQL database. For full instructions on how to integrate the module, se the `login-module-tictactoe-integration`-branch.
